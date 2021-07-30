@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_reports_qossioc.html 
+summary: 您可以在适用于 vCenter Server 的 NetApp Element 插件中查看有关连接到选定集群的 iSCSI 会话的信息。 
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster, performance 
+---
+= 监控具有 QoSSIOC 事件的虚拟机性能分层
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+当具有启用了 QoS 的数据存储库的 VM 重新配置或发出电源或子系统事件时，您可以查看与 QoSSIOC 相关的事件。
+
+您可以从适用于 vCenter Server 的 NetApp Element 插件中的 NetApp Element 配置扩展点查看 QoSSIOC 事件。
+
+此时将显示本地添加的集群中的 QoSSIOC 事件。在链接模式环境中，登录到已在本地添加集群的 vSphere Web Client 以查看该集群的 QoSSIOC 事件。
+
+.您需要什么？ #8217 ；将需要什么
+* 必须至少添加并运行一个集群。
+* 必须使用此插件的 "QoSSIOC Settings" 页面配置并验证 QoSSIOC 服务是否正在运行。
+* 必须至少有一个数据存储库启用 QoSSIOC 自动化。
+
+
+.步骤
+. 从 vCenter 插件中，选择 * NetApp Element Configuration* 。
+. 选择 * QoSSIOC Events* 。
+
+
+
+
+== QoSSIOC 事件数据
+
+* * 日期 * ： QoSSIOC 事件的日期和时间。
+* * 数据存储库名称 * ：用户定义的数据存储库名称。
+* * 集群 IP* ：包含事件源数据存储库的集群的 IP 地址。
+* * 卷 ID* ：系统为关联卷生成的 ID 。
+* * 最小 IOPs* ：卷的当前最小 IOPS QoS 设置。
+* * 最大 IOPs* ：卷的当前最大 IOPS QoS 设置。
+* *Burst IOPs* ：卷的当前最大突发 QoS 设置。
+* * 突发时间 * ：允许突发的时间长度。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: task_vcp_unregister.html 
+summary: 您可以从 vCenter 取消注册适用于 vCenter Server 的 NetApp Element 插件。 
+keywords: netapp, vcp, vcenter, plugin, element, unregister 
+---
+= 取消注册 vCenter 插件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, unregister
+
+
+[role="lead"]
+您可以使用以下过程之一从 vCenter 取消注册适用于 vCenter Server 的 NetApp Element 插件。
+
+.您需要什么？ #8217 ；将需要什么
+* 用于注销插件的 vCenter 管理员角色特权。
+* 管理节点的 IP 地址。
+* 要从中取消注册此插件的 vCenter 的 URL 和凭据。
+
+
+对于 vSphere 6.7 及更早版本，注销插件的效果与禁用此插件相同，但不会删除本地安装的所有关联文件和文件夹。要删除所有插件文件，请参见上的说明 link:task_vcp_remove.html["正在删除插件"]。
+
+对于 vSphere 7.0 ，注销插件后，所有文件都会自动删除。
+
+.步骤
+. 要取消注册此插件，请按照适用于您已安装版本的操作步骤进行操作：
++
+** 对于 vCenter 插件 3.0 或更高版本，请使用 vCenter 插件注册实用程序取消注册此插件：
++
+... 在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口： `https://<ManagementNodeIP>:9443` 。
+... 导航到 * 注销插件 * 。
+... 输入以下内容：
++
+.... 已注册此插件的 vCenter 服务的 IP 地址或 FQDN 服务器名称。
+.... vCenter 管理员用户名。
+.... vCenter 管理员密码。
+
+
+... 选择 * 取消注册 * 。
+
+
+** 对于 vCenter 插件 2.7 到 2.7.1 ：
++
+*** 使用浏览器中的 vCenter Managed Object Browser （ MOB ）界面手动取消注册：
++
+.... 输入 MOB URL ： `https://<vcenter>/mob`
+.... 选择 * 内容 > 扩展管理器 > 注销扩展 * 。
+.... 输入 `com.solidfire` 。
+.... 选择 * 调用方法 * 。
+
+
+*** 使用 PowerCLI 注销：
++
+[listing]
+----
+Connect-VIServer -Server $vcenter -User administrator@vsphere.local -Password xxxxXXx -Force -ErrorAction Stop -SaveCredentials
+$em = Get-View ExtensionManager
+$em.ExtensionList | ft -property Key
+$em.UnregisterExtension("com.solidfire")
+$em.UpdateViewData()
+$em.ExtensionList | ft -property Key
+Disconnect-VIServer * -Confirm:$false
+----
+
+
+** 对于 vCenter 插件 2.6.1 或更早版本：
++
+... 在浏览器中输入注册实用程序的 URL 或在程序目录中找到该实用程序：
++
+**** `https://<FDVAorManagementNodeIP>:8443`
+**** ` /opt/solidfire/vcp/bin/vcp-reg.sh`
+
+
+... 在 vCenter Plugin Register/Unregister 窗口中，选择 * 取消注册 * 。
+
+
+
+
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

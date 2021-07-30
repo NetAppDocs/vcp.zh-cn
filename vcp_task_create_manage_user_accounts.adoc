@@ -1,0 +1,124 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_create_manage_user_accounts.html 
+summary: 您可以使用此插件创建和管理用户帐户。 
+keywords: netapp, storage, accounts, vcp, vcenter, element 
+---
+= 创建和管理用户帐户
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+link:vcp_concept_accounts.html["用户帐户"^] 用于控制对基于 NetApp Element 软件的网络上存储资源的访问。
+
+.选项
+* <<Create an account>>
+* <<Edit an account>>
+* <<Delete an account>>
+
+
+
+
+== 创建帐户
+
+您可以创建一个唯一的用户帐户，以允许访问存储卷。
+
+.您需要什么？ #8217 ；将需要什么
+* 必须至少添加并运行一个集群。
+
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 帐户 * 子选项卡。
+. 选择 * 创建帐户 * 。
+. 输入用户名。
++
+
+TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集群或 vCenter Server ，这一点尤其重要。
+
+. 在 * CHAP 设置 * 部分中：
++
+.. 输入用于 CHAP 节点会话身份验证的启动程序密钥。
+.. 输入 CHAP 节点会话身份验证的目标密钥。
++
+
+NOTE: 启动程序密钥和目标密钥必须不同。如果这些字段留空，系统将生成身份验证凭据。
+
+
+
+. 单击 * 确定 * 以创建帐户。
+
+
+
+
+== 编辑帐户
+
+您可以编辑用户帐户以更改状态或 CHAP 密码。更改 CHAP 设置可能会导致发生原因丢失主机与其关联卷之间的连接。
+
+如果要在管理节点中使用永久性卷，请勿修改与这些卷关联的帐户的帐户名称。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 帐户 * 子选项卡。
+. 选中要编辑的帐户对应的复选框。
+. 选择 * 操作 * 。
+. 在显示的菜单中，选择 * 编辑 * 。
+. 根据需要更改以下内容：
++
+.. 编辑帐户的访问状态。
++
+
+IMPORTANT: 将访问权限更改为 * 锁定 * 将终止与帐户的所有 iSCSI 连接，并且无法再访问此帐户。与帐户关联的卷会保留下来，但这些卷不能通过 iSCSI 发现。
+
+.. 编辑用于节点会话身份验证的启动程序密钥或目标密钥凭据。
++
+
+NOTE: 如果不更改凭据，它们将保持不变。如果将凭据字段留空，系统将生成新密码。
+
+
+
+. 单击 * 确定 * 。
+
+
+
+
+== 删除帐户
+
+您可以使用 NetApp Element 管理扩展点删除用户帐户。
+
+删除并清除与帐户关联的任何卷，或者将这些卷重新分配给其他帐户。
+
+
+IMPORTANT: 如果要在管理节点中使用永久性卷，请勿删除与这些卷关联的帐户。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 帐户 * 子选项卡。
+. 选中要删除的帐户对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 删除 * 。
+. 确认操作。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

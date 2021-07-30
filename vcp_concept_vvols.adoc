@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_vvols.html 
+summary:  
+keywords: netapp, vvol, virtual volume, storage container, protocol endpoint, vcp, vcenter, element 
+---
+= 虚拟卷（ VVOL ）
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+vSphere 虚拟卷是 VMware 的一种存储模式，可将 vSphere 的大部分存储管理从存储系统迁移到 VMware vCenter 。使用虚拟卷（ VVOL ），您可以根据各个虚拟机的要求分配存储。
+
+
+
+== 绑定
+
+NetApp Element 集群会选择最佳协议端点，创建将 ESXi 主机和虚拟卷与协议端点关联的绑定，并将此绑定返回到 ESXi 主机。绑定后， ESXi 主机可以对绑定的虚拟卷执行 I/O 操作。
+
+
+
+== 协议端点
+
+VMware ESXi 主机使用称为协议端点的逻辑 I/O 代理与虚拟卷进行通信。ESXi 主机将虚拟卷绑定到协议端点以执行 I/O 操作。当主机上的虚拟机执行 I/O 操作时，关联的协议端点会将 I/O 定向到与其配对的虚拟卷。
+
+NetApp Element 集群中的协议端点用作 SCSI 管理逻辑单元。集群会自动创建每个协议端点。对于集群中的每个节点，都会创建一个相应的协议端点。例如，一个四节点集群将具有四个协议端点。
+
+iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协议。协议端点不能由用户删除或修改，不与帐户关联，也不能添加到卷访问组。在 NetApp Element 管理扩展点的 "* VVols">"Protocol Endpoints" 页面上，您可以查看协议端点信息。
+
+
+
+== 存储容器
+
+存储容器是映射到 NetApp Element 帐户的逻辑结构，用于报告和资源分配。它们可以将原始存储容量汇聚在一起，或者聚合存储系统可以为虚拟卷提供的存储功能。在 vSphere 中创建的 VVol 数据存储库将映射到单个存储容器。默认情况下，单个存储容器包含 NetApp Element 集群中的所有可用资源。如果需要对多租户进行更精细的监管，则可以创建多个存储容器。
+
+存储容器的功能类似于传统帐户，可以同时包含虚拟卷和传统卷。每个集群最多支持四个存储容器。要使用 VVol 功能，至少需要一个存储容器。在 NetApp Element 管理扩展点的 "* VVols">"Storage Containers" 页面上，您可以创建，删除和查看有关存储容器的详细信息。您可以在创建 VVOL 期间在 vCenter 中发现存储容器。
+
+
+
+== VASA 提供程序
+
+要使 vSphere 能够识别 NetApp Element 集群上的 VVOL 功能， vSphere 管理员必须向 vCenter 注册 NetApp Element VASA Provider 。VASA 提供程序是 vSphere 与 Element 集群之间的带外控制路径。它负责代表 vSphere 在 Element 集群上执行请求，例如创建 VM ，使 VM 可供 vSphere 使用以及向 vSphere 公布存储功能。
+
+VASA 提供程序在 Element 软件中作为集群主节点的一部分运行。集群主节点是一种高可用性服务，可根据需要故障转移到集群中的任何节点。如果集群主节点进行故障转移， VASA 提供程序将随之移动，以确保 VASA 提供程序的高可用性。所有配置和存储管理任务都使用 VASA 提供程序，该提供程序可处理 Element 集群上所需的任何更改。
+
+
+NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39["NetApp 软件下载"^] 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

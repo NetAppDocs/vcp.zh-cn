@@ -1,0 +1,157 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_qos_policies.html 
+summary: 您可以设置和修改 QoS 策略以应用于存储集群中的卷。 
+keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, element 
+---
+= 创建和管理卷 QoS 策略
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过 QoS （服务质量）策略，您可以创建和保存可应用于多个卷的标准化服务质量设置。要使用 QoS 策略，选定集群必须为 Element 10.0 或更高版本；否则， QoS 策略功能将不可用。
+
+使用 NetApp Element 管理扩展点，您可以通过完成以下任务来配置和管理 QoSSIOC ：
+
+* <<Create a QoS policy>>
+* <<Apply a QoS policy to volumes>>
+* <<Change the QoS policy association of a volume>>
+* <<Edit a QoS policy>>
+* <<Delete a QoS policy>>
+
+
+
+
+== 创建 QoS 策略
+
+您可以创建 QoS 策略并将其应用于性能应相当的卷。
+
+
+NOTE: 不应同时使用 QoSSIOC 自动化和 QoS 策略。如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击 * QoS 策略 * 子选项卡。
+. 单击 * 创建 QoS 策略 * 。
+. 输入 * 策略名称 * 。
++
+
+TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集群或 vCenter Server ，这一点尤其重要。
+
+. 输入最小 IOPS ，最大 IOPS 和突发 IOPS 值。
+. 单击 * 确定 * 。
+
+
+
+
+== 将 QoS 策略应用于卷
+
+您可以将现有 QoS 策略应用于多个卷。如果要将策略批量应用于一个或多个卷，请使用此过程。
+
+要批量应用的 QoS 策略已是 <<Create a QoS policy,已创建>>。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击 * 卷 * 子选项卡。
+. 选中要应用 QoS 策略的每个卷对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 应用 QoS 策略 * 。
+. 在对话框中，从下拉列表中选择要应用于选定卷的 QoS 策略。
+. 单击 * 确定 * 。
+
+
+
+
+== 更改卷的 QoS 策略关联
+
+您可以从卷中删除 QoS 策略关联，也可以选择其他 QoS 策略或自定义 QoS 。
+
+要修改的卷为 <<Apply a QoS policy to volumes,已关联>> 使用 QoS 策略。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击 * 卷 * 子选项卡。
+. 选中包含要修改的 QoS 策略的卷对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 编辑 * 。
+. 在对话框的 * 服务质量 * 下，选择要应用于卷的新 QoS 策略或自定义设置。
+. 如果选择了自定义设置，请修改 * 最小 IOPS* ， * 最大 IOPS* 和 * 突发 IOPS* 值。
++
+
+NOTE: 您也可以单击 * 重置默认 QoS* 以还原默认 IOPS 值。
+
+. 单击 * 确定 * 。
+
+
+
+
+== 编辑 QoS 策略
+
+您可以更改现有 QoS 策略的名称或编辑与该策略关联的值。更改 QoS 策略性能值会影响与此策略关联的所有卷的 QoS 。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击 * QoS 策略 * 子选项卡。
+. 选中要编辑的 QoS 策略对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 编辑 * 。
+. 在 * 编辑 QoS 策略 * 对话框中，根据需要修改以下属性：
++
+** * 策略名称 * ：用户为 QoS 策略定义的名称。
+** * 最小 IOPS* ：卷保证的最小 IOPS 数。
+** * 最大 IOPS* ：卷允许的最大 IOPS 数。
+** * 突发 IOPS* ：卷在短时间内允许的最大 IOPS 数。默认值为 15 ， 000 。
++
+
+NOTE: 您也可以单击重置默认 QoS 以还原默认 IOPS 值。
+
+
+
+. 单击 * 确定 * 。
+
+
+
+
+== 删除 QoS 策略
+
+您可以删除不再需要的 QoS 策略。删除 QoS 策略时，与该策略关联的所有卷都会保留先前由该策略定义的 QoS 值，但保留为单个卷 QoS 。系统将删除与已删除 QoS 策略的任何关联。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击 * QoS 策略 * 子选项卡。
+. 选中要删除的 QoS 策略对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 删除 * 。
+. 确认操作。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

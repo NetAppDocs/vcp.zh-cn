@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_qossioc.html 
+summary:  
+keywords: netapp, quality of service, volume performance, sioc, storage I/O control, vcp 
+---
+= QoSSIOC
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+适用于 vCenter Server 的 NetApp Element 插件可作为一项可选设置启用自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 ）标准数据存储库上所有 VM 的设置。可以为任何标准数据存储库启用 QoS 和 SIOC 集成（ QoSSIOC ），从而对所有关联 VM 上的所有 SIOC 设置运行扫描。
+
+QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。QoSSIOC 服务使用所有 SIOC 预留或共享的总和以及 IOPS 限制的总和来确定每个数据存储库的底层卷的最小和最大 QoS 。此外，还提供了一个可配置的突发因子。
+
+在使用 QoSSIOC 自动化之前，应考虑以下各项：
+
+* QoSSIOC 自动化和 https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html#qos-policies["QoS 策略"^] 不应同时使用。如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。
+* QoSSIOC 最适合日常或每天多次重新启动，启动或关闭的轻型 VM ，例如虚拟桌面或专用自助服务终端类型的 VM 。
+* QoSSIOC 不太适合服务环境，例如，数据库，应用程序或基础架构服务器很少重新启动，需要对存储进行持续等量访问。QoS 策略最适合这些环境。
+* QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。
+
+
+
+NOTE: 当 VMDK 的 SIOC 设置处于默认的共享级别正常和默认的 IOPS 限制无限制时，共享和限制 IOPS 值会计入底层卷的总 QoS 。如果 VMDK 的 SIOC 设置不在默认级别，则 SIOC 共享将影响底层卷的最小 QoS ，而 SIOC IOPS 限制值将影响到最大 QoS 。
+
+
+TIP: 可以通过 vSphere API 设置预留值。如果为 VMDK 设置了预留值，则会忽略共享，而改用预留值。
+
+
+TIP: https://activeiq.solidfire.com["SolidFire Active IQ"^] 具有一个 QoS 建议页面，可提供有关最佳配置和设置 QoS 设置的建议。
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_config_extension_point.html 
+summary:  
+keywords: netapp, vcp, element, plugin, plug-in, config, extension point 
+---
+= NetApp Element 配置扩展点
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+通过 NetApp Element 配置扩展点，您可以添加和管理集群，为链接模式下的 vCenter Server 分配存储集群以及为 QoSSIOC 配置管理节点设置。
+
+
+NOTE: 您的 vSphere Web Client 可能与下图所示略有不同，具体取决于安装的 vSphere 版本。
+
+image::vcp_config_extension_point.png[配置扩展点]
+
+NetApp Element 配置扩展点提供了以下选项卡：
+
+* * 入门 * ：介绍此插件的扩展点以及可执行的操作。您可以从每个页面隐藏 " 入门 " 页面，也可以从 NetApp Element 配置扩展点中的 * 关于 * 选项卡还原这些页面。
+* * 集群 * ：管理此插件控制的 NetApp Element 集群。您还可以启用，禁用或配置集群专用功能。
+* * QoSSIOC 设置 * ：为管理节点上的 QoSSIOC 服务配置凭据，以便与 vCenter 进行通信。
+* * QoSSIOC Events* ：显示有关检测到的所有 QoSSIOC 事件的信息。
+* * 关于 * ：显示插件版本信息并提供服务包下载选项。
+
+
+[discrete]
+== 了解更多信息
+
+* link:vcp_concept_management_extension_point["NetApp Element 管理扩展点"]
+* link:concept_vcp_product_overview.html["适用于 vCenter Server 的 NetApp Element 插件概述"]
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

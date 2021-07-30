@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: concept_vcp_product_overview.html 
+summary: 有关此插件的高级信息，包括组件和重要 URL 。 
+keywords: netapp, vcp, element, vcenter plugin, plug-in 
+---
+= 适用于 vCenter Server 的 NetApp Element 插件产品概述
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, vcp, element, vcenter plugin, plug-in
+
+
+[role="lead"]
+适用于 vCenter Server 的 NetApp Element 插件（ VCP ）是一个与 VMware vSphere Web Client 用户界面（ UI ）集成的基于 Web 的工具。该插件是 VMware vSphere 的一个扩展和备用可扩展，用户友好型界面，可管理和监控运行 * NetApp Element software* 软件的存储集群。
+
+您可以使用此插件用户界面发现和配置集群，并管理，监控和分配集群容量中的存储，以配置数据存储库和虚拟数据存储库（对于虚拟卷）。集群在网络上显示为一个本地组，该组通过虚拟 IP 地址呈现给主机和管理员。您还可以通过实时报告功能监控集群活动，包括执行各种操作时可能发生的任何事件的错误和警报消息。
+
+
+
+== 与此插件相关的 NetApp 组件
+
+* * 注册实用程序 * ：一种用于管理的工具 link:vcp_concept_qossioc.html["QoSSIOC"] 向 vCenter 注册服务和插件。
+* * 管理服务 * ：包含适用于 vCenter 插件的 QoSSIOC 服务的微服务。此插件的升级将作为管理服务包的一部分发布。
++
+
+TIP: 了解更多信息 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理服务版本"^]。
+
+* * 管理节点（ mNode ） * ：与一个或多个基于 Element 软件的存储集群并行运行的虚拟机。从 Element 11.3 版开始，管理服务托管在管理节点上，从而可以在主要版本之外更快地更新所选软件服务。
+
+
+
+
+== 通用 URL
+
+除了 vSphere 之外，这些 URL 也是您在 vCenter 插件中使用的一些常见 URL ：
+
+[cols="2*"]
+|===
+| URL | Description 
+
+
+| `https://[management node IP address] ： 9443` | 在 vSphere Web Client 中注册 vCenter 插件软件包。 
+
+
+| `https://[management node IP address] ： 442` | 从管理节点的每节点 UI 中，访问网络和集群设置并利用系统测试和实用程序。 https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html["了解更多信息。"^] 
+
+
+| `https://[management node IP address]` | 访问 NetApp Hybrid Cloud Control 升级管理服务，或者扩展，监控和管理安装。 https://docs.netapp.com/us-en/hci/docs/task_hci_getstarted.html["了解更多信息。"^] 
+
+
+| `https://[management node IP address]/mnode` | 使用管理节点中的 REST API UI 手动更新管理服务或管理资产。 https://docs.netapp.com/us-en/hci/docs/task_mnode_access_ui.html["了解更多信息。"^] 
+
+
+| `https://[storage cluster MVIP address]` | 访问 NetApp Element 软件 UI 。 
+|===
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* link:vcp_concept_config_extension_point.html["NetApp Element 配置扩展点"]
+* link:vcp_concept_management_extension_point.html["NetApp Element 配置扩展点"]
+

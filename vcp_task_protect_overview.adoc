@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_protect_overview.html 
+summary: 您可以确保在需要的位置创建和存储数据副本。 
+keywords: netapp, vcp, vcenter, element, protect, data 
+---
+= 使用适用于 vCenter Server 的 NetApp Element 插件保护数据
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用适用于 vCenter Server 的 NetApp Element 插件确保在需要的位置创建和存储数据副本。为此，您可以创建和管理卷和组快照，设置快照计划以及创建卷和集群对关系以在远程集群之间进行复制。
+
+.选项
+* link:vcp_task_protect_snapshots_volume.html["创建和管理卷快照"]
+* link:vcp_task_protect_snapshots_group.html["创建和管理组快照"]
+* link:vcp_task_protect_snapshots_schedules.html["创建快照计划"]
+* link:vcp_task_protect_remote_replication.html["在集群之间执行远程复制"]
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

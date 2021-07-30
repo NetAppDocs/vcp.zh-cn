@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_protection_domains.html 
+summary:  
+keywords: netapp, vcp, element, plugin, plug-in, protection, domain 
+---
+= 保护域
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+保护域是一个节点或一组分组在一起的节点，这样，域中的任何节点或所有节点都可能发生故障，而不会导致集群丢失数据可用性。通过保护域功能，您可以监控集群的资源容量，以确保集群仍能够从故障事件中修复。您可以在节点或机箱域级别选择监控：
+
+* * 节点级别 * 为每个节点定义每个保护域，每个节点可能位于机箱中。
+* * 机箱级别 * 按共享机箱的节点定义每个保护域。
+
+
+机箱域比节点域需要更多的潜在容量资源，才能对故障进行故障恢复。超过保护域阈值时，集群将不再具有足够的容量来从故障中恢复，同时保持数据可用性不中断。
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

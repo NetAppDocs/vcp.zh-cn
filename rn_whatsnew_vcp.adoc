@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: rn_whatsnew_vcp.html 
+summary: 了解此版本的适用于 vCenter Server 的 NetApp Element 插件中的新增功能。 
+keywords: netapp, vcp, vcenter, plugin, element, new, whats new 
+---
+= 适用于 vCenter Server 的 NetApp Element 插件中的新增功能和 #8217
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: netapp, vcp, vcenter, plugin, element, new, whats new
+
+
+[role="lead"]
+适用于 vCenter Server 4.7 的 NetApp Element 插件包含重要的安全改进功能，进一步完善了中的改进功能 https://security.netapp.com/advisory/ntap-20210315-0001/["最新的管理服务 2.17.56 修补程序"] 版本。
+
+适用于 vCenter Server 4.7 的 NetApp Element 插件随 2.18 版管理服务一起提供。
+
+
+
+== 适用于 vCenter Server 的 NetApp Element 插件 4.6
+
+在 4.6 版中，此插件现在支持 vSphere 7.0 Update 1 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。
+
+适用于 vCenter Server 4.6 的 NetApp Element 插件可与 2.16 版的管理服务配合使用。
+
+[discrete]
+== 了解更多信息
+
+* link:reference_earlier_versions.html["早期版本的 NetApp Element 插件文档"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["混合云控制和管理服务发行说明知识库"^]
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

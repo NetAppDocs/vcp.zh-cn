@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_reports_intro.html 
+summary: 使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。 
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performance 
+---
+= 使用报告选项监控系统性能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。
+
+使用 vCenter 插件，您可以通过以下方式监控集群组件和性能：
+
+* link:vcp_task_reports_overview.html["在概述页面上监控集群的整体运行状况"]
+* link:vcp_task_reports_alerts.html["监控系统警报"]
+* link:vcp_task_reports_event_logs.html["监控事件日志以进行故障排除"]
+* link:vcp_task_reports_volume_performance.html["监控卷性能"]
+* link:vcp_task_reports_iscsi.html["监控 iSCSI 会话以确定连接状态"]
+* link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"]
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

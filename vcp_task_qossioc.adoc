@@ -1,0 +1,222 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_qossioc.html 
+summary: 您可以为集群中已配置的存储设置和修改卷 QoS 和数据存储库 SIOC （ QoSSIOC ）。 
+keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element 
+---
+= 为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以为插件控制的单个卷和数据存储库设置 QoSSIOC 自动化。 link:vcp_concept_qossioc.html["QoSSIOC"] 是自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 ）标准数据存储库上所有 VM 的设置。
+
+管理节点上的 QoSSIOC 服务与 vCenter 进行通信并监控数据存储库上的 VM 活动。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。QoSSIOC 是一项可选功能，该插件无需使用它来管理存储集群。
+
+QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。
+
+
+NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或使 VVol 可供 vSphere 使用。有关详细信息，请参见适用于 vCenter Server 的 Element 插件文档中有关配置 VVol 功能的信息。
+
+对于链接模式，适用于 vCenter Server 的 NetApp Element 插件将使用您在单个 vCenter Server 上提供的 QoSSIOC 设置注册所有 vCenter Server 。
+
+使用 vCenter 插件，您可以通过完成以下任务来配置和管理 QoSSIOC ：
+
+
+
+=== 设置任务
+
+* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置 QoSSIOC 设置"]
+* <<Enabling QoSSIOC automation on datastores>>
+
+
+
+
+=== 管理任务
+
+* link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"^]
+* <<Edit QoSSIOC settings>>
+* <<Change the QoSSIOC service password>>
+* <<Disable QoSSIOC automation for a datastore>>
+* <<Clear QoSSIOC settings>>
+
+
+
+
+== 在数据存储库上启用 QoSSIOC 自动化
+
+在为插件启用 QoSSIOC 服务后，您可以为数据存储库启用 QoSSIOC 自动化并自定义虚拟机磁盘（ VMDK ）性能级别。
+
+您已拥有 link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["已配置 QoSSIOC 服务设置"] 在 QoSSIOC 设置页面上， * QoSSIOC 状态 * 字段显示 `up` 。
+
+QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。
+
+
+IMPORTANT: 如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。无论策略如何， QoSSIOC 都会覆盖和调整任何卷 QoS 设置的 QoS 值。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击选定数据存储库的 * QoSSIOC Automation" 列中的状态按钮。
++
+
+TIP: 确保数据存储库未在另一个 vCenter 上启用 QoSSIOC 集成，以防止 QoS 发生意外更改。
+
+. 选择 * 启用 QoS 和 SIOC* 。
+. 配置 * 突发因子 * 。
++
+突发因子是 VMDK 的 IOPS 限制（ SIOC ）设置的倍数。如果更改默认值，请确保使用的突发因子值在与任何 VMDK 的 IOPS 限制相乘后不会超过基于 NetApp Element 软件的卷的突发上限。
+
+. （可选）选择 * 覆盖默认 QoS" 并配置设置。
++
+如果数据存储库禁用了覆盖默认 QoS 设置，则会根据每个虚拟机的默认 SIOC 设置自动设置共享和限制 IOPS 值。
+
++
+
+TIP: 在未自定义 SIOC IOPS 限制的情况下，请勿自定义 SIOC 共享限制。
+
++
+
+TIP: 默认情况下，最大 SIOC 磁盘共享设置为无限制。在 VDI 等大型 VM 环境中，这可能会导致集群上的最大 IOPS 过量使用。启用 QoSSIOC 后，请始终选中 Override Default QoS 并将 Limit IOPS 选项设置为合理值。
+
+. 单击 * 确定 * 。
++
+为数据存储库启用 QoSSIOC Automation 后，此按钮将从 `D已标记` 更改为 `已启用` 。
+
+
+
+
+
+== 编辑 QoSSIOC 设置
+
+您可以更改活动 Element 管理节点的 QoSSIOC 和 vCenter 凭据。
+
+.步骤
+. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 编辑 * 。
+. 在 * 编辑 QoSSIOC 设置 * 对话框中，更改以下任一项：
++
+** * QoSSIOC 用户 ID* ： QoSSIOC 服务的用户 ID 。QoSSIOC 服务的默认用户 ID 为 `admin` 。对于 NetApp HCI ，用户 ID 与使用 NetApp 部署引擎在安装期间输入的用户 ID 相同。
+** * QoSSIOC Password* ： Element QoSSIOC 服务的密码。QoSSIOC 服务的默认密码为 SolidFire` 。如果您尚未创建自定义密码，则可以从注册实用程序 UI （`https://[management node IP] ： 9443` ）创建一个密码。
++
+
+NOTE: 对于 NetApp HCI 部署，默认密码会在安装期间随机生成。要确定密码，请参见本指南中的操作步骤 4 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["知识库"^] 文章。
+
+** * vCenter User ID* ：具有完全管理员角色特权的 vCenter 管理员的用户名。
+** * vCenter 密码 * ：具有完全管理员角色特权的 vCenter 管理员的密码。
+
+
+. 单击 * 确定 * 。当此插件可以成功与服务通信时， "QoSSIOC Status" 字段将显示 `up` 。
++
+
+NOTE: 请参见此内容 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["知识库"^] 要在状态为以下任一项时进行故障排除，请执行以下操作： * `DOwn` ： QoSSIOC is not enabled 。* `未配置` ：尚未配置 QoSSIOC 设置。* `网络关闭` ： vCenter 无法与网络上的 QoSSIOC 服务进行通信。mNode 和 SIOC 服务可能仍在运行。
+
++
+
+NOTE: 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为默认设置。QoSSIOC 设置将还原为最后一次已知的有效 QoSSIOC 设置，直到您为新管理节点提供有效的 QoSSIOC 设置为止。在为新管理节点设置 QoSSIOC 凭据之前，必须清除已配置管理节点的 QoSSIOC 设置。
+
+
+
+
+
+== 更改 QoSSIOC 服务密码
+
+您可以使用注册实用程序 UI 更改管理节点上 QoSSIOC 服务的密码。
+
+.您需要什么？ #8217 ；将需要什么
+* 管理节点已启动。
+
+
+此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作 <<Edit QoSSIOC settings,QoSSIOC 设置>> 页面。 NetApp Element
+
+.步骤
+. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 清除 * 。
+. 确认操作。
++
+此过程完成后， * QoSSIOC Status* 字段将显示 `Not Configured` 。
+
+. 在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口： `https://[management node IP] ： 9443` 。
++
+注册实用程序 UI 将显示此插件的 * 管理 QoSSIOC 服务凭据 * 页面。
+
++
+image::vcp_registration_ui_qossioc.png[VCP 注册实用程序菜单]
+
+. 输入以下信息：
++
+.. * 旧密码 * ： QoSSIOC 服务的当前密码。如果尚未分配密码，请键入默认密码 SolidFire` 。
++
+
+NOTE: 对于 NetApp HCI 部署，默认密码会在安装期间随机生成。要确定密码，请参见本指南中的操作步骤 4 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["知识库"^] 文章。
+
+.. * 新密码 * ： QoSSIOC 服务的新密码。
+.. * 确认密码 * ：再次输入新密码。
+
+
+. 单击 * 提交更改 * 。
++
+
+NOTE: QoSSIOC 服务会在您提交更改后自动重新启动。
+
+. 在 vSphere Web Client 中，选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 配置 * 。
+. 在 * 配置 QoSSIOC 设置 * 对话框的 * QoSSIOC 密码 * 字段中输入新密码。
+. 单击 * 确定 * 。
++
+当插件可以成功与服务通信时， * QoSSIOC Status* 字段将显示 `up` 。
+
+
+
+
+
+== 为数据存储库禁用 QoSSIOC 自动化
+
+您可以为数据存储库禁用 QoSSIOC 集成。
+
+.步骤
+. 选择 * NetApp Element 管理 > 管理 * 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 单击选定数据存储库的 * QoSSIOC Automation" 列中的按钮。
+. 清除 * 启用 QoS 和 SIOC* 复选框以禁用集成。
++
+清除启用 QoS 和 SIOC 复选框会自动禁用覆盖默认 QoS 选项。
+
+. 单击 * 确定 * 。
+
+
+
+
+== 清除 QoSSIOC 设置
+
+您可以清除 Element 存储管理节点（ mNode ）的 QoSSIOC 配置详细信息。在为新管理节点配置凭据或更改 QoSSIOC 服务密码之前，必须清除已配置管理节点的设置。清除 QoSSIOC 设置将从 vCenter ，集群和数据存储库中删除活动的 QoSSIOC 。
+
+.步骤
+. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
+. 单击 * 操作 * 。
+. 在显示的菜单中，选择 * 清除 * 。
+. 确认操作。
++
+此过程完成后， * QoSSIOC Status* 字段将显示 `Not Configured` 。
+
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

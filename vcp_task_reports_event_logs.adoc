@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_reports_event_logs.html 
+summary: 查看适用于 vCenter Server 的 NetApp Element 插件中的事件日志，其中列出了在集群上执行的操作以及指示错误的任何集群故障。 
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance 
+---
+= 监控事件日志以进行故障排除
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看事件日志，了解在选定集群上执行的操作以及可能发生的集群故障。大多数错误都会由系统自动解决。其他故障可能需要手动干预。
+
+.步骤
+. 从 vCenter 插件中，选择 * NetApp Element Management* 。
+. 选择 * 报告 * > * 事件日志 * 。
+. 要查看详细信息，请选择一个事件，然后单击 * 详细信息 * 。
+. 查看包括以下内容的事件信息：
++
+** * 事件类型 * ：记录的事件类型，例如 API 事件或克隆事件。
+** * 服务 ID* ：报告事件的服务的 ID （如果适用）。如果故障不与服务关联，则此值为零。
+** * 节点 * 或 * 驱动器 ID* ：报告事件的节点或驱动器的 ID （如果适用）。
+
+
+
+
+
+
+== 事件类型
+
+系统会报告多种类型的事件；每个事件都是系统已完成的一项操作。事件可以是例行事件，正常事件或需要管理员注意的事件。"Event Log" 页面上的 "Event Type" 列指示系统中发生事件的部分。
+
+
+NOTE: 系统不会在事件日志中记录只读 API 命令。
+
+以下列表介绍了事件日志中可能显示的事件类型。
+
+* apiEvent* ：用户通过 API 或 Web UI 启动的事件，用于修改设置。
+* * 二进制分配事件 * ：与数据箱分配相关的事件。箱本质上是保存数据的容器，并在整个集群中进行映射。
+* *binSyncEvent* ：与在块服务之间重新分配数据相关的系统事件。
+* * bsCheckEvent* ：与块服务检查相关的系统事件。
+* * bsKillEvent* ：与块服务终止相关的系统事件。
+* *bulkOpEvent* ：与对整个卷执行的操作相关的事件，例如备份，还原，快照或克隆。
+* * cloneEvent* ：与卷克隆相关的事件。
+* * clusterMasterEvent* ：集群初始化或集群配置更改时显示的事件，例如添加或删除节点。
+* * csumEvent* ：与磁盘上的无效数据校验和相关的事件。
+* * dataEvent* ：与读取和写入数据相关的事件。
+* * dbEvent* ：与集群中的集合节点维护的全局数据库相关的事件。
+* * 驱动器事件 * ：与驱动器操作相关的事件。
+* * 加密 AtRestEvent* ：与集群上的加密过程相关的事件。
+* * 信号群事件 * ：与增加或减少集合中节点数相关的事件。
+* * fibreChannelEvent* ：与节点配置和连接相关的事件。
+* * gcEvent* ：与每 60 分钟运行一次以回收块驱动器上的存储的进程相关的事件。此过程也称为垃圾收集。
+* *ieEvent* ：内部系统错误。
+* * 安装事件 * ：自动软件安装事件。正在待定节点上自动安装软件。
+* * iSCSIEvent * ：与系统中的 iSCSI 问题相关的事件。
+* * 限制事件 * ：与帐户或集群中接近允许的最大卷数或虚拟卷数相关的事件。
+* * 维护模式事件 * ：与节点维护模式相关的事件，例如禁用节点。
+* *networkEvent* ：与虚拟网络状态相关的事件。
+* * platformHardwareEvent* ：与在硬件设备上检测到的问题相关的事件。
+* * remoteClusterEvent* ：与远程集群配对相关的事件。
+* * scheduleEvent* ：与计划快照相关的事件。
+* * 服务事件 * ：与系统服务状态相关的事件。
+* * sliceEvent* ：与分区服务器相关的事件，例如删除元数据驱动器或卷。
++
+有三种类型的分区重新分配事件，其中包括有关分配卷的服务的信息：
+
+* 翻转：将主服务更改为新的主服务
++
+`sliceID oldPrimaryServiceID->newPrimaryServiceID`
+
+* 移动：将二级服务更改为新的二级服务
++
+`sliceID ｛ oldSecondaryServiceID ｝ -> ｛ newSecondaryServiceID ｝`
+
+* 修剪：从一组服务中删除卷
++
+`sliceID ｛ oldSecondaryServiceID ｝`
+
+* * snmpTrapEvent* ：与 SNMP 陷阱相关的事件。
+* * statEvent* ：与系统统计信息相关的事件。
+* * tsEvent* ：与系统传输服务相关的事件。
+* * 未预期异常 * ：与意外系统异常相关的事件。
+* *ureEvent* ：与从存储设备读取时发生的不可恢复读取错误相关的事件。
+* * vasaProviderEvent* ：与 VASA （ vSphere 存储感知 API ）提供程序相关的事件。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

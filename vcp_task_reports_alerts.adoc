@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_reports_alerts.html 
+summary: 通过使用适用于 vCenter Server 的 NetApp Element 插件的报告页面监控警报，这些警报可提供信息，警告或错误，指示集群的运行状况。 
+keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance 
+---
+= 监控系统警报
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以监控警报，这些警报是指示集群运行状况的信息，警告或错误。
+
+警报是指集群故障或错误，会在发生时进行报告。大多数错误会自动自行解决；但是，某些错误可能需要手动干预。系统会在警报页面上报告每个警报的警报错误代码。错误代码可帮助您确定系统中哪个组件出现警报以及生成警报的原因。请参见 link:vcp_reference_reports_alert_errors.html["系统警报列表"] 有关说明和修复步骤。
+
+解析问题描述后，系统会自行轮询并将此问题描述标识为已解析。然后，有关警报的所有信息（包括警报解决日期）将移至 "Resolved" 视图。
+
+.步骤
+. 从 vCenter 插件中，选择 * NetApp Element Management* 。
+. 选择 * 报告 * > * 警报 * 。
+. 监控以下集群警报信息：
++
+** * ID * ：集群警报的唯一 ID 。
+** * 严重性 *
++
+*** * 警告 * ：可能很快需要关注的次要问题描述。在此严重性级别下，仍允许系统升级。
+*** * 错误 * ：可能会降低发生原因性能或丢失高可用性（ HA ）的故障。错误通常不会影响服务。
+*** * 严重 * ：影响服务的严重故障。系统无法提供 API 或客户端 I/O 请求。在此状态下运行可能会导致数据丢失。
+*** * 最佳实践 * ：未使用建议的系统配置最佳实践。
+
+
+** * 类型 *
++
+*** * 节点 * ：影响整个节点的故障。
+*** * 驱动器 * ：影响单个驱动器的故障。
+*** * 集群 * ：影响整个集群的故障。
+*** * 服务 * ：影响集群上某个服务的故障。
+*** * 卷 * ：影响集群上卷的故障。
+
+
+** * 节点 * ：此故障所引用节点的节点 ID 。对于节点和驱动器故障，会提供此参数，否则会设置为 - （短划线）。
+** * 驱动器 ID* ：此故障所引用的驱动器的驱动器 ID 。对于驱动器故障，会提供此参数，否则会设置为 - （短划线）。
+** * 错误代码 * ：指示故障原因的描述性代码。
+** * 详细信息 * ：故障的详细问题描述。
+** * 时间 * ：此标题仅在 Active 筛选器视图中可见。记录故障的日期和时间。
+** * 解决日期 * ：此标题仅在已解决筛选器视图中可见。解决故障的日期和时间。
+
+
+. 要验证问题描述是否已解决，请在 "Resolved" 视图中查找它。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

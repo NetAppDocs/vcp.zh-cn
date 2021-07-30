@@ -1,0 +1,211 @@
+---
+sidebar: sidebar 
+permalink: vcp_reference_troubleshoot_vcp.html 
+summary: 您可以了解此插件的一些常见问题以及解决这些问题的步骤。 
+keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, alert, cluster, performance 
+---
+= 对 vCenter 插件进行故障排除
+:hardbreaks:
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: media/
+
+
+[role="lead"]
+您需要了解适用于 vCenter Server 的 NetApp Element 插件的一些常见问题以及解决这些问题的步骤。
+
+* <<Plug-in registration successful but icons do not appear in web client>>
+* <<Error registering plug-in using Registration UI>>
+* <<Error updating plug-in using Registration UI>>
+* <<Error message that NetApp extension cannot be upgraded>>
+* <<Removing plug-in completes successfully but icons remain>>
+* <<Plug-in cannot be unregistered or removed after admin password change>>
+* <<Plug-in management tasks fail or volumes are not accessible to ESXi host>>
+* <<Failure occurs during vCenter Plug-in use on Firefox 59.0.2 browsers>>
+* <<Delete datastore operation fails>>
+* <<Cluster pair cannot connect using a pairing key>>
+* <<Error message for QoSSIOC status>>
+* <<QoSSIOC service shown as available but is unavailable>>
+* <<QoSSIOC is enabled for datastore but unavailable>>
+
+
+
+
+== 插件注册成功，但图标未显示在 Web 客户端中
+
+注册显示为成功，但在 vSphere Web Client 中看不到插件图标。
+
+.更正操作
+* 从 vSphere Web Client 中注销并重新登录。可能需要关闭并重新打开浏览器。
+* 清除浏览器缓存。
+* 从 vCenter 中，从 Windows 管理工具中的服务菜单重新启动 vSphere Web Client 服务或重新启动 vCenter 。
+* 确保您具有与 vCenter 管理员角色关联的所有必需的默认管理权限。
+* 检查插件 ZIP 文件是否已成功下载到 vCenter ：
++
+.. 在 vCenter 中打开 `vsphere_client_virGo.log` 。6.5 和 6.7 版的 vCenter 日志文件位于以下位置：
++
+*** 闪存安装： ` /var/log/vmware/vsphere-client/logs/vsphere_client_virGo.log`
+*** HTML5 安装： ` /var/log/vmware/vsphere-ui/logs/vsphere_client_virGo.log`
+
+
+.. 如果失败消息指示 ZIP 下载失败，请重新下载此 ZIP 。
++
+
+NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或取消注册并使用更正后的 URL 重新注册此插件。如果指定了 HTTP URL 而未更改 `allowHTTP` 设置，则也可能无法下载 ZIP 。
+
+
+
+* 验证网络端口。确保可通过所需端口从 vCenter 双向访问管理节点。
+* 检查 vCenter 的 MOB 扩展记录 (https://<vcenterIP>/mob/?moid=ExtensionManager&doPath=extensionList["com.solidfire"].server ），其中包含插件 ZIP 的下载位置 URL ：
++
+.. 将 URL 粘贴到浏览器中。
+.. 验证是否可以下载此插件 ZIP 。
++
+*** 如果可以下载此插件 ZIP ，请继续执行下一步。
+*** 如果无法下载此插件 ZIP ，请检查 vCenter Server 与管理节点之间是否存在网络问题。
+
+
+.. 如果无法下载此插件，请将 MOB 记录中的 `serverThumbprint` 与浏览器中显示的 ZIP URL 的证书 SHA-1 进行比较：
++
+... 如果 MOB 中的注册记录的 URL 或 SHA-1 不正确或过时，请取消注册此插件并重新注册此插件。
+... 如果此问题仍然存在且无法访问此 ZIP ，请检查此 ZIP URL 以确定是否存在使用管理节点地址的问题描述。在某些情况下，可能需要使用此插件的注册实用程序自定义 URL ，以便可以下载此 ZIP 文件。
+
+
+
+
+
+
+
+
+== 使用注册用户界面注册插件时出错
+
+使用注册实用程序时，向 vCenter 服务器注册此插件时出错。已安装密钥为 `com.solidfire` 的插件。
+
+在注册实用程序中，使用 * 更新插件 * ，而不是 * 注册插件 * 。
+
+
+
+== 使用注册用户界面更新插件时出错
+
+使用注册实用程序时，针对 vCenter 服务器更新此插件时出错。未为更新安装密钥为 `com.solidfire` 的插件。
+
+在注册实用程序中，使用 * 注册插件 * ，而不是 * 更新插件 * 。
+
+
+
+== 无法升级 NetApp 扩展的错误消息
+
+.message
+[listing]
+----
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Could not open connection.
+----
+在将 Windows vCenter Server 从 6.0 版升级到 6.5 期间，您会看到一条警告，指出 NetApp 扩展无法升级或可能无法与新的 vCenter Server 配合使用。完成升级并登录到 vSphere Web Client 后，如果选择 vCenter 插件扩展点，则会发生此错误。发生此错误的原因是，存储运行时数据库的目录已从 6.0 更改为 6.5 。vCenter 插件无法创建运行时所需的文件。
+
+.更正操作
+. 取消注册此插件。
+. 删除插件文件。
+. 重新启动 vCenter 。
+. 注册此插件。
+. 登录到 vSphere Web Client 。
+
+
+
+
+== 删除插件成功完成，但图标仍存在
+
+已成功删除 vCenter 插件软件包文件，但在 vSphere Web Client 中仍可看到插件图标。
+
+从 vSphere Web Client 中注销并重新登录。可能需要关闭并重新打开浏览器。如果注销 vSphere Web Client 无法解析问题描述，则可能需要重新启动 vCenter Server Web 服务。此外，其他用户可能已有会话。必须关闭所有用户会话。
+
+
+
+== 更改管理员密码后，无法取消注册或删除插件
+
+更改用于注册此插件的 vCenter 的管理员密码后，无法取消注册或删除此 vCenter 插件。
+
+对于插件 2.6 ，转到 vCenter 插件 * 注册 */* 取消注册 * 页面。单击 * 更新 * 按钮以更改 vCenter IP 地址，用户 ID 和密码。
+
+对于插件 2.7 或更高版本，请在插件的 mNode Settings 中更新 vCenter 管理员密码。
+
+对于插件 4.4 或更高版本，请在该插件的 QoSSIOC 设置中更新 vCenter 管理员密码。
+
+
+
+== 插件管理任务失败或 ESXi 主机无法访问卷
+
+创建，克隆和共享数据存储库任务失败，或者 ESXi 主机无法访问卷。
+
+.更正操作
+* 检查 ESXi 主机上是否存在用于数据存储库操作的软件 iSCSI HBA 并已启用。
+* 检查卷是否未删除或分配给不正确的卷访问组。
+* 检查卷访问组是否具有正确的主机 IQN 。
+* 检查关联帐户是否具有正确的 CHAP 设置。
+* 检查卷状态是否为 active ，卷访问是否为 `readWrite` ，以及 `512e` 是否设置为 true 。
+
+
+
+
+== 在 Firefox 59.0.2 浏览器上使用 vCenter 插件期间发生故障
+
+`名称： HttpErrorResponse 原始消息： HTTP 故障响应 https://vc6/ui/solidfire-war-4.2.0-SNAPSHOT/rest/vsphere//servers:[] 500 内部服务器错误返回消息：服务器错误。请重试或联系 NetApp 支持`
+
+此问题描述发生在使用 Firefox 的 vSphere HTML5 Web 客户端中。vSphere Flash 客户端不受影响。
+
+在浏览器 URL 中使用完整的 FQDN 。VMware 要求对 IP ，短名称和 FQDN 进行完全正向和反向解析。
+
+
+
+== 删除数据存储库操作失败
+
+删除数据存储库操作失败。
+
+检查是否已从数据存储库中删除所有 VM 。您必须先从数据存储库中删除 VM ，然后才能删除该数据存储库。
+
+
+
+== 集群对无法使用配对密钥进行连接
+
+使用配对密钥进行集群配对期间发生连接错误。"* 创建集群配对 * " 对话框中的错误消息指示没有到主机的路由。
+
+手动删除未配置的集群对在本地集群上创建的过程进行配对，然后重新执行集群配对。
+
+
+
+== QoSSIOC 状态错误消息
+
+此插件的 QoSSIOC 状态显示警告图标和错误消息。
+
+.更正操作
+* `无法访问 IP 地址` ： IP 地址无效或未收到响应。验证地址是否正确以及管理节点是否联机且可用。
+* `无法通信` ：可以访问 IP 地址，但对该地址的调用失败。这可能表示 QoSSIOC 服务未在指定地址运行，或者防火墙可能正在阻止流量。
+* `无法连接到 SIOC 服务` ：在管理节点上的 ` /opt/solidfire/SIOC/data/logs/` 中打开 `sIOC.log` （在较早的管理节点上为` /var/log` 或 ` /var/log/solidfire/` ）以验证 SIOC 服务是否已成功启动。启动 SIOC 服务可能需要 50 秒或更长时间。如果服务未成功启动，请重试。
+
+
+
+
+== QoSSIOC 服务显示为可用，但不可用
+
+QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。
+
+从 NetApp Element 配置扩展点的 * QoSSIOC 设置 * 选项卡中，单击刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
+
+
+
+== 已为数据存储库启用 QoSSIOC ，但此功能不可用
+
+已为数据存储库启用 QoSSIOC ，但 QoSSIOC 不可用。
+
+检查数据存储库上是否已启用 VMware SIOC ：
+
+. 在管理节点上的 ` /opt/solidfire/sioc/data/logs/` 中打开 `sioc.log` （在旧管理节点上为` /var/log` 或 ` /var/log/solidfire/` ）。
+. 搜索此文本：
++
+[listing]
+----
+SIOC is not enabled
+----
+. 请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["本文"] 针对特定于问题描述的更正操作。
+

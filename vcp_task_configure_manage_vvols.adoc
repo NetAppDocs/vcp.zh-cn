@@ -1,0 +1,288 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_configure_manage_vvols.html 
+summary: 您可以为集群中已配置的存储设置虚拟卷。 
+keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, element 
+---
+= 配置和管理虚拟卷
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， ， 和 NetApp Element 管理扩展点的主机。
+
+.您需要什么？ #8217 ；将需要什么
+* 您使用的 NetApp Element 10 或更高版本集群连接到与 VVol 兼容的 ESXi 6.5 或更高版本环境。
+* 您正在使用 vCenter 6.5 或更高版本。
+
+
+
+
+=== 设置任务
+
+要在适用于 vCenter Server 的 NetApp Element 插件中使用虚拟卷（ VVol ），您必须执行初始配置步骤。
+
+.步骤
+. <<Enable virtual volumes functionality on the NetApp Element cluster>>
+. <<Register the VASA provider with vCenter>>
+. <<Create a storage container and associated VVol datastore>>
+
+
+
+
+=== 管理任务
+
+* <<Monitor virtual volume resources>>
+* <<Create a VVol datastore for a storage container>>
+* <<Delete a storage container>>
+
+
+
+
+== 在 NetApp Element 集群上启用虚拟卷功能
+
+您必须使用 NetApp Element vSphere 配置扩展点手动启用 vSphere 虚拟卷（ VVol ）功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 从列表中选择要启用的集群。
+. 选择 * 操作 * 。
+. 在显示的菜单中，单击 * 启用 VVols* 。
++
+
+IMPORTANT: 启用 VVol 功能后，无法将其禁用。启用 vSphere 虚拟卷功能会永久更改 NetApp Element 软件配置。只有当集群连接到与 VMware ESXi VVol 兼容的环境时，才应启用 VVol 功能。您只能通过将集群恢复为出厂映像来禁用 VVol 功能并还原默认设置。
+
+. 选择 * 是 * 确认虚拟卷配置更改。
++
+
+NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA 流量打开端口 8444 ，并创建可由 vCenter 和所有 ESXi 主机发现的协议端点。
+
+. 为选定集群选择 * 操作 * 。
+. 在显示的菜单中，选择 * 详细信息 * 。
+. 从 * VASA Provider URL* 字段复制 VASA Provider URL 。您将使用此 URL 在 vCenter 中注册 VASA Provider 。
+. 请参见 <<Register the VASA provider with vCenter>> 后续步骤。
+
+
+
+
+== 向 vCenter 注册 VASA Provider
+
+您必须向 vCenter 注册 NetApp Element VASA Provider ，以便 vCenter 能够识别集群上的 VVOL 功能。向 vCenter 注册 VASA Provider 是一次性配置任务。
+
+.您需要什么？ #8217 ；将需要什么
+* 您已为集群启用 VVol 功能。
+
+
+本操作步骤介绍了 vSphere 6.7 版中提供的步骤。您的 vSphere 用户界面可能与所述略有不同，具体取决于安装的 vSphere 版本。有关其他帮助，请参见 VMware vCenter 文档。
+
+
+IMPORTANT: 请勿将 NetApp Element VASA Provider 注册到多个 vCenter 实例。由于 NetApp Element VASA 提供程序处理 SSL 的方式存在限制，因此只能将其注册到一个 vCenter 中。一个 vCenter 可以包含多个 NetApp Element 集群，但一个集群不能在两个 vCenter 实例之间共享。
+
+
+NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39["NetApp 软件下载"] 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。
+
+.步骤
+. 在 vSphere Client 主页中，单击 * 主机和集群 * 。
+. 选择要注册 NetApp Element VASA Provider 的 vCenter 实例。
+. 选择 * 配置 > 存储提供程序 * 。
+. 在 * 存储提供程序 * 中，单击添加图标。
+. 在 * 新建存储提供程序 * 对话框中输入以下信息：
++
+** VASA Provider 名称。
+** VASA Provider URL 。
++
+
+NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider URL 。您还可以从集群详细信息（ * NetApp Element 配置 > 集群 * ）或 Element UI 中的集群设置（`https://<MVIP>/cluster` ）中找到此 URL 。
+
+** NetApp Element 集群的管理帐户用户名。
+** NetApp Element 集群的管理帐户密码。
+
+
+. 选择 * 确定 * 以添加 VASA Provider 。
+. 出现提示时，批准 SSL 证书的指纹。此时， NetApp Element VASA Provider 应注册为状态 `Connected` 。
++
+
+NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在 * NetApp Element 配置 > 集群 * 中验证是否已启用此提供程序。为要启用的集群选择 * 操作 * ，然后单击 * 详细信息 * 。
+
+. 请参见 <<Create a storage container and associated VVol datastore>> 后续步骤。
+
+
+
+
+== 创建存储容器以及关联的 VVol 数据存储库
+
+您可以从 NetApp Element 管理扩展点中的 "VVols" 选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。
+
+.开始之前
+* 您已为集群启用 VVol 功能。
+* 您已在 vCenter 中为虚拟卷注册 NetApp Element VASA Provider 。
+
+
+.步骤
+. 选择 * NetApp Element 管理 > VVols* 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 存储容器 * 子选项卡。
+. 选择 * 创建存储容器 * 。
+. 在 * 创建新存储容器 * 对话框中输入存储容器信息：
++
+.. 输入存储容器的名称。
++
+
+TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集群或 vCenter Server ，这一点尤其重要。
+
+.. 配置 CHAP 的启动程序和目标密钥。
++
+
+TIP: 将 "CHAP Settings" 字段留空可自动生成密钥。
+
+.. 输入数据存储库的名称。默认情况下会选中 * 创建数据存储库 * 复选框。
++
+
+NOTE: 要在 vSphere 中使用存储容器，需要 VVol 数据存储库。
+
+.. 为此数据存储库选择一个或多个主机。
++
+
+NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配了集群的 vCenter Server 使用的主机。
+
+.. 选择 * 确定 * 。
+
+
+. 验证新存储容器是否显示在 * 存储容器 * 子选项卡的列表中。由于 NetApp Element 帐户 ID 会自动创建并分配给存储容器，因此无需手动创建帐户。
+. 验证是否已在 vCenter 中的选定主机上创建关联的数据存储库。
+
+
+
+
+== 监控虚拟卷资源
+
+您可以从插件的 NetApp Element 管理扩展点查看虚拟卷组件性能和设置：
+
+* <<Monitoring VVols>>
+* <<Monitoring storage containers>>
+* <<Monitoring protocol endpoints>>
+
+
+
+
+=== 监控 VVOL
+
+您可以查看集群上所有活动虚拟卷的常规数据或每个虚拟卷的详细数据。此插件可跟踪虚拟卷的效率，性能，事件和 QoS 以及关联的快照， VM 和绑定。
+
+.您需要什么？ #8217 ；将需要什么
+* 您已启动 VM ，以便可以查看虚拟卷详细信息。
+
+
+.步骤
+. 选择 * NetApp Element 管理 > VVols* 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 在 * 虚拟卷 * 选项卡中，您可以搜索特定的虚拟卷。
+. 选中要查看的虚拟卷对应的复选框。
+. 选择 * 操作 * 。
+. 在显示的菜单中，选择 * 详细信息 * 。
+
+
+
+
+=== 监控存储容器
+
+您可以查看集群上所有活动存储容器的常规数据或每个存储容器的详细数据。此插件可跟踪存储容器的效率，性能以及关联的虚拟卷。
+
+.步骤
+. 选择 * NetApp Element 管理 > VVols* 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 存储容器 * 选项卡。
+. 选中要查看的存储容器对应的复选框。
+. 选择 * 操作 * 。
+. 在显示的菜单中，选择 * 详细信息 * 。
+
+
+
+
+=== 监控协议端点
+
+您可以查看集群上所有协议端点的常规数据。
+
+.步骤
+. 选择 * NetApp Element 管理 > VVols* 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 协议端点 * 选项卡。
+. 选中要查看的协议端点对应的复选框。
+. 选择 * 操作 * 。
+. 在显示的菜单中，选择 * 详细信息 * 。
+
+
+
+
+== 为存储容器创建 VVol 数据存储库
+
+创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法 <<Create a storage container and associated VVol datastore,创建存储容器>> 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
+
+.您需要什么？ #8217 ；将需要什么
+* 虚拟环境中的现有存储容器。
++
+
+NOTE: 您可能需要在 vCenter 中重新扫描 NetApp Element 存储以发现存储容器。
+
+
+
+.步骤
+. 在 vCenter 的导航器视图中，右键单击某个存储集群，然后选择 * 存储 > 数据存储库 > 新建数据存储库 * 。
+. 在 * 新建数据存储库 * 对话框中，选择 * VVol* 作为要创建的数据存储库类型。
+. 在 * 数据存储库名称 * 字段中为数据存储库提供一个名称。
+. 从后备存储容器列表中选择 NetApp Element 存储容器。
++
+
+NOTE: 您无需手动创建协议端点（ PE ） LUN 。创建数据存储库时，它们会自动映射到 ESXi 主机。
+
+. 选择需要访问数据存储库的主机。
+. 选择 * 下一步 * 。
+. 查看配置并选择 * 完成 * 以创建 VVol 数据存储库。
+
+
+
+
+== 删除存储容器
+
+您可以从 NetApp Element 管理扩展点删除存储容器。
+
+.您需要什么？ #8217 ；将需要什么
+* 已从存储容器中删除所有卷。
+
+
+.步骤
+. 选择 * NetApp Element 管理 > VVols* 。
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+. 选择 * 存储容器 * 选项卡。
+. 选中要删除的存储容器对应的复选框。
+. 选择 * 操作 * 。
+. 在显示的菜单中，选择 * 删除 * 。
+. 确认操作。
+. 刷新 * 存储容器 * 子选项卡中的存储容器列表，以确认此存储容器已被删除。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

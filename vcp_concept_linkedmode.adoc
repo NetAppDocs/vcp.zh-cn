@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_linkedmode.html 
+summary:  
+keywords: netapp, vcp, element, plugin, plug-in, linked mode 
+---
+= 链接模式和插件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用适用于 vCenter Server 的 NetApp Element 插件通过 vCenter 链接模式从其他 vCenter Server 管理集群资源。
+
+您可以登录到链接模式组中的任何 vCenter Server ，并从一个界面管理其他链接的 vCenter Server 所拥有的资源。
+
+必须在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。您必须使用此插件的注册实用程序向每个 vCenter Server 完成注册。您还必须一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。登录后，此插件将在 Web 客户端上安装。
+
+
+TIP: 在添加集群配置过程中，从与集群关联的 vCenter Server 管理集群。
+
+使用基于 Element 软件的存储的主机是特定 vCenter Server 专用的，不会在链接模式组的成员之间共享。因此，集群的任何存储管理任务仅限于 vCenter Server 中的可用主机。
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

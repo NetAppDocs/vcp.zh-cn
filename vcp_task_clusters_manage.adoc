@@ -1,0 +1,285 @@
+---
+sidebar: sidebar 
+permalink: vcp_task_clusters_manage.html 
+summary: 您可以使用此插件将节点添加到存储集群中。 
+keywords: netapp, cluster, vcp, vcenter, element 
+---
+= 管理集群
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑运行 Element 软件的集群，管理 SSH 配置，设置保护域监控以及关闭集群。
+
+.您需要什么？ #8217 ；将需要什么
+* 必须至少有一个集群 link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["已添加"]。
++
+
+NOTE: 要使用 NetApp Element 管理扩展点功能，必须至少添加一个集群。
+
+* 集群的当前完整集群管理员用户凭据。
+* 防火墙规则可在 vCenter 和集群 MVIP 之间通过 TCP 端口 443 和 8443 进行开放网络通信。
+
+
+.选项
+* <<View cluster details>>
+* <<Edit a cluster profile>>
+* <<Remove a cluster profile>>
+* <<Enable Encryption at Rest>>
+* <<Disable Encryption at Rest>>
+* <<Enable SSH>>
+* <<Change the SSH time limit>>
+* <<Disable SSH>>
+* <<Set protection domain monitoring>>
+* <<Shut down a cluster>>
+* <<Expand your NetApp HCI infrastructure>>
+
+
+
+
+== 查看集群详细信息
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 选中要编辑的集群。
+. 选择 * 操作 * 。
+. 选择 * 详细信息 * 。
+. 查看所有集群的以下信息：
++
+** * 集群名称 * ：集群的名称。
+** * vCenter IP Address* ：将集群分配到的 vCenter Server 的 IP 地址或 FQDN 。
+** * 唯一 ID* ：集群的唯一 ID 。
+** * 管理虚拟 IP* ：管理虚拟 IP 地址（ MVIP ）。
+** * 存储虚拟 * ：存储虚拟 IP 地址（ SVIP ）。
+** * 状态 * ：集群的状态。
+** * vvols* ：集群上 VVol 功能的状态。
+
+
+. 查看单个集群的其他详细信息：
++
+** * MVIP 节点 ID* ：持有主 MVIP 地址的节点。
+** * SVIP 节点 ID* ：持有主 SVIP 地址的节点。
+** * Element Version* ：集群运行的 NetApp Element 软件版本。
+** * VASA 2 Status* ： Element 集群上 VASA Provider 的状态。
+** * VASA Provider URL* ：如果适用，则为 Element 集群上启用的 VASA Provider 的 URL 。
+** * 空闲时加密状态 * ：可能值：
++
+*** Enabling ：正在启用空闲加密。
+*** Enabled ：已启用空闲加密。
+*** disabling ：正在禁用空闲加密。
+*** Disabled ：已禁用空闲加密。
+
+
+** * 整体节点 * ：数据库集合中节点的 IP 。
+** * 配对 * ：与本地集群配对的其他集群的名称。
+** * SSH Status* ：安全 Shell 的状态。如果启用，则会显示剩余时间。
+
+
+
+
+
+
+== 编辑集群配置文件
+
+您可以从 NetApp Element 配置扩展点更改集群用户 ID 和密码。
+
+
+NOTE: 此操作步骤介绍了如何更改此插件使用的集群管理员用户名和密码。您不能通过此插件更改集群管理员凭据。请参见 https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html["管理集群管理员用户帐户"^] 有关更改集群管理员帐户凭据的说明。
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 编辑 * 。
+. 更改以下任一项：
++
+** User ID ：集群管理员名称。
+** Password ：集群管理员密码。
++
+
+NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不能更改为添加的集群分配的链接模式 vCenter Server 。要更改集群地址或关联的 vCenter Server ，您必须删除此集群并重新添加它。
+
+
+
+. 选择 * 确定 * 。
+
+
+
+
+== 删除集群配置文件
+
+您可以使用 NetApp Element 配置扩展点从 vCenter 插件中删除不再需要管理的集群的配置文件。
+
+如果您设置了链接模式组并希望将集群重新分配给另一个 vCenter Server ，则可以删除此集群配置文件，然后使用其他链接的 vCenter Server IP 重新添加此配置文件。
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 选中要删除的集群。
+. 选择 * 操作 * 。
+. 选择 * 删除 * 。
+. 确认操作。
+
+
+
+
+== 启用空闲加密
+
+您可以使用 NetApp Element 配置扩展点手动启用空闲加密（ EAR ）功能。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 选择要启用空闲加密的集群。
+. 选择 * 操作 * 。
+. 在显示的菜单中，单击 * 启用 EAR* 。
+. 确认操作。
+
+
+
+
+== 禁用空闲加密
+
+您可以使用 NetApp Element 配置扩展点手动禁用空闲加密（ EAR ）功能。
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 选中集群对应的复选框。
+. 单击 * 操作 * 。
+. 在显示的菜单中，单击 * 禁用 EAR* 。
+. 确认操作。
+
+
+
+
+== 启用 SSH ：
+
+您可以使用 NetApp Element 配置扩展点手动启用安全 Shell （ SSH ）会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 启用 SSH* 。
+. 输入要启用 SSH 会话的持续时间，以小时为单位，最长不超过 720 。
++
+
+NOTE: 要继续，您需要输入一个值。
+
+. 选择 * 是 * 。
+
+
+
+
+== 更改 SSH 时间限制
+
+您可以输入 SSH 会话的新持续时间。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 更改 SSH* 。
++
+此对话框将显示 SSH 会话的剩余时间。
+
+. 输入 SSH 会话的新持续时间，以小时为单位，最长不超过 720 。
++
+
+NOTE: 要继续，您需要输入一个值。
+
+. 选择 * 是 * 。
+
+
+
+
+== 禁用 SSH
+
+您可以使用 NetApp Element 配置扩展点手动禁用对存储集群中节点的安全 Shell （ SSH ）访问。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 禁用 SSH* 。
+. 选择 * 是 * 。
+
+
+
+
+== 设置保护域监控
+
+您可以手动启用 link:vcp_concept_protection_domains.html["保护域监控"] 使用 NetApp Element 配置扩展点。您可以根据节点或机箱域选择保护域阈值。
+
+.您需要什么？ #8217 ；将需要什么
+* 要使用保护域监控功能，必须由 Element 11.0 或更高版本监控选定集群；否则，保护域功能将不可用。
+* 要使用保护域功能，集群必须具有两个以上的节点。无法与双节点集群兼容。
+
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 设置保护域监控 * 。
+. 选择故障阈值：
++
+** * 节点 * ：超过此阈值后，集群将无法在节点级别的硬件故障期间不间断地提供数据。节点阈值为系统默认值。
+** * 机箱 * ：超过此阈值后，集群将无法在机箱级别的硬件故障期间提供不间断的数据。
+
+
+. 选择 * 确定 * 。
+
+
+设置监控首选项后，您可以从监控保护域 link:vcp_task_reports_overview.html#reporting-overview-page-data["报告"] NetApp Element 管理扩展点的选项卡。
+
+
+
+== 关闭集群
+
+您可以使用 NetApp Element 配置扩展点手动关闭存储集群中的所有活动节点。
+
+如果您要 ... link:vcp_task_add_manage_nodes.html#restart-a-node["重新启动"] 您可以从 NetApp Element 管理扩展点的 "Cluster" 页面中选择所有节点并执行重新启动，而不是关闭集群。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+您已停止 I/O 并断开所有 iSCSI 会话。
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 关闭 * 。
+. 确认操作。
+
+
+
+
+== 扩展 NetApp HCI 基础架构
+
+您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。NetApp Element 扩展点提供了一个指向 NetApp HCI UI 的链接，用于扩展您的系统。NetApp Element 管理扩展点中的 " 入门 " 和 " 集群 " 页面提供了其他链接。
+
+
+NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
+
+.步骤
+. 选择 * NetApp Element 配置 > 集群 * 。
+. 检查集群。
+. 选择 * 操作 * 。
+. 选择 * 扩展 NetApp HCI * 。
+
+
+[discrete]
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+

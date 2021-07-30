@@ -1,0 +1,66 @@
+= NetApp HCI
+
+
+您可以通过链接访问 NetApp HCI 和 Element 存储环境中各个组件的最新和早期发行说明。
+
+
+NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
+
+
+
+== NetApp HCI
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2876591["NetApp HCI 1.9 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873790["NetApp HCI 1.8P1 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865021["NetApp HCI 1.8 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861226["《 NetApp HCI 1.7P1 发行说明》"^]
+
+
+
+
+== NetApp Element 软件
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2876498["《 NetApp Element 软件 12.3 发行说明》"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873789["《 NetApp Element 软件 12.2 发行说明》"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2865022["《 NetApp Element 软件 12.0 发行说明》"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2864256["NetApp Element 软件 11.8 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2861225["《 NetApp Element 软件 11.7 发行说明》"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2863854["《 NetApp Element 软件 11.5.1 发行说明》"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2859857["《 NetApp Element 软件 11.3P1 发行说明》"^]
+
+
+
+
+== 管理服务
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理服务发行说明知识库"^]
+
+
+
+
+== 适用于 vCenter Server 的 NetApp Element 插件
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748["vCenter 插件 4.7 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631["vCenter 插件 4.6 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396["vCenter 插件 4.5 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569["vCenter 插件 4.4 发行说明"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119["vCenter 插件 4.3 发行说明"^]
+
+
+
+
+== 计算固件
+
+* https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html["计算固件包 2.76 发行说明（最新）"^]
+* https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html["计算固件包 2.27 发行说明"^]
+* https://docs.netapp.com/us-en/hci/docs/rn_firmware_12.2.109.html["计算固件包 12.2.109 发行说明"^]
+
+
+
+
+== 存储固件
+
+* https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.76.html["存储固件包 2.76 发行说明（最新）"^]
+* https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html["存储固件包 2.27 发行说明"^]
+* https://docs.netapp.com/us-en/hci/docs/rn_H610S_BMC_3.84.07.html["H610S BMC 3.84.07 发行说明"^]
+

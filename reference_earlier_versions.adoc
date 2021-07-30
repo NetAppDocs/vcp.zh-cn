@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: reference_earlier_versions.html 
+keywords: documentation, earlier, previous, versions 
+summary: 适用于 vCenter Server 的 NetApp Element 插件 4.6 之前的版本提供了相关文档。 
+---
+= 早期版本的 NetApp Element 插件文档
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+:keywords: documentation, earlier, previous, versions
+
+
+[role="lead"]
+此外，还提供了适用于 vCenter Server 的 NetApp Element 插件 4.6 之前版本的文档。
+
+[cols="4*"]
+|===
+| version | 插件发行说明 | 管理服务发行说明 | 用户指南 
+
+
+| 4.5 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396["PDF"^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.14.60_Release_Notes["2.14.60 K 个字节"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2872843["PDF"^] 
+
+
+| 4.4 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2866569["PDF"^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.11.34_Release_Notes["2.11.34 K 个字节"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2870280["PDF"^] 
+
+
+| 4.3 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2856119["PDF"^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.0.725_Release_Notes["2.0.725 KB"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2860023["PDF"^]注意：本出版物介绍了 Element 软件 11.3/NetApp HCI 1.6 的更新管理节点升级过程。注意：本出版物介绍了 Element 软件 11.5/NetApp HCI 1.7 的更新管理节点升级过程注意：本出版物介绍了 Element 软件 11.7/NetApp HCI 1.7P1 的更新管理节点升级过程 
+|===
