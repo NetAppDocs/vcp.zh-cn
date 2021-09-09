@@ -16,6 +16,8 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 [role="lead"]
 适用于 vCenter Server 4.7 的 NetApp Element 插件包含重要的安全改进功能，进一步完善了中的改进功能 https://security.netapp.com/advisory/ntap-20210315-0001/["最新的管理服务 2.17.56 修补程序"] 版本。
 
+在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。
+
 适用于 vCenter Server 4.7 的 NetApp Element 插件随 2.18 版管理服务一起提供。
 
 

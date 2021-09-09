@@ -2380,4 +2380,5 @@
   <block id="9c17578111f04071be2db36d040281bf" category="sidebar">取消注册此插件</block>
   <block id="faa169d4c778c54064b635053ab306a2" category="sidebar">删除此插件</block>
   <block id="5612baf51d00a05f0290357c97294f8d" category="sidebar">对插件进行故障排除</block>
+  <block id="b43e19e2999292fbebfa71878760ddf9" category="paragraph">在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。</block>
 </blocks>
