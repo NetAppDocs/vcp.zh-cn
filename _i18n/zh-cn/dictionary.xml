@@ -658,20 +658,7 @@
   <block id="9803678e197bd8cc0124e8ca7af68dba" category="list-text">* PausedVolumeSizeMismatch* ：目标卷小于源卷。</block>
   <block id="72cacbd7272c0a213eda6683c012534e" category="list-text">* PausedXCopy* ：正在对源卷发出 SCSI XCOPY 命令。必须先完成命令，然后才能恢复复制。此消息仅显示在对的源端。</block>
   <block id="e3cab9c5c32acc4b4216fefd04b7621c" category="list-text">* StoppedMisconfigure* ：检测到永久配置错误。远程卷已清除或取消配对。无法执行更正操作；必须建立新的配对。</block>
-  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
-  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
-  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
-  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
-  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
-  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
-  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
-  <block id="eb3c130e264688a3a29d73ad802f6f63" category="paragraph">通知文件提供了有关第三方版权和许可证的信息。</block>
   <block id="9fb45d65282cc3f96e819596e5e394dd" category="inline-link-macro">管理服务 2.18.91 通知（ VCP 4.7.10 ）</block>
   <block id="4c92abb8eb776e4564eeeb62ddf3c4f1" category="list-text"><block ref="4c92abb8eb776e4564eeeb62ddf3c4f1" category="inline-link-macro-rx"></block></block>
   <block id="4dc58eed88195e2dee9ef97cb0900fcc" category="inline-link-macro">管理服务 2.17.56 （ VCP 4.6.32 ）通知</block>
@@ -2381,4 +2368,6 @@
   <block id="faa169d4c778c54064b635053ab306a2" category="sidebar">删除此插件</block>
   <block id="5612baf51d00a05f0290357c97294f8d" category="sidebar">对插件进行故障排除</block>
   <block id="b43e19e2999292fbebfa71878760ddf9" category="paragraph">在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
 </blocks>
