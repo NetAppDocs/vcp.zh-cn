@@ -63,6 +63,9 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 对于链接模式环境，必须向该环境中的每个 vCenter Server 注册此插件，以使 MOB 数据保持同步并能够升级此插件。如果 vSphere Web Client 连接到未注册插件的 vCenter Server ，则此插件对客户端不可见。
 
+
+NOTE: 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+
 .步骤
 . 在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口：
 +
@@ -283,9 +286,13 @@ IMPORTANT: vSphere HTML5 Web 客户端和 Flash Web 客户端具有单独的数�
 ** * 密码 * ：输入集群管理员密码。
 ** * vCenter Server* ：如果设置了链接模式组，请选择要访问集群的 vCenter Server 。如果您不使用链接模式，则默认使用当前 vCenter Server 。
 +
+[NOTE]
+====
+*** 集群的主机仅适用于每个 vCenter Server 。请确保您选择的 vCenter Server 能够访问目标主机。您可以删除集群，将其重新分配给另一个 vCenter Server ，如果稍后决定使用不同的主机，则可以重新添加集群。
+*** 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
-NOTE: 集群的主机仅适用于每个 vCenter Server 。请确保您选择的 vCenter Server 能够访问目标主机。您可以删除集群，将其重新分配给另一个 vCenter Server ，如果稍后决定使用不同的主机，则可以重新添加集群。
 
+====
 
 
 . 选择 * 确定 * 。
@@ -342,5 +349,5 @@ NOTE: 请参见此内容 https://kb.netapp.com/Advice_and_Troubleshooting/Data_S
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
 * http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
-* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

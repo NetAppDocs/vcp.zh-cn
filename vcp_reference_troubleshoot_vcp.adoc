@@ -17,6 +17,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 您需要了解适用于 vCenter Server 的 NetApp Element 插件的一些常见问题以及解决这些问题的步骤。
 
 * <<Plug-in registration successful but icons do not appear in web client>>
+* <<Errors after VCP 4.8 upgrade with VMware vCenter Server 6.7U1>>
 * <<Error registering plug-in using Registration UI>>
 * <<Error updating plug-in using Registration UI>>
 * <<Error message that NetApp extension cannot be upgraded>>
@@ -74,6 +75,28 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 
 
+
+
+
+
+
+== 使用 VMware vCenter Server 6.7U1 升级 VCP 4.8 后出现错误
+
+在使用 VMware vCenter Server 6.7U1 升级到 VCP 4.8 后，您可能会遇到以下问题：
+
+* 集群未列在 * 集群 * 部分中。
+* NetApp Element 配置的 * 集群和 QoSSIOC 设置 * 部分显示服务器错误。
+
+
+还原集群和 QoSSIOC 设置：
+
+. 从 vCenter 中注销。
+. 注销后，请等待两到三分钟，然后重新登录。
+. 在当前 vSphere Client 视图中，选择刷新图标。
+. 禁用缓存并刷新浏览器，例如，使用 Ctrl+F5 。
+. 检查集群和 QoSSIOC 设置是否已还原。
++
+如果问题描述仍然存在，则需要执行此操作 link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["重新添加集群"^]。
 
 
 

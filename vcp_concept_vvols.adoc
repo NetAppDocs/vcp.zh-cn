@@ -55,5 +55,5 @@ NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
 * http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
-* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

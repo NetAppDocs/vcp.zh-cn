@@ -155,8 +155,6 @@
   <block id="9c83e144e5481ac6766f4055e566594d" category="floating-title">了解更多信息</block>
   <block id="ad0a505756223d68dc11afeae3459351" category="inline-link">NetApp HCI 文档</block>
   <block id="bf667c8802395357e4f080e2fcd819e4" category="list-text"><block ref="bf667c8802395357e4f080e2fcd819e4" category="inline-link-rx"></block></block>
-  <block id="ca400825810e4b740fea1209f6374847" category="inline-link">NetApp SolidFire 和 Element 软件文档</block>
-  <block id="b4588bac0cd7e0e5442d66db103d5537" category="list-text"><block ref="b4588bac0cd7e0e5442d66db103d5537" category="inline-link-rx"></block></block>
   <block id="bd607b66858d9331643c0e3529eef009" category="summary">了解此版本的适用于 vCenter Server 的 NetApp Element 插件中的新增功能。</block>
   <block id="bd4fc9c876f29d7b65b5ec6243dd29b1" category="doc">适用于 vCenter Server 的 NetApp Element 插件中的新增功能和 #8217</block>
   <block id="4ffb98b73fd3c97c4d4ff0bb0a71e369" category="inline-link">最新的管理服务 2.17.56 修补程序</block>
@@ -242,13 +240,10 @@
   <block id="36fb791a39c0dcf9d768ea535ca51db9" category="doc">适用于 vCenter Server 的 Element 插件的要求</block>
   <block id="e6934e0cf4466efe40dba8ffce55213b" category="paragraph">在使用适用于 vCenter Server 的 NetApp Element 插件管理 NetApp HCI 或 SolidFire 全闪存阵列存储之前，您需要确保系统满足插件使用要求。​</block>
   <block id="d495047561c1a08074d3afeeb5b5d172" category="section-title">VMware vSphere 前提条件</block>
-  <block id="f8618a7fa99b25f7eeca653662a62a4c" category="paragraph">要使用适用于 vCenter Server 的 NetApp Element 插件，需要使用 VMware vSphere 7.0 ， 6.7 或 6.5 ，包括配置了软件 iSCSI 适配器和 iSCSI 网络的 vCenter 和 ESXi 。</block>
   <block id="3903fd261f224ad8af888f893eb71a5e" category="section-title">此插件支持的 VMware vSphere 版本</block>
   <block id="39bb4a890cda10e989012ed844843a1a" category="paragraph">此插件支持以下主要版本的 VMware 软件：</block>
   <block id="f91a10eb569e37e963d1fe4559054eaf" category="list-text">vSphere 7.0 和 7.0 Update 1 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库</block>
   <block id="8bc5dd01570b8e30ab647a98f1b5c995" category="list-text">vSphere 6.7 和 6.7 Update 1 和 3 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库</block>
-  <block id="6f6bb60dc6cd3a3594eacd7f8a7e0fad" category="admonition">此插件与 HTML5 vSphere Web Client 6.7 U2 版不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。</block>
-  <block id="dd7674941102f4fa734eb3c2e50275f8" category="list-text">vSphere 6.5 和 6.5 Update 1 或更高版本，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库</block>
   <block id="bcc539df8c871d5ecc3798cf0bf4e50a" category="section-title">停止 vSphere 6.0 支持</block>
   <block id="dec3ff704eae83bc704f10747ef72261" category="inline-link">产品公告</block>
   <block id="56e21e285d29ac3707d9de62d9f702c6" category="admonition">VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 NetApp HCI 1.8 和 Element 12 开始，不再支持 vSphere 6.0 。有关详细信息，请参见此<block ref="f606560fd089580031ad7289c0774bc4" category="inline-link-rx"></block>。</block>
@@ -408,15 +403,11 @@
   <block id="e6f04bc267aa8b790e8358fbcafd13da" category="inline-link">vCenter 插件 4.3 发行说明</block>
   <block id="b2a1b69fb08bccdb5677884b0a061505" category="list-text"><block ref="b2a1b69fb08bccdb5677884b0a061505" category="inline-link-rx"></block></block>
   <block id="ff87ebe2c25e682bd61568ba1a06d717" category="section-title">计算固件</block>
-  <block id="3b912116949947004f7508c5e18dbffe" category="inline-link">计算固件包 2.76 发行说明（最新）</block>
-  <block id="a7c5f716cc46aaac07c3d488491ca5f1" category="list-text"><block ref="a7c5f716cc46aaac07c3d488491ca5f1" category="inline-link-rx"></block></block>
   <block id="add6cf39bf48bd4bb95153935993051e" category="inline-link">计算固件包 2.27 发行说明</block>
   <block id="da2623f4186e06c9a6c44a9bd8ba7dc2" category="list-text"><block ref="da2623f4186e06c9a6c44a9bd8ba7dc2" category="inline-link-rx"></block></block>
   <block id="3a155d4e218deae857aac98fd3d2be2c" category="inline-link">计算固件包 12.2.109 发行说明</block>
   <block id="564b18336879036fad235824c42003f6" category="list-text"><block ref="564b18336879036fad235824c42003f6" category="inline-link-rx"></block></block>
   <block id="002e74c06881f6eef90f201bb310bbfa" category="section-title">存储固件</block>
-  <block id="2b7dd4e3b734a3463631c30749f4f77d" category="inline-link">存储固件包 2.76 发行说明（最新）</block>
-  <block id="3a350e23971adb938e70542f8a043316" category="list-text"><block ref="3a350e23971adb938e70542f8a043316" category="inline-link-rx"></block></block>
   <block id="f0334c1f59f95a0173885c35e98f843f" category="inline-link">存储固件包 2.27 发行说明</block>
   <block id="fb6956e658e563cc55e645e1fae3f2f9" category="list-text"><block ref="fb6956e658e563cc55e645e1fae3f2f9" category="inline-link-rx"></block></block>
   <block id="af149d844cc5e37dba5faa0cc28a9285" category="inline-link">H610S BMC 3.84.07 发行说明</block>
@@ -1026,7 +1017,6 @@
   <block id="ab91dd7f95968fffd00546428fa0ec61" category="paragraph">您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。NetApp Element 扩展点提供了一个指向 NetApp HCI UI 的链接，用于扩展您的系统。NetApp Element 管理扩展点中的 " 入门 " 和 " 集群 " 页面提供了其他链接。</block>
   <block id="18a2913d457d149d724c285bb0b5ecf6" category="list-text">选择 * 扩展 NetApp HCI * 。</block>
   <block id="41bebb27febffbe684d395967a3074fb" category="summary">适用于 vCenter Server 的 NetApp Element 插件 4.6 之前的版本提供了相关文档。</block>
-  <block id="7a083f9e5491b2ecbc098e610f3b6dc3" category="paragraph">此外，还提供了适用于 vCenter Server 的 NetApp Element 插件 4.6 之前版本的文档。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">version</block>
   <block id="8c4acbc2063657214fc1de03ee31a0df" category="cell">插件发行说明</block>
   <block id="fefb29e781716d4ae47b68c416f147bf" category="cell">管理服务发行说明</block>
@@ -1318,10 +1308,6 @@
   <block id="b0ec293604aea8d5a90bcb818b872d3b" category="list-text">验证卷以及所有连接是否均已还原。</block>
   <block id="799c7a7e8a296591856f1cfd78f68e3d" category="doc">链接模式和插件</block>
   <block id="8a6865cfe151df75b8bd946dc97b82dd" category="paragraph">您可以使用适用于 vCenter Server 的 NetApp Element 插件通过 vCenter 链接模式从其他 vCenter Server 管理集群资源。</block>
-  <block id="b841358fefea1005ff53491ca5d914fc" category="paragraph">您可以登录到链接模式组中的任何 vCenter Server ，并从一个界面管理其他链接的 vCenter Server 所拥有的资源。</block>
-  <block id="dfa7a41e10cc98a1627d1e1aeacbfed6" category="paragraph">必须在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。您必须使用此插件的注册实用程序向每个 vCenter Server 完成注册。您还必须一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。登录后，此插件将在 Web 客户端上安装。</block>
-  <block id="3cf5a49e393d2d65754bd1edb610cef6" category="admonition">在添加集群配置过程中，从与集群关联的 vCenter Server 管理集群。</block>
-  <block id="4418789a52da27754e9a5d6a19813162" category="paragraph">使用基于 Element 软件的存储的主机是特定 vCenter Server 专用的，不会在链接模式组的成员之间共享。因此，集群的任何存储管理任务仅限于 vCenter Server 中的可用主机。</block>
   <block id="3fc23f34e36d05f9e3d062c71bacd2f0" category="doc">保护域</block>
   <block id="9b480422c240fe96384c295ed19ec96d" category="paragraph">保护域是一个节点或一组分组在一起的节点，这样，域中的任何节点或所有节点都可能发生故障，而不会导致集群丢失数据可用性。通过保护域功能，您可以监控集群的资源容量，以确保集群仍能够从故障事件中修复。您可以在节点或机箱域级别选择监控：</block>
   <block id="d3aa0229608e48b638ce6da6bee6fdb7" category="list-text">* 节点级别 * 为每个节点定义每个保护域，每个节点可能位于机箱中。</block>
@@ -2346,9 +2332,6 @@
   <block id="8acadeccb90bf205135348e4902b9c20" category="inline-link">本文</block>
   <block id="6827a947857f77989cf06bb0f67a6085" category="list-text">请参见<block ref="fcb81063f72d7cb08144faa25942e149" category="inline-link-rx"></block> 针对特定于问题描述的更正操作。</block>
   <block id="8fbfd26ed5e6497365d351c8f25fa303" category="doc">升级此插件</block>
-  <block id="9aa7f8879a91eb7b1e09682dc66b4757" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。适用于 vCenter Server 4.7 的 NetApp Element 插件在 Element 和 NetApp HCI 版本之外作为管理服务包的一部分提供。</block>
-  <block id="f5c23e4b91da34e39fcfeacbaac12df0" category="inline-link">升级文档</block>
-  <block id="b0608da611be8c8809947a97d1bfebf7" category="paragraph">要升级此插件，请按照中的说明进行操作<block ref="a635796bc63ef5dc485933239edfbba1" category="inline-link-rx"></block>。</block>
   <block id="9cec0e50b42801b7660f56e947b1c67f" category="inline-link">《混合云控制和管理服务发行说明》</block>
   <block id="9154c6fd5e4a9dc865524f9f8778b48f" category="list-text"><block ref="9154c6fd5e4a9dc865524f9f8778b48f" category="inline-link-rx"></block></block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
@@ -2370,4 +2353,74 @@
   <block id="b43e19e2999292fbebfa71878760ddf9" category="paragraph">在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。</block>
   <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
   <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire 和 Element 资源页面</block>
+  <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
+  <block id="19d7fd1174be86185b720fea9ff20172" category="paragraph">适用于 vCenter Server 4.8 的 NetApp Element 插件提供了一些安全性改进，内存利用率提高以及第三方库升级功能。</block>
+  <block id="a4bdf0d2fea25fcb0a7523212aa31626" category="paragraph">适用于 vCenter Server 4.8 的 NetApp Element 插件可与 2.19 版的管理服务配合使用。</block>
+  <block id="0c6401f3a6e4115c47e9c1a72d14ab9e" category="section-title">适用于 vCenter Server 的 NetApp Element 插件 4.7</block>
+  <block id="4c0d90c9ada6ab81f16f3446180ab3a1" category="inline-link-macro">vCenter 链接模式</block>
+  <block id="9fdb639b750d5db855a8b30b956f7e52" category="admonition">使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
+  <block id="8b1a6c95fed8363998ed5d7eae965f1a" category="inline-link-macro">管理服务注意事项 2.19.48 （ VCP 4.8.34 ）</block>
+  <block id="48e73a938758f852ecf42def2ae2a2ec" category="list-text"><block ref="48e73a938758f852ecf42def2ae2a2ec" category="inline-link-macro-rx"></block></block>
+  <block id="f69d59b3c086e91cd1005a1ff37e9c51" category="paragraph">要使用适用于 vCenter Server 的 NetApp Element 插件，需要使用 VMware vSphere 7.0 或 6.7 ，包括配置了软件 iSCSI 适配器和 iSCSI 网络的 vCenter 和 ESXi 。</block>
+  <block id="f72c3688e3e7a685ff88f8a7c360f844" category="admonition">此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。</block>
+  <block id="45d51a6416ad3562026999aeda3b30f2" category="admonition">此插件与 VMware vCenter Server 6.5 不兼容。</block>
+  <block id="54866f3f5260905d8cc6b998d85fee46" category="inline-link">《 NetApp HCI 1.9P1 发行说明》</block>
+  <block id="5f123fb5072e8736326c928e2de971af" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block> _new_</block>
+  <block id="7199e7988a06a61dd6614783601855bd" category="inline-link">《 NetApp Element 软件 12.3.1 发行说明》</block>
+  <block id="b91b7e31099336f65c115b7637d8d891" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block> _new_</block>
+  <block id="3b34803433d83528840d8e729af0e8bc" category="inline-link">vCenter 插件 4.8 发行说明</block>
+  <block id="c561b7d92736e6c451a661a0a5da7586" category="list-text"><block ref="c561b7d92736e6c451a661a0a5da7586" category="inline-link-rx"></block></block>
+  <block id="b8a3e041719b8e9752b150f5cd409639" category="inline-link">计算固件包 2.76.10 发行说明（最新）</block>
+  <block id="b95832f9e97293e5970c119813d12f8c" category="list-text"><block ref="b95832f9e97293e5970c119813d12f8c" category="inline-link-rx"></block></block>
+  <block id="7a02f75af06b21c7f1cfccabab836899" category="inline-link">计算固件包 2.76 发行说明</block>
+  <block id="6c8926cd2660fe1426832a40f7e78bff" category="list-text"><block ref="6c8926cd2660fe1426832a40f7e78bff" category="inline-link-rx"></block></block>
+  <block id="e2b165ab46734aee4acaaada05a4c247" category="inline-link">存储固件包 2.99.2 发行说明（最新）</block>
+  <block id="f1de80703dd5c9a1cd53931752c56274" category="list-text"><block ref="f1de80703dd5c9a1cd53931752c56274" category="inline-link-rx"></block></block>
+  <block id="826ed2a2fd875eeb127f73e48856de14" category="inline-link">存储固件包 2.76 发行说明</block>
+  <block id="c8de9bc8a027f0e5864fb603489b44fd" category="list-text"><block ref="c8de9bc8a027f0e5864fb603489b44fd" category="inline-link-rx"></block></block>
+  <block id="c60c64f416bf22b6e140eb52525d5b01" category="paragraph">此外，还提供了适用于 vCenter Server 的 NetApp Element 插件 4.8 之前版本的文档。</block>
+  <block id="b1859080f20e43589e23a4f60292cbd0" category="inline-link-macro">文档链接</block>
+  <block id="76fd0d53661e4e34cc3d7eadc5c43294" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于适用于 vCenter Server 的 NetApp Element 插件 4.8 版，还包括 4.6 和 4.7 版。</block>
+  <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
+  <block id="4ada441a918bfe9c2818d0e81bb96974" category="cell"><block ref="4ada441a918bfe9c2818d0e81bb96974" category="inline-link-rx"></block></block>
+  <block id="ec6b509a3b39fbc4fcdff883a3e28204" category="inline-link">2.18.91</block>
+  <block id="d25890d249ad2472b717cc5d87d84d8b" category="cell"><block ref="d25890d249ad2472b717cc5d87d84d8b" category="inline-link-rx"></block></block>
+  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="inline-link-macro">链接。</block>
+  <block id="ccd34459e819d9a4ebe1588f0bf8337c" category="cell"><block ref="ccd34459e819d9a4ebe1588f0bf8337c" category="inline-link-macro-rx"></block></block>
+  <block id="231910ff513901af9c1921224df901ba" category="cell">4.6</block>
+  <block id="57b1260b3b4b02b95040a199f4ba7ae7" category="cell"><block ref="57b1260b3b4b02b95040a199f4ba7ae7" category="inline-link-rx"></block></block>
+  <block id="1bf351bf2131e4e1257bf891c669a3df" category="inline-link">2.17.56 KB</block>
+  <block id="09d6a9e13c81a9feff06e2f08afd0bf9" category="cell"><block ref="09d6a9e13c81a9feff06e2f08afd0bf9" category="inline-link-rx"></block></block>
+  <block id="b6183ce9c4e8eb00aca6382fa0b9133d" category="paragraph">只有在登录到目标 vCenter Web 客户端后，您才能在 Element 插件中管理存储集群。</block>
+  <block id="0d4feab6027cad30793ce2dadc6e4fde" category="paragraph">要在 vSphere 链接模式环境中设置存储集群管理，您可以使用以下操作步骤手动添加存储集群。</block>
+  <block id="91e17858e171c728ce382e4d503b66bc" category="list-text">在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。</block>
+  <block id="58ac558cf97424514dc4281b13503a9e" category="list-text">一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。</block>
+  <block id="c4cc76bc9ec18ff5bf06879832a4ba84" category="paragraph">登录后，此插件将在 Web 客户端上安装。</block>
+  <block id="a87ae6e15ccb731ab64b5c012e2ae079" category="list-text">登录到要管理存储集群的目标 vCenter 的 Web 客户端。</block>
+  <block id="1f3806ff5dcd0c681fc8ea6fc9018160" category="list-text">将存储集群添加到 Element 插件清单中。</block>
+  <block id="480f73beb479c360bbae467c26cb4ccc" category="paragraph">vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2 处于链接模式。您希望 vCenter1 管理 cluster1 ，而 vCenter2 管理 cluster2 。要设置存储集群管理，请在向每个 vCenter Server 注册此插件后执行以下步骤：</block>
+  <block id="02804728f799134f878cb8e8bdb7d17c" category="list-text">登录到 vCenter1 Web 客户端。</block>
+  <block id="686eb72e50fdf6e66f191bfc6cd63d86" category="list-text">要从 vCenter1 Web 客户端管理 cluster1 ，请将 cluster1 添加到 Element 插件清单中。</block>
+  <block id="cc02c1a474fd0061edf9cb89e5207e4b" category="list-text">登录到 vCenter2 Web 客户端。</block>
+  <block id="fc1711098d513e4eacdd203c03109df1" category="list-text">要从 vCenter2 Web 客户端管理 cluster2 ，请将 cluster2 添加到 Element 插件清单中。</block>
+  <block id="adee7899128d267f13a11c68d161c1f4" category="list-text"><block ref="07fa342623c29f24475338282827edaa" category="inline-xref-macro-rx"></block></block>
+  <block id="4b3f9c6de81a8dc90f7429b2464c6b39" category="section-title">使用 VMware vCenter Server 6.7U1 升级 VCP 4.8 后出现错误</block>
+  <block id="ac1d7f2400d2aa38888bfc6cc2a28d59" category="paragraph">在使用 VMware vCenter Server 6.7U1 升级到 VCP 4.8 后，您可能会遇到以下问题：</block>
+  <block id="bbcde54d38a7d044c3b8a3ec056f932f" category="list-text">集群未列在 * 集群 * 部分中。</block>
+  <block id="cec85f10ae66451b3af081cbc5ca7e20" category="list-text">NetApp Element 配置的 * 集群和 QoSSIOC 设置 * 部分显示服务器错误。</block>
+  <block id="aa8746d5b71402972581bdd84dcc2484" category="paragraph">还原集群和 QoSSIOC 设置：</block>
+  <block id="c3a78f82feea7790e45dc2b8ff202ad6" category="list-text">从 vCenter 中注销。</block>
+  <block id="1b3bf198be8d42e344e87e814638c35e" category="list-text">注销后，请等待两到三分钟，然后重新登录。</block>
+  <block id="42fe583841480643befc86660359cc97" category="list-text">在当前 vSphere Client 视图中，选择刷新图标。</block>
+  <block id="d0027b340b133639d43317fb35d13a94" category="list-text">禁用缓存并刷新浏览器，例如，使用 Ctrl+F5 。</block>
+  <block id="389eaf94a0ef26f9ba0cba36b0fb8069" category="list-text">检查集群和 QoSSIOC 设置是否已还原。</block>
+  <block id="b89387a58bf1412670fdff83f0b343a9" category="inline-link-macro">重新添加集群</block>
+  <block id="b7860cf0970d15cae4ff75cc6777e13e" category="paragraph">如果问题描述仍然存在，则需要执行此操作 <block ref="2defad7184bda40da2bf8bda0cd5de7e" category="inline-link-macro-rx"></block>。</block>
+  <block id="11de79fb56eb3a529489d5598250cfa1" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。适用于 vCenter Server 4.8 的 NetApp Element 插件在 Element 和 NetApp HCI 版本之外作为管理服务包的一部分提供。</block>
+  <block id="230c0803a12f9d38853bdccc853eaabd" category="paragraph">要升级此插件，请按照适用于您的产品的升级文档中的说明进行操作：</block>
+  <block id="056947baa0d57b8ea8db9699e2b2d650" category="inline-link">升级 NetApp HCI 系统</block>
+  <block id="8205746f5d5236ad86d4993e15eed883" category="list-text"><block ref="8205746f5d5236ad86d4993e15eed883" category="inline-link-rx"></block></block>
+  <block id="e868028708701bd050c5db2e0a7f54a9" category="inline-link">升级 SolidFire 全闪存存储系统</block>
+  <block id="9082b5c51eb2d8daa6920501e4e6ac2a" category="list-text"><block ref="9082b5c51eb2d8daa6920501e4e6ac2a" category="inline-link-rx"></block></block>
 </blocks>

@@ -19,7 +19,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 == VMware vSphere 前提条件
 
-要使用适用于 vCenter Server 的 NetApp Element 插件，需要使用 VMware vSphere 7.0 ， 6.7 或 6.5 ，包括配置了软件 iSCSI 适配器和 iSCSI 网络的 vCenter 和 ESXi 。
+要使用适用于 vCenter Server 的 NetApp Element 插件，需要使用 VMware vSphere 7.0 或 6.7 ，包括配置了软件 iSCSI 适配器和 iSCSI 网络的 vCenter 和 ESXi 。
 
 
 
@@ -31,10 +31,12 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 * vSphere 6.7 和 6.7 Update 1 和 3 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
 +
 
-IMPORTANT: 此插件与 HTML5 vSphere Web Client 6.7 U2 版不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。
+IMPORTANT: 此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。
 
-* vSphere 6.5 和 6.5 Update 1 或更高版本，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
 
+
+
+IMPORTANT: 此插件与 VMware vCenter Server 6.5 不兼容。
 
 
 
@@ -74,5 +76,5 @@ IMPORTANT: VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 Net
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
-* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

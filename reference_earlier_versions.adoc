@@ -14,11 +14,20 @@ summary: 适用于 vCenter Server 的 NetApp Element 插件 4.6 之前的版本�
 
 
 [role="lead"]
-此外，还提供了适用于 vCenter Server 的 NetApp Element 插件 4.6 之前版本的文档。
+此外，还提供了适用于 vCenter Server 的 NetApp Element 插件 4.8 之前版本的文档。
+
+
+NOTE: 这 link:index.html["文档链接"] 对于适用于 vCenter Server 的 NetApp Element 插件 4.8 版，还包括 4.6 和 4.7 版。
 
 [cols="4*"]
 |===
 | version | 插件发行说明 | 管理服务发行说明 | 用户指南 
+
+
+| 4.7 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748["2.18.91"^] | link:index.html["链接。"] 
+
+
+| 4.6 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2874631["PDF"^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/NetApp_Hybrid_Cloud_Control_and_Management_Services_2.17.56_Release_Notes["2.17.56 KB"^] | link:index.html["链接。"] 
 
 
 | 4.5 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2873396["PDF"^] | https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_2.14.60_Release_Notes["2.14.60 K 个字节"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2872843["PDF"^] 

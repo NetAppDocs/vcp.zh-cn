@@ -15,18 +15,31 @@ keywords: netapp, vcp, element, plugin, plug-in, linked mode
 [role="lead"]
 您可以使用适用于 vCenter Server 的 NetApp Element 插件通过 vCenter 链接模式从其他 vCenter Server 管理集群资源。
 
-您可以登录到链接模式组中的任何 vCenter Server ，并从一个界面管理其他链接的 vCenter Server 所拥有的资源。
+只有在登录到目标 vCenter Web 客户端后，您才能在 Element 插件中管理存储集群。
 
-必须在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。您必须使用此插件的注册实用程序向每个 vCenter Server 完成注册。您还必须一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。登录后，此插件将在 Web 客户端上安装。
+要在 vSphere 链接模式环境中设置存储集群管理，您可以使用以下操作步骤手动添加存储集群。
+
+.步骤
+. 在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。
+. 一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。
++
+登录后，此插件将在 Web 客户端上安装。
+
+. 登录到要管理存储集群的目标 vCenter 的 Web 客户端。
+. 将存储集群添加到 Element 插件清单中。
 
 
-TIP: 在添加集群配置过程中，从与集群关联的 vCenter Server 管理集群。
+vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2 处于链接模式。您希望 vCenter1 管理 cluster1 ，而 vCenter2 管理 cluster2 。要设置存储集群管理，请在向每个 vCenter Server 注册此插件后执行以下步骤：
 
-使用基于 Element 软件的存储的主机是特定 vCenter Server 专用的，不会在链接模式组的成员之间共享。因此，集群的任何存储管理任务仅限于 vCenter Server 中的可用主机。
+. 登录到 vCenter1 Web 客户端。
+. 要从 vCenter1 Web 客户端管理 cluster1 ，请将 cluster1 添加到 Element 插件清单中。
+. 登录到 vCenter2 Web 客户端。
+. 要从 vCenter2 Web 客户端管理 cluster2 ，请将 cluster2 添加到 Element 插件清单中。
+
 
 [discrete]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
-* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

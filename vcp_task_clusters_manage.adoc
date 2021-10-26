@@ -114,6 +114,9 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 如果您设置了链接模式组并希望将集群重新分配给另一个 vCenter Server ，则可以删除此集群配置文件，然后使用其他链接的 vCenter Server IP 重新添加此配置文件。
 
+
+NOTE: 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+
 . 选择 * NetApp Element 配置 > 集群 * 。
 . 选中要删除的集群。
 . 选择 * 操作 * 。
@@ -281,5 +284,5 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
-* https://docs.netapp.com/sfe-122/topic/com.netapp.ndc.sfe-vers/GUID-B1944B0E-B335-4E0B-B9F1-E960BF32AE56.html["NetApp SolidFire 和 Element 软件文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

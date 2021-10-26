@@ -20,6 +20,7 @@ link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-le
 
 link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[""]
 
+* link:media/mgmt_svcs_2.19_notice.pdf["管理服务注意事项 2.19.48 （ VCP 4.8.34 ）"^]
 * link:media/mgmt_svcs_2.18_notice.pdf["管理服务 2.18.91 通知（ VCP 4.7.10 ）"^]
 * link:media/mgmt_svcs_2.17.56_notice.pdf["管理服务 2.17.56 （ VCP 4.6.32 ）通知"^]
 * link:media/mgmt_svcs_2.17_notice.pdf["管理服务注意事项 2.17.52 （ VCP 4.6.29 ）"^]
