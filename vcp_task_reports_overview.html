@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>在概述页面上监控集群的整体运行状况</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="在概述页面上监控集群的整体运行状况" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/vcp/vcp_task_reports_overview.html" />
+	<meta property="og:description" content="使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。">
+  <meta name="keywords" content=" netapp, hci, vcp, vcenter, element, monitor, report">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/zh-cn/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-cn/vcp/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-cn/vcp/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-cn/vcp/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-cn/vcp/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-cn/vcp/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-cn/vcp/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/vcp/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/vcp/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-cn/vcp/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/vcp/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/zh-cn/vcp/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/zh-cn/vcp/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/zh-cn/vcp/js/na-search.js'></script>
+  
+
+  
+  <script src='/zh-cn/vcp/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/zh-cn/vcp/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-cn/vcp/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-cn/vcp/js/na-utility.js'></script>
+  <script src='/zh-cn/vcp/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/zh-cn/vcp/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-cn/vcp/js/toc.js'></script>
+  <script src='/zh-cn/vcp/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/zh-cn/vcp/js/product-family.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">产品和解决方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支持和培训</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">云中心</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社区</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">日志</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客户案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">联系人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-cn/vcp/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-cn/vcp/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-cn/vcp/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-cn/vcp/search.html"
+          data-type="widget" 
+          data-placeholder="搜索文档" 
+          data-no-results-found="未找到与 {query} 匹配的结果。" 
+          data-did-you-mean="搜索 {suggestion}。" 
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
+          data-results-found="找到 {hitCount} 个结果"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">简体中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <div class="n-language-selector-menu__header">
+            <span class="n-language-selector-menu__title">选择您的语言</span>
+          </div>
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/vcp/vcp_task_reports_overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/vcp/vcp_task_reports_overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/vcp/vcp_task_reports_overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li></ul>
+            </li>
+          </ul>
+          <div class="menu__footer">
+            <p>当前语言: 简体中文
+            </p>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+        <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">主页</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">文档</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-cn/vcp/">VCP</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          在概述页面上监控集群的整体运行状况
+        </li>
+      </ul>
+    </div>
+
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+    </span>
+  </a>
+</div>
+<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
+      <span class="n-pdf-section-title">站点</span>
+    </div>
+    <li>
+      <a target="_blank" href="/zh-cn/vcp/pdfs/fullsite-sidebar/适用于_vCenter_Server_的_NetApp_Element_插件文档.pdf" >
+        <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+        适用于 vCenter Server 的 NetApp Element 插件文档
+      </a>
+    </li>
+
+    
+      <span class="subfolders" style="display:none;">
+        
+          <div class="n-pdf-section">
+            <span class="n-pdf-section-title">
+              小节
+            </span>
+          </div>
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/适用于_vCenter_Server_的_NetApp_Element_插件文档.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            适用于 vCenter Server 的 NetApp Element 插件文档
+          </a>
+        </li>
+        <span>
+          
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/发行说明.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            发行说明
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            概念
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件管理存储.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            使用 vCenter 插件管理存储
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/管理集群硬件和虚拟网络.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            管理集群硬件和虚拟网络
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统性能.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            监控系统性能
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统警报.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            监控系统警报
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+    
+      <span class="subfolders" style="display:none;">
+        
+        <li>
+          <a target="_blank" 
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件保护数据.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>
+            使用 vCenter 插件保护数据
+          </a>
+        </li>
+        <span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </span>
+      </span>
+    
+
+  
+
+
+</ul>
+
+<script>
+  $("#toggleContainerPdf li.active").parents('li').toggle('display');
+  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+  });
+</script><ul id="mysidebar" class="nav"><li class="subfolders "><a href="/zh-cn/vcp/index.html">
+        <div class="na-navbar-padding"> 适用于 vCenter Server 的 NetApp Element 插件文档</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/concept_vcp_product_overview.html">
+        适用于 vCenter Server 的 NetApp Element 插件产品概述
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 发行说明</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/rn_whatsnew_vcp.html">
+        适用于 vCenter Server 的 NetApp Element 插件中的新增功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/rn_relatedrn_vcp.html">
+        其他版本信息
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_config_extension_point.html">
+        NetApp Element 配置扩展点
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_management_extension_point.html">
+        NetApp Element 管理扩展点
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_accounts.html">
+        用户帐户
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_protection_domains.html">
+        保护域
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_linkedmode.html">
+        链接模式和 vCenter 插件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_concept_vvols.html">
+        虚拟卷（ VVOL ）
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/reference_requirements_vcp.html">
+        部署前要求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_getstarted.html">
+        安装和配置适用于 vCenter Server 的 NetApp Element 插件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/task_vcp_upgrades.html">
+        升级此插件
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 使用 vCenter 插件管理存储</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_clusters_manage.html">
+        管理集群
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_datastores_manage.html">
+        管理数据存储库
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_volumes_manage.html">
+        管理卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_create_manage_user_accounts.html">
+        创建和管理用户帐户
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_create_manage_access_groups.html">
+        创建和管理访问组
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_create_manage_initiators.html">
+        创建和管理启动程序
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_qossioc.html">
+        为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_qos_policies.html">
+        创建和管理卷 QoS 策略
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理集群硬件和虚拟网络</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_manage_cluster_overview.html">
+        管理集群硬件和虚拟网络概述
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_add_manage_drive.html">
+        添加和管理驱动器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_add_manage_nodes.html">
+        添加和管理节点
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_create_manage_vlans.html">
+        创建和管理虚拟网络
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 监控系统性能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_intro.html">
+        使用报告选项监控系统性能
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_overview.html">
+        在概述页面上监控集群的整体运行状况
+      </a></li><li class="subfolders "><a href="/zh-cn/vcp/vcp_task_reports_alerts.html">
+        <div class="na-navbar-padding"> 监控系统警报</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_reference_reports_alert_errors.html">
+        系统警报列表
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_event_logs.html">
+        监控事件日志以进行故障排除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_volume_performance.html">
+        监控卷性能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_iscsi.html">
+        监控 iSCSI 会话以确定连接状态
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_reports_qossioc.html">
+        使用 QocSSIOC 事件监控虚拟机性能
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 使用 vCenter 插件保护数据</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_protect_overview.html">
+        使用 vCenter 插件概述保护数据
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_protect_snapshots_volume.html">
+        创建和管理卷快照
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_protect_snapshots_group.html">
+        创建和管理组快照
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_protect_snapshots_schedules.html">
+        创建快照计划
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_protect_remote_replication.html">
+        在集群之间执行远程复制
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_task_configure_manage_vvols.html">
+        使用 vCenter 插件设置和管理虚拟卷
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/task_vcp_unregister.html">
+        取消注册此插件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/task_vcp_remove.html">
+        删除此插件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/vcp_reference_troubleshoot_vcp.html">
+        对插件进行故障排除
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/reference_earlier_versions.html">
+        早期版本的 NetApp Element 插件文档
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-cn/vcp/legal-notices.html">
+        法律声明
+      </a></li></ul></li></ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-cn/vcp/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">在概述页面上监控集群的整体运行状况</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-10-27 10:06:28 +0000">10/27/2021</time>
+    
+  
+
+<span>提供者
+  <a target="_blank" href="https://github.com/netapp-dbagwell">
+    <img  class="avatar avatar-small"
+          alt="netapp-dbagwell"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/53352450?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/amgrissino">
+    <img  class="avatar avatar-small"
+          alt="amgrissino"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/36450105?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" href="https://github.com/netapp-pcarriga">
+    <img  class="avatar avatar-small"
+          alt="netapp-pcarriga"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/77334475?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+</span>
+
+
+  <span>
+    <a target="_blank" href="/zh-cn/vcp/pdfs/pages/vcp_task_reports_overview.pdf" role="button">
+      <img src="/zh-cn/vcp/images/pdf.png" width="20" height="20"/>下载此页面的 PDF</a>
+  </span>
+
+
+</p>
+
+
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>您可以从适用于 vCenter Server 的 NetApp Element 插件的 NetApp Element 管理扩展点的报告选项卡的概述页面查看选定集群的集群信息概要，包括整体容量，效率和性能。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步骤</div>
+<ol class="arabic">
+<li>
+<p>从 vCenter 插件中，选择 * NetApp Element Management* 。</p>
+</li>
+<li>
+<p>选择 * 报告 * 。</p>
+</li>
+<li>
+<p>监控 " 概述 " 页面上的数据。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="报告概述页面数据">报告概述页面数据</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>以下数据将显示在 "Reporting Overview" 页面上：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>* 集群容量 * ：块存储，元数据和已配置空间的剩余容量。将指针移动到进度条上方可查看阈值信息。</p>
+</li>
+<li>
+<p>* 集群信息 * ：集群专用信息，例如集群名称，集群上运行的 NetApp Element 软件版本， MVIP 和 SVIP 地址以及集群上的节点数， 4k IOPS ，卷和会话数。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 集群名称 * ：集群的名称。</p>
+</li>
+<li>
+<p>* 存储 IP （ SVIP ） * ：存储虚拟 IP 地址（ SVIP ）。</p>
+</li>
+<li>
+<p>* 管理 IP （ MVIP ） * ：管理虚拟 IP 地址（ MVIP ）。</p>
+</li>
+<li>
+<p>* SVIP VLAN 标记 * ：主 SVIP 地址的 VLAN 标识符。</p>
+</li>
+<li>
+<p>* MVIP VLAN 标记 * ：主 MVIP 地址的 VLAN 标识符。</p>
+</li>
+<li>
+<p>* 节点计数 * ：集群中活动节点的数量。</p>
+</li>
+<li>
+<p>* 集群 4k IOPS* ：集群可以在一秒内读取 / 写入的 4096 （ 4k ）块的数量。</p>
+</li>
+<li>
+<p>* Element OS Version* ：集群运行的 NetApp Element 软件版本。</p>
+</li>
+<li>
+<p>* 卷计数 * ：集群上的卷总数，不包括虚拟卷。</p>
+</li>
+<li>
+<p>* 虚拟卷计数 * ：集群上的虚拟卷总数。</p>
+</li>
+<li>
+<p>* iSCSI 会话 * ：连接到集群的 iSCSI 会话。</p>
+</li>
+<li>
+<p>* 光纤通道会话 * ：连接到集群的光纤通道会话。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 集群效率 * ：考虑到精简配置，重复数据删除和数据压缩的当前使用的系统总容量。计算得出的集群优势是通过比较传统存储设备上不使用精简配置，重复数据删除和数据压缩时的容量利用率来计算得出的。</p>
+</li>
+<li>
+<p>* 保护域 * ：集群的保护域监控摘要。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/vcp/images/note.svg" alt="注">
+</td>
+<td class="content">
+保护域功能与双节点集群不兼容。
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>* 保护域监控级别 * ：用户选择的保护域故障恢复能力级别。可能值为机箱或节点。绿色表示集群能够达到选定监控级别。红色表示集群不再能够达到选定监控级别，需要采取更正操作。</p>
+</li>
+<li>
+<p>* 剩余块容量 * ：表示为保持选定故障恢复能力级别而剩余块容量的百分比。</p>
+</li>
+<li>
+<p>* 元数据容量 * ：指示是否有足够的元数据容量来从故障中恢复，同时保持数据可用性不中断。正常（绿色）表示集群具有足够的元数据来保持选定监控级别。Full （红色）表示集群不再能够达到选定监控级别，需要采取更正操作。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 已配置 IOPS* ：集群上如何过度配置卷 IOPS 的摘要。配置的 IOPS 计算方法是，将集群上所有卷的最小 IOPS ，最大 IOPS 和突发 IOPS 总数之和除以集群的额定最大 IOPS 。</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/vcp/images/note.svg" alt="注">
+</td>
+<td class="content">
+例如，如果集群中有四个卷，每个卷的最小 IOPS 为 500 ，最大 IOPS 为 15 ， 000 ，突发 IOPS 为 15 ， 000 ，则最小 IOPS 总数为 2 ， 000 ，最大 IOPS 总数为 60 ， 000 ，突发 IOPS 总数为 60 ， 000 。如果集群的额定最大 IOPS 为 50 ， 000 ，则计算结果如下： * 最小 IOPS* ： 2000/50000 = 0.04x * 最大 IOPS* ： 60000/50000 = 1.20x * 突发 IOPS* ： 60000/50000 = 1.20x 1.00x 1.00x 是基线，在此基线下，已配置的 IOPS 等于集群的额定 IOPS 。
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>* 集群运行状况 * ：集群运行状况的硬件，容量和安全组件。颜色代码表示以下内容：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 绿色 * ：运行状况良好</p>
+</li>
+<li>
+<p>* 黄色 * ：严重</p>
+</li>
+<li>
+<p>* 红色 * ：错误</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 集群输入 / 输出 * ：集群上当前运行的 I/O 。这些值是根据先前的 I/O 测量值与当前 I/O 测量值进行计算的。这些是图中显示的测量值：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 总计 * ：系统中发生的读写 IOPS 的组合。</p>
+</li>
+<li>
+<p>* 读取 * ：发生的读取 IOPS 数。</p>
+</li>
+<li>
+<p>* 写入 * ：写入 IOPS 的数量。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 集群吞吐量 * ：集群上的读取，写入和总带宽活动：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>* 总计 * ：集群中用于读取和写入活动的总 MB/ 秒。</p>
+</li>
+<li>
+<p>* 读取 * ：集群的读取活动，以 MB/ 秒为单位。</p>
+</li>
+<li>
+<p>* 写入 * ：集群的写入活动，以 MB/ 秒为单位。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 性能利用率 * ：正在使用的集群 IOPS 百分比。例如，以 100K IOPS 运行的 250K IOPS 集群将显示消耗率为 40% 。</p>
+</li>
+</ul>
+</div>
+<h2 id="了解更多信息" class="discrete">了解更多信息</h2>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/index.html" target="_blank" rel="noopener">"NetApp HCI 文档"</a></p>
+</li>
+<li>
+<p><a href="https://www.netapp.com/data-storage/solidfire/documentation" target="_blank" rel="noopener">"SolidFire 和 Element 资源页面"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div class="page-nav-contribute"  >
+      <div class="page-nav-contribute-title">提供</div>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_task_reports_overview.adoc" class="btn btn-default githubEditButton" role="button"><img src="/zh-cn/vcp/images/github.png" class="github-icon" />编辑这个页面</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[在概述页面上监控集群的整体运行状况](https://docs.netapp.com/zh-cn/vcp/vcp_task_reports_overview.html)" class="btn btn-default githubEditButton" role="button"><img src="/zh-cn/vcp/images/github.png" class="github-icon" />请求文档更改</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >了解如何贡献</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此页面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">想就我们的网站提供反馈?<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">请告诉我们</a>
+  <a href="https://docs.netapp.com/zh-cn/announcements/" class="n-footer__copyright">通知</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/vcp/js/www-ntap.js'></script>
+    <script src='/zh-cn/vcp/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
