@@ -2368,7 +2368,6 @@
   <block id="54866f3f5260905d8cc6b998d85fee46" category="inline-link">《 NetApp HCI 1.9P1 发行说明》</block>
   <block id="5f123fb5072e8736326c928e2de971af" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block> _new_</block>
   <block id="7199e7988a06a61dd6614783601855bd" category="inline-link">《 NetApp Element 软件 12.3.1 发行说明》</block>
-  <block id="b91b7e31099336f65c115b7637d8d891" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block> _new_</block>
   <block id="3b34803433d83528840d8e729af0e8bc" category="inline-link">vCenter 插件 4.8 发行说明</block>
   <block id="c561b7d92736e6c451a661a0a5da7586" category="list-text"><block ref="c561b7d92736e6c451a661a0a5da7586" category="inline-link-rx"></block></block>
   <block id="b8a3e041719b8e9752b150f5cd409639" category="inline-link">计算固件包 2.76.10 发行说明（最新）</block>
@@ -2423,4 +2422,7 @@
   <block id="8205746f5d5236ad86d4993e15eed883" category="list-text"><block ref="8205746f5d5236ad86d4993e15eed883" category="inline-link-rx"></block></block>
   <block id="e868028708701bd050c5db2e0a7f54a9" category="inline-link">升级 SolidFire 全闪存存储系统</block>
   <block id="9082b5c51eb2d8daa6920501e4e6ac2a" category="list-text"><block ref="9082b5c51eb2d8daa6920501e4e6ac2a" category="inline-link-rx"></block></block>
+  <block id="56570048e2475ec7b64ee91388743714" category="inline-link">《 NetApp Element 软件 12.3.2 发行说明》</block>
+  <block id="3903fc6a9f0bcbe1f49608f5110cf661" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block> _new_</block>
+  <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
 </blocks>
