@@ -156,7 +156,6 @@
   <block id="ad0a505756223d68dc11afeae3459351" category="inline-link">NetApp HCI 文档</block>
   <block id="bf667c8802395357e4f080e2fcd819e4" category="list-text"><block ref="bf667c8802395357e4f080e2fcd819e4" category="inline-link-rx"></block></block>
   <block id="bd607b66858d9331643c0e3529eef009" category="summary">了解此版本的适用于 vCenter Server 的 NetApp Element 插件中的新增功能。</block>
-  <block id="bd4fc9c876f29d7b65b5ec6243dd29b1" category="doc">适用于 vCenter Server 的 NetApp Element 插件中的新增功能和 #8217</block>
   <block id="4ffb98b73fd3c97c4d4ff0bb0a71e369" category="inline-link">最新的管理服务 2.17.56 修补程序</block>
   <block id="63dc0610fa4f17ed41a534fecd0529dc" category="paragraph">适用于 vCenter Server 4.7 的 NetApp Element 插件包含重要的安全改进功能，进一步完善了中的改进功能<block ref="b1233a0bfa93edf062561cc29a402448" category="inline-link-rx"></block> 版本。</block>
   <block id="cfae351f326ceb749aee846597a3c182" category="paragraph">适用于 vCenter Server 4.7 的 NetApp Element 插件随 2.18 版管理服务一起提供。</block>
@@ -2425,4 +2424,5 @@
   <block id="56570048e2475ec7b64ee91388743714" category="inline-link">《 NetApp Element 软件 12.3.2 发行说明》</block>
   <block id="3903fc6a9f0bcbe1f49608f5110cf661" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block> _new_</block>
   <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
+  <block id="27e0892481776817839fc398f00de350" category="doc">适用于 vCenter Server 的 NetApp Element 插件中的新增功能</block>
 </blocks>

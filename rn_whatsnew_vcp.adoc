@@ -4,7 +4,7 @@ permalink: rn_whatsnew_vcp.html
 summary: 了解此版本的适用于 vCenter Server 的 NetApp Element 插件中的新增功能。 
 keywords: netapp, vcp, vcenter, plugin, element, new, whats new 
 ---
-= 适用于 vCenter Server 的 NetApp Element 插件中的新增功能和 #8217
+= 适用于 vCenter Server 的 NetApp Element 插件中的新增功能
 :hardbreaks:
 :nofooter: 
 :icons: font
