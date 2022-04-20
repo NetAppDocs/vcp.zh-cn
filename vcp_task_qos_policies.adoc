@@ -6,6 +6,7 @@ keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, el
 ---
 = 创建和管理卷 QoS 策略
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

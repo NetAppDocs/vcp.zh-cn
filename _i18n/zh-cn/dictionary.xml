@@ -1516,8 +1516,6 @@
   <block id="61993b64115728d8f5ac3de889d7d5cd" category="cell">证书将在 3 天内过期或已过期。</block>
   <block id="42a775dbc829e1685b50072b5c687f36" category="paragraph">* 要解决 * ：要解决此故障，请在 SSL 证书过期之前更新此证书。使用 `UpdateIdpConfiguration` API 方法和 `refreshCertificate呼 出时间 =true` 提供更新后的 SSL 证书。</block>
   <block id="308f88c7343bcde5928afc202705f02e" category="list-text">* 不一致的绑定模式 * ： VLAN 设备上缺少绑定模式。此故障将显示预期的绑定模式和当前正在使用的绑定模式。</block>
-  <block id="34abef81b9a8ce278ef3ade37200f6a4" category="list-text">* 不一致的接口配置 * ：接口配置不一致。</block>
-  <block id="5b0166feabda67b3040f6239ee1f1e40" category="paragraph">* 要解决 * ：要解决此故障，请确保存储集群中的节点接口配置一致。</block>
   <block id="c4b0c56cdcb13f6eb48c16acd3406015" category="list-text">* 不一致的 Mtus* ：此集群故障指示以下情况之一：</block>
   <block id="9c1485d86c325377a29a8d89037f06b2" category="list-text">Bond1G mismatch ：在绑定 1G 接口上检测到 MTU 不一致。</block>
   <block id="b9c6a0b1df2e02b3cef9f3c2de4ae589" category="list-text">Bond10G mismatch ：在绑定 10G 接口上检测到 MTU 不一致。</block>
@@ -2350,8 +2348,6 @@
   <block id="faa169d4c778c54064b635053ab306a2" category="sidebar">删除此插件</block>
   <block id="5612baf51d00a05f0290357c97294f8d" category="sidebar">对插件进行故障排除</block>
   <block id="b43e19e2999292fbebfa71878760ddf9" category="paragraph">在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。</block>
-  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
-  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
   <block id="631923a687ff82d68973d99b95597b47" category="inline-link">SolidFire 和 Element 资源页面</block>
   <block id="238c5b123e3473c57e2925edccb205c2" category="list-text"><block ref="238c5b123e3473c57e2925edccb205c2" category="inline-link-rx"></block></block>
   <block id="19d7fd1174be86185b720fea9ff20172" category="paragraph">适用于 vCenter Server 4.8 的 NetApp Element 插件提供了一些安全性改进，内存利用率提高以及第三方库升级功能。</block>
@@ -2425,4 +2421,18 @@
   <block id="3903fc6a9f0bcbe1f49608f5110cf661" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block> _new_</block>
   <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
   <block id="27e0892481776817839fc398f00de350" category="doc">适用于 vCenter Server 的 NetApp Element 插件中的新增功能</block>
+  <block id="72da0f32a8783a5cb119cddae9f955bb" category="admonition">请勿将多个 NetApp Element VASA 提供程序注册到一个 vCenter 实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商标</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 徽标和 NetApp 商标页面上列出的标记是 NetApp 、 Inc. 的商标。其他公司和产品名称可能是其各自所有者的商标。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">专利</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">有关 NetApp 拥有的专利的最新列表，请访问：</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隐私政策</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
 </blocks>

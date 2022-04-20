@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 ---
 = 系统警报列表
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -282,10 +283,6 @@ NOTE: 警告状态只能在三重 Helix 系统上发生。
 * 要解决 * ：要解决此故障，请在 SSL 证书过期之前更新此证书。使用 `UpdateIdpConfiguration` API 方法和 `refreshCertificate呼 出时间 =true` 提供更新后的 SSL 证书。
 
 * * 不一致的绑定模式 * ： VLAN 设备上缺少绑定模式。此故障将显示预期的绑定模式和当前正在使用的绑定模式。
-* * 不一致的接口配置 * ：接口配置不一致。
-+
-* 要解决 * ：要解决此故障，请确保存储集群中的节点接口配置一致。
-
 * * 不一致的 Mtus* ：此集群故障指示以下情况之一：
 +
 ** Bond1G mismatch ：在绑定 1G 接口上检测到 MTU 不一致。

@@ -6,6 +6,7 @@ keywords: netapp, vcp, element, plugin, plug-in, linked mode
 ---
 = 链接模式和插件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

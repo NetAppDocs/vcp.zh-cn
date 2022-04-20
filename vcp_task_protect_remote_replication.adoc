@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, protect, replication, remote, clus
 ---
 = 在集群之间执行远程复制
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 ---
 = 适用于 vCenter Server 的 Element 插件的要求
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 ---
 = 创建和管理卷访问组
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

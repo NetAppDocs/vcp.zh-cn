@@ -6,6 +6,7 @@ keywords: netapp, vcp, element, vcenter plugin, plug-in
 ---
 = 适用于 vCenter Server 的 NetApp Element 插件产品概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

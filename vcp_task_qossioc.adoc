@@ -6,6 +6,7 @@ keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element
 ---
 = 为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -13,7 +14,7 @@ keywords: netapp, qossioc, quality of service, qos, sioc, vcp, vcenter, element
 
 
 [role="lead"]
-您可以为插件控制的单个卷和数据存储库设置 QoSSIOC 自动化。 link:vcp_concept_qossioc.html["QoSSIOC"] 是自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 ）标准数据存储库上所有 VM 的设置。
+您可以为插件控制的单个卷和数据存储库设置 QoSSIOC 自动化。 link:vcp_concept_qossioc.html["QoSSIOC"] 是自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html["SIOC"^]）标准数据存储库上所有 VM 的设置。
 
 管理节点上的 QoSSIOC 服务与 vCenter 进行通信并监控数据存储库上的 VM 活动。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。QoSSIOC 是一项可选功能，该插件无需使用它来管理存储集群。
 

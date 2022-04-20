@@ -6,6 +6,7 @@ keywords: netapp, storage, accounts, vcp, vcenter, element
 ---
 = 创建和管理用户帐户
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

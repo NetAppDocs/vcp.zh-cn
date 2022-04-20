@@ -6,6 +6,7 @@ keywords: netapp, storage, inititators, vcp, vcenter, element
 ---
 = 创建和管理启动程序
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

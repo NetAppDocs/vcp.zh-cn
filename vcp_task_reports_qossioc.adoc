@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster,
 ---
 = 监控具有 QoSSIOC 事件的虚拟机性能分层
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 ---
 = 添加和管理驱动器
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

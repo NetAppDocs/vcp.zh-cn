@@ -1,4 +1,5 @@
 = NetApp HCI
+:allow-uri-read: 
 
 
 您可以通过链接访问 NetApp HCI 和 Element 存储环境中各个组件的最新和早期发行说明。

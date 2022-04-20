@@ -2,10 +2,11 @@
 sidebar: sidebar 
 permalink: vcp_task_configure_manage_vvols.html 
 summary: 您可以为集群中已配置的存储设置虚拟卷。 
-keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, element 
+keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, element, vasa provider 
 ---
 = 配置和管理虚拟卷
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -13,7 +14,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 [role="lead"]
-您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， ， 和 NetApp Element 管理扩展点的主机。
+您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， link:vcp_concept_vvols.html#storage-containers["存储容器"]， link:vcp_concept_vvols.html#protocol-endpoints["协议端点"]和 NetApp Element 管理扩展点的主机。
 
 .您需要什么？ #8217 ；将需要什么
 * 您使用的 NetApp Element 10 或更高版本集群连接到与 VVol 兼容的 ESXi 6.5 或更高版本环境。
@@ -81,6 +82,9 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 
 
 IMPORTANT: 请勿将 NetApp Element VASA Provider 注册到多个 vCenter 实例。由于 NetApp Element VASA 提供程序处理 SSL 的方式存在限制，因此只能将其注册到一个 vCenter 中。一个 vCenter 可以包含多个 NetApp Element 集群，但一个集群不能在两个 vCenter 实例之间共享。
+
+
+IMPORTANT: 请勿将多个 NetApp Element VASA 提供程序注册到一个 vCenter 实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。
 
 
 NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39["NetApp 软件下载"] 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。

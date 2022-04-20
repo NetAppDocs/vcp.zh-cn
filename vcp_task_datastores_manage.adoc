@@ -6,6 +6,7 @@ keywords: netapp, datastore, vcp, vcenter, element
 ---
 = 管理数据存储库
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -73,7 +74,7 @@ NOTE: 在创建新数据存储库之前，您至少需要一个已连接的主�
 . 在 * 配置卷 * 窗格中，选择一个现有卷并继续执行下一步，或者为新数据存储库创建一个新卷：
 +
 
-NOTE: 如果选择现有卷以创建新数据存储库，则现有数据将丢失。对于现有 VMFS 卷，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"^] 和。
+NOTE: 如果选择现有卷以创建新数据存储库，则现有数据将丢失。对于现有 VMFS 卷，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"^] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html["管理重复的 VMFS 数据存储库"^]。
 
 +
 .. 为支持数据存储库的卷输入一个名称。

@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 ---
 = 在概述页面上监控集群的整体运行状况
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

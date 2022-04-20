@@ -6,6 +6,7 @@ keywords: netapp, quality of service, volume performance, sioc, storage I/O cont
 ---
 = QoSSIOC
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -13,7 +14,7 @@ keywords: netapp, quality of service, volume performance, sioc, storage I/O cont
 
 
 [role="lead"]
-适用于 vCenter Server 的 NetApp Element 插件可作为一项可选设置启用自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 ）标准数据存储库上所有 VM 的设置。可以为任何标准数据存储库启用 QoS 和 SIOC 集成（ QoSSIOC ），从而对所有关联 VM 上的所有 SIOC 设置运行扫描。
+适用于 vCenter Server 的 NetApp Element 插件可作为一项可选设置启用自动服务质量 (https://docs.netapp.com/us-en/hci/docs/concept_hci_performance.html["QoS"^]）基于存储 I/O 控制 (https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.resmgmt.doc/GUID-7686FEC3-1FAC-4DA7-B698-B808C44E5E96.html["SIOC"^]）标准数据存储库上所有 VM 的设置。可以为任何标准数据存储库启用 QoS 和 SIOC 集成（ QoSSIOC ），从而对所有关联 VM 上的所有 SIOC 设置运行扫描。
 
 QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。QoSSIOC 服务使用所有 SIOC 预留或共享的总和以及 IOPS 限制的总和来确定每个数据存储库的底层卷的最小和最大 QoS 。此外，还提供了一个可配置的突发因子。
 

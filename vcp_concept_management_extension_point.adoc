@@ -6,6 +6,7 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 ---
 = NetApp Element 管理扩展点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

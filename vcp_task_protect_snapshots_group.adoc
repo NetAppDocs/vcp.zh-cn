@@ -6,6 +6,7 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 ---
 = 在 vCenter Server 中创建和管理组快照
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ keywords: netapp, VLANs, drives, nodes, cluster, manage create, delete, view vcp
 ---
 = 管理集群硬件和虚拟网络概述
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

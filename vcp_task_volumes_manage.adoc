@@ -6,6 +6,7 @@ keywords: netapp, volumes, vcp, vcenter, element,
 ---
 = 管理卷
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -272,7 +273,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 NOTE: 克隆的卷不会从源卷继承卷访问组成员资格。
 
-操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"] 和。
+操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html["管理重复的 VMFS 数据存储库"]。
 
 .步骤
 . 选择 * NetApp Element 管理 > 管理 * 。

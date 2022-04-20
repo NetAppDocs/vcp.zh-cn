@@ -6,6 +6,7 @@ keywords: netapp, hci, element, vcp, vcenter plugin, storage, management service
 ---
 = 其他版本信息
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

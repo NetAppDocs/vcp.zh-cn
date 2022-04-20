@@ -6,6 +6,7 @@ keywords: netapp, vcp, element, plugin, plug-in, config, extension point
 ---
 = NetApp Element 配置扩展点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 ---
 = 添加和管理节点
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
