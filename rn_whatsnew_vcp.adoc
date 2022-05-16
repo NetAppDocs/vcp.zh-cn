@@ -15,6 +15,14 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
+适用于vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
+
+适用于vCenter Server 4.9的NetApp Element 插件可与管理服务的2.2版一起使用。
+
+
+
+== 适用于vCenter Server的NetApp Element 插件4.8
+
 适用于 vCenter Server 4.8 的 NetApp Element 插件提供了一些安全性改进，内存利用率提高以及第三方库升级功能。
 
 适用于 vCenter Server 4.8 的 NetApp Element 插件可与 2.19 版的管理服务配合使用。

@@ -20,7 +20,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 == VMware vSphere 前提条件
 
-要使用适用于 vCenter Server 的 NetApp Element 插件，需要使用 VMware vSphere 7.0 或 6.7 ，包括配置了软件 iSCSI 适配器和 iSCSI 网络的 vCenter 和 ESXi 。
+要使用适用于vCenter Server的NetApp Element 插件、需要使用VMware vSphere 7.0、6.7或6.5 (包括已配置软件iSCSI适配器和iSCSI网络的vCenter和ESXi)。
 
 
 
@@ -29,15 +29,17 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 此插件支持以下主要版本的 VMware 软件：
 
 * vSphere 7.0 和 7.0 Update 1 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
++
+
+IMPORTANT: 升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["此知识库文章"^]。
+
 * vSphere 6.7 和 6.7 Update 1 和 3 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
 +
 
 IMPORTANT: 此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。
 
+* vSphere 6.5、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
 
-
-
-IMPORTANT: 此插件与 VMware vCenter Server 6.5 不兼容。
 
 
 
