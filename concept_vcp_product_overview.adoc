@@ -15,7 +15,7 @@ keywords: netapp, vcp, element, vcenter plugin, plug-in
 
 
 [role="lead"]
-适用于 vCenter Server 的 NetApp Element 插件（ VCP ）是一个与 VMware vSphere Web Client 用户界面（ UI ）集成的基于 Web 的工具。该插件是 VMware vSphere 的一个扩展和备用可扩展，用户友好型界面，可管理和监控运行 * NetApp Element software* 软件的存储集群。
+适用于vCenter Server的NetApp Element 插件是一个与VMware vSphere Web Client用户界面(UI)集成的基于Web的工具。该插件是 VMware vSphere 的一个扩展和备用可扩展，用户友好型界面，可管理和监控运行 * NetApp Element software* 软件的存储集群。
 
 您可以使用此插件用户界面发现和配置集群，并管理，监控和分配集群容量中的存储，以配置数据存储库和虚拟数据存储库（对于虚拟卷）。集群在网络上显示为一个本地组，该组通过虚拟 IP 地址呈现给主机和管理员。您还可以通过实时报告功能监控集群活动，包括执行各种操作时可能发生的任何事件的错误和警报消息。
 

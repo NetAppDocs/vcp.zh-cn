@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: index.html 
-summary: 使用适用于 vCenter Server 的 NetApp Element 插件（ VCP ）（ VMware vSphere 界面的一个插件）管理和监控运行 NetApp Element 软件的存储集群。 
+summary: '使用适用于vCenter Server的NetApp Element 插件(VMware vSphere界面的插件)管理和监控运行NetApp Element 软件的存储集群。' 
 keywords: netapp, vcp, on premise, hybrid cloud control, hcc 
 ---
 = 适用于 vCenter Server 的 NetApp Element 插件文档
@@ -14,7 +14,7 @@ keywords: netapp, vcp, on premise, hybrid cloud control, hcc
 
 
 [role="lead"]
-适用于 vCenter Server 的 NetApp Element 插件（ VCP ）为 VMware vSphere 界面提供了一个插件，可用于管理和监控运行 NetApp Element 软件的存储集群。
+适用于vCenter Server的NetApp Element 插件为VMware vSphere界面提供了一个插件、可用于管理和监控运行NetApp Element 软件的存储集群。
 
 您可以使用本文档了解并使用此插件。本文档介绍了 4.6 及更高版本。有关此插件的旧版本，请参见 link:reference_earlier_versions.html["此页面"]。
 

@@ -29,7 +29,7 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 
 
 
-=== 设置任务
+== 设置任务
 
 * link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置 QoSSIOC 设置"]
 * <<Enabling QoSSIOC automation on datastores>>
@@ -37,7 +37,7 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 
 
 
-=== 管理任务
+== 管理任务
 
 * link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"^]
 * <<Edit QoSSIOC settings>>

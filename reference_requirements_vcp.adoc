@@ -14,7 +14,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 
 [role="lead"]
-在使用适用于 vCenter Server 的 NetApp Element 插件管理 NetApp HCI 或 SolidFire 全闪存阵列存储之前，您需要确保系统满足插件使用要求。​
+在使用适用于vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您需要确保系统满足插件使用要求。
 
 
 
@@ -39,6 +39,10 @@ IMPORTANT: 升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server
 IMPORTANT: 此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 13007421 以及更新 2a （内部版本 13643870 ）之前发布的其他 6.7 U2 内部版本不兼容。它与适用于 Flash/FLEX 的 vSphere Web Client 6.7 U2 版兼容。
 
 * vSphere 6.5、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
++
+
+IMPORTANT: 此插件与适用于VMware vCenter Server 4.6、4.7和4.8的Element插件6.5版不兼容。
+
 
 
 

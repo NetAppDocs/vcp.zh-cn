@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 
 [role="lead"]
-您可以将适用于 vCenter Server 的 NetApp Element 插件（ VCP ）的最新版本直接安装到 vCenter 中，并使用 vSphere Web Client 访问此插件。
+您可以将适用于vCenter Server的NetApp Element 插件的最新版本直接安装到vCenter中、并使用vSphere Web Client访问此插件。
 
 安装完成后，您可以根据存储 I/O 控制（ QoSSIOC ）服务以及 vCenter 插件的其他服务使用服务质量。
 

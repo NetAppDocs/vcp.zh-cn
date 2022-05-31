@@ -23,7 +23,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 
-=== 设置任务
+== 设置任务
 
 要在适用于 vCenter Server 的 NetApp Element 插件中使用虚拟卷（ VVol ），您必须执行初始配置步骤。
 
@@ -35,7 +35,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 
-=== 管理任务
+== 管理任务
 
 * <<Monitor virtual volume resources>>
 * <<Create a VVol datastore for a storage container>>
