@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[管理数据存储库](https://docs.netapp.com/zh-cn/vcp/vcp_task_datastores_manage.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/vcp/images/discuss-sm.svg" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_task_datastores_manage.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/vcp/images/edit-sm.svg" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/vcp/images/article-sm.svg" class="github-icon" />提供者指南</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/vcp/issues/new?body=Page%3A%20[管理数据存储库](https://docs.netapp.com/zh-cn/vcp/vcp_task_datastores_manage.html)" class="page-nav-contribute-link" role="button"><img src="/zh-cn/vcp/images/discuss-sm.svg" alt="" class="github-icon" />请求文档变更</a><a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_task_datastores_manage.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-cn/vcp/images/edit-sm.svg" alt="" class="github-icon" />在 GitHub 上编辑</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-cn/vcp/images/article-sm.svg" alt="" class="github-icon" />提供者指南</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此页面上</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/zh-cn/vcp/search.html"
           data-type="widget" 
-          data-placeholder="搜索文档" 
-          data-no-results-found="未找到与 {query} 匹配的结果。" 
-          data-did-you-mean="搜索 {suggestion}。" 
-          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?" 
-          data-results-found="找到 {hitCount} 个结果"  
+          data-placeholder="搜索文档"
+          data-no-results-found="未找到与 {query} 匹配的结果。"
+          data-did-you-mean="搜索 {suggestion}。"
+          data-no-results-found-did-you-mean="未找到与 {query} 匹配的结果。您是否要搜索 {suggestion}?"
+          data-results-found="找到 {hitCount} 个结果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">简体中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">简体中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-cn/vcp/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/vcp/vcp_task_datastores_manage.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/vcp/vcp_task_datastores_manage.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/vcp/vcp_task_datastores_manage.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/vcp/vcp_task_datastores_manage.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/vcp/vcp_task_datastores_manage.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-cn/vcp/vcp_task_datastores_manage.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/vcp/vcp_task_datastores_manage.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/vcp/vcp_task_datastores_manage.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/vcp/vcp_task_datastores_manage.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/vcp/vcp_task_datastores_manage.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>可用的 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/zh-cn/vcp/pdfs/fullsite-sidebar/适用于_vCenter_Server_的_NetApp_Element_插件文档.pdf" >
-          <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>此文档站点的 PDF</a>
+          <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>此文档站点的 PDF</a>
 
     
       <ul class="subfolders" style="display:none;">
@@ -372,7 +366,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/适用于_vCenter_Server_的_NetApp_Element_插件文档.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             适用于 vCenter Server 的 NetApp Element 插件文档
           </a>
           
@@ -390,7 +384,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/发行说明.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             发行说明
           </a>
           
@@ -398,8 +392,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -419,7 +411,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/概念.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             概念
           </a>
           
@@ -437,8 +429,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -464,7 +454,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件管理存储.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             使用 vCenter 插件管理存储
           </a>
           
@@ -484,8 +474,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -505,7 +493,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/管理集群硬件和虚拟网络.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             管理集群硬件和虚拟网络
           </a>
           
@@ -517,8 +505,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -538,7 +524,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/监控系统性能.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             监控系统性能
           </a>
           
@@ -558,14 +544,12 @@
               href="/zh-cn/vcp/pdfs/sidebar/监控系统警报.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             监控系统警报
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -581,8 +565,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -602,7 +584,7 @@
               href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件保护数据.pdf" 
             
           >
-            <img src="/zh-cn/vcp/images/pdf.png" width="16" height="16"/>
+            <img src="/zh-cn/vcp/images/pdf.png" alt="" width="16" height="16"/>
             使用 vCenter 插件保护数据
           </a>
           
@@ -616,8 +598,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -637,19 +617,16 @@
 
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/zh-cn/vcp/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/zh-cn/vcp/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>收集单独的 PDF 文档<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -682,7 +659,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class="subfolders "><a href="/zh-cn/vcp/index.html">
         <div class="na-navbar-padding"> 适用于 vCenter Server 的 NetApp Element 插件文档</div>
       </a>
@@ -857,6 +834,9 @@
     <time datetime="2022-04-22 08:03:22 +0000">04/22/2022</time>
     
   
+
+<span>提供者
+</span>
 
 
 </p>
@@ -2111,4 +2091,5 @@ QoS 策略最适合服务环境，例如数据库，应用程序或基础架构�
     </script>
     <script src='/zh-cn/vcp/js/www-ntap.js'></script>
     <script src='/zh-cn/vcp/js/tabbed-blocks.js'></script>
+    <script src='/zh-cn/vcp/js/sidebar.js'></script>
   </body></html>
