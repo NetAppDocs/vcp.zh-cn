@@ -30,7 +30,7 @@ Element vCenter插件4.9可用于管理服务2.20.69版。
 
 == 适用于vCenter Server的NetApp Element 插件4.8
 
-Element vCenter插件4.7 4.8提供了一些安全改进功能、内存利用率改进功能以及第三方库升级功能。
+Element vCenter插件4.8提供了一些安全改进功能、内存利用率改进功能以及第三方库升级功能。
 
 Element vCenter插件4.8可在2.19版管理服务中使用。
 

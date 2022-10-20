@@ -17,7 +17,7 @@ summary: 适用于VMware vCenter Server的NetApp Element 插件4.6之前的版�
 此外、还提供了适用于VMware vCenter Server的NetApp Element 插件4.10之前版本的文档。
 
 
-NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件4.10、还包括版本4.9、4.6、4.7和4.8。
+NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件4.10、还包括版本4.6、4.7、4.8和4.9。
 
 [cols="4*"]
 |===
