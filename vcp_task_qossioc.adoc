@@ -23,7 +23,7 @@ QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）
 
 NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或使 VVol 可供 vSphere 使用。有关详细信息，请参见适用于 vCenter Server 的 Element 插件文档中有关配置 VVol 功能的信息。
 
-对于链接模式，适用于 vCenter Server 的 NetApp Element 插件将使用您在单个 vCenter Server 上提供的 QoSSIOC 设置注册所有 vCenter Server 。
+对于链接模式、Element vCenter插件将使用您在单个vCenter Server上提供的QoSSIOC设置注册所有vCenter Server。
 
 使用 vCenter 插件，您可以通过完成以下任务来配置和管理 QoSSIOC ：
 
@@ -32,7 +32,7 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 == 设置任务
 
 * link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置 QoSSIOC 设置"]
-* <<Enabling QoSSIOC automation on datastores>>
+*  QoSSIOC automation on datastores
 
 
 
@@ -40,10 +40,10 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 == 管理任务
 
 * link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"^]
-* <<Edit QoSSIOC settings>>
-* <<Change the QoSSIOC service password>>
-* <<Disable QoSSIOC automation for a datastore>>
-* <<Clear QoSSIOC settings>>
+*  QoSSIOC settings
+*  the QoSSIOC service password
+*  QoSSIOC automation for a datastore
+*  QoSSIOC settings
 
 
 
@@ -136,7 +136,7 @@ NOTE: 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为�
 * 管理节点已启动。
 
 
-此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作 <<Edit QoSSIOC settings,QoSSIOC 设置>> 页面。 NetApp Element
+此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作  QoSSIOC settings,QoSSIOC 设置 页面。 NetApp Element
 
 .步骤
 . 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
@@ -151,7 +151,7 @@ NOTE: 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为�
 注册实用程序 UI 将显示此插件的 * 管理 QoSSIOC 服务凭据 * 页面。
 
 +
-image::vcp_registration_ui_qossioc.png[VCP 注册实用程序菜单]
+image::vcp_registration_ui_qossioc.png[适用于vCenter Server的NetApp Element 插件注册实用程序菜单]
 
 . 输入以下信息：
 +
@@ -215,7 +215,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

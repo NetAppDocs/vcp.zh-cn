@@ -14,7 +14,7 @@ keywords: netapp, datastore, vcp, vcenter, element
 
 
 [role="lead"]
-使用适用于 vCenter Server 的 NetApp Element 插件，您可以管理由 Element 卷提供支持的数据存储库。您可以创建，扩展，克隆，共享或删除数据存储库。您还可以使用 VAAI UNMAP 允许集群从精简配置的 VMFS 数据存储库回收可用块空间。
+使用适用于VMware vCenter Server的NetApp Element 插件、您可以管理由Element卷提供支持的数据存储库。您可以创建，扩展，克隆，共享或删除数据存储库。您还可以使用 VAAI UNMAP 允许集群从精简配置的 VMFS 数据存储库回收可用块空间。
 
 .您需要什么？ #8217 ；将需要什么
 * 要创建和管理数据存储库，必须先至少创建一个用户帐户。
@@ -23,13 +23,13 @@ keywords: netapp, datastore, vcp, vcenter, element
 
 
 .选项
-* <<Create a datastore>>
-* <<View the datastore list>>
-* <<Extend a datastore>>
-* <<Clone a datastore>>
-* <<Share a datastore>>
-* <<Perform VAAI UNMAP>>
-* <<Delete a datastore>>
+*  a datastore
+*  the datastore list
+*  a datastore
+*  a datastore
+*  a datastore
+*  VAAI UNMAP
+*  a datastore
 
 
 
@@ -471,7 +471,8 @@ NOTE: 您也可以选择保留卷，然后将其与其他数据存储库相关�
 . 选择 * 是 * 。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

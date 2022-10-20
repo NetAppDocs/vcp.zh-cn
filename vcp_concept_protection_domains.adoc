@@ -22,7 +22,8 @@ keywords: netapp, vcp, element, plugin, plug-in, protection, domain
 
 机箱域比节点域需要更多的潜在容量资源，才能对故障进行故障恢复。超过保护域阈值时，集群将不再具有足够的容量来从故障中恢复，同时保持数据可用性不中断。
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

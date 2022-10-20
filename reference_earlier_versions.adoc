@@ -2,27 +2,29 @@
 sidebar: sidebar 
 permalink: reference_earlier_versions.html 
 keywords: documentation, earlier, previous, versions 
-summary: 适用于 vCenter Server 的 NetApp Element 插件 4.6 之前的版本提供了相关文档。 
+summary: 适用于VMware vCenter Server的NetApp Element 插件4.6之前的版本提供了相关文档。 
 ---
-= 早期版本的 NetApp Element 插件文档
+= 适用于VMware vCenter Server的NetApp Element 插件的早期版本文档
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: documentation, earlier, previous, versions
 
 
 [role="lead"]
-此外、还提供了适用于vCenter Server的NetApp Element 插件4.9之前版本的文档。
+此外、还提供了适用于VMware vCenter Server的NetApp Element 插件4.10之前版本的文档。
 
 
-NOTE: 这 link:index.html["文档链接"] 对于适用于vCenter Server的NetApp Element 插件4.9版、还包括4.6、4.7和4.8版。
+NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件4.10、还包括版本4.9、4.6、4.7和4.8。
 
 [cols="4*"]
 |===
 | version | 插件发行说明 | 管理服务发行说明 | 用户指南 
+
+
+| 4.9. | https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904["2.20.69"] | link:index.html["链接。"] 
 
 
 | 4.8 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296["2.19.48"^] | link:index.html["链接。"] 

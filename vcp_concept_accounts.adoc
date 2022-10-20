@@ -20,7 +20,8 @@ keywords: netapp, vcp, element, plugin, plug-in, account
 
 一个帐户最多可以分配 2000 个卷，但一个卷只能属于一个帐户。
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

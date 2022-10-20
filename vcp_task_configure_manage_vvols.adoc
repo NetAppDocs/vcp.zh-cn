@@ -28,18 +28,18 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 要在适用于 vCenter Server 的 NetApp Element 插件中使用虚拟卷（ VVol ），您必须执行初始配置步骤。
 
 .步骤
-. <<Enable virtual volumes functionality on the NetApp Element cluster>>
-. <<Register the VASA provider with vCenter>>
-. <<Create a storage container and associated VVol datastore>>
+.  virtual volumes functionality on the NetApp Element cluster
+.  the VASA provider with vCenter
+.  a storage container and associated VVol datastore
 
 
 
 
 == 管理任务
 
-* <<Monitor virtual volume resources>>
-* <<Create a VVol datastore for a storage container>>
-* <<Delete a storage container>>
+*  virtual volume resources
+*  a VVol datastore for a storage container
+*  a storage container
 
 
 
@@ -65,7 +65,7 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 . 为选定集群选择 * 操作 * 。
 . 在显示的菜单中，选择 * 详细信息 * 。
 . 从 * VASA Provider URL* 字段复制 VASA Provider URL 。您将使用此 URL 在 vCenter 中注册 VASA Provider 。
-. 请参见 <<Register the VASA provider with vCenter>> 后续步骤。
+. 请参见  the VASA provider with vCenter 后续步骤。
 
 
 
@@ -112,7 +112,7 @@ NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider
 
 NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在 * NetApp Element 配置 > 集群 * 中验证是否已启用此提供程序。为要启用的集群选择 * 操作 * ，然后单击 * 详细信息 * 。
 
-. 请参见 <<Create a storage container and associated VVol datastore>> 后续步骤。
+. 请参见  a storage container and associated VVol datastore 后续步骤。
 
 
 
@@ -169,9 +169,9 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 您可以从插件的 NetApp Element 管理扩展点查看虚拟卷组件性能和设置：
 
-* <<Monitoring VVols>>
-* <<Monitoring storage containers>>
-* <<Monitoring protocol endpoints>>
+*  VVols
+*  storage containers
+*  protocol endpoints
 
 
 
@@ -236,7 +236,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 为存储容器创建 VVol 数据存储库
 
-创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法 <<Create a storage container and associated VVol datastore,创建存储容器>> 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
+创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法  a storage container and associated VVol datastore,创建存储容器 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
 
 .您需要什么？ #8217 ；将需要什么
 * 虚拟环境中的现有存储容器。
@@ -284,7 +284,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 刷新 * 存储容器 * 子选项卡中的存储容器列表，以确认此存储容器已被删除。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

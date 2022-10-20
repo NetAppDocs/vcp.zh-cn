@@ -9,107 +9,146 @@ settings:
   langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: 适用于 vCenter Server 的 NetApp Element 插件文档
+  - title: 适用于VMware vCenter Server的NetApp Element 插件文档
     url: "/index.html"
+  - title: 适用于VMware vCenter Server的NetApp Element 插件产品概述
+    url: "/concept_vcp_product_overview.html"
+  - title: 发行说明
     entries:
-    - title: 适用于 vCenter Server 的 NetApp Element 插件产品概述
-      url: concept_vcp_product_overview.html
+    - title: 适用于VMware vCenter Server的NetApp Element 插件中的新增功能
+      url: "/rn_whatsnew_vcp.html"
+    - title: 其他版本信息
+      url: "/rn_relatedrn_vcp.html"
+  - title: 概念
+    entries:
+    - title: NetApp Element 配置扩展点
+      url: "/vcp_concept_config_extension_point.html"
+    - title: NetApp Element 管理扩展点
+      url: "/vcp_concept_management_extension_point.html"
+    - title: 用户帐户
+      url: "/vcp_concept_accounts.html"
+    - title: 保护域
+      url: "/vcp_concept_protection_domains.html"
+    - title: 链接模式和 vCenter 插件
+      url: "/vcp_concept_linkedmode.html"
+    - title: QoSSIOC
+      url: "/vcp_concept_qossioc.html"
+    - title: 虚拟卷（ VVOL ）
+      url: "/vcp_concept_vvols.html"
+  - title: 部署前要求
+    url: reference_requirements_vcp.html
+  - title: 安装和配置适用于VMware vCenter Server的NetApp Element 插件
+    url: "/vcp_task_getstarted.html"
+  - title: 升级此插件
+    url: "/task_vcp_upgrades.html"
+  - title: 使用 vCenter 插件管理存储
+    entries:
+    - title: 管理集群
+      url: "/vcp_task_clusters_manage.html"
+    - title: 管理数据存储库
+      url: "/vcp_task_datastores_manage.html"
+    - title: 管理卷
+      url: "/vcp_task_volumes_manage.html"
+    - title: 创建和管理用户帐户
+      url: "/vcp_task_create_manage_user_accounts.html"
+    - title: 创建和管理访问组
+      url: "/vcp_task_create_manage_access_groups.html"
+    - title: 创建和管理启动程序
+      url: "/vcp_task_create_manage_initiators.html"
+    - title: 为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
+      url: "/vcp_task_qossioc.html"
+    - title: 创建和管理卷 QoS 策略
+      url: "/vcp_task_qos_policies.html"
+  - title: 管理集群硬件和虚拟网络
+    entries:
+    - title: 管理集群硬件和虚拟网络概述
+      url: "/vcp_task_manage_cluster_overview.html"
+    - title: 添加和管理驱动器
+      url: "/vcp_task_add_manage_drive.html"
+    - title: 添加和管理节点
+      url: "/vcp_task_add_manage_nodes.html"
+    - title: 创建和管理虚拟网络
+      url: "/vcp_task_create_manage_vlans.html"
+  - title: 监控系统性能
+    entries:
+    - title: 使用报告选项监控系统性能
+      url: "/vcp_task_reports_intro.html"
+    - title: 在概述页面上监控集群的整体运行状况
+      url: "/vcp_task_reports_overview.html"
+    - title: 监控系统警报
+      url: "/vcp_task_reports_alerts.html"
+      entries:
+      - title: 系统警报列表
+        url: "/vcp_reference_reports_alert_errors.html"
+    - title: 监控事件日志以进行故障排除
+      url: "/vcp_task_reports_event_logs.html"
+    - title: 监控卷性能
+      url: "/vcp_task_reports_volume_performance.html"
+    - title: 监控 iSCSI 会话以确定连接状态
+      url: "/vcp_task_reports_iscsi.html"
+    - title: 使用 QocSSIOC 事件监控虚拟机性能
+      url: "/vcp_task_reports_qossioc.html"
+  - title: 使用 vCenter 插件保护数据
+    entries:
+    - title: 使用 vCenter 插件概述保护数据
+      url: "/vcp_task_protect_overview.html"
+    - title: 创建和管理卷快照
+      url: "/vcp_task_protect_snapshots_volume.html"
+    - title: 创建和管理组快照
+      url: "/vcp_task_protect_snapshots_group.html"
+    - title: 创建快照计划
+      url: "/vcp_task_protect_snapshots_schedules.html"
+    - title: 在集群之间执行远程复制
+      url: "/vcp_task_protect_remote_replication.html"
+  - title: 使用 vCenter 插件设置和管理虚拟卷
+    url: "/vcp_task_configure_manage_vvols.html"
+  - title: 取消注册此插件
+    url: "/task_vcp_unregister.html"
+  - title: 删除此插件
+    url: "/task_vcp_remove.html"
+  - title: 对插件进行故障排除
+    url: "/vcp_reference_troubleshoot_vcp.html"
+  - title: 早期版本的 NetApp Element 插件文档
+    url: "/reference_earlier_versions.html"
+  - title: 法律声明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 入门
+    links:
+    - title: 产品概述
+      url: "/concept_vcp_product_overview.html"
+    - title: 安装并部署此插件
+      url: "/vcp_task_getstarted.html"
+  - title: 了解
+    links:
+    - title: 新增功能
+      url: "/rn_whatsnew_vcp.html"
     - title: 发行说明
-      entries:
-      - title: 适用于 vCenter Server 的 NetApp Element 插件中的新增功能
-        url: rn_whatsnew_vcp.html
-      - title: 其他版本信息
-        url: rn_relatedrn_vcp.html
-    - title: 概念
-      entries:
-      - title: NetApp Element 配置扩展点
-        url: vcp_concept_config_extension_point.html
-      - title: NetApp Element 管理扩展点
-        url: vcp_concept_management_extension_point.html
-      - title: 用户帐户
-        url: vcp_concept_accounts.html
-      - title: 保护域
-        url: vcp_concept_protection_domains.html
-      - title: 链接模式和 vCenter 插件
-        url: vcp_concept_linkedmode.html
-      - title: QoSSIOC
-        url: vcp_concept_qossioc.html
-      - title: 虚拟卷（ VVOL ）
-        url: vcp_concept_vvols.html
-    - title: 部署前要求
-      url: reference_requirements_vcp.html
-    - title: 安装和配置适用于 vCenter Server 的 NetApp Element 插件
-      url: vcp_task_getstarted.html
-    - title: 升级此插件
-      url: task_vcp_upgrades.html
-    - title: 使用 vCenter 插件管理存储
-      entries:
-      - title: 管理集群
-        url: vcp_task_clusters_manage.html
-      - title: 管理数据存储库
-        url: vcp_task_datastores_manage.html
-      - title: 管理卷
-        url: vcp_task_volumes_manage.html
-      - title: 创建和管理用户帐户
-        url: vcp_task_create_manage_user_accounts.html
-      - title: 创建和管理访问组
-        url: vcp_task_create_manage_access_groups.html
-      - title: 创建和管理启动程序
-        url: vcp_task_create_manage_initiators.html
-      - title: 为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
-        url: vcp_task_qossioc.html
-      - title: 创建和管理卷 QoS 策略
-        url: vcp_task_qos_policies.html
-    - title: 管理集群硬件和虚拟网络
-      entries:
-      - title: 管理集群硬件和虚拟网络概述
-        url: vcp_task_manage_cluster_overview.html
-      - title: 添加和管理驱动器
-        url: vcp_task_add_manage_drive.html
-      - title: 添加和管理节点
-        url: vcp_task_add_manage_nodes.html
-      - title: 创建和管理虚拟网络
-        url: vcp_task_create_manage_vlans.html
-    - title: 监控系统性能
-      entries:
-      - title: 使用报告选项监控系统性能
-        url: vcp_task_reports_intro.html
-      - title: 在概述页面上监控集群的整体运行状况
-        url: vcp_task_reports_overview.html
-      - title: 监控系统警报
-        url: vcp_task_reports_alerts.html
-        entries:
-        - title: 系统警报列表
-          url: vcp_reference_reports_alert_errors.html
-      - title: 监控事件日志以进行故障排除
-        url: vcp_task_reports_event_logs.html
-      - title: 监控卷性能
-        url: vcp_task_reports_volume_performance.html
-      - title: 监控 iSCSI 会话以确定连接状态
-        url: vcp_task_reports_iscsi.html
-      - title: 使用 QocSSIOC 事件监控虚拟机性能
-        url: vcp_task_reports_qossioc.html
-    - title: 使用 vCenter 插件保护数据
-      entries:
-      - title: 使用 vCenter 插件概述保护数据
-        url: vcp_task_protect_overview.html
-      - title: 创建和管理卷快照
-        url: vcp_task_protect_snapshots_volume.html
-      - title: 创建和管理组快照
-        url: vcp_task_protect_snapshots_group.html
-      - title: 创建快照计划
-        url: vcp_task_protect_snapshots_schedules.html
-      - title: 在集群之间执行远程复制
-        url: vcp_task_protect_remote_replication.html
-    - title: 使用 vCenter 插件设置和管理虚拟卷
-      url: vcp_task_configure_manage_vvols.html
-    - title: 取消注册此插件
-      url: task_vcp_unregister.html
-    - title: 删除此插件
-      url: task_vcp_remove.html
-    - title: 对插件进行故障排除
-      url: vcp_reference_troubleshoot_vcp.html
-    - title: 早期版本的 NetApp Element 插件文档
-      url: reference_earlier_versions.html
-    - title: 法律声明
-      url: legal-notices.html
+      url: "/rn_relatedrn.html"
+  - title: SolidFire 全闪存存储系统
+    links:
+    - title: 升级Element插件
+      url: https://docs.netapp.com/us-en/element-software/upgrade/task_vcp_upgrade_plugin.html
+    - title: 升级vSphere组件
+      url: https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all_vsphere.html
+  - title: NetApp HCI 系统
+    links:
+    - title: 升级Element插件
+      url: https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html
+    - title: 升级vSphere组件
+      url: https://docs.netapp.com/us-en/hci/docs/task_hci_upgrade_all_vsphere.html
+  - title: 早期版本
+    links:
+    - title: NetApp Element 插件文档4.5及更早版本
+      url: "/reference_earlier_versions.html"
+  - title: 更多资源
+    links:
+    - title: SolidFire 和Element文档资源
+      url: https://www.netapp.com/data-storage/solidfire/documentation
+    - title: NetApp HCI 文档资源
+      url: https://www.netapp.com/hybrid-cloud/hci-documentation/
+    - title: "《NetApp混合云控制和管理服务发行说明》知识库"
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes
+    - title: NetApp 产品文档
+      url: https://www.netapp.com/support-and-training/documentation/

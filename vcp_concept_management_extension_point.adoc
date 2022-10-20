@@ -17,7 +17,7 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point
 通过 NetApp Element 管理扩展点，您可以添加和管理集群，为链接模式下的 vCenter Server 分配存储集群以及为 QoSSIOC 配置管理节点设置。
 
 
-NOTE: 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+NOTE: 使用适用于VMware vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
 
 NOTE: 您的 vSphere Web Client 可能与下图所示略有不同，具体取决于安装的 vSphere 版本。
@@ -42,11 +42,12 @@ NetApp Element 管理扩展点提供了以下选项卡：
 * * vvols* ：管理虚拟卷及其关联的存储容器，协议端点和绑定。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * link:vcp_concept_config_extension_point["NetApp Element 配置扩展点"]
-* link:concept_vcp_product_overview.html["适用于 vCenter Server 的 NetApp Element 插件概述"]
+* link:concept_vcp_product_overview.html["适用于VMware vCenter Server的NetApp Element 插件概述"]
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
 * https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

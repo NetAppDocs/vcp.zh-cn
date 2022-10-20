@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_reports_event_logs.html 
-summary: 查看适用于 vCenter Server 的 NetApp Element 插件中的事件日志，其中列出了在集群上执行的操作以及指示错误的任何集群故障。 
+summary: 查看适用于VMware vCenter Server的NetApp Element 插件中的事件日志、其中列出了在集群上执行的操作以及指示错误的任何集群故障。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance 
 ---
 = 监控事件日志以进行故障排除
@@ -90,7 +90,8 @@ NOTE: 系统不会在事件日志中记录只读 API 命令。
 * * vasaProviderEvent* ：与 VASA （ vSphere 存储感知 API ）提供程序相关的事件。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

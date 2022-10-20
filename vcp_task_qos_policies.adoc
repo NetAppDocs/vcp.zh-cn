@@ -18,11 +18,11 @@ keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, el
 
 使用 NetApp Element 管理扩展点，您可以通过完成以下任务来配置和管理 QoSSIOC ：
 
-* <<Create a QoS policy>>
-* <<Apply a QoS policy to volumes>>
-* <<Change the QoS policy association of a volume>>
-* <<Edit a QoS policy>>
-* <<Delete a QoS policy>>
+*  a QoS policy
+*  a QoS policy to volumes
+*  the QoS policy association of a volume
+*  a QoS policy
+*  a QoS policy
 
 
 
@@ -57,7 +57,7 @@ TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集
 
 您可以将现有 QoS 策略应用于多个卷。如果要将策略批量应用于一个或多个卷，请使用此过程。
 
-要批量应用的 QoS 策略已是 <<Create a QoS policy,已创建>>。
+要批量应用的 QoS 策略已是  a QoS policy,已创建。
 
 .步骤
 . 选择 * NetApp Element 管理 > 管理 * 。
@@ -79,7 +79,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以从卷中删除 QoS 策略关联，也可以选择其他 QoS 策略或自定义 QoS 。
 
-要修改的卷为 <<Apply a QoS policy to volumes,已关联>> 使用 QoS 策略。
+要修改的卷为  a QoS policy to volumes,已关联 使用 QoS 策略。
 
 .步骤
 . 选择 * NetApp Element 管理 > 管理 * 。
@@ -150,7 +150,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 确认操作。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

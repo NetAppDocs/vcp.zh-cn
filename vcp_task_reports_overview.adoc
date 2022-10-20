@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_reports_overview.html 
-summary: 使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。 
+summary: 使用适用于VMware vCenter Server的NNetApp Element插件的报告页面查看有关集群组件和性能的信息。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report 
 ---
 = 在概述页面上监控集群的整体运行状况
@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 
 
 [role="lead"]
-您可以从适用于 vCenter Server 的 NetApp Element 插件的 NetApp Element 管理扩展点的报告选项卡的概述页面查看选定集群的集群信息概要，包括整体容量，效率和性能。
+您可以从适用于VMware vCenter Server的NetApp Element 插件的NetApp Element 管理扩展点的报告选项卡的概述页面查看选定集群的集群信息、包括整体容量、效率和性能。
 
 .步骤
 . 从 vCenter 插件中，选择 * NetApp Element Management* 。
@@ -86,7 +86,8 @@ NOTE: 例如，如果集群中有四个卷，每个卷的最小 IOPS 为 500 ，
 * * 性能利用率 * ：正在使用的集群 IOPS 百分比。例如，以 100K IOPS 运行的 250K IOPS 集群将显示消耗率为 40% 。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

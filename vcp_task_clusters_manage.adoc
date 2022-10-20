@@ -27,17 +27,17 @@ NOTE: 要使用 NetApp Element 管理扩展点功能，必须至少添加一个�
 
 
 .选项
-* <<View cluster details>>
-* <<Edit a cluster profile>>
-* <<Remove a cluster profile>>
-* <<Enable Encryption at Rest>>
-* <<Disable Encryption at Rest>>
-* <<Enable SSH>>
-* <<Change the SSH time limit>>
-* <<Disable SSH>>
-* <<Set protection domain monitoring>>
-* <<Shut down a cluster>>
-* <<Expand your NetApp HCI infrastructure>>
+*  cluster details
+*  a cluster profile
+*  a cluster profile
+*  Encryption at Rest
+*  Encryption at Rest
+*  SSH
+*  the SSH time limit
+*  SSH
+*  protection domain monitoring
+*  down a cluster
+*  your NetApp HCI infrastructure
 
 
 
@@ -116,7 +116,7 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 如果您设置了链接模式组并希望将集群重新分配给另一个 vCenter Server ，则可以删除此集群配置文件，然后使用其他链接的 vCenter Server IP 重新添加此配置文件。
 
 
-NOTE: 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+NOTE: 使用适用于VMware vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
 . 选择 * NetApp Element 配置 > 集群 * 。
 . 选中要删除的集群。
@@ -281,7 +281,8 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 . 选择 * 扩展 NetApp HCI * 。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

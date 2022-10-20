@@ -19,11 +19,11 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 您可以通过在一组卷中映射 iSCSI 启动程序 IQN 或光纤通道 WWPN 来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个 WWPN 都允许通过光纤通道网络访问此访问组中的卷。
 
 .选项
-* <<Create an access group>>
-* <<Edit an access group>>
-* <<Add volumes to an access group>>
-* <<Remove volumes from an access group>>
-* <<Delete an access group>>
+*  an access group
+*  an access group
+*  volumes to an access group
+*  volumes from an access group
+*  an access group
 
 
 
@@ -151,7 +151,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 确认操作。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

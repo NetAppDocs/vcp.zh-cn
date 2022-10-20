@@ -16,11 +16,11 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 [role="lead"]
 使用 vCenter 插件，您可以添加 https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes["存储节点"] 创建集群或需要更多存储时。可以使用 NetApp Element 管理扩展点添加运行 Element 软件的存储节点。必须在 vSphere 中的插件之外添加和管理 NetApp HCI 计算节点。
 
-* <<Add a node to a cluster>>
-* <<View node details>>
-* <<Restart a node>>
-* <<Shut down a node>>
-* <<Remove a node from a cluster>>
+*  a node to a cluster
+*  node details
+*  a node
+*  down a node
+*  a node from a cluster
 
 
 

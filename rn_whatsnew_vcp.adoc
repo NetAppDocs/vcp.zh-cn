@@ -1,51 +1,59 @@
 ---
 sidebar: sidebar 
 permalink: rn_whatsnew_vcp.html 
-summary: 了解此版本的适用于 vCenter Server 的 NetApp Element 插件中的新增功能。 
+summary: 了解此版本的适用于VMware vCenter Server的NetApp Element 插件中的新增功能。 
 keywords: netapp, vcp, vcenter, plugin, element, new, whats new 
 ---
-= 适用于 vCenter Server 的 NetApp Element 插件中的新增功能
+= 适用于VMware vCenter Server的NetApp Element 插件中的新增功能
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
 :imagesdir: ../media/
-:keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
-适用于vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
+适用于vCenter Server 4.10的NetApp Element 插件包含已解决的问题、包括安全漏洞、这些问题可能会显著减少升级期间出现的中断、并增强某些环境的日常操作。在该插件的4.10版中、联机帮助链接已过渡到此版本 link:index.html["文档链接"]。要从插件中访问联机帮助链接、您必须能够访问网络。
 
-适用于vCenter Server 4.9的NetApp Element 插件可与管理服务的2.2版一起使用。
+Element vCenter插件4.10可用于2.21.61版的管理服务。
+
+
+
+== 适用于vCenter Server 4.9的NetApp Element 插件
+
+适用于VMware vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
+
+Element vCenter插件4.9可用于管理服务2.20.69版。
 
 
 
 == 适用于vCenter Server的NetApp Element 插件4.8
 
-适用于 vCenter Server 4.8 的 NetApp Element 插件提供了一些安全性改进，内存利用率提高以及第三方库升级功能。
+Element vCenter插件4.7 4.8提供了一些安全改进功能、内存利用率改进功能以及第三方库升级功能。
 
-适用于 vCenter Server 4.8 的 NetApp Element 插件可与 2.19 版的管理服务配合使用。
+Element vCenter插件4.8可在2.19版管理服务中使用。
 
 
 
-== 适用于 vCenter Server 的 NetApp Element 插件 4.7
+== 适用于VMware vCenter Server 4.7的NetApp Element 插件
 
-适用于 vCenter Server 4.7 的 NetApp Element 插件包含重要的安全改进功能，进一步完善了中的改进功能 https://security.netapp.com/advisory/ntap-20210315-0001/["最新的管理服务 2.17.56 修补程序"] 版本。
+Element vCenter插件4.7提供了重要的安全改进功能、进一步改进了中的功能 https://security.netapp.com/advisory/ntap-20210315-0001/["最新的管理服务 2.17.56 修补程序"] 版本。
 
 在 4.7 版中，此插件现在支持 vSphere 7.0 Update 2 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。
 
-适用于 vCenter Server 4.7 的 NetApp Element 插件随 2.18 版管理服务一起提供。
+Element vCenter插件4.7可在2.18版管理服务中使用。
 
 
 
-== 适用于 vCenter Server 的 NetApp Element 插件 4.6
+== 适用于VMware vCenter Server的NetApp Element 插件4.6.
 
 在 4.6 版中，此插件现在支持 vSphere 7.0 Update 1 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。
 
-适用于 vCenter Server 4.6 的 NetApp Element 插件可与 2.16 版的管理服务配合使用。
+管理服务的2.16版提供了Element vCenter插件4.6。
 
-[discrete]
+
+
 == 了解更多信息
 
 * link:reference_earlier_versions.html["早期版本的 NetApp Element 插件文档"]

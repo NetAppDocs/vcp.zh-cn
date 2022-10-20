@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_reports_intro.html 
-summary: 使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。 
+summary: 使用适用于VMware vCenter Server的NetApp Element 插件的报告页面查看有关集群组件和性能的信息。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performance 
 ---
 = 使用报告选项监控系统性能
@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performa
 
 
 [role="lead"]
-您可以使用适用于 vCenter Server 的 NetApp Element 插件的报告页面查看有关集群组件和性能的信息。
+您可以使用适用于VMware vCenter Server的NetApp Element 插件的报告页面查看有关集群组件和性能的信息。
 
 使用 vCenter 插件，您可以通过以下方式监控集群组件和性能：
 
@@ -26,7 +26,8 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, cluster, performa
 * link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"]
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

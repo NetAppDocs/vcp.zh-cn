@@ -29,11 +29,11 @@ keywords: netapp, hci, vcp, vcenter, element, protect, replication, remote, clus
 NOTE: WAN 加速器设备尚未获得 NetApp 认证，无法在复制数据时使用。如果部署在复制数据的两个集群之间，则这些设备可能会干扰数据压缩和重复数据删除。在生产环境中部署任何 WAN 加速器设备之前，请务必对其影响进行全面的评估。
 
 .步骤
-. <<Pair clusters>>
-. <<Pair volumes>>
-. <<Validate volume replication>>
-. <<Delete a volume relationship after replication>>
-. <<Manage volume relationships>>
+.  clusters
+.  volumes
+.  volume replication
+.  a volume relationship after replication
+.  volume relationships
 
 
 
@@ -58,8 +58,8 @@ NOTE: 集群配对要求管理网络上的节点之间具有完全连接。复�
 
 选择以下方法之一：
 
-* <<Pair clusters using known credentials>>
-* <<Pair clusters with a pairing key>>
+*  clusters using known credentials
+*  clusters with a pairing key
 
 
 
@@ -70,7 +70,7 @@ NOTE: 集群配对要求管理网络上的节点之间具有完全连接。复�
 
 集群管理员用户名和密码用于在集群配对之前对集群访问进行身份验证。
 
-如果 MVIP 未知或无法访问集群，您可以生成配对密钥并使用该密钥对两个集群配对。有关说明，请参见 <<Pair clusters with a pairing key>>。
+如果 MVIP 未知或无法访问集群，您可以生成配对密钥并使用该密钥对两个集群配对。有关说明，请参见  clusters with a pairing key。
 
 .步骤
 . 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Protection* 。
@@ -82,8 +82,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 选择 * 创建集群配对 * 。
 . 选择以下选项之一：
 +
-** * 已注册集群 * ：如果配对的远程集群由适用于 vCenter Server 的 NetApp Element 插件的同一实例控制，请选择此项。
-** * Credentialed Cluster* ：如果远程集群的已知凭据不在适用于 vCenter Server 的 NetApp Element 插件配置中，请选择此项。
+** *已注册集群*：如果配对的远程集群由同一Element vCenter插件实例控制、请选择此项。
+** * Credentialed Cluster*：如果远程集群的已知凭据不在Element vCenter插件配置中、请选择此项。
 
 
 . 如果选择了 * 已注册集群 * ，请从可用集群列表中选择一个集群，然后单击 * 配对 * 。
@@ -173,14 +173,14 @@ NOTE: 等待加载旋转器消失，然后再继续下一步。如果在配对�
 
 您可以使用以下方法之一对卷进行配对：
 
-* <<Pair volumes using known credentials>>：对两个集群使用已知凭据
-* <<Pair volumes using a pairing key>>：如果集群凭据仅在源集群上可用，请使用配对密钥。
-* <<Create target volumes and pair them with local volumes>>：如果您知道这两个集群的凭据，请在远程集群上创建一个复制目标卷以与源集群配对。
+*  volumes using known credentials：对两个集群使用已知凭据
+*  volumes using a pairing key：如果集群凭据仅在源集群上可用，请使用配对密钥。
+*  target volumes and pair them with local volumes：如果您知道这两个集群的凭据，请在远程集群上创建一个复制目标卷以与源集群配对。
 
 
 建立卷配对关系后，您必须确定哪个卷是复制目标：
 
-* <<Assign a replication source and target to paired volumes>>
+*  a replication source and target to paired volumes
 
 
 .您需要什么？ #8217 ；将需要什么
@@ -213,9 +213,9 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 选择 * 卷配对 * 。
 . 选择以下选项之一：
 +
-** * 卷创建 * ：要在远程集群上创建复制目标卷，请选择此项。此方法只能在由适用于 vCenter Server 的 NetApp Element 插件控制的远程集群上使用。
-** * 卷选择 * ：如果目标卷的远程集群由适用于 vCenter Server 的 NetApp Element 插件控制，请选择此项。
-** * 卷 ID* ：如果目标卷的远程集群具有已知凭据，而这些凭据不在适用于 vCenter Server 的 NetApp Element 插件配置范围内，请选择此项。
+** * 卷创建 * ：要在远程集群上创建复制目标卷，请选择此项。此方法只能在由Element vCenter插件控制的远程集群上使用。
+** *卷选择*：如果目标卷的远程集群由Element vCenter插件控制、请选择此项。
+** *卷ID*：如果目标卷的远程集群具有已知凭据、而这些凭据不在Element vCenter插件配置中、请选择此项。
 
 
 . 选择复制模式：
@@ -481,7 +481,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 复制完成后，如果您不再需要卷配对关系，则可以删除此卷关系。
 
-请参见 <<Delete a volume pair>>。
+请参见  a volume pair。
 
 
 
@@ -489,10 +489,10 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以通过多种方式管理卷关系，例如暂停复制，反转卷配对，更改复制模式，删除卷对或删除集群对。
 
-* <<Pause replication>>
-* <<Change the mode of replication>>
-* <<Delete a volume pair>>
-* <<Delete a cluster pair>>
+*  replication
+*  the mode of replication
+*  a volume pair
+*  a cluster pair
 
 
 
@@ -610,8 +610,8 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 
 系统会在卷状态列中显示配对和进度消息。
 
-* <<Volume pairing messages>>
-* <<Volume pairing warnings>>
+*  pairing messages
+*  pairing warnings
 
 
 
@@ -651,7 +651,8 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 * * StoppedMisconfigure* ：检测到永久配置错误。远程卷已清除或取消配对。无法执行更正操作；必须建立新的配对。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

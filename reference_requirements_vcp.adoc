@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: reference_requirements_vcp.html 
-summary: 开始使用适用于 vCenter Server 的 NetApp Element 插件之前，您需要了解产品安装和使用的前提条件。 
+summary: 开始使用适用于VMware vCenter Server的NetApp Element 插件之前、您需要了解产品安装和使用的前提条件。 
 keywords: netapp, hci, kubernetes, on premise, cloud services 
 ---
-= 适用于 vCenter Server 的 Element 插件的要求
+= 适用于VMware vCenter Server的NetApp Element 插件的要求
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 
 [role="lead"]
-在使用适用于vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您需要确保系统满足插件使用要求。
+在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您需要确保系统满足插件使用要求。
 
 
 
 == VMware vSphere 前提条件
 
-要使用适用于vCenter Server的NetApp Element 插件、需要使用VMware vSphere 7.0、6.7或6.5 (包括已配置软件iSCSI适配器和iSCSI网络的vCenter和ESXi)。
+要使用Element vCenter插件、需要使用VMware vSphere 7.0、6.7或6.5、包括配置了软件iSCSI适配器和iSCSI网络的vCenter和ESXi。
 
 
 
@@ -28,10 +28,11 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 此插件支持以下主要版本的 VMware 软件：
 
-* vSphere 7.0 和 7.0 Update 1 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
+* vSphere 7.0和7.0 Update 1和2、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
+* vSphere 7.0 Update 3、包括使用Spring Framework 4的vCenter Server、ESXi、VMFS5和VMFS6数据存储库
 +
 
-IMPORTANT: 升级到 VMware vCenter Server 7.0 U3 后，适用于 vCenter Server 的所有版本的 NetApp Element 插件都无法部署。要解决此问题描述 ，请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["此知识库文章"^]。
+IMPORTANT: 升级到VMware vCenter Server 7.0 U3时、Element插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["此知识库文章"^]。
 
 * vSphere 6.7 和 6.7 Update 1 和 3 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库
 +
@@ -69,7 +70,7 @@ IMPORTANT: VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 Net
 
 此插件支持以下主要版本：
 
-* Element 12.x ，包括 SolidFire 企业 SDS
+* Element 12.x
 * Element 11.x
 
 
@@ -79,7 +80,8 @@ IMPORTANT: VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 Net
 
 您需要允许某些 TCP 端口通过数据中心的边缘防火墙，以便可以远程管理系统，并允许数据中心外部的客户端连接到资源。有关 NetApp HCI 和 SolidFire 系统中使用的端口的完整列表，请参见此部分 link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html["页面。"]。
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

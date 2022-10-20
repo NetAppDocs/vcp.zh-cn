@@ -16,9 +16,9 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 [role="lead"]
 您可以使用 NetApp Element 管理扩展点向集群添加驱动器，查看现有驱动器以及删除驱动器。
 
-* <<Add available drives to a cluster>>
-* <<View drive details>>
-* <<Remove a drive>>
+*  available drives to a cluster
+*  drive details
+*  a drive
 
 
 

@@ -17,11 +17,11 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 您可以为一组相关卷创建组快照，以便为每个卷保留元数据的时间点副本。您可以使用组快照作为备份或回滚，将卷组的状态还原到所需的时间点。
 
 .选项
-* <<Create a group snapshot>>
-* <<View group snapshot details>>
-* <<Clone volumes from a group snapshot>>
-* <<Roll back volumes to a group snapshot>>
-* <<Delete a group snapshot>>
+*  a group snapshot
+*  group snapshot details
+*  volumes from a group snapshot
+*  back volumes to a group snapshot
+*  a group snapshot
 
 
 
@@ -182,7 +182,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 确认操作。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

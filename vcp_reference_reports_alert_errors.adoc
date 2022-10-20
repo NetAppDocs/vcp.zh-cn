@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_reference_reports_alert_errors.html 
-summary: 下面列出了系统警报，这些警报是信息，警告或错误，可通过使用适用于 vCenter Server 的 NetApp Element 插件的报告页面指示集群的运行状况。 
+summary: 下面列出了系统警报、这些警报是信息、警告或错误、可通过使用适用于VMware vCenter Server的NetApp Element 插件的报告页面指示集群的运行状况。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance 
 ---
 = 系统警报列表
@@ -568,7 +568,8 @@ NOTE: 有关故障的更多详细信息，请参见详细信息标题。
 
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

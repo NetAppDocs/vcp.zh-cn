@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_reports_iscsi.html 
-summary: 您可以在适用于 vCenter Server 的 NetApp Element 插件中查看有关连接到选定集群的 iSCSI 会话的信息。 
+summary: 您可以在适用于VMware vCenter Server的NetApp Element 插件中查看有关连接到选定集群的iSCSI会话的信息。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection 
 ---
 = 监控 iSCSI 会话以确定连接状态
@@ -14,7 +14,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 
 
 [role="lead"]
-您可以在适用于 vCenter Server 的 NetApp Element 插件中查看有关连接到选定集群的 iSCSI 会话的信息。
+您可以在适用于VMware vCenter Server的NetApp Element 插件中查看有关连接到选定集群的iSCSI会话的信息。
 
 .步骤
 . 从 vCenter 插件中，选择 * NetApp Element Management* 。
@@ -38,7 +38,8 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 * * 创建日期 * ：建立会话的日期。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

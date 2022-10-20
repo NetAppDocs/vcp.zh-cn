@@ -4,9 +4,10 @@ permalink: vcp_task_getstarted.html
 summary: 您可以安装和配置适用于 vCenter Server 的 Element 插件，以便与 Element 存储配合使用。 
 keywords: netapp, hci, vcp, vcenter, element, install, setup 
 ---
-= 安装和配置适用于 vCenter Server 的 NetApp Element 插件
+= 安装和配置适用于VMware vCenter Server的NetApp Element 插件
 :hardbreaks:
 :allow-uri-read: 
+:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,21 +15,21 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 
 [role="lead"]
-您可以将适用于vCenter Server的NetApp Element 插件的最新版本直接安装到vCenter中、并使用vSphere Web Client访问此插件。
+您可以将适用于VMware vCenter Server的NetApp Element 插件的最新版本直接安装到vCenter中、并使用vSphere Web Client访问此插件。
 
 安装完成后，您可以根据存储 I/O 控制（ QoSSIOC ）服务以及 vCenter 插件的其他服务使用服务质量。
 
 阅读并完成每个步骤以安装并开始使用此插件：
 
-* <<Prepare for installation>>
-* <<Install the management node>>
-* <<Register the plug-in with vCenter>>
-* <<Modify vCenter properties for a dark site HTTP server>>
-* <<Access the plug-in and verify successful installation>>
-* <<Add storage clusters for use with the plug-in>>
-* <<Configure QoSSIOC settings using the plug-in>>
-* <<Configure user accounts>>
-* <<Create datastores and volumes>>
+*  for installation
+*  the management node
+*  the plug-in with vCenter
+*  vCenter properties for a dark site HTTP server
+*  the plug-in and verify successful installation
+*  storage clusters for use with the plug-in
+*  QoSSIOC settings using the plug-in
+*  user accounts
+*  datastores and volumes
 
 
 
@@ -65,7 +66,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 对于链接模式环境，必须向该环境中的每个 vCenter Server 注册此插件，以使 MOB 数据保持同步并能够升级此插件。如果 vSphere Web Client 连接到未注册插件的 vCenter Server ，则此插件对客户端不可见。
 
 
-NOTE: 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+NOTE: 使用Element vCenter插件通过管理其他vCenter Server中的集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
 .步骤
 . 在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口：
@@ -107,7 +108,7 @@ NOTE: 您输入的用户名和密码凭据必须适用于具有 vCenter 管理�
 ** （对于内部服务器 / 非公开站点）插件 ZIP 的自定义 URL 。
 +
 
-NOTE: 大多数安装都会使用默认路径。要在使用 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置时自定义 URL ，请选择 * 自定义 URL* 。有关要自定义 URL 的其他步骤，请参见 * <<Modify vCenter properties for a dark site HTTP server,修改非公开站点 HTTP 服务器的 vCenter 属性>>。
+NOTE: 大多数安装都会使用默认路径。要在使用 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置时自定义 URL ，请选择 * 自定义 URL* 。有关要自定义 URL 的其他步骤，请参见 *  vCenter properties for a dark site HTTP server,修改非公开站点 HTTP 服务器的 vCenter 属性。
 
 
 
@@ -290,7 +291,7 @@ IMPORTANT: vSphere HTML5 Web 客户端和 Flash Web 客户端具有单独的数�
 [NOTE]
 ====
 *** 集群的主机仅适用于每个 vCenter Server 。请确保您选择的 vCenter Server 能够访问目标主机。您可以删除集群，将其重新分配给另一个 vCenter Server ，如果稍后决定使用不同的主机，则可以重新添加集群。
-*** 使用适用于 vCenter Server 的 NetApp Element 插件从其他 vCenter Server 管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
+*** 使用Element vCenter插件通过管理其他vCenter Server中的集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
 
 ====
@@ -345,7 +346,8 @@ NOTE: 请参见此内容 https://kb.netapp.com/Advice_and_Troubleshooting/Data_S
 
 您可以创建 link:vcp_task_datastores_manage.html#create-a-datastore["数据存储库和 Element 卷"] 开始分配存储。
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

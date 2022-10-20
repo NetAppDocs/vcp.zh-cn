@@ -16,10 +16,10 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 [role="lead"]
 您可以将新的虚拟网络添加到集群配置中，以便与运行 NetApp Element 软件的集群建立多租户环境连接，并使用 vCenter 插件管理虚拟网络。
 
-* <<Create a virtual network>>
-* <<View virtual network details>>
-* <<Edit a virtual network>>
-* <<Delete a virtual network>>
+*  a virtual network
+*  virtual network details
+*  a virtual network
+*  a virtual network
 
 
 

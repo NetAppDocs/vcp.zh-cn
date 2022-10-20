@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_reports_volume_performance.html 
-summary: 您可以从适用于 vCenter Server 的 NetApp Element 插件的报告选项卡上的卷性能页面查看选定集群中所有卷的性能信息。 
+summary: 您可以从适用于VMware vCenter Server的NetApp Element 插件的报告选项卡上的卷性能页面查看选定集群中所有卷的性能信息。 
 keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, cluster, performance 
 ---
 = 监控卷性能
@@ -52,7 +52,8 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 * * 平均 IO 大小 * ：过去 500 毫秒内卷最近 I/O 的平均大小（以字节为单位）。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

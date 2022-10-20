@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: vcp_task_volumes_manage.html 
-summary: 使用适用于 vCenter Server 的 NetApp Element 插件，您可以创建，查看，编辑，删除， 克隆，备份或还原卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。 
+summary: 使用适用于VMware vCenter Server的NetApp Element 插件、您可以创建、查看、编辑、删除、 克隆、备份或还原卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。 
 keywords: netapp, volumes, vcp, vcenter, element, 
 ---
 = 管理卷
@@ -14,17 +14,17 @@ keywords: netapp, volumes, vcp, vcenter, element,
 
 
 [role="lead"]
-使用适用于 vCenter Server 的 NetApp Element 插件，您可以创建，查看，编辑，删除， 克隆，备份或还原用户帐户的卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。
+使用适用于VMware vCenter Server的NetApp Element 插件、您可以创建、查看、编辑、删除、 克隆、备份或还原用户帐户的卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。
 
 .选项
-* <<Create a volume>>
-* <<View volume details>>
-* <<Edit a volume>>
-* <<Clone a volume>>
-* <<Back up or restore volumes>>
-* <<Delete volumes>>
-* <<Purge volumes>>
-* <<Restore deleted volumes>>
+*  a volume
+*  volume details
+*  a volume
+*  a volume
+*  up or restore volumes
+*  volumes
+*  volumes
+*  deleted volumes
 
 
 
@@ -114,11 +114,11 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 . 查看以下部分中列出的特定卷的详细信息：
 +
-** <<General Details section>>
-** <<Efficiency section>>
-** <<Performance section>>
-** <<Quality of Service section>>
-** <<Snapshots section>>
+**  Details section
+**  section
+**  section
+**  of Service section
+**  section
 
 
 
@@ -644,7 +644,8 @@ NOTE: 如果删除卷并随后还原， ESXi 将无法检测还原的卷（以�
 . 验证卷以及所有连接是否均已还原。
 
 
-[discrete]
+
+
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
