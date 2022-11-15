@@ -14,7 +14,7 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 
 
 [role="lead"]
-答 link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html["卷访问组"] 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。
+答 link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html["卷访问组"^] 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。
 
 您可以通过在一组卷中映射iSCSI启动程序IQN或FC WWPN来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个WWPN都可以通过FC网络访问此访问组中的卷。
 

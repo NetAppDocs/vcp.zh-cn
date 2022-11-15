@@ -2356,7 +2356,6 @@
   <block id="cdac12e8444404de524af6aed2665f45" category="inline-link">2.21.61</block>
   <block id="493947108f90792d70b0080451b59368" category="cell"><block ref="493947108f90792d70b0080451b59368" category="inline-link-rx"></block></block>
   <block id="562a438f33bff2259da6858dd288f400" category="cell"><block ref="562a438f33bff2259da6858dd288f400" category="inline-link-rx"></block></block>
-  <block id="35217a2ac23a8b6448931b9efc4c4f94" category="paragraph">答 <block ref="2934e3adb910b5942a2e24ca276b4338" category="inline-link-macro-rx"></block> 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。</block>
   <block id="adcd2fc490460962064733fd569fa4ea" category="paragraph">您可以通过在一组卷中映射iSCSI启动程序IQN或FC WWPN来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个WWPN都可以通过FC网络访问此访问组中的卷。</block>
   <block id="ba5eebae5f14aac1ccd19f5057a508df" category="list-text">在vSphere Web Client中、打开*管理*选项卡：</block>
   <block id="00d5861848d4c935bdf9d8f9e8d3a493" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;管理*。</block>
@@ -2645,4 +2644,5 @@
   <block id="0e9c9eb44ef5108d7204ec64bc76f844" category="sidebar">适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件</block>
   <block id="74f171bb465a49ebcce88fa91d4562d4" category="sidebar">适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件</block>
   <block id="2abfacd3d0325353cbe289faa9d0d3b1" category="sidebar">安装和配置适用于 vCenter Server 的 NetApp Element 插件</block>
+  <block id="e97497d0f5938ed35b2e63e89f51bf3c" category="paragraph">答 <block ref="e64b216761b70bc0cfda4bc4eab1b43a" category="inline-link-macro-rx"></block> 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。</block>
 </blocks>
