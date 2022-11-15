@@ -16,13 +16,17 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster,
 [role="lead"]
 当具有启用了 QoS 的数据存储库的 VM 重新配置或发出电源或子系统事件时，您可以查看与 QoSSIOC 相关的事件。
 
-您可以从适用于VMware vCenter Server的NetApp Element 插件中的NetApp Element 配置扩展点查看QoSSIOC事件。
+您可以从适用于vCenter Server的NetApp Element 插件中的插件扩展点查看QoSSIOC事件。
 
 此时将显示本地添加的集群中的 QoSSIOC 事件。在链接模式环境中，登录到已在本地添加集群的 vSphere Web Client 以查看该集群的 QoSSIOC 事件。
 
+[NOTE]
+====
+* 从Element vCenter插件5.0开始、使用 link:vcp_concept_linkedmode.html["vCenter 链接模式"]下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。
+* 使用适用于vCenter Server 4.10及更早版本的NetApp Element 插件从其他vCenter Server管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
-NOTE: 使用Element vCenter插件通过管理其他vCenter Server中的集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
+====
 .您需要什么？ #8217 ；将需要什么
 * 必须至少添加并运行一个集群。
 * 必须使用此插件的 "QoSSIOC Settings" 页面配置并验证 QoSSIOC 服务是否正在运行。
@@ -30,8 +34,12 @@ NOTE: 使用Element vCenter插件通过管理其他vCenter Server中的集群资
 
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Configuration* 。
-. 选择 * QoSSIOC Events* 。
+. 在vSphere Web Client中、打开* QoSSIOC Events*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置> QoSSIOC事件*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置> QoSSIOC事件*。
+
+
 
 
 

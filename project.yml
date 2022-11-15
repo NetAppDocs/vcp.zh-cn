@@ -6,7 +6,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
-  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr
+  langs: zh-cn,us-en,ja-jp,zh-tw,ko-kr,fr-fr,de-de
 sidebar:
   entries:
   - title: 适用于VMware vCenter Server的NetApp Element 插件文档
@@ -21,24 +21,36 @@ sidebar:
       url: "/rn_relatedrn_vcp.html"
   - title: 概念
     entries:
-    - title: NetApp Element 配置扩展点
-      url: "/vcp_concept_config_extension_point.html"
-    - title: NetApp Element 管理扩展点
-      url: "/vcp_concept_management_extension_point.html"
+    - title: 适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件
+      entries:
+      - title: 远程插件架构概述
+        url: "/vcp_concept_remote_plugin_architecture.html"
+      - title: NetApp Element 远程插件扩展点
+        url: "/vcp_concept_remote_plugin_extension_point.html"
+    - title: 适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件
+      entries:
+      - title: NetApp Element 配置扩展点
+        url: "/vcp_concept_config_extension_point.html"
+      - title: NetApp Element 管理扩展点
+        url: "/vcp_concept_management_extension_point.html"
     - title: 用户帐户
       url: "/vcp_concept_accounts.html"
     - title: 保护域
       url: "/vcp_concept_protection_domains.html"
-    - title: 链接模式和 vCenter 插件
+    - title: 链接模式和vCenter插件
       url: "/vcp_concept_linkedmode.html"
     - title: QoSSIOC
       url: "/vcp_concept_qossioc.html"
     - title: 虚拟卷（ VVOL ）
       url: "/vcp_concept_vvols.html"
   - title: 部署前要求
-    url: reference_requirements_vcp.html
-  - title: 安装和配置适用于VMware vCenter Server的NetApp Element 插件
-    url: "/vcp_task_getstarted.html"
+    url: "/reference_requirements_vcp.html"
+  - title: 安装和配置适用于 vCenter Server 的 NetApp Element 插件
+    entries:
+    - title: 为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本
+      url: "/vcp_task_getstarted_5_0.html"
+    - title: 安装并配置Element插件4.10及更早版本
+      url: "/vcp_task_getstarted.html"
   - title: 升级此插件
     url: "/task_vcp_upgrades.html"
   - title: 使用 vCenter 插件管理存储

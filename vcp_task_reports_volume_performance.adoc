@@ -14,11 +14,16 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 
 
 [role="lead"]
-您可以从 NetApp Element 管理扩展点的报告选项卡查看选定集群中所有卷的性能信息。
+您可以从插件扩展点的"Reporting"选项卡查看选定集群中所有卷的性能信息。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* 。
-. 选择 * 报告 * > * 卷性能 * 。
+. 从vCenter插件中、打开*报告*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>报告*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting*。
+
+
+. 选择*卷性能*。
 . 要更改页面上数据刷新的频率，请单击 * 刷新每个列表 * 并选择一个值。
 +
 如果集群中的卷少于 1000 个，则默认刷新间隔为 10 秒；否则，默认刷新间隔为 60 秒。如果选择从不，则会禁用自动页面刷新。

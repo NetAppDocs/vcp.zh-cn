@@ -14,7 +14,7 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 
 
 [role="lead"]
-使用 vCenter 插件，您可以添加 https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes["存储节点"] 创建集群或需要更多存储时。可以使用 NetApp Element 管理扩展点添加运行 Element 软件的存储节点。必须在 vSphere 中的插件之外添加和管理 NetApp HCI 计算节点。
+使用此插件、您可以添加 https://docs.netapp.com/us-en/hci/docs/concept_hci_nodes.html#storage-nodes["存储节点"] 创建集群或需要更多存储时。您还可以添加运行Element软件的存储节点。您必须在vSphere中将NetApp HCI 计算节点添加到此插件之外。
 
 *  a node to a cluster
 *  node details
@@ -37,14 +37,19 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 
 NOTE: 如果要添加的节点的 NetApp Element 软件主要或次要版本与集群上运行的版本不同，则集群会异步将节点更新到集群主节点上运行的 NetApp Element 软件版本。更新节点后，它会自动将自己添加到集群中。在此异步过程中，节点将处于 `pendingActive` 状态。
 
-首次打开电源时，节点需要进行初始配置。设置和配置节点后，它会在配置节点时标识的集群上注册自身，并显示在 NetApp Element 管理扩展点的 * 集群 > 节点 * 页面上的待定节点列表中。
+首次打开电源时，节点需要进行初始配置。设置和配置节点后、它会在配置节点时标识的集群上注册自身、并显示在插件扩展点*集群>节点*页面上的待定节点列表中。
 
 您可以向现有集群添加容量较小或较大的节点。
 
-在添加运行 NetApp Element 软件的光纤通道节点或存储节点时，操作步骤是相同的。
+添加运行NetApp Element 软件的FC节点或存储节点时、操作步骤 是相同的。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -67,10 +72,15 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 查看节点详细信息
 
-您可以从 NetApp Element 管理扩展点的 "Cluster" 选项卡的 "Nodes" 页面查看集群中节点的列表。要查看活动节点列表，必须选择 Active View 。您可以使用下拉筛选器选择 `Pending` ， `PendingActive` 和 `All` 选项来更改视图。
+您可以通过插件扩展点的"Cluster"选项卡的"Nodes"页面查看集群中节点的列表。要查看活动节点列表，必须选择 Active View 。您可以通过选择来更改此视图 `Pending`， `PendingActive`，和 `All` 选项。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -87,7 +97,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 重新启动节点
 
-您可以使用 NetApp Element 管理扩展点重新启动集群中的一个或多个活动节点。
+您可以使用插件扩展点重新启动集群中的一个或多个活动节点。
 
 如果要同时重新启动多个节点，则已停止 I/O 并断开所有 iSCSI 会话。
 
@@ -100,7 +110,12 @@ IMPORTANT: 此方法将重新启动节点上的所有网络服务，从而导致
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -119,7 +134,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 关闭节点
 
-您可以使用 NetApp Element 管理扩展点关闭集群中的一个或多个活动节点。要关闭集群，您可以选择所有集群节点并同时关闭。
+您可以使用插件扩展点关闭集群中的一个或多个活动节点。要关闭集群，您可以选择所有集群节点并同时关闭。
 
 如果要同时重新启动多个节点，则已停止 I/O 并断开所有 iSCSI 会话。
 
@@ -128,7 +143,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -154,10 +174,15 @@ NOTE: 如果某个节点在任何类型的关闭条件下关闭时间超过 5.5 
 
 您已从集群中删除节点中的所有驱动器。在 `RemoveDrives` 进程完成且所有数据均已迁移出节点之前，无法删除节点。
 
-NetApp Element 集群中的光纤通道连接至少需要两个光纤通道节点。如果仅连接了一个光纤通道节点，则系统会在事件日志中触发警报，直到您向集群添加另一个光纤通道节点为止，即使所有光纤通道网络流量仍只使用一个光纤通道节点运行也是如此。
+NetApp Element 集群中至少需要两个FC节点才能进行FC连接。如果仅连接了一个FC节点、则系统会在事件日志中触发警报、直到您向集群添加另一个FC节点为止、即使所有FC网络流量仍仅在一个FC节点上运行也是如此。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -174,4 +199,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 +
 从集群中删除的任何节点都会显示在待定节点列表中。
 
+
+
+
+
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

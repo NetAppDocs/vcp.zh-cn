@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_remote_plugin_architecture.html 
+summary: 了解适用于vCenter Server的远程NetApp Element 插件架构。 
+keywords: netapp, vcp, vcenter, plugin, element, remote, architecture 
+---
+= 远程插件架构概述
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+从适用于vCenter Server 5.0的NetApp Element 插件开始、此插件的架构将从本地更改为远程。随着远程架构的推出、此插件不再部署在vCenter Server中。对于适用于vCenter Server 4.10或更早版本的Element插件、此插件部署仍位于其注册到的vCenter服务器的本地。
+
+此页面介绍了适用于vCenter Server的远程NetApp Element 插件的实施。
+
+vSphere Client远程插件架构旨在将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程插件架构支持插件隔离、支持横向扩展在大型vSphere环境中运行的插件、并具有以下优势：
+
+* 此插件可防止受同一vSphere Client上加载的不稳定或受损插件的干扰。
+* 在vCenter Server升级过程中、插件兼容性非常强大。
+* 不兼容的插件不会干扰vCenter Server操作。
+* 您可以在同一vSphere环境中部署多个插件版本。
+* 远程插件用户界面只需与单个后端服务器进行通信即可。
+* 部署的插件拓扑结构定义明确、易于理解哪些支持故障排除。
+
+
+
+
+== 适用于vCenter Server的远程Element插件高级架构
+
+使用NetApp Hybrid Cloud Control、远程Element插件与管理服务部署在管理节点内的Docker容器中。
+
+image:vcp_remote_plugin_high_level_architecture.png["远程插件高级架构"]
+
+远程Element插件vCenter Server、注册服务和存储I/O控制(SIOC)服务共享相同的Docker服务、但侦听不同的端口。
+
+[cols="50,25"]
+|===
+| Description | Port 
+
+
+| 远程Element插件vCenter Server | 8333 
+
+
+| 注册服务 | 9443 
+
+
+| SIOC服务 | 8443 
+|===
+
+
+== 远程Element插件通信路径概述
+
+您必须先使用管理节点上运行的注册服务向vCenter Server注册远程插件 (`https://<mnode-ip>:9443/`）。在注册页面上、您可以看到vCenter Server用户名、密码和 `plugin.json` 清单文件路径。
+
+
+NOTE: 默认路径将填充到用户界面中。无需执行任何操作。
+
+如果提供的详细信息正确无误、注册服务将向vCenter Server注册此插件、并在插件服务器数据库中输入vCenter详细信息。
+
+注册完成后、插件服务器将下载 `plugin.json` 清单文件并启动远程插件部署、其中包括使用将远程插件配置为扩展 `vsphere-ui` 客户端。部署完成后、您可以从访问* NetApp Element 远程插件*扩展点 `vsphere-ui` Web客户端。
+
+此插件UI中的所有通信均通过vCenter Server进行、vCenter Server使用HTTPS协议运行反向代理服务、该协议负责转发远程插件服务的请求。此插件服务器使用HTTPS基本身份验证与SIOC服务进行交互、并使用Element Java软件开发套件(SDK)与Element集群进行交互。
+
+
+
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
+

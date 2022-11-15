@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: vcp_concept_remote_plugin_extension_point.html 
+summary:  
+keywords: netapp, vcp, element, plugin, plug-in, management, extension point, remote 
+---
+= NetApp Element 远程插件扩展点
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+从NetApp Element vCenter插件5.0开始、您可以使用NetApp Element 远程插件扩展点访问远程Element插件、通过该扩展点、您可以配置和管理集群、节点和驱动器并查看集群信息。
+
+NetApp Element 远程插件扩展点提供了以下选项卡：
+
+*  Started
+* 
+* 
+* 
+
+
+
+
+== 入门
+
+Getting Started选项卡介绍了此插件的扩展点以及可执行的操作。您可以从每个页面隐藏"入门"页面、也可以从*关于*选项卡还原这些页面。
+
+
+
+== Configuration
+
+通过*配置*选项卡、您可以添加和管理集群、以及配置QoSSIOC的管理节点设置。
+
+
+NOTE: 您的 vSphere Web Client 可能与下图所示略有不同，具体取决于安装的 vSphere 版本。
+
+image::vcp_config_tab.png[配置选项卡]
+
+以下选项卡可从*配置*选项卡访问：
+
+* * 集群 * ：管理此插件控制的 NetApp Element 集群。您还可以启用，禁用或配置集群专用功能。
+* * QoSSIOC 设置 * ：为管理节点上的 QoSSIOC 服务配置凭据，以便与 vCenter 进行通信。
+* * QoSSIOC Events* ：显示有关检测到的所有 QoSSIOC 事件的信息。
+
+
+
+
+== 管理
+
+使用*管理*选项卡、您可以执行以下活动：
+
+* 查看集群信息
+* 管理数据存储库、卷、用户帐户、访问组和启动程序
+* 管理单个组快照以及添加和管理驱动器和节点
+
+
+
+NOTE: 您的 vSphere Web Client 可能与下图所示略有不同，具体取决于安装的 vSphere 版本。
+
+image::vcp_management_tab.png[管理选项卡]
+
+通过集群导航栏，您可以在已添加到此插件的集群之间快速切换：
+
+* * 集群 * ：如果添加了两个或更多集群，请确保在导航栏中选择要用于管理任务的集群。从下拉列表中选择其他已添加的集群。
+* * MVIP* ：选定集群的管理虚拟 IP 地址。
+* * 。 svip* ：选定集群的存储虚拟 IP 地址。
+* * vCenter * ：选定集群可以访问的 vCenter Server 。将集群添加到此插件后，系统会为集群分配对 vCenter Server 的访问权限。
+
+
+以下选项卡可从*管理*选项卡访问：
+
+* * 报告 * ：显示有关集群组件的信息并提供集群性能概述。您还可以从选项卡中查找有关事件、警报、iSCSI会话、正在运行的任务和性能卷的信息。
+* * 管理 * ：创建和管理数据存储库，卷，用户帐户，访问组和启动程序。您还可以执行备份操作，克隆和快照。可以使用 NetApp Element 软件 10 或更高版本创建和管理 QoS 策略。
+* * 保护 * ：管理单个快照和组快照。您还可以创建快照创建计划，对集群进行配对以进行实时复制以及管理卷对。
+* * 集群 * ：添加和管理驱动器和节点。您还可以创建和管理 VLAN 。
+* * vvols* ：管理虚拟卷及其关联的存储容器，协议端点和绑定。
+
+
+
+
+== About
+
+显示插件版本信息并提供服务包下载选项。
+
+[discrete]
+== 了解更多信息
+
+* link:concept_vcp_product_overview.html["适用于 vCenter Server 的 NetApp Element 插件概述"]
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
+

@@ -21,7 +21,12 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 解析问题描述后，系统会自行轮询并将此问题描述标识为已解析。然后，有关警报的所有信息（包括警报解决日期）将移至 "Resolved" 视图。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 选择 * 报告 * > * 警报 * 。
 . 监控以下集群警报信息：
 +

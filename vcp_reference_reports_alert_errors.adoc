@@ -14,7 +14,11 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 
 
 [role="lead"]
-系统会在 NetApp Element 管理扩展点的 * 报告 > 警报 * 页面上报告每个警报的错误代码。错误代码可帮助您确定系统中哪个组件出现警报以及生成警报的原因。
+系统会报告每个警报的错误代码、以帮助您确定系统中哪个组件遇到警报以及生成警报的原因。您可以使用插件扩展点查看错误代码：
+
+* 从Element vCenter插件5.0开始、选择* NetApp远程插件>管理>报告>警报*。
+* 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting > Alerts*。
+
 
 以下列表概述了不同类型的系统警报。
 

@@ -73,10 +73,15 @@ NOTE: 集群配对要求管理网络上的节点之间具有完全连接。复�
 如果 MVIP 未知或无法访问集群，您可以生成配对密钥并使用该密钥对两个集群配对。有关说明，请参见  clusters with a pairing key。
 
 .步骤
-. 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Protection* 。
+. 在vSphere Web Client中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>保护*。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+
 
 . 选择 * 集群对 * 子选项卡。
 . 选择 * 创建集群配对 * 。
@@ -96,7 +101,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 . 完成此任务并看到 "Cluster Pairs" 页面后，验证此集群对是否已连接。
-. （可选）在远程集群上，选择 * NetApp Element 集群管理 * > * 保护 * > * 集群对 * 或使用 Element Web UI 验证集群对是否已连接。
+. (可选)在远程集群上、使用Element UI或插件扩展点验证集群对是否已连接：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护>集群对*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护>集群对*。
+
+
 
 
 
@@ -107,11 +117,17 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 此操作步骤介绍了如何使用 vCenter 在本地站点和远程站点上的两个集群之间进行集群配对。对于不受 vCenter 插件控制的集群，您也可以选择 https://docs.netapp.com/us-en/element-software/storage/task_replication_pair_cluster_using_pairing_key.html["开始或完成集群配对"] 使用 Element Web UI 。
 
+[[open_protection_tab]]
 .步骤
-. 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Protection* 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+
 
 . 选择 * 集群对 * 子选项卡。
 . 选择 * 创建集群配对 * 。
@@ -132,7 +148,7 @@ NOTE: 集群配对密钥包含一个版本的 MVIP ，用户名，密码和数�
 
 IMPORTANT: 请勿修改配对密钥中的任何字符。如果修改此密钥，则此密钥将无效。
 
-. 从包含远程集群的 vCenter 中，选择 * NetApp Element Management* > * Protection* 。
+. 从包含远程集群的vCenter中、 ,打开保护选项卡。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -150,7 +166,7 @@ NOTE: 等待加载旋转器消失，然后再继续下一步。如果在配对�
 . 将配对密钥从本地集群粘贴到 * 集群配对密钥 * 字段中。
 . 选择 * 配对集群 * 。
 . 完成此任务并看到 * 集群对 * 页面后，请验证集群对是否已连接。
-. 要验证集群对是否已连接，请在远程集群上选择 * NetApp Element Management* > * Protection* 或使用 Element UI 。
+. 要验证集群对是否已连接、请在远程集群上 ,打开保护选项卡 或者使用Element UI。
 
 
 
@@ -202,7 +218,12 @@ NOTE: 等待加载旋转器消失，然后再继续下一步。如果在配对�
 
 
 .步骤
-. 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Management* 。
+. 从包含本地集群的vCenter中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -306,11 +327,17 @@ NOTE: 如果尚未将卷分配为复制目标，则配对配置将不完整。�
 
 NOTE: 卷配对密钥包含经过加密的卷信息，并且可能包含敏感信息。仅以安全方式共享此密钥。
 
+[[open_management]]
 .步骤
-. 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Management* 。
+. 从包含本地集群的vCenter中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
+
 
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，选中要配对的卷对应的复选框。
@@ -340,7 +367,7 @@ NOTE: 应以安全的方式对待卷配对密钥，而不是以允许意外或�
 
 IMPORTANT: 请勿修改配对密钥中的任何字符。如果修改此密钥，则此密钥将无效。
 
-. 从包含远程集群的 vCenter 中，选择 * NetApp Element Management* > * Management* 。
+. 从包含远程集群的vCenter中、 ,打开管理选项卡。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -384,7 +411,12 @@ NOTE: 在远程位置完成配对过程后，使用配对密钥配对的卷将�
 
 
 .步骤
-. 从包含本地集群的 vCenter 中，选择 * NetApp Element Management* > * Management* 。
+. 从包含本地集群的vCenter中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -433,8 +465,13 @@ NOTE: 确认配对后，两个集群将开始连接卷。在配对过程中，�
 * 最佳实践 * ：目标卷不应包含任何数据，并且与源卷具有完全相同的特征，例如大小， 512e 设置和 QoS 配置。目标卷的大小可以大于或等于源卷，但不能小于源卷。
 
 .步骤
-. 从 vCenter Server 的 * NetApp Element Management* 扩展点中，选择包含要用作复制源的配对卷的集群。
-. 选择 * NetApp Element Management* > * Management* 。
+. 从插件扩展点选择包含要用作复制源的配对卷的集群：
++
+** 从* NetApp远程插件>管理*中的Element vCenter插件5.0开始。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management*。
+
+
+. 从适用于vCenter Server的Element插件版本的扩展点中、选择*管理*选项卡。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，选中要编辑的卷对应的复选框。
 . 选择 * 操作 * 。
@@ -445,8 +482,12 @@ NOTE: 确认配对后，两个集群将开始连接卷。在配对过程中，�
 IMPORTANT: 如果要反转源分配和目标分配，此操作将对卷对执行发生原因操作，以显示 PausedMisconfigured ，直到分配新的复制目标为止。更改访问权限会暂停卷复制并导致数据传输停止。请确保您已在两个站点协调这些更改。
 
 . 选择 * 确定 * 。
-. 从 * NetApp Element Management* 扩展点中，选择包含要用作复制目标的配对卷的集群。
-. 选择 * NetApp Element Management* > * Management* 。
+. 选择包含要用作复制目标的配对卷的集群：
++
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理>管理*。
+** 从* NetApp远程插件>管理>管理*中的Element vCenter插件5.0开始。
+
+
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，选中要编辑的卷对应的复选框。
 . 选择 * 操作 * 。
@@ -466,7 +507,12 @@ IMPORTANT: 如果您将现有卷分配为复制目标，则该卷上的数据将
 复制卷后，您应确保源卷和目标卷处于活动状态。处于 "Active" 状态时，卷将配对，数据将从源卷发送到目标卷，并且数据处于同步状态。
 
 .步骤
-. 从配对的任一集群中，选择 * NetApp Element Management* > * 保护 * 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -502,7 +548,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以编辑卷对属性以手动暂停复制。
 
 .步骤
-. 选择 * NetApp Element Management* > * 保护 * 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -526,7 +577,12 @@ IMPORTANT: 手动暂停或恢复卷复制将对数据传输进行发生原因以
 您可以编辑卷对属性以更改卷对关系的复制模式。
 
 .步骤
-. 选择 * NetApp Element Management* > * 保护 * 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -560,7 +616,12 @@ IMPORTANT: 更改复制模式会立即更改此模式。请确保您已在两个
 对于不受 vCenter 插件控制的卷，您也可以选择 link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_volume_relationship_after_replication.html["删除卷对端"] 使用 Element Web UI 。
 
 .步骤
-. 选择 * NetApp Element Management* > * 保护 * 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -589,7 +650,12 @@ NOTE: 对于不受此插件管理的集群，此操作仅会删除本地集群�
 对于不受 vCenter 插件控制的集群，您也可以选择 link:https://docs.netapp.com/us-en/element-software/storage/task_replication_delete_cluster_pair.html["删除集群对端"] 使用 Element Web UI 。
 
 .步骤
-. 选择 * NetApp Element Management* > * 保护 * 。
+. 从包含本地集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 . 选择 * 集群对 * 子选项卡。
 . 选中要删除的集群对对应的复选框。
 . 选择 * 操作 * 。
@@ -606,7 +672,7 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 
 == 卷配对消息和警告
 
-您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看已配对或正在配对的卷的信息。
+您可以在插件扩展点的保护选项卡的卷对页面上查看已配对或正在配对的卷的信息。从Element vCenter插件5.0开始、从NetApp Element 远程插件扩展点选择管理选项卡。对于Element vCenter插件4.10及更早版本、请选择NetApp Element 管理扩展点。
 
 系统会在卷状态列中显示配对和进度消息。
 
@@ -618,7 +684,7 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 
 === 卷配对消息
 
-您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看初始配对过程中的消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。
+您可以在初始配对过程中通过插件扩展点的保护选项卡的卷对页面查看消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。
 
 * * PausedDisconnected* ：源复制或同步 RPC 超时。与远程集群的连接已断开。检查与集群的网络连接。
 * * 正在重新同步连接 * ：远程复制同步现已处于活动状态。开始同步过程并等待数据。
@@ -635,7 +701,7 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 
 === 卷配对警告
 
-在对卷配对后，您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看警告消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。
+在对卷配对后、您可以从插件扩展点的保护选项卡的卷对页面查看警告消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。
 
 除非另有说明，否则这些消息可能会显示在配对的源端和目标端。
 
@@ -651,8 +717,7 @@ NOTE: 此操作仅会删除本地集群上的集群对端。要完全删除此�
 * * StoppedMisconfigure* ：检测到永久配置错误。远程卷已清除或取消配对。无法执行更正操作；必须建立新的配对。
 
 
-
-
+[discrete]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

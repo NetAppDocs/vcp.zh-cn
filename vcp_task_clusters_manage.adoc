@@ -17,13 +17,23 @@ keywords: netapp, cluster, vcp, vcenter, element
 您可以编辑运行 Element 软件的集群，管理 SSH 配置，设置保护域监控以及关闭集群。
 
 .您需要什么？ #8217 ；将需要什么
-* 必须至少有一个集群 link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["已添加"]。
+* 必须至少添加一个集群：
++
+** link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in["使用适用于vCenter 5.0及更高版本的Element插件添加集群"]
+** link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["使用适用于vCenter 4.10及更早版本的Element插件添加集群"]
+
+
 +
 
-NOTE: 要使用 NetApp Element 管理扩展点功能，必须至少添加一个集群。
+NOTE: 要使用插件扩展点功能、必须至少添加一个集群。
 
 * 集群的当前完整集群管理员用户凭据。
-* 防火墙规则可在 vCenter 和集群 MVIP 之间通过 TCP 端口 443 和 8443 进行开放网络通信。
+* 防火墙规则允许在vCenter和集群MVIP之间通过以下TCP端口进行开放网络通信：
++
+** 从适用于vCenter 5.0的Element插件开始、在端口443、8333和8443上。
+** 对于适用于vCenter 4.10或更早版本的Element插件、请使用端口443和8443。
+
+
 
 
 .选项
@@ -44,7 +54,15 @@ NOTE: 要使用 NetApp Element 管理扩展点功能，必须至少添加一个�
 
 == 查看集群详细信息
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+您可以从vCenter插件扩展点查看集群详细信息。
+
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 选中要编辑的集群。
 . 选择 * 操作 * 。
 . 选择 * 详细信息 * 。
@@ -85,12 +103,18 @@ NOTE: 要使用 NetApp Element 管理扩展点功能，必须至少添加一个�
 
 == 编辑集群配置文件
 
-您可以从 NetApp Element 配置扩展点更改集群用户 ID 和密码。
+您可以从插件扩展点更改集群用户ID和密码。
 
 
 NOTE: 此操作步骤介绍了如何更改此插件使用的集群管理员用户名和密码。您不能通过此插件更改集群管理员凭据。请参见 https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html["管理集群管理员用户帐户"^] 有关更改集群管理员帐户凭据的说明。
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 编辑 * 。
@@ -111,14 +135,24 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 == 删除集群配置文件
 
-您可以使用 NetApp Element 配置扩展点从 vCenter 插件中删除不再需要管理的集群的配置文件。
+您可以使用此插件扩展点从vCenter插件中删除不再需要管理的集群的配置文件。
 
 如果您设置了链接模式组并希望将集群重新分配给另一个 vCenter Server ，则可以删除此集群配置文件，然后使用其他链接的 vCenter Server IP 重新添加此配置文件。
 
+[NOTE]
+====
+* 从Element vCenter插件5.0开始、使用 link:vcp_concept_linkedmode.html["vCenter 链接模式"]下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。
+* 使用Element vCenter插件4.10及更早版本通过其他vCenter Server管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
-NOTE: 使用适用于VMware vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 link:vcp_concept_linkedmode.html["vCenter 链接模式"] 仅限于本地存储集群。
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+====
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 选中要删除的集群。
 . 选择 * 操作 * 。
 . 选择 * 删除 * 。
@@ -129,16 +163,21 @@ NOTE: 使用适用于VMware vCenter Server的NetApp Element 插件从其他vCent
 
 == 启用空闲加密
 
-您可以使用 NetApp Element 配置扩展点手动启用空闲加密（ EAR ）功能。
+您可以使用插件扩展点手动启用空闲加密(EAR)功能。
 
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 选择要启用空闲加密的集群。
 . 选择 * 操作 * 。
-. 在显示的菜单中，单击 * 启用 EAR* 。
+. 在显示的菜单中、选择*启用EAR*。
 . 确认操作。
 
 
@@ -146,13 +185,18 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 == 禁用空闲加密
 
-您可以使用 NetApp Element 配置扩展点手动禁用空闲加密（ EAR ）功能。
+您可以使用插件扩展点手动禁用空闲加密(EAR)功能。
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡b：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 选中集群对应的复选框。
-. 单击 * 操作 * 。
-. 在显示的菜单中，单击 * 禁用 EAR* 。
+. 选择 * 操作 * 。
+. 在显示的菜单中、选择*禁用EAR*。
 . 确认操作。
 
 
@@ -160,12 +204,18 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 == 启用 SSH ：
 
-您可以使用 NetApp Element 配置扩展点手动启用安全 Shell （ SSH ）会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。
+您可以使用插件扩展点手动启用安全Shell (SSH)会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。
 
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 启用 SSH* 。
@@ -186,7 +236,13 @@ NOTE: 要继续，您需要输入一个值。
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 更改 SSH* 。
@@ -205,12 +261,18 @@ NOTE: 要继续，您需要输入一个值。
 
 == 禁用 SSH
 
-您可以使用 NetApp Element 配置扩展点手动禁用对存储集群中节点的安全 Shell （ SSH ）访问。
+您可以使用插件扩展点手动禁用对存储集群中节点的安全Shell (SSH)访问。
 
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
-. 选择 * NetApp Element 配置 > 集群 * 。
+.步骤
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 禁用 SSH* 。
@@ -221,7 +283,7 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 == 设置保护域监控
 
-您可以手动启用 link:vcp_concept_protection_domains.html["保护域监控"] 使用 NetApp Element 配置扩展点。您可以根据节点或机箱域选择保护域阈值。
+您可以手动启用 link:vcp_concept_protection_domains.html["保护域监控"] 使用插件扩展点。您可以根据节点或机箱域选择保护域阈值。
 
 .您需要什么？ #8217 ；将需要什么
 * 要使用保护域监控功能，必须由 Element 11.0 或更高版本监控选定集群；否则，保护域功能将不可用。
@@ -229,7 +291,12 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 设置保护域监控 * 。
@@ -248,7 +315,7 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 == 关闭集群
 
-您可以使用 NetApp Element 配置扩展点手动关闭存储集群中的所有活动节点。
+您可以使用插件扩展点手动关闭存储集群中的所有活动节点。
 
 如果您要 ... link:vcp_task_add_manage_nodes.html#restart-a-node["重新启动"] 您可以从 NetApp Element 管理扩展点的 "Cluster" 页面中选择所有节点并执行重新启动，而不是关闭集群。
 
@@ -258,7 +325,12 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 您已停止 I/O 并断开所有 iSCSI 会话。
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 关闭 * 。
@@ -269,13 +341,24 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 == 扩展 NetApp HCI 基础架构
 
-您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。NetApp Element 扩展点提供了一个指向 NetApp HCI UI 的链接，用于扩展您的系统。NetApp Element 管理扩展点中的 " 入门 " 和 " 集群 " 页面提供了其他链接。
+您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。此插件扩展点提供了一个指向NetApp HCI UI的链接、用于扩展您的系统。
+
+其他链接可从Getting Started和Cluster页面访问：
+
+* 从Element vCenter插件5.0开始、选择NetApp Element 远程插件>管理。
+* 对于Element vCenter插件4.10及更早版本、请选择NetApp Element 管理扩展点。
+
 
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 检查集群。
 . 选择 * 操作 * 。
 . 选择 * 扩展 NetApp HCI * 。

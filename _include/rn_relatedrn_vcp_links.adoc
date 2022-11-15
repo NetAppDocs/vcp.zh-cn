@@ -11,7 +11,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == NetApp HCI
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882194["NetApp HCI 1.10发行说明"^] _new_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2882194["NetApp HCI 1.10发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879274["《 NetApp HCI 1.9P1 发行说明》"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876591["NetApp HCI 1.9 发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2873790["NetApp HCI 1.8P1 发行说明"^]
@@ -47,7 +47,8 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 适用于VMware vCenter Server的NetApp Element 插件
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["vCenter插件4.10发行说明"^] _new_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["vCenter插件5.0发行说明"^] _new_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["vCenter插件4.10发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2881904["vCenter插件4.9发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2879296["vCenter 插件 4.8 发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2876748["vCenter 插件 4.7 发行说明"^]
@@ -61,7 +62,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 计算固件
 
-* https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.146.html["计算固件包 2.146 发行说明"^] _new_
+* https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.146.html["计算固件包 2.146 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.76.html["计算固件包 2.76 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.27.html["计算固件包 2.27 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_firmware_12.2.109.html["计算固件包 12.2.109 发行说明"^]
@@ -71,7 +72,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 存储固件
 
-* https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.146.html["存储固件包 2.146 发行说明"^] _new_
+* https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.146.html["存储固件包 2.146 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.99.2.html["存储固件包 2.99.2 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.76.html["存储固件包 2.76 发行说明"^]
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.27.html["存储固件包 2.27 发行说明"^]

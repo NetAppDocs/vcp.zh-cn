@@ -41,7 +41,12 @@ VMware 需要使用 512e 作为磁盘资源。如果未启用 512e ，则无法�
 
 
 .步骤
-. 选择 * NetApp Element Management* > * Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择要用于此任务的集群。
 . 选择 * 卷 * 子选项卡。
 . 从 * 活动 * 视图中，选择 * 创建卷 * 。
@@ -77,9 +82,15 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 == 查看卷详细信息
 
-您可以在 NetApp Element 管理扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。
+您可以在插件扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+.步骤
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 单击 * 卷 * 子选项卡。
 +
@@ -218,7 +229,13 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 如果要在管理节点中使用永久性卷，请勿修改此永久性卷的名称。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+.步骤
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 单击 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -246,11 +263,17 @@ NOTE: 您可以增加卷的大小，但不能减小卷的大小。如果要调�
 
 TIP: * 最佳实践 * ：更改 IOPS 值时，请以十或百为单位递增。输入值需要有效的整数。为卷配置极高的突发值。这样，系统就可以更快地处理偶尔出现的大型块顺序工作负载，同时仍会限制卷的持续 IOPS 。
 
-
-
 +
+[IMPORTANT]
+====
+QoS 策略最适合服务环境，例如数据库，应用程序或基础架构服务器，这些服务器很少重新启动，需要对存储的持续等量访问。自定义 QoSSIOC 自动化最适合日常或每天多次可能重新启动，启动或关闭的轻型 VM ，例如虚拟桌面或专业的自助式 VM 。不应同时使用 QoSSIOC 自动化和 QoS 策略。
 
-IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或基础架构服务器，这些服务器很少重新启动，需要对存储的持续等量访问。自定义 QoSSIOC 自动化最适合日常或每天多次可能重新启动，启动或关闭的轻型 VM ，例如虚拟桌面或专业的自助式 VM 。不应同时使用 QoSSIOC 自动化和 QoS 策略。启用数据存储库 QoSSIOC 设置后，卷级别的任何 QoS 设置都将被覆盖。最大或突发 IOPS 值大于 20 ， 000 IOPS 的卷可能需要较高的队列深度或多个会话，才能在单个卷上实现此级别的 IOPS 。
+启用数据存储库 QoSSIOC 设置后，卷级别的任何 QoS 设置都将被覆盖。
+
+最大或突发 IOPS 值大于 20 ， 000 IOPS 的卷可能需要较高的队列深度或多个会话，才能在单个卷上实现此级别的 IOPS 。
+
+====
+
 
 . 选择 * 确定 * 。
 
@@ -273,10 +296,15 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 NOTE: 克隆的卷不会从源卷继承卷访问组成员资格。
 
-操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html["管理重复的 VMFS 数据存储库"]。
+操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"^] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html["管理重复的 VMFS 数据存储库"^]。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选中要克隆的卷。
 . 选择 * 操作 * 。
@@ -338,7 +366,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 您可以将 NetApp Element 卷备份到与 Amazon S3 兼容的外部对象存储。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -366,7 +399,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 您可以将 NetApp Element 卷备份到与 OpenStack Swift 兼容的外部对象存储。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -405,7 +443,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 .设置备份卷
-. 从要放置卷备份的 vCenter 和集群中，选择 * NetApp Element Management> Management* 。
+. 在要放置卷备份的vCenter和集群中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -423,7 +466,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 .备份卷
-. 从包含要用于备份的源卷的 vCenter 和集群中，选择 * NetApp Element Management> Management* 。
+. 在包含要用于备份的源卷的vCenter和集群中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -455,7 +503,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 您可以使用此插件从 Amazon S3 对象存储上的备份还原卷。
 
-. 选择 * NetApp Element 管理 > 报告 * 。
+. 从vCenter插件中、打开*报告*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>报告*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 事件日志 * 子选项卡。
 . 选择创建需要还原的备份的备份事件。
@@ -487,7 +540,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 您可以使用此插件从 OpenStack Swift 对象存储上的备份还原卷。
 
-. 选择 * NetApp Element 管理 > 报告 * 。
+. 从vCenter插件中、打开*报告*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>报告*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 事件日志 * 子选项卡。
 . 选择创建需要还原的备份的备份事件。
@@ -526,7 +584,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 .选择要用于还原的卷
-. 从要还原卷的 vCenter 和集群中，选择 * NetApp Element 管理 > 管理 * 。
+. 在要还原卷的vCenter和集群中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -544,7 +607,12 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 .还原卷
-. 从包含要用于还原的源卷的 vCenter 和集群中，选择 * NetApp Element Management> Management* 。
+. 从包含要用于还原的源卷的vCenter和集群中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 在 * 活动 * 视图中，检查卷。
@@ -568,7 +636,7 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 == 删除卷
 
-您可以使用 NetApp Element 管理扩展点从 NetApp Element 集群中删除一个或多个卷。
+您可以使用插件扩展点从NetApp Element 集群中删除一个或多个卷。
 
 系统不会立即清除已删除的卷。已删除的卷可以还原大约八小时。
 
@@ -581,7 +649,12 @@ IMPORTANT: 与管理服务关联的永久性卷会在安装或升级期间创建
 IMPORTANT: 如果删除了用于创建快照的卷，则其关联快照将列在 "Protection">"Snapshots" 页面上的 "Inactive" 视图中。清除已删除的源卷后， Inactive 视图中的快照也会从系统中删除。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 删除一个或多个卷：
@@ -613,7 +686,12 @@ NOTE: 此插件不允许删除包含数据存储库的卷。
 IMPORTANT: 清除卷后，该卷将立即从系统中永久删除。卷中的所有数据都将丢失。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 选择视图筛选器，然后从列表中选择 * 已删除 * 。
@@ -634,7 +712,12 @@ IMPORTANT: 清除卷后，该卷将立即从系统中永久删除。卷中的所
 NOTE: 如果删除卷并随后还原， ESXi 将无法检测还原的卷（以及数据存储库（如果存在）。从 ESXi iSCSI 适配器中删除静态目标并重新扫描此适配器。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 如果添加了两个或更多集群，请在导航栏中选择该集群。
 . 选择 * 卷 * 子选项卡。
 . 选择视图筛选器，然后从列表中选择 * 已删除 * 。

@@ -67,17 +67,6 @@ Disconnect-VIServer * -Confirm:$false
 ----
 
 
-** 对于 vCenter 插件 2.6.1 或更早版本：
-+
-... 在浏览器中输入注册实用程序的 URL 或在程序目录中找到该实用程序：
-+
-**** `https://<FDVAorManagementNodeIP>:8443`
-**** ` /opt/solidfire/vcp/bin/vcp-reg.sh`
-
-
-... 在 vCenter Plugin Register/Unregister 窗口中，选择 * 取消注册 * 。
-
-
 
 
 

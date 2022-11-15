@@ -16,7 +16,7 @@ keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, el
 [role="lead"]
 通过 QoS （服务质量）策略，您可以创建和保存可应用于多个卷的标准化服务质量设置。要使用 QoS 策略，选定集群必须为 Element 10.0 或更高版本；否则， QoS 策略功能将不可用。
 
-使用 NetApp Element 管理扩展点，您可以通过完成以下任务来配置和管理 QoSSIOC ：
+使用插件扩展点、您可以通过完成以下任务来配置和管理QoSSIOC：
 
 *  a QoS policy
 *  a QoS policy to volumes
@@ -35,7 +35,12 @@ keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, el
 NOTE: 不应同时使用 QoSSIOC 自动化和 QoS 策略。如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -60,7 +65,12 @@ TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集
 要批量应用的 QoS 策略已是  a QoS policy,已创建。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -82,7 +92,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 要修改的卷为  a QoS policy to volumes,已关联 使用 QoS 策略。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -107,7 +122,12 @@ NOTE: 您也可以单击 * 重置默认 QoS* 以还原默认 IOPS 值。
 您可以更改现有 QoS 策略的名称或编辑与该策略关联的值。更改 QoS 策略性能值会影响与此策略关联的所有卷的 QoS 。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -138,7 +158,12 @@ NOTE: 您也可以单击重置默认 QoS 以还原默认 IOPS 值。
 您可以删除不再需要的 QoS 策略。删除 QoS 策略时，与该策略关联的所有卷都会保留先前由该策略定义的 QoS 值，但保留为单个卷 QoS 。系统将删除与已删除 QoS 策略的任何关联。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。

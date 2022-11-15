@@ -52,7 +52,11 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 
 在为插件启用 QoSSIOC 服务后，您可以为数据存储库启用 QoSSIOC 自动化并自定义虚拟机磁盘（ VMDK ）性能级别。
 
-您已拥有 link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["已配置 QoSSIOC 服务设置"] 在 QoSSIOC 设置页面上， * QoSSIOC 状态 * 字段显示 `up` 。
+您已在QoSSIOC设置页面上配置QoSSIOC服务设置、并显示* QoSSIOC状态*字段 `UP`。
+
+* link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
+* link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
+
 
 QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。
 
@@ -60,7 +64,12 @@ QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）
 IMPORTANT: 如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。无论策略如何， QoSSIOC 都会覆盖和调整任何卷 QoS 设置的 QoS 值。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -100,8 +109,13 @@ TIP: 默认情况下，最大 SIOC 磁盘共享设置为无限制。在 VDI 等�
 您可以更改活动 Element 管理节点的 QoSSIOC 和 vCenter 凭据。
 
 .步骤
-. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
-. 单击 * 操作 * 。
+. 在vSphere Web Client中、打开* QoSSIOC设置*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置> QoSSIOC设置*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置> QoSSIOC设置*。
+
+
+. 选择 * 操作 * 。
 . 在显示的菜单中，选择 * 编辑 * 。
 . 在 * 编辑 QoSSIOC 设置 * 对话框中，更改以下任一项：
 +
@@ -115,7 +129,7 @@ NOTE: 对于 NetApp HCI 部署，默认密码会在安装期间随机生成。�
 ** * vCenter 密码 * ：具有完全管理员角色特权的 vCenter 管理员的密码。
 
 
-. 单击 * 确定 * 。当此插件可以成功与服务通信时， "QoSSIOC Status" 字段将显示 `up` 。
+. 选择 * 确定 * 。此时将显示"QoSSIOC Status"字段 `UP` 插件可以成功与服务通信时。
 +
 
 NOTE: 请参见此内容 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["知识库"^] 要在状态为以下任一项时进行故障排除，请执行以下操作： * `DOwn` ： QoSSIOC is not enabled 。* `未配置` ：尚未配置 QoSSIOC 设置。* `网络关闭` ： vCenter 无法与网络上的 QoSSIOC 服务进行通信。mNode 和 SIOC 服务可能仍在运行。
@@ -136,11 +150,16 @@ NOTE: 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为�
 * 管理节点已启动。
 
 
-此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作  QoSSIOC settings,QoSSIOC 设置 页面。 NetApp Element
+此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作  QoSSIOC settings,QoSSIOC 设置 页面。
 
 .步骤
-. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
-. 单击 * 操作 * 。
+. 在vSphere Web Client中、打开* QoSSIOC设置*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置> QoSSIOC设置*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置> QoSSIOC设置*。
+
+
+. 选择 * 操作 * 。
 . 在显示的菜单中，选择 * 清除 * 。
 . 确认操作。
 +
@@ -164,16 +183,16 @@ NOTE: 对于 NetApp HCI 部署，默认密码会在安装期间随机生成。�
 .. * 确认密码 * ：再次输入新密码。
 
 
-. 单击 * 提交更改 * 。
+. 选择 * 提交更改 * 。
 +
 
 NOTE: QoSSIOC 服务会在您提交更改后自动重新启动。
 
 . 在 vSphere Web Client 中，选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
-. 单击 * 操作 * 。
+. 选择 * 操作 * 。
 . 在显示的菜单中，选择 * 配置 * 。
 . 在 * 配置 QoSSIOC 设置 * 对话框的 * QoSSIOC 密码 * 字段中输入新密码。
-. 单击 * 确定 * 。
+. 选择 * 确定 * 。
 +
 当插件可以成功与服务通信时， * QoSSIOC Status* 字段将显示 `up` 。
 
@@ -186,17 +205,22 @@ NOTE: QoSSIOC 服务会在您提交更改后自动重新启动。
 您可以为数据存储库禁用 QoSSIOC 集成。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
 
-. 单击选定数据存储库的 * QoSSIOC Automation" 列中的按钮。
+. 在* QoSSIOC Automation"列中选择选定数据存储库的按钮。
 . 清除 * 启用 QoS 和 SIOC* 复选框以禁用集成。
 +
 清除启用 QoS 和 SIOC 复选框会自动禁用覆盖默认 QoS 选项。
 
-. 单击 * 确定 * 。
+. 选择 * 确定 * 。
 
 
 
@@ -206,8 +230,13 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以清除 Element 存储管理节点（ mNode ）的 QoSSIOC 配置详细信息。在为新管理节点配置凭据或更改 QoSSIOC 服务密码之前，必须清除已配置管理节点的设置。清除 QoSSIOC 设置将从 vCenter ，集群和数据存储库中删除活动的 QoSSIOC 。
 
 .步骤
-. 选择 * NetApp Element 配置 > QoSSIOC 设置 * 。
-. 单击 * 操作 * 。
+. 在vSphere Web Client中、打开* QoSSIOC设置*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置> QoSSIOC设置*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置> QoSSIOC设置*。
+
+
+. 选择 * 操作 * 。
 . 在显示的菜单中，选择 * 清除 * 。
 . 确认操作。
 +

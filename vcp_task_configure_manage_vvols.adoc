@@ -14,7 +14,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 [role="lead"]
-您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， link:vcp_concept_vvols.html#storage-containers["存储容器"]， link:vcp_concept_vvols.html#protocol-endpoints["协议端点"]和 NetApp Element 管理扩展点的主机。
+您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， link:vcp_concept_vvols.html#storage-containers["存储容器"]， link:vcp_concept_vvols.html#protocol-endpoints["协议端点"]和插件扩展点的主机。
 
 .您需要什么？ #8217 ；将需要什么
 * 您使用的 NetApp Element 10 或更高版本集群连接到与 VVol 兼容的 ESXi 6.5 或更高版本环境。
@@ -46,13 +46,18 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 == 在 NetApp Element 集群上启用虚拟卷功能
 
-您必须使用 NetApp Element vSphere 配置扩展点手动启用 vSphere 虚拟卷（ VVol ）功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。
+您必须使用插件扩展点手动启用vSphere虚拟卷(VVol)功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。
 
 .步骤
-. 选择 * NetApp Element 配置 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>配置>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置>集群*。
+
+
 . 从列表中选择要启用的集群。
 . 选择 * 操作 * 。
-. 在显示的菜单中，单击 * 启用 VVols* 。
+. 在显示的菜单中、选择*启用VVols*。
 +
 
 IMPORTANT: 启用 VVol 功能后，无法将其禁用。启用 vSphere 虚拟卷功能会永久更改 NetApp Element 软件配置。只有当集群连接到与 VMware ESXi VVol 兼容的环境时，才应启用 VVol 功能。您只能通过将集群恢复为出厂映像来禁用 VVol 功能并还原默认设置。
@@ -84,23 +89,23 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 IMPORTANT: 请勿将 NetApp Element VASA Provider 注册到多个 vCenter 实例。由于 NetApp Element VASA 提供程序处理 SSL 的方式存在限制，因此只能将其注册到一个 vCenter 中。一个 vCenter 可以包含多个 NetApp Element 集群，但一个集群不能在两个 vCenter 实例之间共享。
 
 
-IMPORTANT: 请勿将多个 NetApp Element VASA 提供程序注册到一个 vCenter 实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。
+IMPORTANT: 对于Element软件12.5及更早版本、请勿将多个NetApp Element VASA Provider注册到一个vCenter实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。
 
 
 NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39["NetApp 软件下载"] 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。
 
 .步骤
-. 在 vSphere Client 主页中，单击 * 主机和集群 * 。
+. 从vSphere Client主页中、选择*主机和集群*。
 . 选择要注册 NetApp Element VASA Provider 的 vCenter 实例。
 . 选择 * 配置 > 存储提供程序 * 。
-. 在 * 存储提供程序 * 中，单击添加图标。
+. 在*存储提供程序*中、选择添加图标。
 . 在 * 新建存储提供程序 * 对话框中输入以下信息：
 +
 ** VASA Provider 名称。
 ** VASA Provider URL 。
 +
 
-NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider URL 。您还可以从集群详细信息（ * NetApp Element 配置 > 集群 * ）或 Element UI 中的集群设置（`https://<MVIP>/cluster` ）中找到此 URL 。
+NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider URL 。此外、您还可以从集群详细信息(* NetApp Element 配置>集群*或* NetApp Element 远程插件>配置>集群*)或Element UI中的集群设置中找到此URL (`https://<MVIP>/cluster`）。
 
 ** NetApp Element 集群的管理帐户用户名。
 ** NetApp Element 集群的管理帐户密码。
@@ -110,7 +115,7 @@ NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider
 . 出现提示时，批准 SSL 证书的指纹。此时， NetApp Element VASA Provider 应注册为状态 `Connected` 。
 +
 
-NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在 * NetApp Element 配置 > 集群 * 中验证是否已启用此提供程序。为要启用的集群选择 * 操作 * ，然后单击 * 详细信息 * 。
+NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在* NetApp Element 配置>集群*或* NetApp Element 远程插件>配置>集群*中验证是否已启用此提供程序。为要启用的集群选择*操作*、然后选择*详细信息*。
 
 . 请参见  a storage container and associated VVol datastore 后续步骤。
 
@@ -119,7 +124,7 @@ NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程�
 
 == 创建存储容器以及关联的 VVol 数据存储库
 
-您可以从 NetApp Element 管理扩展点中的 "VVols" 选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。
+您可以从插件扩展点中的"VVols"选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。
 
 .开始之前
 * 您已为集群启用 VVol 功能。
@@ -127,7 +132,12 @@ NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程�
 
 
 .步骤
-. 选择 * NetApp Element 管理 > VVols* 。
+. 在vSphere Web Client中、打开* VVols*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVols*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> VVols*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -167,7 +177,7 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 == 监控虚拟卷资源
 
-您可以从插件的 NetApp Element 管理扩展点查看虚拟卷组件性能和设置：
+您可以从插件扩展点查看虚拟卷组件的性能和设置：
 
 *  VVols
 *  storage containers
@@ -185,7 +195,12 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 
 .步骤
-. 选择 * NetApp Element 管理 > VVols* 。
+. 在vSphere Web Client中、打开* VVols*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVols*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> VVols*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -203,7 +218,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以查看集群上所有活动存储容器的常规数据或每个存储容器的详细数据。此插件可跟踪存储容器的效率，性能以及关联的虚拟卷。
 
 .步骤
-. 选择 * NetApp Element 管理 > VVols* 。
+. 在vSphere Web Client中、打开* VVols*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVols*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> VVols*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -221,7 +241,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以查看集群上所有协议端点的常规数据。
 
 .步骤
-. 选择 * NetApp Element 管理 > VVols* 。
+. 在vSphere Web Client中、打开* VVols*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVols*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> VVols*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -264,14 +289,19 @@ NOTE: 您无需手动创建协议端点（ PE ） LUN 。创建数据存储库�
 
 == 删除存储容器
 
-您可以从 NetApp Element 管理扩展点删除存储容器。
+您可以从插件扩展点删除存储容器。
 
 .您需要什么？ #8217 ；将需要什么
 * 已从存储容器中删除所有卷。
 
 
 .步骤
-. 选择 * NetApp Element 管理 > VVols* 。
+. 在vSphere Web Client中、打开* VVols*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVols*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> VVols*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。

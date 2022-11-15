@@ -14,7 +14,7 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 
 
 [role="lead"]
-您可以使用 NetApp Element 管理扩展点向集群添加驱动器，查看现有驱动器以及删除驱动器。
+您可以使用插件扩展点向集群添加驱动器、查看现有驱动器以及删除驱动器。
 
 *  available drives to a cluster
 *  drive details
@@ -25,7 +25,7 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 
 == 向集群添加可用驱动器
 
-您可以使用 NetApp Element 管理扩展点向集群添加驱动器。向集群添加节点或在现有节点中安装新驱动器时，驱动器会自动注册为 `Available` 。您必须先将驱动器添加到集群中，然后每个驱动器才能加入集群。
+您可以使用插件扩展点向集群添加驱动器。向集群添加节点或在现有节点中安装新驱动器时、驱动器会自动注册为 `Available`。您必须先将驱动器添加到集群中，然后每个驱动器才能加入集群。
 
 存在以下情况时，驱动器不会显示在可用列表中：
 
@@ -34,7 +34,12 @@ keywords: netapp, drives, add, manage, remove, view vcp, vcenter, element
 
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -53,12 +58,17 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 查看驱动器详细信息
 
-您可以通过 NetApp Element 管理扩展点的 "Cluster" 选项卡的 "Drives" 页面上的 "Active" 视图查看集群中的活动驱动器列表。您可以使用下拉筛选器选择可用选项来更改此视图。
+您可以使用插件扩展点"Cluster"选项卡中"Drives"页面上的"Active"视图查看集群中的活动驱动器列表。您可以使用下拉筛选器选择可用选项来更改此视图。
 
 首次初始化集群时，活动驱动器列表为空。创建新集群后，您可以添加未分配给集群并在 " 可用 " 选项卡中列出的驱动器。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -75,13 +85,21 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 删除驱动器
 
-您可以使用 NetApp Element 管理扩展点从集群中删除驱动器。在减少集群容量或准备更换接近使用寿命的驱动器时，您可以执行此操作。删除驱动器会使该驱动器脱机。在将驱动器从集群中删除之前，驱动器上的所有数据都会被删除并迁移到集群中的其他驱动器。根据集群上的容量利用率和活动 I/O ，将数据迁移到系统中的其他活动驱动器可能需要几分钟到一小时的时间。
+您可以使用插件扩展点从集群中删除驱动器。在减少集群容量或准备更换接近使用寿命的驱动器时，您可以执行此操作。删除驱动器会使该驱动器脱机。在将驱动器从集群中删除之前，驱动器上的所有数据都会被删除并迁移到集群中的其他驱动器。根据集群上的容量利用率和活动 I/O ，将数据迁移到系统中的其他活动驱动器可能需要几分钟到一小时的时间。
 
 删除处于 `Failed` 状态的驱动器时，该驱动器不会返回到 `Available` 或 `Active` 状态。而是无法在集群中使用此驱动器。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
-. 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
++
+
+NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
+
 . 从下拉列表中选择 * 全部 * 以查看完整的驱动器列表。
 . 按如下所示删除驱动器：
 +
@@ -94,4 +112,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 NOTE: 如果在删除节点之前没有足够的容量删除活动驱动器，则在确认删除驱动器时会显示一条错误消息。
 
+
+
+
+
+== 了解更多信息
+
+* https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
+* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 

@@ -23,6 +23,10 @@ keywords: netapp, vcp, element, vcenter plugin, plug-in
 == 与此插件相关的 NetApp 组件
 
 * * 注册实用程序 * ：一种用于管理的工具 link:vcp_concept_qossioc.html["QoSSIOC"] 向 vCenter 注册服务和插件。
++
+
+NOTE: 从适用于vCenter 5.0的Element插件开始、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。
+
 * * 管理服务 * ：包含适用于 vCenter 插件的 QoSSIOC 服务的微服务。此插件的升级将作为管理服务包的一部分发布。
 +
 
@@ -65,4 +69,5 @@ TIP: 了解更多信息 link:https://kb.netapp.com/Advice_and_Troubleshooting/Da
 * https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
 * link:vcp_concept_config_extension_point.html["NetApp Element 配置扩展点"]
 * link:vcp_concept_management_extension_point.html["NetApp Element 配置扩展点"]
+* link:vcp_concept_remote_plugin_extension_point.html["NetApp Element 远程插件扩展点"]
 

@@ -14,17 +14,31 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 
 
 [role="lead"]
-在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您需要确保系统满足插件使用要求。
+在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。
+
+[role="tabbed-block"]
+====
+.适用于vCenter 5.0或更高版本的Element插件
+--
+验证您的系统是否满足使用Element vCenter插件5.0或更高版本的要求。
+
+要使用Element vCenter插件、需要使用已配置软件iSCSI适配器和iSCSI网络的VMware vSphere 8.0和7.0、包括vCenter和ESXi。
+
+此插件支持以下主要版本的 VMware 软件：
+
+* vSphere 8.0、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
+* vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
 
 
 
-== VMware vSphere 前提条件
+IMPORTANT: VMware vSphere 6.5和6.7已于2022年10月15日停止支持。从Element插件5.0开始、不再支持vSphere 6.5和6.7。有关详细信息，请参见此 https://core.vmware.com/blog/reminder-vsphere-6567-end-general-support["文章"^]。
+
+--
+.适用于vCenter 4.10或更早版本的Element插件
+--
+验证您的系统是否满足使用Element vCenter插件4.10或更早版本的要求。
 
 要使用Element vCenter插件、需要使用VMware vSphere 7.0、6.7或6.5、包括配置了软件iSCSI适配器和iSCSI网络的vCenter和ESXi。
-
-
-
-=== 此插件支持的 VMware vSphere 版本
 
 此插件支持以下主要版本的 VMware 软件：
 
@@ -42,17 +56,16 @@ IMPORTANT: 此插件与 HTML5 vSphere Web Client 的 6.7 U2 内部版本 1300742
 * vSphere 6.5、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
 +
 
-IMPORTANT: 此插件与适用于VMware vCenter Server 4.6、4.7和4.8的Element插件6.5版不兼容。
+IMPORTANT: 此插件与适用于vCenter 4.6、4.7和4.8的Element插件6.5版不兼容。
 
 
 
-
-
-=== 停止 vSphere 6.0 支持
-
+.停止 vSphere 6.0 支持
 
 IMPORTANT: VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 NetApp HCI 1.8 和 Element 12 开始，不再支持 vSphere 6.0 。有关详细信息，请参见此 https://mysupport.netapp.com/info/communications/ECMLP2863840.html["产品公告"]。
 
+--
+====
 
 
 == vSphere 兼容性和最佳实践

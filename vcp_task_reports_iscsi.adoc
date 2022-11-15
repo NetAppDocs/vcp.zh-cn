@@ -17,8 +17,13 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, iscsi, connection
 您可以在适用于VMware vCenter Server的NetApp Element 插件中查看有关连接到选定集群的iSCSI会话的信息。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* 。
-. 选择 * 报告 * > * iSCSI 会话 * 。
+. 从vCenter插件中、打开*报告*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>报告*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting*。
+
+
+. 选择* iSCSI会话*。
 
 
 

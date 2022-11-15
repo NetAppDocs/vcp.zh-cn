@@ -4,8 +4,6 @@
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="doc">管理数据存储库</block>
   <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="fee03a90bfc424cd6ea94a6cc22746e8" category="list-text">要创建和管理数据存储库，必须先至少创建一个用户帐户。</block>
-  <block id="93913e23ba02c21815deeb2ea4293435" category="inline-link-macro">配置设置</block>
-  <block id="37c4aea1ac4ddac0e76d2634315d1fca" category="list-text">要对数据存储库使用 QoSSIOC 服务，必须首先 <block ref="a2268bd3bd8fc6322025e8fd369c9e4c" category="inline-link-macro-rx"></block> 在 NetApp Element 配置扩展点的 "QoSSIOC Settings" 页面上。</block>
   <block id="292ffe431087f7d8cd09b046745b9893" category="list-text">由于数据存储库是使用选定 ESXi 主机支持的最高 VMFS 版本创建的，因此所有集群成员都应运行相同版本的 vSphere 和 ESXi ，以避免出现 VMFS 兼容性问题。</block>
   <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="list-title">选项</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-xref"></block>
@@ -18,13 +16,11 @@
   <block id="23b081e2c4ea680f5f8a6e9d000547ca" category="list-text"><block ref="f1db34a1e025f6da80e53874daaca648" category="inline-xref-macro-rx"></block></block>
   <block id="381ca050cbf88b622b16bd201291815e" category="admonition">在 vSphere 中使用任务监控功能监控数据存储库操作的完成情况。</block>
   <block id="484cebc53125766b84254b2ca0899b9c" category="section-title">创建数据存储库</block>
-  <block id="8223449a9eccdf88e8a01a38b7df9eb0" category="paragraph">您可以从 NetApp Element 管理扩展创建数据存储库。</block>
   <block id="26209b1fcbdf8600aee5bc08ddf8f12d" category="list-text">必须至少将一台主机连接到 vCenter Server 。</block>
   <block id="2b39b8bb48e01459e34037072a056457" category="list-text">必须至少添加并运行一个集群。</block>
   <block id="1a5a6ffdbdf4bf7b0de8b3313b815f1d" category="admonition">如果您使用的是 vCenter 链接模式，请确保已使用正确的 vCenter Server 添加集群。</block>
   <block id="e6233a0b1997a9ab3dba6e3d6837b56a" category="list-text">必须至少创建一个用户帐户。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步骤</block>
-  <block id="5d6a28f0167eaff34c7828dc90fb0b38" category="list-text">选择 * NetApp Element Management* &gt; * Management* 。</block>
   <block id="2e0a4e14d700b1d5af0b96e64b28b8ac" category="admonition">如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。</block>
   <block id="1966e0e760a1c36aee6ee0728a167536" category="list-text">从数据存储库页面中，选择 * 创建数据存储库 * 。</block>
   <block id="0dd36811ec8dd97973cb521e1c03eedb" category="list-text">输入数据存储库的名称。</block>
@@ -57,8 +53,6 @@
   <block id="a0826c08331388a2dd05f5ea15d6c57f" category="list-text">在 * 配置主机的访问 * 窗格中，将可用的主机启动程序（ IQN 或 WWPN ）与您在上一窗格中选择的卷访问组相关联。如果某个主机启动程序已与某个卷访问组关联，则此字段对于该启动程序为只读字段。如果主机启动程序没有卷访问组关联，请从启动程序旁边的列表中选择一个选项。</block>
   <block id="651241502266cc2bc76076ecdab2204b" category="list-text">如果要启用 QoSSIOC 自动化，请选中 * 启用 QoS 和 SIOC* ，然后配置 QoSSIOC 设置。</block>
   <block id="10b6a4d532d851e6a13a28d0c16cc183" category="admonition">如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。</block>
-  <block id="60e2ad1d6767c7ef7e6905a5adee3470" category="inline-link-macro">配置 QoSSIOC 设置</block>
-  <block id="d954979b9cb22b00a8a8095aaae3ff73" category="paragraph">如果 QoSSIOC 服务不可用，请首先 <block ref="9f771952c873ab4814a69e75267e7453" category="inline-link-macro-rx"></block>。</block>
   <block id="740a2435b2c3355340756973b38cff1d" category="list-text">选择 * 启用 QoS 和 SIOC* 。</block>
   <block id="42669ec4c477367fcc8a27ac8975c7a0" category="list-text">配置 * 突发因子 * 。</block>
   <block id="f4848aa44c4c41781a02d706b3cb8201" category="admonition">突发因子是 VMDK 的 IOPS 限制（ SIOC ）设置的倍数。如果更改默认值，请确保使用的突发因子值在与任何 VMDK 的 IOPS 限制相乘后不会超过 Element 卷的最大突发限制。</block>
@@ -69,8 +63,6 @@
   <block id="22ab0cfd5baac15c4de5e9496847686a" category="list-text">确认选择并单击 * 完成 * 。</block>
   <block id="67eb8201d9ec8237b38aaee253202d74" category="list-text">要查看任务的进度，请使用 vSphere 中的任务监控。如果数据存储库未显示在列表中，请刷新视图。</block>
   <block id="4f4fff756b14bfc0043859ea459eba27" category="section-title">查看数据存储库列表</block>
-  <block id="a8f6ec84bde84ea1a965b420095187e6" category="paragraph">您可以从 NetApp Element 管理扩展点的 "Datastores" 页面查看可用数据存储库。</block>
-  <block id="5c4c4bb28a5036f3b53059039209560e" category="list-text">选择 * NetApp Element 管理 &gt; 管理 * 。</block>
   <block id="42a95f3bc225c02cf5d95baa312d0841" category="admonition">如果添加了两个或更多集群，请在导航栏中选择要使用的集群。</block>
   <block id="822b6f9d63753d97d8c1305e83154502" category="list-text">查看数据存储库列表。</block>
   <block id="bbb6518db622797c90eb2bb71c9f1523" category="admonition">不会列出跨多个卷的数据存储库（混合数据存储库）。数据存储库视图仅显示选定 NetApp Element 集群中的 ESXi 主机上可用的数据存储库。</block>
@@ -88,7 +80,6 @@
   <block id="b0ed1a6d8d255281c99593099b2cd3bc" category="list-text">`d已标记` ：未启用 QoSSIOC 。</block>
   <block id="29fad8dd33b102385099b252ffcab54d" category="list-text">`max exceeded` ：卷最大 QoS 已超过指定的限制值。</block>
   <block id="1269da27c6f7c4261eeb96f73578f544" category="section-title">扩展数据存储库</block>
-  <block id="e6d00b5aa55a3b00f0b2ab5cf3ad632b" category="paragraph">您可以使用 NetApp Element 管理扩展点扩展数据存储库以增加卷大小。扩展数据存储库还会扩展与该数据存储库相关的 VMFS 卷。</block>
   <block id="9767bb6edc4fe21b0a14561c1b9c1cfa" category="list-text">在 Datastores 页面中，选中要扩展的数据存储库对应的复选框。</block>
   <block id="7c2e81318825c1b1e517a212224ce662" category="list-text">选择 * 操作 * 。</block>
   <block id="260eeb6d1d80ae4aa0eb0b0447a7bd87" category="list-text">在显示的菜单中，选择 * 扩展 * 。</block>
@@ -116,12 +107,10 @@
   <block id="932d4a85bca15b99b19c5e699762a6da" category="list-text">在 * 配置主机的访问 * 窗格中，将可用的主机启动程序（ IQN 或 WWPN ）与您在上一窗格中选择的卷访问组相关联。</block>
   <block id="af68ddc4d0709dbfde0ac018c920ac91" category="paragraph">如果某个主机启动程序已与某个卷访问组关联，则此字段对于该启动程序为只读字段。如果主机启动程序没有卷访问组关联，请从启动程序旁边的下拉列表中选择一个选项。</block>
   <block id="f00ef1f5213bd0f9b653f13e9e80f0e1" category="list-text">如果要启用 QoSSIOC 自动化，请选中 * 启用 QoS 和 SIOC* 复选框，然后配置 QoSSIOC 设置。</block>
-  <block id="88850b4ef97e702af2b1bbd8b7cfbf1c" category="paragraph">如果 QoSSIOC 服务不可用，则必须先从 NetApp Element 配置扩展点的 "QoSSIOC 设置 " 页面上配置设置。</block>
   <block id="8cd943f52f3bd6d2e733f1046f950711" category="admonition">突发因子是 VMDK 的 IOPS 限制（ SIOC ）设置的倍数。如果更改默认值，请确保使用的突发因子值在与任何 VMDK 的 IOPS 限制相乘后不会超过 NetApp Element 卷的最大突发限制。</block>
   <block id="5aa4e7def2a89f4f85736e5f89b20737" category="list-text">* 可选 * ：选择 * 覆盖默认 QoS" 并配置设置。</block>
   <block id="93fa039934d458299739652d690e523a" category="list-text">确认选择并选择 * 完成 * 。</block>
   <block id="2cb2be36c1f3b7548e35f2489ab31e61" category="section-title">共享数据存储库</block>
-  <block id="6c9537b0af6d0bc8cfc57726bb31975a" category="paragraph">您可以使用 NetApp Element 管理扩展点与一个或多个主机共享数据存储库。</block>
   <block id="d7a1e2933a565e3ac7858c1d69518fa9" category="paragraph">数据存储库只能在同一数据中心内的主机之间共享。</block>
   <block id="63acff36c2e42ceff61b7edc862e50db" category="list-text">选定数据中心下必须有多个主机。</block>
   <block id="822a35e75a50b8be88ceb3702a15ad61" category="list-text">从 * 数据存储库 * 页面中，选中要共享的数据存储库对应的复选框。</block>
@@ -145,7 +134,6 @@
   <block id="a96209dbbd077a22bc1c068baec0a078" category="list-text">输入主机用户名和密码。</block>
   <block id="b8cf7ed738a29d1071dd4774986820dc" category="list-text">确认选择并选择 * 确定 * 。</block>
   <block id="b23c0d1300af82713608ff50bd4b5049" category="section-title">删除数据存储库</block>
-  <block id="64497b3ee5b681d2b7f0182906457583" category="paragraph">您可以使用 NetApp Element 管理扩展点删除数据存储库。此操作将永久删除与要删除的数据存储库上的 VM 关联的所有文件。此插件不会删除包含已注册 VM 的数据存储库。</block>
   <block id="076697fc8071f84673250985399126aa" category="list-text">从 * 数据存储库 * 页面中，选中要删除的数据存储库对应的复选框。</block>
   <block id="1d6989f975c26df6ed7f6a323b89e4f8" category="list-text">在显示的菜单中，选择 * 删除 * 。</block>
   <block id="061aaf39a070acd7a88b540ee533563b" category="list-text">（可选）如果要删除与数据存储库关联的 NetApp Element 卷，请选中 * 删除关联卷 * 复选框。</block>
@@ -161,7 +149,6 @@
   <block id="b0b80e0d5cbad416355ae85ab0ebf880" category="inline-link">混合云控制和管理服务发行说明知识库</block>
   <block id="ece24339f7b21cf020a31ebc63f91461" category="list-text"><block ref="ece24339f7b21cf020a31ebc63f91461" category="inline-link-rx"></block></block>
   <block id="84766b1f02c6136ddf8fac32ab4bb8d7" category="doc">NetApp Element 管理扩展点</block>
-  <block id="dae217fd652bfc462ffe55a7565812e2" category="paragraph">通过 NetApp Element 管理扩展点，您可以添加和管理集群，为链接模式下的 vCenter Server 分配存储集群以及为 QoSSIOC 配置管理节点设置。</block>
   <block id="3fd455c92daedd13049e258221d1589a" category="admonition">您的 vSphere Web Client 可能与下图所示略有不同，具体取决于安装的 vSphere 版本。</block>
   <block id="718e841ec5c0c147632c79f6bc8f9518" category="image-alt">管理扩展点</block>
   <block id="c8c33b98b9fc048349897b71ae50093b" category="paragraph">通过集群导航栏，您可以在已添加到此插件的集群之间快速切换：</block>
@@ -181,7 +168,6 @@
   <block id="5ffbddc6871ea17252ba04957698f0fd" category="summary">您可以设置和修改 QoS 策略以应用于存储集群中的卷。</block>
   <block id="50ee1f895e7e284e9dd0f8f045bc11a2" category="doc">创建和管理卷 QoS 策略</block>
   <block id="aa59f10f28f46853d1287bf8c57a1896" category="paragraph">通过 QoS （服务质量）策略，您可以创建和保存可应用于多个卷的标准化服务质量设置。要使用 QoS 策略，选定集群必须为 Element 10.0 或更高版本；否则， QoS 策略功能将不可用。</block>
-  <block id="6c397232d087c40faa9d3223b8bbec14" category="paragraph">使用 NetApp Element 管理扩展点，您可以通过完成以下任务来配置和管理 QoSSIOC ：</block>
   <block id="5065e2a427fab966fffb5b565b4c48a6" category="list-text"><block ref="9a5253f025f03565600537b7b0e22833" category="inline-xref-macro-rx"></block></block>
   <block id="5b4ed8c000abf903d65062f4d88ebb25" category="list-text"><block ref="116d4578e3562f8850f11e96b4cda5a8" category="inline-xref-macro-rx"></block></block>
   <block id="56ca89b23a0a59d83afdcf7fb6648863" category="list-text"><block ref="6f671cbcdadb07478fc3717e83e9d21b" category="inline-xref-macro-rx"></block></block>
@@ -227,8 +213,6 @@
   <block id="2bee85af6914f0a5879c7c12bf441e01" category="paragraph">您可以删除不再需要的 QoS 策略。删除 QoS 策略时，与该策略关联的所有卷都会保留先前由该策略定义的 QoS 值，但保留为单个卷 QoS 。系统将删除与已删除 QoS 策略的任何关联。</block>
   <block id="4294f5a888e74bc44950b71dce1c2b12" category="list-text">选中要删除的 QoS 策略对应的复选框。</block>
   <block id="ad5a54b96d86e967dc2a014c681f9377" category="list-text">确认操作。</block>
-  <block id="d495047561c1a08074d3afeeb5b5d172" category="section-title">VMware vSphere 前提条件</block>
-  <block id="3903fd261f224ad8af888f893eb71a5e" category="section-title">此插件支持的 VMware vSphere 版本</block>
   <block id="39bb4a890cda10e989012ed844843a1a" category="paragraph">此插件支持以下主要版本的 VMware 软件：</block>
   <block id="8bc5dd01570b8e30ab647a98f1b5c995" category="list-text">vSphere 6.7 和 6.7 Update 1 和 3 ，包括 vCenter Server ， ESXi 以及 VMFS5 和 VMFS6 数据存储库</block>
   <block id="bcc539df8c871d5ecc3798cf0bf4e50a" category="section-title">停止 vSphere 6.0 支持</block>
@@ -249,7 +233,6 @@
   <block id="3481204db7a808589b179ef2dca4bca8" category="inline-link-macro">虚拟卷（ VVOL ）</block>
   <block id="717b431de45950fd4d33b3be4d86b6ed" category="inline-link-macro">存储容器</block>
   <block id="05cc2c8bead72f05794dbb7da16d6bcb" category="inline-link-macro">协议端点</block>
-  <block id="1811838958ba1c51ff7250d320bb88c8" category="paragraph">您可以启用 VMware vSphere <block ref="b2c897dbc9f8f27c64e032c063a4f688" category="inline-link-macro-rx"></block> 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， <block ref="18ac2bdbb323cba4124b1b85ce340ab4" category="inline-link-macro-rx"></block>， <block ref="4bb7989fc64f274d67c358cc77d42197" category="inline-link-macro-rx"></block>和 NetApp Element 管理扩展点的主机。</block>
   <block id="ffa8d3422d39f3e87f1081fce8eaa98f" category="list-text">您使用的 NetApp Element 10 或更高版本集群连接到与 VVol 兼容的 ESXi 6.5 或更高版本环境。</block>
   <block id="08147f825c645dfe897a2b7f0bc7e029" category="list-text">您正在使用 vCenter 6.5 或更高版本。</block>
   <block id="087ac0e1ccc7ab3450c29d0b18651f97" category="section-title">设置任务</block>
@@ -262,10 +245,8 @@
   <block id="36490b06adc79929496865fc8661ab18" category="list-text"><block ref="e8e9b8a2918f655675f902491d2ae60f" category="inline-xref-macro-rx"></block></block>
   <block id="9bb6332b3edc7c97f42d85f4313aade1" category="list-text"><block ref="eca13ce5649600a425ab5fa193986ab4" category="inline-xref-macro-rx"></block></block>
   <block id="b08ba4b25c6138aceac3f80f644ede11" category="section-title">在 NetApp Element 集群上启用虚拟卷功能</block>
-  <block id="40489dbf1903f5022ec0ac1376d3f3e8" category="paragraph">您必须使用 NetApp Element vSphere 配置扩展点手动启用 vSphere 虚拟卷（ VVol ）功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。</block>
   <block id="433b27aa19e75cd3a82c809bc27d7107" category="list-text">选择 * NetApp Element 配置 &gt; 集群 * 。</block>
   <block id="91420ada6ccef678e55d1c5f55445f22" category="list-text">从列表中选择要启用的集群。</block>
-  <block id="f1b158f0f574a4aef8a95d921efdedb0" category="list-text">在显示的菜单中，单击 * 启用 VVols* 。</block>
   <block id="1d9653621649c19cf25d87be1447b58e" category="admonition">启用 VVol 功能后，无法将其禁用。启用 vSphere 虚拟卷功能会永久更改 NetApp Element 软件配置。只有当集群连接到与 VMware ESXi VVol 兼容的环境时，才应启用 VVol 功能。您只能通过将集群恢复为出厂映像来禁用 VVol 功能并还原默认设置。</block>
   <block id="63736c4a94ce30c24b0219cc05580fd8" category="list-text">选择 * 是 * 确认虚拟卷配置更改。</block>
   <block id="626783048216268941981cdea8805b61" category="admonition">启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA 流量打开端口 8444 ，并创建可由 vCenter 和所有 ESXi 主机发现的协议端点。</block>
@@ -280,25 +261,19 @@
   <block id="baa267f6bfaa89e5b3d5a78755ea2475" category="admonition">请勿将 NetApp Element VASA Provider 注册到多个 vCenter 实例。由于 NetApp Element VASA 提供程序处理 SSL 的方式存在限制，因此只能将其注册到一个 vCenter 中。一个 vCenter 可以包含多个 NetApp Element 集群，但一个集群不能在两个 vCenter 实例之间共享。</block>
   <block id="583fdc81420816faa41efaba6c508421" category="inline-link-macro">NetApp 软件下载</block>
   <block id="fc21fe3622f6a6e7198d2b735374be8d" category="admonition">如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 <block ref="330abc56e8586ea5b1b948740a329a51" category="inline-link-macro-rx"></block> 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。</block>
-  <block id="0fa419a8d63cc41aba83501240d8e210" category="list-text">在 vSphere Client 主页中，单击 * 主机和集群 * 。</block>
   <block id="2f8dac593c74272785dab7a5a54ccb6e" category="list-text">选择要注册 NetApp Element VASA Provider 的 vCenter 实例。</block>
   <block id="57827a442e4135255c8b4ff175180f50" category="list-text">选择 * 配置 &gt; 存储提供程序 * 。</block>
-  <block id="e28afdd2d6b4b68167c01dc0fbfb821e" category="list-text">在 * 存储提供程序 * 中，单击添加图标。</block>
   <block id="772753b80c12c00587bf015cb2a299f7" category="list-text">在 * 新建存储提供程序 * 对话框中输入以下信息：</block>
   <block id="29319da4c5629ba242e29ae8a0ae5b81" category="list-text">VASA Provider 名称。</block>
   <block id="f638c830aad217e67101275b8097d832" category="list-text">VASA Provider URL 。</block>
-  <block id="d9ec6607df7603d6a156ca4cfa3c1517" category="admonition">在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider URL 。您还可以从集群详细信息（ * NetApp Element 配置 &gt; 集群 * ）或 Element UI 中的集群设置（`https://&lt;MVIP&gt;/cluster` ）中找到此 URL 。</block>
   <block id="cecb9047de02e5871fba36baa2d7135c" category="list-text">NetApp Element 集群的管理帐户用户名。</block>
   <block id="e4858d18de97fc386a1c831fdab02ab0" category="list-text">NetApp Element 集群的管理帐户密码。</block>
   <block id="114575761eda397a4c0cc3ede1bac825" category="list-text">选择 * 确定 * 以添加 VASA Provider 。</block>
   <block id="4aaf12444dd5659db99371d4af3a479a" category="list-text">出现提示时，批准 SSL 证书的指纹。此时， NetApp Element VASA Provider 应注册为状态 `Connected` 。</block>
-  <block id="ab99dda34ccedf447a665b1869661c57" category="admonition">首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在 * NetApp Element 配置 &gt; 集群 * 中验证是否已启用此提供程序。为要启用的集群选择 * 操作 * ，然后单击 * 详细信息 * 。</block>
   <block id="f3bdc23860e2c00784f1d95d784116f5" category="list-text">请参见 <block ref="3027f3a01c8f27ecbccb6012f00bfddf" category="inline-xref-macro-rx"></block> 后续步骤。</block>
   <block id="d4d727c54ca0f97b6ffdca815b65cbf1" category="section-title">创建存储容器以及关联的 VVol 数据存储库</block>
-  <block id="86fdd741b00fa34498d6cf58583ed33a" category="paragraph">您可以从 NetApp Element 管理扩展点中的 "VVols" 选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">开始之前</block>
   <block id="fff0140e73a6277b14ffb7b24516ee3a" category="list-text">您已在 vCenter 中为虚拟卷注册 NetApp Element VASA Provider 。</block>
-  <block id="2053967a59065d1f55fa4cead1a85ebd" category="list-text">选择 * NetApp Element 管理 &gt; VVols* 。</block>
   <block id="5196024ac717567d0f02d1154f441248" category="list-text">选择 * 存储容器 * 子选项卡。</block>
   <block id="6dd9e1c438ecc2a8242c3f0a32cde6f5" category="list-text">选择 * 创建存储容器 * 。</block>
   <block id="d7593ada456aa93d17269a11ef39bbaa" category="list-text">在 * 创建新存储容器 * 对话框中输入存储容器信息：</block>
@@ -312,7 +287,6 @@
   <block id="73ad65cb8fda28fc3ecf21197c560787" category="list-text">验证新存储容器是否显示在 * 存储容器 * 子选项卡的列表中。由于 NetApp Element 帐户 ID 会自动创建并分配给存储容器，因此无需手动创建帐户。</block>
   <block id="3e5bbadde52d5c6381c87d52811e837b" category="list-text">验证是否已在 vCenter 中的选定主机上创建关联的数据存储库。</block>
   <block id="c675afb821ecde9e14dd6589c3e89a84" category="section-title">监控虚拟卷资源</block>
-  <block id="fd6333d9dbb874e5693e69e6e36754df" category="paragraph">您可以从插件的 NetApp Element 管理扩展点查看虚拟卷组件性能和设置：</block>
   <block id="3683a4a52dd8261198f1f8c2f819bee3" category="list-text"><block ref="087ae70667346048479b0d9e7469674a" category="inline-xref-macro-rx"></block></block>
   <block id="91eff9a6a3200c02490e7c74e57e4a6f" category="list-text"><block ref="920ef72e0f9f8e12bd8cc848e97feca5" category="inline-xref-macro-rx"></block></block>
   <block id="cef8a6322558a2538d707a4b0a870849" category="list-text"><block ref="fd3ccca7d3befe444c0a3c5c3db729b5" category="inline-xref-macro-rx"></block></block>
@@ -342,7 +316,6 @@
   <block id="4cdfbfd5d1849298fce887426e69b22b" category="list-text">选择需要访问数据存储库的主机。</block>
   <block id="b3769a97db63a995528a779d72b19fc8" category="list-text">查看配置并选择 * 完成 * 以创建 VVol 数据存储库。</block>
   <block id="1f4df56e73c4b3645015816b853c65e8" category="section-title">删除存储容器</block>
-  <block id="da6bd21e3ec006d93d233aa1c423704b" category="paragraph">您可以从 NetApp Element 管理扩展点删除存储容器。</block>
   <block id="4cf89742a1d35b63b0f9f5cb026cd8bc" category="list-text">已从存储容器中删除所有卷。</block>
   <block id="85c267f257b18520fd4e881825a3a448" category="list-text">选中要删除的存储容器对应的复选框。</block>
   <block id="cba736be12ab54d8b657576d927aa63f" category="list-text">刷新 * 存储容器 * 子选项卡中的存储容器列表，以确认此存储容器已被删除。</block>
@@ -427,7 +400,6 @@
   <block id="7c5a7ac2cf91aa47ff3d691189d951cf" category="paragraph">您可以使用一个集群的 MVIP 与另一个集群建立连接，从而将两个集群配对以实现实时复制。要使用此方法，需要对两个集群都具有集群管理员访问权限。</block>
   <block id="1a76fdaf98f92e166cf7d54bb7c8ba61" category="paragraph">集群管理员用户名和密码用于在集群配对之前对集群访问进行身份验证。</block>
   <block id="b120ea605d2585af791d532cd9e14882" category="paragraph">如果 MVIP 未知或无法访问集群，您可以生成配对密钥并使用该密钥对两个集群配对。有关说明，请参见 <block ref="899e2933c6a45aa4d52ae5a26def6966" category="inline-xref-macro-rx"></block>。</block>
-  <block id="6c1cde3320826aa88e88baddc4bde823" category="list-text">从包含本地集群的 vCenter 中，选择 * NetApp Element Management* &gt; * Protection* 。</block>
   <block id="8b7c5dadb202334eeece4c393bb6d9e1" category="list-text">选择 * 集群对 * 子选项卡。</block>
   <block id="b031d446eb7eb18775e0ef1a3cc51f6b" category="list-text">选择 * 创建集群配对 * 。</block>
   <block id="36ddaebda56a8c215a8dfff5eb57566d" category="list-text">选择以下选项之一：</block>
@@ -438,7 +410,6 @@
   <block id="54d6312156e887347cc61184f6e92a28" category="list-text">输入集群管理员密码。</block>
   <block id="9ba7ddd037970be50b3cd64b3d150c15" category="list-text">选择 * 开始配对 * 。</block>
   <block id="212a66c0c1e138d6bf39ed51926c185a" category="list-text">完成此任务并看到 "Cluster Pairs" 页面后，验证此集群对是否已连接。</block>
-  <block id="feff88d8a881ad18d5a3974b520c7b10" category="list-text">（可选）在远程集群上，选择 * NetApp Element 集群管理 * &gt; * 保护 * &gt; * 集群对 * 或使用 Element Web UI 验证集群对是否已连接。</block>
   <block id="1cb5df98499ff651505c4c9b30618ded" category="section-title">使用配对密钥对集群配对</block>
   <block id="60dd53abab3462d30e63b9ff8c68a0f5" category="paragraph">如果您对本地集群拥有集群管理员访问权限，但对远程集群没有此权限，则可以使用配对密钥对这些集群进行配对。配对密钥会在本地集群上生成，然后安全地发送给远程站点的集群管理员，以建立连接并完成集群配对以实现实时复制。</block>
   <block id="1267d7d33f08075bcf4cc2bce07aa08b" category="inline-link">开始或完成集群配对</block>
@@ -451,14 +422,12 @@
   <block id="0723d76ce41acd3900d835c910d36e02" category="list-text">使配对密钥可供远程集群站点的集群管理员访问。</block>
   <block id="0c048af65837d3109ccfc91aa6141776" category="admonition">集群配对密钥包含一个版本的 MVIP ，用户名，密码和数据库信息，以允许通过卷连接进行远程复制。此密钥应以安全的方式处理，而不是以允许意外或不安全地访问用户名或密码的方式存储。</block>
   <block id="3b45bfe94576df02917f1340ddcb7dee" category="admonition">请勿修改配对密钥中的任何字符。如果修改此密钥，则此密钥将无效。</block>
-  <block id="270fd4793fe03bcc167c1c2312dd5780" category="list-text">从包含远程集群的 vCenter 中，选择 * NetApp Element Management* &gt; * Protection* 。</block>
   <block id="f0d8fd514839eba93276d22353ff7ec2" category="admonition">您也可以使用 Element UI 完成配对。</block>
   <block id="6ba20a4c5a7f92ed834820c4573ef21e" category="list-text">选择 * 完成集群配对 * 。</block>
   <block id="1236f9410a67a79a4be2728aedd43b0a" category="admonition">等待加载旋转器消失，然后再继续下一步。如果在配对过程中发生意外错误，请检查并手动删除本地和远程集群上任何未配置的集群对，然后重新执行配对。</block>
   <block id="17f64f964f51c35704ece8af3e67b847" category="list-text">将配对密钥从本地集群粘贴到 * 集群配对密钥 * 字段中。</block>
   <block id="87d4c70ff2b1beb69f56f7886068fac9" category="list-text">选择 * 配对集群 * 。</block>
   <block id="de3c21b8e44f9444693d80892b58c2cb" category="list-text">完成此任务并看到 * 集群对 * 页面后，请验证集群对是否已连接。</block>
-  <block id="07521a5ab97eecc73c045f190064ab50" category="list-text">要验证集群对是否已连接，请在远程集群上选择 * NetApp Element Management* &gt; * Protection* 或使用 Element UI 。</block>
   <block id="577128a4e6cfcd92620f526e4801fcfc" category="section-title">验证集群对连接</block>
   <block id="8dc9eef3aa253a202229f64a5f5c2a40" category="paragraph">完成集群配对后，您可能需要验证集群对连接以确保复制成功。</block>
   <block id="a424cd419bf8d3646e4838b3f6d1e316" category="list-text">在本地集群上，选择 * 数据保护 * &gt; * 集群对 * 。</block>
@@ -480,7 +449,6 @@
   <block id="5e664610aae0289e363c77ef3388af3a" category="list-text">确保包含卷的集群已配对。</block>
   <block id="d7ee0416f009e7f4bcf56820917196cf" category="list-text">除非您要在此过程中创建新卷，否则您知道远程卷 ID 。</block>
   <block id="9ff8a012c2a6cc2bea0639f3f7143f86" category="list-text">如果要将本地卷作为源卷，请确保将此卷的访问模式设置为读 / 写。</block>
-  <block id="5468a405f97cedd527fb8aca681be34a" category="list-text">从包含本地集群的 vCenter 中，选择 * NetApp Element Management* &gt; * Management* 。</block>
   <block id="b98ad927559524f1094ade8a57e2f583" category="list-text">选择 * 卷 * 子选项卡。</block>
   <block id="8a4b381c1df809955fda68523d22b427" category="list-text">在 * 活动 * 视图中，选中要配对的卷对应的复选框。</block>
   <block id="8ec6c374153e47c09712f56d55fa6d8a" category="list-text">选择 * 卷配对 * 。</block>
@@ -520,7 +488,6 @@
   <block id="acd5ac0c2f6fc4fc4eda66c3c8015fda" category="admonition">此操作将生成一个用于配对的文本密钥，并在本地集群上创建一个未配置的卷对。如果不执行此操作，则需要手动删除卷对。</block>
   <block id="20418dc668f5bc72ad321fed212dae2f" category="list-text">将配对密钥复制到剪贴板。</block>
   <block id="8725c6cfac74e59f89502b966490e653" category="admonition">应以安全的方式对待卷配对密钥，而不是以允许意外或不安全访问的方式存储。</block>
-  <block id="1287ca33e51fe24dc601642f3aaf3a12" category="list-text">从包含远程集群的 vCenter 中，选择 * NetApp Element Management* &gt; * Management* 。</block>
   <block id="36651339b63108b32ca470c850803918" category="list-text">在 * 活动 * 视图中，选中要配对的卷对应的复选框。</block>
   <block id="4befa67cb42a6f7c9b436abe71bb8ade" category="list-text">将配对密钥从另一个集群粘贴到 * 配对密钥 * 框中。</block>
   <block id="fffc24a9daced5c1d3db5cc75cc80978" category="list-text">选择 * 完成配对 * 。</block>
@@ -548,17 +515,14 @@
   <block id="dcc0cdfe51d7725851d0a5970c8fb61a" category="paragraph">此操作步骤介绍了如何使用 vCenter 在本地站点和远程站点上的两个集群之间分配源卷和复制卷。对于不受 vCenter 插件控制的卷，您也可以选择此选项<block ref="6ac578c516d4375f2115018827b1cc2f" category="inline-link-rx"></block> 使用 Element Web UI 。</block>
   <block id="eee0917ed3fc1d050ec307ada6e010cb" category="paragraph">复制源卷具有读 / 写帐户访问权限。复制目标卷只能由复制源以读 / 写方式访问。</block>
   <block id="4684bf66ce44548d0eaf68d135167b17" category="paragraph">* 最佳实践 * ：目标卷不应包含任何数据，并且与源卷具有完全相同的特征，例如大小， 512e 设置和 QoS 配置。目标卷的大小可以大于或等于源卷，但不能小于源卷。</block>
-  <block id="bbc77b4c7052381d268cca050b07545f" category="list-text">从 vCenter Server 的 * NetApp Element Management* 扩展点中，选择包含要用作复制源的配对卷的集群。</block>
   <block id="388ff14c6557e4aa19b47495b8568d84" category="list-text">在 * 活动 * 视图中，选中要编辑的卷对应的复选框。</block>
   <block id="071ef8ace6c74c9a1515550077974172" category="list-text">选择 * 编辑 * 。</block>
   <block id="39b1a5f1696eb1e9f73b40980f88ca6f" category="list-text">从访问下拉列表中，选择 * 读 / 写 * 。</block>
   <block id="015bb42d8cb25e312437ad02551e8147" category="admonition">如果要反转源分配和目标分配，此操作将对卷对执行发生原因操作，以显示 PausedMisconfigured ，直到分配新的复制目标为止。更改访问权限会暂停卷复制并导致数据传输停止。请确保您已在两个站点协调这些更改。</block>
-  <block id="67eba5d1a9b9083a8aaf1db216548c3d" category="list-text">从 * NetApp Element Management* 扩展点中，选择包含要用作复制目标的配对卷的集群。</block>
   <block id="4ed2064e5bba76308005e1a10f239fd2" category="list-text">在 * 活动 * 视图中，选中要编辑的卷对应的复选框。</block>
   <block id="8948dd8eec7ba7025dc9574998b51437" category="list-text">在 * 访问 * 下拉列表中，选择 * 复制目标 * 。</block>
   <block id="2f7a12218839ccf441ce505e521188df" category="section-title">验证卷复制</block>
   <block id="e21376a2877db5d4832395b7bfcf824c" category="paragraph">复制卷后，您应确保源卷和目标卷处于活动状态。处于 "Active" 状态时，卷将配对，数据将从源卷发送到目标卷，并且数据处于同步状态。</block>
-  <block id="b1cf3186c2a794a2e7ef5aefae1e9bb8" category="list-text">从配对的任一集群中，选择 * NetApp Element Management* &gt; * 保护 * 。</block>
   <block id="38c46d1f73096ebdbe4afe64fa1c7edf" category="list-text">选择 * 卷对 * 子选项卡。</block>
   <block id="2754d225b36df6fd57d4a233e63c3eea" category="list-text">验证卷状态是否为 "Active" 。</block>
   <block id="0ada25fd11726e12b3586f0698b87f69" category="section-title">复制后删除卷关系</block>
@@ -572,7 +536,6 @@
   <block id="c95a05c7b687f6420b86cd228e614472" category="list-text"><block ref="d98955abc3664e99c6711ad277ca4f64" category="inline-xref-macro-rx"></block></block>
   <block id="4c40407bd9a94669fb7323b7262002e8" category="section-title">暂停复制</block>
   <block id="676f4357ad764dae7f90c2fff85fd2a0" category="paragraph">您可以编辑卷对属性以手动暂停复制。</block>
-  <block id="e7578699b73a6f8b7b4b3cf14e804df1" category="list-text">选择 * NetApp Element Management* &gt; * 保护 * 。</block>
   <block id="75831afcb6ed58398f5dec0d4fd412b9" category="list-text">选中要编辑的卷对对应的复选框。</block>
   <block id="8a02976dcfe16adb8b9a59eddfb827f1" category="list-text">手动暂停或启动复制过程。</block>
   <block id="02b3fb5de3d8229b36d94a1528a13345" category="admonition">手动暂停或恢复卷复制将对数据传输进行发生原因以停止或恢复。请确保您已在两个站点协调这些更改。</block>
@@ -602,12 +565,10 @@
   <block id="7a82959d61c172c083441c60d5f8bf54" category="admonition">此操作仅会删除本地集群上的集群对端。要完全删除此配对关系，您需要手动从远程集群中删除此集群对的一端。</block>
   <block id="3560599ffc4eb506583258c26d47e4fb" category="list-text">从集群配对中的远程集群重复上述步骤。</block>
   <block id="e9242bc5452e29bb067c104c8fb2d510" category="section-title">卷配对消息和警告</block>
-  <block id="24bc866b5cb311d8ccb160c6e071a5a0" category="paragraph">您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看已配对或正在配对的卷的信息。</block>
   <block id="6773c05020575bb39693d6e282a47ba1" category="paragraph">系统会在卷状态列中显示配对和进度消息。</block>
   <block id="e0c8a8a294eb20b5cd381eab33ead9d3" category="list-text"><block ref="ffbb50b3a3c11caabd068dd229a35a51" category="inline-xref-macro-rx"></block></block>
   <block id="85d14c93a3b2d93d244848fc161b2cbd" category="list-text"><block ref="c271a7cae0b9c83c8f7695ab2f9039d4" category="inline-xref-macro-rx"></block></block>
   <block id="ea1d7e73f15535e9f25b1c513fce1d86" category="section-title">卷配对消息</block>
-  <block id="6ee0fc168d001e22c81b2374f40d12dc" category="paragraph">您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看初始配对过程中的消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。</block>
   <block id="4410a65db589b1adbd3a2d9328b9ba84" category="list-text">* PausedDisconnected* ：源复制或同步 RPC 超时。与远程集群的连接已断开。检查与集群的网络连接。</block>
   <block id="6f8b73a2634bcfed7f7fedffdf24027e" category="list-text">* 正在重新同步连接 * ：远程复制同步现已处于活动状态。开始同步过程并等待数据。</block>
   <block id="ecb8f4843893a9baad8fa5923ade616e" category="list-text">* 正在重新同步 RRSync* ：正在为配对集群创建卷元数据的单个 Helix 副本。</block>
@@ -617,7 +578,6 @@
   <block id="c0580e5cf9f2077fea6bb701ad8f7dce" category="list-text">* 闲置 * ：未发生复制活动。</block>
   <block id="0b7eb6dc40e68d6127f2ef3476565fc6" category="paragraph">* 此过程由目标卷驱动，可能不会显示在源卷上。</block>
   <block id="5cd76fc209216a5fe693c8a8a6f8ce6c" category="section-title">卷配对警告</block>
-  <block id="4212da664a81676e34e3f200152e34b7" category="paragraph">在对卷配对后，您可以从 NetApp Element 管理配置点的 " 保护 " 选项卡的 " 卷对 " 页面查看警告消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。</block>
   <block id="8646697632a57af3df356381f3d0a0b9" category="paragraph">除非另有说明，否则这些消息可能会显示在配对的源端和目标端。</block>
   <block id="5f4e207c1d8916a008e4bf988749a401" category="list-text">* PausedClusterFull* ：由于目标集群已满，因此无法继续进行源复制和批量数据传输。此消息仅显示在对的源端。</block>
   <block id="35e73210b0bb791c0422fbec1d7fc18c" category="list-text">* PausedExceededMaxSnapshotCount* ：目标卷已具有最大快照数，无法复制其他快照。</block>
@@ -630,7 +590,6 @@
   <block id="72cacbd7272c0a213eda6683c012534e" category="list-text">* PausedXCopy* ：正在对源卷发出 SCSI XCOPY 命令。必须先完成命令，然后才能恢复复制。此消息仅显示在对的源端。</block>
   <block id="e3cab9c5c32acc4b4216fefd04b7621c" category="list-text">* StoppedMisconfigure* ：检测到永久配置错误。远程卷已清除或取消配对。无法执行更正操作；必须建立新的配对。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律声明</block>
-  <block id="d34caa8a134a9bb6d2b2e136ea384646" category="summary">您可以安装和配置适用于 vCenter Server 的 Element 插件，以便与 Element 存储配合使用。</block>
   <block id="3b2dba24ae0f2d994973f682cf057acb" category="paragraph">安装完成后，您可以根据存储 I/O 控制（ QoSSIOC ）服务以及 vCenter 插件的其他服务使用服务质量。</block>
   <block id="19eee5d48732221f909bed55ec2189ea" category="paragraph">阅读并完成每个步骤以安装并开始使用此插件：</block>
   <block id="8ca97483283de86de2176888cfb57571" category="list-text"><block ref="82e85dc19dbabef95eaeba5a68a4e800" category="inline-xref-macro-rx"></block></block>
@@ -647,7 +606,6 @@
   <block id="d8162ad7c4d202810473a2e7f5be4b2c" category="paragraph">开始安装之前，请查看 <block ref="baeaa02785a95d2802e91c7fc21584dc" category="inline-link-macro-rx"></block>。</block>
   <block id="5b6d06fd8eecd9b32d5242936a01f8cd" category="section-title">安装管理节点</block>
   <block id="497f3c7374cc7d5dcfc6c54f9e235684" category="inline-link">安装管理节点</block>
-  <block id="008b7b14e45ac2af34ca8ceeae298c61" category="paragraph">您可以手动执行此操作<block ref="f83ec536b75e146342c1e6216e59a6a3" category="inline-link-rx"></block> 对于运行 NetApp Element 软件的集群，请使用适用于您的配置的映像。</block>
   <block id="39d054f16665efd662cb5551e7cdab2f" category="paragraph">此手动过程适用于未使用 NetApp 部署引擎安装管理节点的 SolidFire 全闪存存储管理员和 NetApp HCI 管理员。</block>
   <block id="a7fdbf5c4e6666e4812cdfb978a2c18d" category="section-title">将此插件注册到 vCenter</block>
   <block id="d08a65b61ffe84fe8a0f23ee404ca33f" category="paragraph">在 vSphere Web Client 中部署 vCenter 插件软件包涉及到将该软件包注册为 vCenter Server 上的扩展。注册完成后，连接到 vSphere 环境的任何 vSphere Web Client 均可使用此插件。</block>
@@ -678,7 +636,6 @@
   <block id="c2611280cf76890b83743a67ac6478e2" category="list-text">vCenter 管理员密码。</block>
   <block id="92d3ac74b6d30f321507464dbfb9220d" category="list-text">（对于内部服务器 / 非公开站点）插件 ZIP 的自定义 URL 。</block>
   <block id="b614f8a8d64f3390e623579bd099dd2a" category="inline-xref">修改非公开站点 HTTP 服务器的 vCenter 属性</block>
-  <block id="37b07c9f01c713137d9c3da2ab5d0529" category="admonition">大多数安装都会使用默认路径。要在使用 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置时自定义 URL ，请选择 * 自定义 URL* 。有关要自定义 URL 的其他步骤，请参见 * <block ref="d2ed5bec20be0e8be5a97f9442c19f29" category="inline-xref-macro-rx"></block>。</block>
   <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">选择 * 注册 * 。</block>
   <block id="b4d8ebb6dae278ffa4144cba05ae7d58" category="list-text">（可选）验证注册状态：</block>
   <block id="927985008389f356c5a3aa6144e58f3c" category="list-text">选择 * 注册状态 * 。</block>
@@ -707,19 +664,16 @@
   <block id="df36cb502904fac40b53cb9cc4cd76fc" category="section-title">访问此插件并验证安装是否成功</block>
   <block id="2131e818de9129b3fbf7becb1d171106" category="paragraph">成功安装或升级后， NetApp Element 配置和管理扩展点将显示在 vSphere Web Client 的 " 快捷方式 " 选项卡和侧面板中。</block>
   <block id="30d0c7e4c616a7c812acb385ce1158eb" category="image-alt">此插件扩展点将显示在 vSphere 中</block>
-  <block id="5ee7dd83ed85a8bcc08c281c24e4da60" category="admonition">如果不显示 vCenter 插件图标，请参见 <block ref="fe8ddf0323e6cee4658194f2ebc6a4f6" category="inline-link-macro-rx"></block>。</block>
   <block id="4347ede819157a203679f129df45d402" category="section-title">添加要与此插件结合使用的存储集群</block>
   <block id="54f9fee5e51d6b644599d81e07d89174" category="paragraph">您可以使用 NetApp Element 配置扩展点添加运行 Element 软件的集群，以便该插件可以对其进行管理。</block>
   <block id="ff5f33d94f584d07bf6c1cc9e1c0fd6c" category="paragraph">在与集群建立连接后，可以使用 NetApp Element 管理扩展点管理集群。</block>
   <block id="cc102d4d7dca4547d837e47afe4d07ec" category="list-text">必须至少有一个集群可用，并且其 IP 或 FQDN 地址已知。</block>
   <block id="57df8875d4bbaa1636e9d76055022b2f" category="list-text">集群的当前完整集群管理员用户凭据。</block>
   <block id="6a8239be0045d6970eef311b36e2764b" category="list-text">防火墙规则允许打开 <block ref="659e4cbd51cb8dba5a95e3f7e2eb854a" category="inline-link-macro-rx"></block> 通过 TCP 端口 443 和 8443 在 vCenter 和集群 MVIP 之间。</block>
-  <block id="139d25304338523e94a9baaef8361464" category="admonition">要使用 NetApp Element 管理扩展点功能，必须至少添加一个集群。</block>
   <block id="e36af56c585143da4f7ec2e551a073b4" category="paragraph">此操作步骤介绍了如何添加集群配置文件，以便此插件可以管理此集群。您不能使用此插件修改集群管理员凭据。</block>
   <block id="31bac8d09b84c52c53944e596e74329c" category="inline-link">管理集群管理员用户帐户</block>
   <block id="0309823e9ae91db98032e590442dedb1" category="paragraph">请参见<block ref="5d916bc6c1468cb9b274ae3db15d6dd5" category="inline-link-rx"></block> 有关更改集群管理员帐户凭据的说明。</block>
   <block id="77b4798d092722f9e9012e7b4945c7a8" category="admonition">vSphere HTML5 Web 客户端和 Flash Web 客户端具有单独的数据库，这些数据库无法组合使用。在一个客户端中添加的集群在另一个客户端中不可见。如果要同时使用这两个客户端，请在这两个客户端中添加集群。</block>
-  <block id="1d45d52d686f586643b0239443417292" category="list-text">选择 * NetApp Element Configuration* &gt; * 集群 * 。</block>
   <block id="790c4cdfe42cc811c89bb5064f650268" category="list-text">选择 * 添加集群 * 。</block>
   <block id="7203406d1f62cabfe63a8be644974122" category="list-text">* IP 地址 /FQDN* ：输入集群 MVIP 地址。</block>
   <block id="a043f94645f45e7d08b405546e6c01cd" category="list-text">* 用户 ID* ：输入集群管理员用户名。</block>
@@ -740,9 +694,7 @@
   <block id="65f72105c8eac4133f65e860a7673a84" category="list-text">* QoSSIOC Password* ： Element QoSSIOC 服务的密码。QoSSIOC 服务的默认密码为 SolidFire` 。如果您尚未创建自定义密码，则可以从注册实用程序 UI （`https://[management node IP] ： 9443` ）创建一个密码。</block>
   <block id="bbf245717bbf4beb394b424cc95d9ea8" category="list-text">* vCenter User ID* ：具有完全管理员角色特权的 vCenter 管理员的用户名。</block>
   <block id="923230f5f1040a80034468b15292c0fb" category="list-text">* vCenter 密码 * ：具有完全管理员角色特权的 vCenter 管理员的密码。</block>
-  <block id="1fb35afb2a93cabe93aa14a5033f7c4d" category="list-text">单击 * 确定 * 。当插件可以成功与服务通信时， * QoSSIOC Status* 字段将显示 `up` 。</block>
   <block id="ab57fd0432e25d5b3013133a1c910d56" category="inline-link">知识库</block>
-  <block id="d30fb8e148486fa7953b670129181359" category="admonition">请参见此内容<block ref="73c985feae38ab11c72c32983286b317" category="inline-link-rx"></block> 要在状态为以下任一项时进行故障排除，请执行以下操作： * `DOwn` ： QoSSIOC is not enabled 。* `未配置` ：尚未配置 QoSSIOC 设置。* `网络关闭` ： vCenter 无法与网络上的 QoSSIOC 服务进行通信。mNode 和 SIOC 服务可能仍在运行。</block>
   <block id="321a492f7aecad70a8ff98d40adec29d" category="paragraph">启用 QoSSIOC 服务后，您可以在各个数据存储库上配置 QoSSIOC 性能。</block>
   <block id="817368f24847303544562bd914f6a445" category="section-title">配置用户帐户</block>
   <block id="f88fc4daa9c86ffbec392f2da132aa13" category="inline-link-macro">用户帐户</block>
@@ -767,8 +719,6 @@
   <block id="ede89c99984c1e44df31ac3dff737de0" category="inline-link-macro">监控具有 QoSSIOC 事件的虚拟机性能分层</block>
   <block id="e77991c4c2a793263c728610d4ee765a" category="list-text"><block ref="e77991c4c2a793263c728610d4ee765a" category="inline-link-macro-rx"></block></block>
   <block id="304409dfde6a422986bbfa38b7258895" category="doc">删除 vCenter 插件</block>
-  <block id="216e81580ff91eef006197f6779b4082" category="paragraph">对于与 vSphere 6.7 或更早版本结合使用的 vCenter 插件 2.5 或更高版本，您必须完成以下过程才能从 vCenter Server 中手动删除与此插件关联的所有文件。对于 vSphere 7.0 ，注销插件后，所有文件都将自动删除。</block>
-  <block id="08a549c886605d2288d476d580625591" category="list-text">vCenter 插件 2.5 或更高版本</block>
   <block id="c8b75cd98521813bb646f8e59e1660fa" category="list-text">vSphere 6.7 或更早版本</block>
   <block id="7024db6aaf8e0fac22cd773f9b87f6bd" category="inline-link-macro">已取消注册</block>
   <block id="a44fdaf45cc4fa8d2be9b4828a45e826" category="list-text">您已拥有 <block ref="c88eee28c7f01bc8d3b0dbe781eed9dd" category="inline-link-macro-rx"></block> 现有插件并与 vCSA 或 vCenter Server 建立 SSH ， RDP 或其他适当连接。</block>
@@ -784,8 +734,6 @@
   <block id="461271b05833a58d292f4e8ba4370409" category="list-text">（对于 vCSA ）运行以下命令：</block>
   <block id="2e490f38c14cdb7869c44c920d8529fd" category="list-text">启动 vCenter Server 服务：</block>
   <block id="112e518d44943400ae499f6efcba1d87" category="list-text">vCSA ：</block>
-  <block id="a856253964d3447555bdfc5def4a5ba3" category="list-text">从 vCenter 插件中，选择 * NetApp Element Management* 。</block>
-  <block id="8f890cacf4794536fdea8b70fc3d5e89" category="list-text">选择 * 报告 * &gt; * iSCSI 会话 * 。</block>
   <block id="ab889c0f870cde4a471f0e3a8a25925b" category="section-title">iSCSI 会话数据</block>
   <block id="ca047cced0de5736f9f073735e3d233d" category="list-text">* 节点 * ：托管卷的主元数据分区的节点。</block>
   <block id="b06d2569fa81d467403239d5fbc5bd57" category="list-text">* 帐户 * ：拥有卷的帐户的名称。如果值为空，则会显示一个短划线（ - ）。</block>
@@ -802,8 +750,6 @@
   <block id="78e61a5beb0ae053da8019e13bbefcb5" category="paragraph">此时将显示本地添加的集群中的 QoSSIOC 事件。在链接模式环境中，登录到已在本地添加集群的 vSphere Web Client 以查看该集群的 QoSSIOC 事件。</block>
   <block id="463ba440dcce8f5eae3c520f4c9da6ef" category="list-text">必须使用此插件的 "QoSSIOC Settings" 页面配置并验证 QoSSIOC 服务是否正在运行。</block>
   <block id="67216e28bdbf08ea86bd3a29c80bf10d" category="list-text">必须至少有一个数据存储库启用 QoSSIOC 自动化。</block>
-  <block id="f6803025ba0df857c01dacd15de15a37" category="list-text">从 vCenter 插件中，选择 * NetApp Element Configuration* 。</block>
-  <block id="06238ff5d4d36614efa9a085b1fc4494" category="list-text">选择 * QoSSIOC Events* 。</block>
   <block id="e8174d6dfee461aad9fbf91cdf98489c" category="section-title">QoSSIOC 事件数据</block>
   <block id="db858fb1d0a10f85870ffe7adfba4d6d" category="list-text">* 日期 * ： QoSSIOC 事件的日期和时间。</block>
   <block id="2d7ed56204de5860f953510b1e37aa89" category="list-text">* 数据存储库名称 * ：用户定义的数据存储库名称。</block>
@@ -824,7 +770,6 @@
   <block id="caba5859d8a5830210ab32116e96cb50" category="section-title">创建组快照</block>
   <block id="62211e5c27c46cffd8e648e2d27c4a09" category="paragraph">您可以立即为一组卷创建快照，也可以创建一个计划来自动为该组卷创建未来快照。一个组快照一次可以一致地创建多达 32 个卷的快照。</block>
   <block id="3a0c0ab4f47856973290b01dd440fb5f" category="paragraph">您可以稍后更改组快照的复制设置或保留期限。您指定的保留期限从输入新间隔开始。设置保留期限时，您可以选择从当前时间开始的期限（保留期限不会从快照创建时间开始计算）。您可以以分钟，小时和天为单位指定间隔。</block>
-  <block id="633e2c9ffd2a20244bcf590c4a5bab8c" category="list-text">从 vCenter 插件中，选择 * NetApp Element Management* &gt; * Management* 。</block>
   <block id="b81198177f9162f783a4b8766abb1f2d" category="admonition">如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。</block>
   <block id="09828bbd43b0e5290006a3bdf8cd10ca" category="list-text">在 * 活动 * 视图中，选中要用于快照的卷对应的复选框。</block>
   <block id="ba49cf1017bd6069d19002531da98f23" category="list-text">在显示的菜单中，选择 * 创建组 Snapshot* 。</block>
@@ -843,7 +788,6 @@
   <block id="e27d746e9771886c4494d3b4b0e406d5" category="list-text">（可选）选中 * 重复计划 * 复选框以定期重复计划的快照。</block>
   <block id="96fbebfac07609ac0a56f340edd98e9d" category="section-title">查看组快照详细信息</block>
   <block id="2e46c97d27094b41d9fa817440eca1be" category="paragraph">您可能需要验证是否已添加快照。</block>
-  <block id="94f6aa239f53fe40df75297f71b0f422" category="list-text">从 vCenter 插件中，选择 * NetApp Element Management* &gt; * Protection* 。</block>
   <block id="765de62ea4584e058f0661733cdba08e" category="list-text">单击 * 组快照 * 子选项卡。</block>
   <block id="c121e5061954ec5857e64d29429b2fae" category="list-text">验证快照详细信息：</block>
   <block id="84da6acfd10db402762f6e37befc5849" category="list-text">* 创建日期 * ：创建组快照的日期和时间。</block>
@@ -880,10 +824,6 @@
   <block id="a66fec10414d93c5a4f856bba6fe1729" category="list-text">* 保留成员 * ：删除组快照，但保留所有成员快照。</block>
   <block id="15089086cdcde8de09b03ad13cce88ca" category="summary">您可以使用此插件将节点添加到存储集群中。</block>
   <block id="0d9029e785d6af991e53b31b279e9aa4" category="doc">管理集群</block>
-  <block id="71e9c0507e3cebd9b4e0b99c71a5e98b" category="paragraph">您可以编辑运行 Element 软件的集群，管理 SSH 配置，设置保护域监控以及关闭集群。</block>
-  <block id="b60ed88355ac3f6898fd8a7ab1734d06" category="inline-link-macro">已添加</block>
-  <block id="4ccd64e71dfef7fbb8f1ea80fa01c925" category="list-text">必须至少有一个集群 <block ref="132d58c32ebdff57c85a2f4a8cd10ae6" category="inline-link-macro-rx"></block>。</block>
-  <block id="32c44a9a1ce51c0c788db8bff5828c93" category="list-text">防火墙规则可在 vCenter 和集群 MVIP 之间通过 TCP 端口 443 和 8443 进行开放网络通信。</block>
   <block id="54d0489e4fb9453a17b8c1d683304e5b" category="list-text"><block ref="860f2ad6c3ea4f4817bcb0f14b6b25c6" category="inline-xref-macro-rx"></block></block>
   <block id="047d0798b02979d1437a03abb0c90d5b" category="list-text"><block ref="4d4f3a13c229219c2371039338f05cd4" category="inline-xref-macro-rx"></block></block>
   <block id="85c3a905a22ea18242035e8b6cde09d6" category="list-text"><block ref="8d773b09d88cafa404bb0a781d90205d" category="inline-xref-macro-rx"></block></block>
@@ -921,7 +861,6 @@
   <block id="eca4fb99b9a8c4564181cfaec57db742" category="list-text">* 配对 * ：与本地集群配对的其他集群的名称。</block>
   <block id="a974bf7ec19c6ca7b7cb8faad68b73d8" category="list-text">* SSH Status* ：安全 Shell 的状态。如果启用，则会显示剩余时间。</block>
   <block id="cb8fdc0476a16e980957b386183bc39c" category="section-title">编辑集群配置文件</block>
-  <block id="b2e199c1b20ea5f4bbdf1b6996a1bcdb" category="paragraph">您可以从 NetApp Element 配置扩展点更改集群用户 ID 和密码。</block>
   <block id="9f6ba4a2d454b59f7e2e572398e0138a" category="admonition">此操作步骤介绍了如何更改此插件使用的集群管理员用户名和密码。您不能通过此插件更改集群管理员凭据。请参见<block ref="5d916bc6c1468cb9b274ae3db15d6dd5" category="inline-link-rx"></block> 有关更改集群管理员帐户凭据的说明。</block>
   <block id="54ff6b528463dda8cc306526a323ea57" category="list-text">检查集群。</block>
   <block id="f3828e7716c172413fc0f19862f8aec5" category="list-text">更改以下任一项：</block>
@@ -929,21 +868,15 @@
   <block id="8def6438d31a03f2d26f3f456fa66b75" category="list-text">Password ：集群管理员密码。</block>
   <block id="cf66ab12b7f15c5d7900e0d294dd562c" category="admonition">添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不能更改为添加的集群分配的链接模式 vCenter Server 。要更改集群地址或关联的 vCenter Server ，您必须删除此集群并重新添加它。</block>
   <block id="a5427d089bfc1b07d1dead6637379e7e" category="section-title">删除集群配置文件</block>
-  <block id="27447dccda41d502d5574b4f46d298e7" category="paragraph">您可以使用 NetApp Element 配置扩展点从 vCenter 插件中删除不再需要管理的集群的配置文件。</block>
   <block id="b6cbe70a3682d96f7a2f224a2cdc9e5d" category="paragraph">如果您设置了链接模式组并希望将集群重新分配给另一个 vCenter Server ，则可以删除此集群配置文件，然后使用其他链接的 vCenter Server IP 重新添加此配置文件。</block>
   <block id="8479a8ac48f590c970f1ded41ac9b4ca" category="list-text">选中要删除的集群。</block>
   <block id="6f99fa9b2e1f4893851a8aeb82d171f9" category="list-text">选择 * 删除 * 。</block>
   <block id="32488c0a8d325482a6599eaa5c63b366" category="section-title">启用空闲加密</block>
-  <block id="c2c366c834429d77b8daec5642032b9f" category="paragraph">您可以使用 NetApp Element 配置扩展点手动启用空闲加密（ EAR ）功能。</block>
   <block id="54901669f6ee1692cfa5c4342dec9cf6" category="admonition">此功能在 SolidFire 企业 SDS 集群中不可用。</block>
   <block id="44bf3272559de42e44cc97e837454a7a" category="list-text">选择要启用空闲加密的集群。</block>
-  <block id="2f29c70d65d2736b1ca2a3cfe7e696c3" category="list-text">在显示的菜单中，单击 * 启用 EAR* 。</block>
   <block id="70b30e14378f7b0d12d50ab80fbf1a07" category="section-title">禁用空闲加密</block>
-  <block id="653ca78d7b5548ccbfc94e20f54cad29" category="paragraph">您可以使用 NetApp Element 配置扩展点手动禁用空闲加密（ EAR ）功能。</block>
   <block id="f196d3fc319522f105c3ee8047a92213" category="list-text">选中集群对应的复选框。</block>
-  <block id="9c16e63a32bf1abc35ed7c631fccc192" category="list-text">在显示的菜单中，单击 * 禁用 EAR* 。</block>
   <block id="e7d694813a2146a3ab31b4b907988620" category="section-title">启用 SSH ：</block>
-  <block id="a709a13c7ad384ac48d3d32c98a4c0f7" category="paragraph">您可以使用 NetApp Element 配置扩展点手动启用安全 Shell （ SSH ）会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。</block>
   <block id="6dc7a933239b5c72bc56e3bb13c222cb" category="list-text">选择 * 启用 SSH* 。</block>
   <block id="cea6ccf96a7b8eab98ceb2443acee4cb" category="list-text">输入要启用 SSH 会话的持续时间，以小时为单位，最长不超过 720 。</block>
   <block id="734450d7d347b0dfc9f355a9187decf8" category="admonition">要继续，您需要输入一个值。</block>
@@ -953,11 +886,9 @@
   <block id="ec840def307fd99ae909c484a7f860aa" category="paragraph">此对话框将显示 SSH 会话的剩余时间。</block>
   <block id="cd96cc01ba61336e64b124bb6df57626" category="list-text">输入 SSH 会话的新持续时间，以小时为单位，最长不超过 720 。</block>
   <block id="b9bcb82dfb5532523e72796f9b9a1e81" category="section-title">禁用 SSH</block>
-  <block id="d6f4efcf5bcd0ee2897aac5a8bc48e6b" category="paragraph">您可以使用 NetApp Element 配置扩展点手动禁用对存储集群中节点的安全 Shell （ SSH ）访问。</block>
   <block id="34e61bb14b41c045eb7f299c0e6e4b9e" category="list-text">选择 * 禁用 SSH* 。</block>
   <block id="aa1895831e919f6282bd2fdc2eaf5da4" category="section-title">设置保护域监控</block>
   <block id="6a9916fd360cff0edd98f0f92ae94b3f" category="inline-link-macro">保护域监控</block>
-  <block id="2219d39acd7b2ee529616833d9497f49" category="paragraph">您可以手动启用 <block ref="eb2a8f3ad2c177d2352fbc0a14b04656" category="inline-link-macro-rx"></block> 使用 NetApp Element 配置扩展点。您可以根据节点或机箱域选择保护域阈值。</block>
   <block id="d3b962d6d7d357eada64973561d4213c" category="list-text">要使用保护域监控功能，必须由 Element 11.0 或更高版本监控选定集群；否则，保护域功能将不可用。</block>
   <block id="1e522faf3f2c29744184206a0598c56b" category="list-text">要使用保护域功能，集群必须具有两个以上的节点。无法与双节点集群兼容。</block>
   <block id="e04f259b38cf85b8a211c1864c15f035" category="list-text">选择 * 设置保护域监控 * 。</block>
@@ -967,13 +898,11 @@
   <block id="c5562ce2e22a86c247849904ecef3dc8" category="inline-link-macro">报告</block>
   <block id="8e81eca36074680feeb27e27e1c52eda" category="paragraph">设置监控首选项后，您可以从监控保护域 <block ref="13aa0e47635e2cf5e19f028e9d099aaa" category="inline-link-macro-rx"></block> NetApp Element 管理扩展点的选项卡。</block>
   <block id="186f4f181c5fef406a9238827e55c200" category="section-title">关闭集群</block>
-  <block id="7b01032bd738696475aab312a3e93d8c" category="paragraph">您可以使用 NetApp Element 配置扩展点手动关闭存储集群中的所有活动节点。</block>
   <block id="8a7ef1c3e82395341b7000b79c239eb4" category="inline-link-macro">重新启动</block>
   <block id="cf60702c259ef2cdb1f4dcf858dc3dd7" category="paragraph">如果您要 ... <block ref="eecba8da42c83d937a557e01bb18a3bb" category="inline-link-macro-rx"></block> 您可以从 NetApp Element 管理扩展点的 "Cluster" 页面中选择所有节点并执行重新启动，而不是关闭集群。</block>
   <block id="b66403b2641299b623edc6d35a257b75" category="paragraph">您已停止 I/O 并断开所有 iSCSI 会话。</block>
   <block id="8093ed1f7ee8f086a8bf870495984b92" category="list-text">选择 * 关闭 * 。</block>
   <block id="08468b27dfb7f805f9e02b91650864dc" category="section-title">扩展 NetApp HCI 基础架构</block>
-  <block id="ab91dd7f95968fffd00546428fa0ec61" category="paragraph">您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。NetApp Element 扩展点提供了一个指向 NetApp HCI UI 的链接，用于扩展您的系统。NetApp Element 管理扩展点中的 " 入门 " 和 " 集群 " 页面提供了其他链接。</block>
   <block id="18a2913d457d149d724c285bb0b5ecf6" category="list-text">选择 * 扩展 NetApp HCI * 。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="cell">version</block>
   <block id="8c4acbc2063657214fc1de03ee31a0df" category="cell">插件发行说明</block>
@@ -995,17 +924,13 @@
   <block id="31330ddb93b890fefb352d0d23e04a58" category="inline-link">2.0.725 KB</block>
   <block id="46908b2049881396eaebed287856ff77" category="cell"><block ref="46908b2049881396eaebed287856ff77" category="inline-link-rx"></block></block>
   <block id="e0b3e00c8ede6394a2f91fbc4f3c0b40" category="cell"><block ref="af6ea15134520eeae3bd7394659b0b2f" category="inline-link-rx"></block>注意：本出版物介绍了 Element 软件 11.3/NetApp HCI 1.6 的更新管理节点升级过程。<block ref="23822845d02ea4fff52cbd63e5d2747c" category="inline-link-rx"></block>注意：本出版物介绍了 Element 软件 11.5/NetApp HCI 1.7 的更新管理节点升级过程<block ref="7a8413a62eb5966c6aa89457ad7daa14" category="inline-link-rx"></block>注意：本出版物介绍了 Element 软件 11.7/NetApp HCI 1.7P1 的更新管理节点升级过程</block>
-  <block id="94ca44276077aae54f6df6e88b103a22" category="summary">您可以使用此插件的 NetApp Element 管理扩展点管理存储集群。</block>
   <block id="e07b0a5326295e7745228add875c7c50" category="doc">管理集群硬件和虚拟网络概述</block>
-  <block id="052cc0eb8ed6204799d0ba3fe163f543" category="paragraph">从 NetApp Element 管理扩展点的 "Cluster" 选项卡中，您可以查看和更改集群范围的设置，并对驱动器，节点和 VLAN 执行特定于集群的任务。</block>
   <block id="169bc36348d833447e9ed51fe9bb69fd" category="inline-link-macro">添加和管理驱动器</block>
   <block id="77b62074ca4c9c6af4a43f40da1f3ff0" category="list-text"><block ref="77b62074ca4c9c6af4a43f40da1f3ff0" category="inline-link-macro-rx"></block></block>
   <block id="fd6ce9a3655193c5558dacb1162ff5dd" category="inline-link-macro">添加和管理节点</block>
   <block id="2f5f07347ae1800f7c3b27d51f653a16" category="list-text"><block ref="2f5f07347ae1800f7c3b27d51f653a16" category="inline-link-macro-rx"></block></block>
   <block id="b61be542ba645bfe6a01a6b0c6d23322" category="inline-link-macro">创建和管理虚拟网络</block>
   <block id="2599db1111daf0441f5d4acbc4f25743" category="list-text"><block ref="2599db1111daf0441f5d4acbc4f25743" category="inline-link-macro-rx"></block></block>
-  <block id="8fb56fcf5bc6ffb8a8e4daef63b58be3" category="paragraph">您可以从 NetApp Element 管理扩展点的报告选项卡查看选定集群中所有卷的性能信息。</block>
-  <block id="2f25754cc3330800c4b628bfee599f18" category="list-text">选择 * 报告 * &gt; * 卷性能 * 。</block>
   <block id="41a7803ba2ba16b22ea8010700320d2a" category="list-text">要更改页面上数据刷新的频率，请单击 * 刷新每个列表 * 并选择一个值。</block>
   <block id="975a9e5dd4173d55583463733eb9a604" category="paragraph">如果集群中的卷少于 1000 个，则默认刷新间隔为 10 秒；否则，默认刷新间隔为 60 秒。如果选择从不，则会禁用自动页面刷新。</block>
   <block id="c8167ab551063de4a09f0582d24a76fc" category="section-title">卷性能数据</block>
@@ -1048,7 +973,6 @@
   <block id="7354e6b4c7bf91ae68f2ead53516d34b" category="list-text">从 * 帐户 * 列表中选择一个用户帐户。</block>
   <block id="58941cd77b80a07e29dc7875cb94798e" category="admonition">QoS 策略最适合服务环境，例如数据库，应用程序或基础架构服务器，这些服务器很少重新启动，需要对存储的持续等量访问。自定义 QoSSIOC 自动化最适合日常或每天多次可能重新启动，启动或关闭的轻型 VM ，例如虚拟桌面或专业的自助式 VM 。不应同时使用 QoSSIOC 自动化和 QoS 策略。启用数据存储库 QoSSIOC 设置后，卷级别的任何 QoS 设置都将被覆盖。最大或突发 IOPS 值大于 20 ， 000 IOPS 的卷可能需要较高的队列深度或多个会话，才能在单个卷上实现此级别的 IOPS 。</block>
   <block id="ec4fc4cb1b37373b785aaee6062cfec7" category="section-title">查看卷详细信息</block>
-  <block id="42b6e093288a6616c1d182d24fd66b7b" category="paragraph">您可以在 NetApp Element 管理扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。</block>
   <block id="b1ca76f87b556ba8f8d5e27d36e4a01d" category="list-text">如果添加了两个或更多集群，请在导航栏中选择该集群。</block>
   <block id="6c4930cd0c87ca9ae05f248fb8a576ab" category="list-text">单击 * 卷 * 子选项卡。</block>
   <block id="1542787dac7d2d2ee9a7c571fef18fda" category="paragraph">此时将显示有关活动卷的常规信息。</block>
@@ -1146,7 +1070,6 @@
   <block id="2103c952afd66676efb9bf587496e47e" category="list-text">必须至少创建一个卷。</block>
   <block id="4d81e52ec962249f279274b52530d811" category="paragraph">集群一次最多支持每个卷运行两个克隆请求，一次最多支持 8 个活动卷克隆操作。超过这些限制的请求将排队等待稍后处理。</block>
   <block id="381a713d0f51b31ff1fbdb3ab89b3006" category="admonition">克隆的卷不会从源卷继承卷访问组成员资格。</block>
-  <block id="bab398090dc5cc3471c492471edad2ab" category="paragraph">操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档<block ref="e578a339e9493d9c63d57360db9fb8b0" category="inline-link-rx"></block> 和<block ref="6865dba41e05c4300a16bf14013377d9" category="inline-link-rx"></block>。</block>
   <block id="c15882785a0d876bc229f0d34454c482" category="list-text">选中要克隆的卷。</block>
   <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">选择 * 克隆 * 。</block>
   <block id="834f6dbd3eb0c6b268da4538ab2d8565" category="list-text">输入新克隆的卷的卷名称。</block>
@@ -1194,13 +1117,11 @@
   <block id="e3ced6658cd8f6da5ef0c1a2653c5eb2" category="list-text">（目标）设置备份卷</block>
   <block id="a6bba03aade314dfcf7ee82602ad67d9" category="list-text">（源）备份卷</block>
   <block id="c5e7a483905aa2c9a6b038339cb8e187" category="list-title">设置备份卷</block>
-  <block id="711830e0455c052c425af87e365c4da8" category="list-text">从要放置卷备份的 vCenter 和集群中，选择 * NetApp Element Management&gt; Management* 。</block>
   <block id="cd367f2edd160b07add31706273eba3c" category="list-text">选择 * 从 * 还原。</block>
   <block id="366875e30946b0fb8cb85aea5b1797f1" category="list-text">在 * 还原自 * 下，选择 * NetApp Element * 。</block>
   <block id="3b835c18be4ef3a2a0be602502576449" category="list-text">单击 * 生成密钥 * 为目标卷生成批量卷写入密钥。</block>
   <block id="59fcb9c933f25a03d89c7557b78343df" category="list-text">将批量卷写入密钥复制到剪贴板，以应用于源集群上的后续步骤。</block>
   <block id="90e9e58b3aa07c8bca9436316429414e" category="list-title">备份卷</block>
-  <block id="0512c0b79dc934801672b41372452479" category="list-text">从包含要用于备份的源卷的 vCenter 和集群中，选择 * NetApp Element Management&gt; Management* 。</block>
   <block id="323ae9970138143ba2512b8a3b79dc8c" category="list-text">在 * 将卷备份到 * 下，选择 * NetApp Element * 。</block>
   <block id="64b71c43bfa48871d83c90d55f27ee66" category="list-text">选择与目标集群相同的选项，数据格式如下：</block>
   <block id="493e1420b29f6089fd1fdb38b97af444" category="list-text">在 * 远程集群 MVIP* 字段中，输入目标卷集群的管理虚拟 IP 地址。</block>
@@ -1211,7 +1132,6 @@
   <block id="32f38989cffcb2b43f52fa78ed1b4aca" category="paragraph">从 OpenStack Swift 或 Amazon S3 等对象存储上的备份还原卷时，您需要原始备份过程中的清单信息。如果要还原在基于 NetApp Element 的存储系统上备份的 NetApp Element 卷，则不需要清单信息。您可以在 "Reporting" 选项卡上的 "Event Log" 中找到从 Swift 和 S3 还原所需的清单信息。</block>
   <block id="3cca01513738e3ce26260870432370e1" category="section-title">从 Amazon S3 对象存储上的备份还原卷</block>
   <block id="63e60c1b2388bc42ec64831b7b06e788" category="paragraph">您可以使用此插件从 Amazon S3 对象存储上的备份还原卷。</block>
-  <block id="db6b5d84c8d8ad2c1715a4a20416dea8" category="list-text">选择 * NetApp Element 管理 &gt; 报告 * 。</block>
   <block id="3f603c3beac7fead96f9aa1c02f68d73" category="list-text">选择 * 事件日志 * 子选项卡。</block>
   <block id="84dc8278b6baa9007346d4101b250ad0" category="list-text">选择创建需要还原的备份的备份事件。</block>
   <block id="da51b18716892a8b30b25f80b5c987f6" category="list-text">为事件选择 * 详细信息 * 。</block>
@@ -1232,12 +1152,9 @@
   <block id="1a30bc0ae512b038f3f5a2c704083007" category="list-text">（目标集群）选择要用于还原的卷</block>
   <block id="f177d94e2c0f614f903386803c169058" category="list-text">（源集群）还原卷</block>
   <block id="89a2d55e537e509d57026a7507ccb517" category="list-title">选择要用于还原的卷</block>
-  <block id="d8723fc40586cf20df174ceab460c148" category="list-text">从要还原卷的 vCenter 和集群中，选择 * NetApp Element 管理 &gt; 管理 * 。</block>
   <block id="bf6d814eb03630dec9e23a3a427b3311" category="list-title">还原卷</block>
-  <block id="0443146f8502a5f295849a23cf336a67" category="list-text">从包含要用于还原的源卷的 vCenter 和集群中，选择 * NetApp Element Management&gt; Management* 。</block>
   <block id="aeaf36ece308cb60511e19a4d560d39c" category="list-text">选择与以下数据格式的备份匹配的选项：</block>
   <block id="f91674f3b22216fc484532cd24dda908" category="section-title">删除卷</block>
-  <block id="aca21e0f528b29eef7f26ef4c530611f" category="paragraph">您可以使用 NetApp Element 管理扩展点从 NetApp Element 集群中删除一个或多个卷。</block>
   <block id="a8b034331cfe4c49d4364900879a2dca" category="paragraph">系统不会立即清除已删除的卷。已删除的卷可以还原大约八小时。</block>
   <block id="5254fdc91a9eeca2c8a00cf366f17930" category="paragraph">您可以在系统清除卷之前将其还原，也可以从 * 管理 * &gt; * 卷 * 中的 " 已删除 " 视图手动清除卷。还原卷时，卷将恢复联机并还原 iSCSI 连接。</block>
   <block id="f474075eb08397c3681f62dcf25b5f3f" category="admonition">与管理服务关联的永久性卷会在安装或升级期间创建并分配给新帐户。如果您使用的是永久性卷，请勿修改或删除这些卷或其关联帐户。</block>
@@ -1261,7 +1178,6 @@
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">选择 * 还原 * 。</block>
   <block id="b52387b68d1a2483ebf9f35c8c356979" category="list-text">选择视图筛选器，然后从列表中选择 * 活动 * 。</block>
   <block id="b0ec293604aea8d5a90bcb818b872d3b" category="list-text">验证卷以及所有连接是否均已还原。</block>
-  <block id="799c7a7e8a296591856f1cfd78f68e3d" category="doc">链接模式和插件</block>
   <block id="3fc23f34e36d05f9e3d062c71bacd2f0" category="doc">保护域</block>
   <block id="9b480422c240fe96384c295ed19ec96d" category="paragraph">保护域是一个节点或一组分组在一起的节点，这样，域中的任何节点或所有节点都可能发生故障，而不会导致集群丢失数据可用性。通过保护域功能，您可以监控集群的资源容量，以确保集群仍能够从故障事件中修复。您可以在节点或机箱域级别选择监控：</block>
   <block id="d3aa0229608e48b638ce6da6bee6fdb7" category="list-text">* 节点级别 * 为每个节点定义每个保护域，每个节点可能位于机箱中。</block>
@@ -1296,7 +1212,6 @@
   <block id="fa8a11a3fbd98ac622690c2c068f7704" category="list-text">验证计划详细信息。</block>
   <block id="cd1e7264baf1efb1c06cc35c5eb871ef" category="section-title">编辑快照计划</block>
   <block id="137df0ce7a4a6a2376333f43ec13a1f2" category="paragraph">您可以修改现有快照计划。修改后，计划下次运行时，将使用更新后的属性。原始计划创建的所有快照都将保留在存储系统上。</block>
-  <block id="f4027f833086ab01fb6c5e0852cfcd48" category="list-text">选择 * NetApp Element 管理 &gt; 保护 * 。</block>
   <block id="d0897e446e98da9060fab4d257e475e2" category="list-text">单击 * 计划 * 子选项卡。</block>
   <block id="6b43f5ff1462e19af863d2306500f6e5" category="list-text">选中要编辑的快照计划对应的复选框。</block>
   <block id="bb39fff2eb8773eefa2b1c5d63790e8b" category="list-text">在 * 卷 ID CSV* 字段中，修改当前包含在快照操作中的单个卷 ID 或逗号分隔的卷 ID 列表。</block>
@@ -1346,7 +1261,6 @@
   <block id="cee954dd02f090626cf9a33283156ad5" category="list-text">* 时间 * ：此标题仅在 Active 筛选器视图中可见。记录故障的日期和时间。</block>
   <block id="ae378687e3d3d98a9463f329392fc5af" category="list-text">* 解决日期 * ：此标题仅在已解决筛选器视图中可见。解决故障的日期和时间。</block>
   <block id="35f4da78a5c0fb57358c0c8b605339a4" category="list-text">要验证问题描述是否已解决，请在 "Resolved" 视图中查找它。</block>
-  <block id="6a5552fc8afece3128d2d5c9991af883" category="paragraph">系统会在 NetApp Element 管理扩展点的 * 报告 &gt; 警报 * 页面上报告每个警报的错误代码。错误代码可帮助您确定系统中哪个组件出现警报以及生成警报的原因。</block>
   <block id="d93fdf8ab834ec550b9295e94912501e" category="paragraph">以下列表概述了不同类型的系统警报。</block>
   <block id="b77a61cd6988e6c08982332968c82546" category="list-text">* 身份验证服务故障 * ：一个或多个集群节点上的身份验证服务未按预期运行。</block>
   <block id="5598b7fb635d67383dc9570babc8e530" category="paragraph">要解决此问题 * ：请联系 NetApp 支持部门以获得帮助。</block>
@@ -1597,9 +1511,6 @@
   <block id="8149aad723011ca8ac50992cd6d09ef1" category="list-text"><block ref="2a1b0def77172e61d78bc2ee68da3a7b" category="inline-xref-macro-rx"></block></block>
   <block id="6d12ac9db75b913e64ab59e63e553188" category="section-title">在数据存储库上启用 QoSSIOC 自动化</block>
   <block id="8d212632817c4e7ba245d52540d6e88a" category="paragraph">在为插件启用 QoSSIOC 服务后，您可以为数据存储库启用 QoSSIOC 自动化并自定义虚拟机磁盘（ VMDK ）性能级别。</block>
-  <block id="7f5d333575c1abd26cac73f3efff8c51" category="inline-link-macro">已配置 QoSSIOC 服务设置</block>
-  <block id="7b9e0ffe07013fd5083e381fd9fbd75c" category="paragraph">您已拥有 <block ref="944c67ad169da681ca6b870321139e37" category="inline-link-macro-rx"></block> 在 QoSSIOC 设置页面上， * QoSSIOC 状态 * 字段显示 `up` 。</block>
-  <block id="098e24a79e2f03668cd124af51cd7f4c" category="paragraph">QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。</block>
   <block id="c95ba07c17659cb0c5895ee43fd44cc4" category="admonition">如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。无论策略如何， QoSSIOC 都会覆盖和调整任何卷 QoS 设置的 QoS 值。</block>
   <block id="b223045e7adaf313da5183bb88982ee1" category="list-text">单击选定数据存储库的 * QoSSIOC Automation" 列中的状态按钮。</block>
   <block id="d7aa1bb65b7dbcadb9ccc24261202c94" category="admonition">确保数据存储库未在另一个 vCenter 上启用 QoSSIOC 集成，以防止 QoS 发生意外更改。</block>
@@ -1611,13 +1522,11 @@
   <block id="afdeffce59224badc13a8821b6ec412f" category="list-text">在 * 编辑 QoSSIOC 设置 * 对话框中，更改以下任一项：</block>
   <block id="f8bae8de9baa8395a6a8ec2d860c337f" category="list-text">* QoSSIOC 用户 ID* ： QoSSIOC 服务的用户 ID 。QoSSIOC 服务的默认用户 ID 为 `admin` 。对于 NetApp HCI ，用户 ID 与使用 NetApp 部署引擎在安装期间输入的用户 ID 相同。</block>
   <block id="cad792ab45ca62879a629f687945067c" category="admonition">对于 NetApp HCI 部署，默认密码会在安装期间随机生成。要确定密码，请参见本指南中的操作步骤 4<block ref="73c985feae38ab11c72c32983286b317" category="inline-link-rx"></block> 文章。</block>
-  <block id="54781b13a4285ad0cc10d8e50d05d867" category="list-text">单击 * 确定 * 。当此插件可以成功与服务通信时， "QoSSIOC Status" 字段将显示 `up` 。</block>
   <block id="18d6e8678d9b6ffeb8e937c46930d1ee" category="admonition">请参见此内容<block ref="73c985feae38ab11c72c32983286b317" category="inline-link-rx"></block> 要在状态为以下任一项时进行故障排除，请执行以下操作： * `DOwn` ： QoSSIOC is not enabled 。* `未配置` ：尚未配置 QoSSIOC 设置。* `网络关闭` ： vCenter 无法与网络上的 QoSSIOC 服务进行通信。mNode 和 SIOC 服务可能仍在运行。</block>
   <block id="fa56630b6219bb590988e3850ac6bf23" category="section-title">更改 QoSSIOC 服务密码</block>
   <block id="8209f42f47120008b0d3d7d32da6ae59" category="paragraph">您可以使用注册实用程序 UI 更改管理节点上 QoSSIOC 服务的密码。</block>
   <block id="e1ea2de510fb69c3802c3b09357e3c35" category="list-text">管理节点已启动。</block>
   <block id="f42c32542c3ff238d76a4c2127b76ddb" category="inline-xref">QoSSIOC 设置</block>
-  <block id="0d8455e01cf48bc725e69efc0082ff8b" category="paragraph">此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作 <block ref="ca2b2fd8486d4adc93dbf1425e6869a9" category="inline-xref-macro-rx"></block> 页面。 NetApp Element</block>
   <block id="61e05bf32da0fa0fd9789baf1caaca1b" category="list-text">在显示的菜单中，选择 * 清除 * 。</block>
   <block id="fc1f04f54cb29f2e711eda9113d6c26f" category="paragraph">此过程完成后， * QoSSIOC Status* 字段将显示 `Not Configured` 。</block>
   <block id="1560d818a9caa158941285d6827b7e83" category="list-text">在浏览器中输入管理节点的 IP 地址，包括要注册的 TCP 端口： `https://[management node IP] ： 9443` 。</block>
@@ -1625,14 +1534,12 @@
   <block id="c880c687c6ebd121eea870eafc327571" category="list-text">* 旧密码 * ： QoSSIOC 服务的当前密码。如果尚未分配密码，请键入默认密码 SolidFire` 。</block>
   <block id="fd025fb94f752aafec2c7562a97406d7" category="list-text">* 新密码 * ： QoSSIOC 服务的新密码。</block>
   <block id="8b0382d997ff2afbb32482791a17e518" category="list-text">* 确认密码 * ：再次输入新密码。</block>
-  <block id="8ecfcd4a3d0b5d33ea58263a5e5a8b1f" category="list-text">单击 * 提交更改 * 。</block>
   <block id="6d5e56ccae50720ca9f434ff8a5377e1" category="admonition">QoSSIOC 服务会在您提交更改后自动重新启动。</block>
   <block id="6e9c8ef1ecc795d9b7fd0cbbd291600a" category="list-text">在 vSphere Web Client 中，选择 * NetApp Element 配置 &gt; QoSSIOC 设置 * 。</block>
   <block id="e9b30f2d1fccdc8f5ce1715ffeb83690" category="list-text">在 * 配置 QoSSIOC 设置 * 对话框的 * QoSSIOC 密码 * 字段中输入新密码。</block>
   <block id="3ace73f92378bd88c4751835d1b157cf" category="paragraph">当插件可以成功与服务通信时， * QoSSIOC Status* 字段将显示 `up` 。</block>
   <block id="95a783264be605055907190bec9bb29b" category="section-title">为数据存储库禁用 QoSSIOC 自动化</block>
   <block id="9e44decea6e60fab9a7c251180c1be4c" category="paragraph">您可以为数据存储库禁用 QoSSIOC 集成。</block>
-  <block id="a5916ed46e567bb95d5e2f1380c661d1" category="list-text">单击选定数据存储库的 * QoSSIOC Automation" 列中的按钮。</block>
   <block id="b0e3c13d1baffdd59c60a05f1ad0d40e" category="list-text">清除 * 启用 QoS 和 SIOC* 复选框以禁用集成。</block>
   <block id="4f3712967452e14155f9ce20b7afd51b" category="paragraph">清除启用 QoS 和 SIOC 复选框会自动禁用覆盖默认 QoS 选项。</block>
   <block id="cc4b43fbbfce7408b64b9c05e98870ba" category="section-title">清除 QoSSIOC 设置</block>
@@ -1654,7 +1561,6 @@
   <block id="81f04bd132484325743d682b111d2d77" category="list-text">未启用 VRF 的 VLAN 要求启动程序与 SVIP 位于同一子网中。</block>
   <block id="dd49b664e7ad04677258489e2c55ce60" category="list-text">启用了 VRF 的 VLAN 不要求启动程序与 SVIP 位于同一子网中，并且支持路由。</block>
   <block id="55493c265ed7e6b09769faf02173c903" category="paragraph">添加虚拟网络时，系统会为每个节点创建一个接口，每个接口都需要一个虚拟网络 IP 地址。创建新虚拟网络时指定的 IP 地址数量必须等于或大于集群中的节点数量。虚拟网络地址由各个节点批量配置并自动分配给这些节点。您无需手动为集群中的节点分配虚拟网络地址。</block>
-  <block id="d19d10c6bb16c718d29f6f3b82cca0a2" category="list-text">选择 * NetApp Element 管理 &gt; 集群 * 。</block>
   <block id="5893fc53d1d2ad0fb381a6f8f4a5ed79" category="list-text">选择 * 网络 * 子选项卡。</block>
   <block id="ef59d49828061da9272f0636bdd3442e" category="list-text">选择 * 创建 VLAN* 。</block>
   <block id="f1e50fa7b375bad72e4886729d4d538a" category="list-text">在 * 创建 VLAN* 对话框中，输入 VLAN 的名称。</block>
@@ -1677,7 +1583,6 @@
   <block id="44115a1b6232be7c194f6d6a6f34e253" category="list-text">单击条目外侧以接受值。</block>
   <block id="9199e2b04639c2d3dfd3c6fb9443dc29" category="list-text">单击 * 确定 * 以创建 VLAN 。</block>
   <block id="25e39ebce6870dadeaf5ff2a6a20ea8b" category="section-title">查看虚拟网络详细信息</block>
-  <block id="59e85fe35105f5e22be2e2bccec1aac6" category="paragraph">您可以从 NetApp Element 管理扩展点的集群选项卡中的网络页面查看 VLAN 的网络信息。</block>
   <block id="a843302900879d0224711ebb05a76182" category="list-text">选择 * 节点 * 子选项卡。</block>
   <block id="8f2e39039f155af20228577a793410a1" category="list-text">选择 * 活动 * 视图。</block>
   <block id="88fe9dcd6fa7c22b0993312a5b82273a" category="list-text">查看存储集群中节点的详细信息。</block>
@@ -1699,10 +1604,8 @@
   <block id="1d1b6a79686b7cde445990699d6b74ca" category="section-title">协议端点</block>
   <block id="14538c7e2f6a2447b7c4e198cbc082ee" category="paragraph">VMware ESXi 主机使用称为协议端点的逻辑 I/O 代理与虚拟卷进行通信。ESXi 主机将虚拟卷绑定到协议端点以执行 I/O 操作。当主机上的虚拟机执行 I/O 操作时，关联的协议端点会将 I/O 定向到与其配对的虚拟卷。</block>
   <block id="9a4ab691d01ad6a90e904949ef75ee99" category="paragraph">NetApp Element 集群中的协议端点用作 SCSI 管理逻辑单元。集群会自动创建每个协议端点。对于集群中的每个节点，都会创建一个相应的协议端点。例如，一个四节点集群将具有四个协议端点。</block>
-  <block id="8622c5bb6626ccaa5b28dd7c7b34424e" category="paragraph">iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协议。协议端点不能由用户删除或修改，不与帐户关联，也不能添加到卷访问组。在 NetApp Element 管理扩展点的 "* VVols"&gt;"Protocol Endpoints" 页面上，您可以查看协议端点信息。</block>
   <block id="6a2ad71d13ffcb23f490e2cac940aebb" category="section-title">存储容器</block>
   <block id="1fe52d003a40ebd5274b71c188fe965c" category="paragraph">存储容器是映射到 NetApp Element 帐户的逻辑结构，用于报告和资源分配。它们可以将原始存储容量汇聚在一起，或者聚合存储系统可以为虚拟卷提供的存储功能。在 vSphere 中创建的 VVol 数据存储库将映射到单个存储容器。默认情况下，单个存储容器包含 NetApp Element 集群中的所有可用资源。如果需要对多租户进行更精细的监管，则可以创建多个存储容器。</block>
-  <block id="2c6cfe4d123152e9a6f046eee120440d" category="paragraph">存储容器的功能类似于传统帐户，可以同时包含虚拟卷和传统卷。每个集群最多支持四个存储容器。要使用 VVol 功能，至少需要一个存储容器。在 NetApp Element 管理扩展点的 "* VVols"&gt;"Storage Containers" 页面上，您可以创建，删除和查看有关存储容器的详细信息。您可以在创建 VVOL 期间在 vCenter 中发现存储容器。</block>
   <block id="cc7378d924a7a641ed80e623576e3981" category="section-title">VASA 提供程序</block>
   <block id="a59c51fc1ad210c1bec14d4848238667" category="paragraph">要使 vSphere 能够识别 NetApp Element 集群上的 VVOL 功能， vSphere 管理员必须向 vCenter 注册 NetApp Element VASA Provider 。VASA 提供程序是 vSphere 与 Element 集群之间的带外控制路径。它负责代表 vSphere 在 Element 集群上执行请求，例如创建 VM ，使 VM 可供 vSphere 使用以及向 vSphere 公布存储功能。</block>
   <block id="01ef303b25d3281cb33cd13014af3226" category="paragraph">VASA 提供程序在 Element 软件中作为集群主节点的一部分运行。集群主节点是一种高可用性服务，可根据需要故障转移到集群中的任何节点。如果集群主节点进行故障转移， VASA 提供程序将随之移动，以确保 VASA 提供程序的高可用性。所有配置和存储管理任务都使用 VASA 提供程序，该提供程序可处理 Element 集群上所需的任何更改。</block>
@@ -1717,8 +1620,6 @@
   <block id="0f748c280a3e841f3180e2af96f2b63d" category="admonition">可以通过 vSphere API 设置预留值。如果为 VMDK 设置了预留值，则会忽略共享，而改用预留值。</block>
   <block id="c9618f4b15d53501dee68300c1517890" category="inline-link">SolidFire Active IQ</block>
   <block id="5fca20943e154f5cd73069bcac84613a" category="admonition"><block ref="15098cd863d8945571eb3fa1cb63a7fe" category="inline-link-rx"></block> 具有一个 QoS 建议页面，可提供有关最佳配置和设置 QoS 设置的建议。</block>
-  <block id="666100731b84805384ac0e0c18db937a" category="list-text">选择 * 报告 * 。</block>
-  <block id="d9841821a8ecc6a4a5be1f5fa000c5ad" category="list-text">监控 " 概述 " 页面上的数据。</block>
   <block id="4f7f614aae330b699fbb948346082683" category="section-title">报告概述页面数据</block>
   <block id="d281b17c5afe6041332c22ae8c2e2668" category="paragraph">以下数据将显示在 "Reporting Overview" 页面上：</block>
   <block id="538f3c50ca90f2b39fb0e400d67d4df4" category="list-text">* 集群容量 * ：块存储，元数据和已配置空间的剩余容量。将指针移动到进度条上方可查看阈值信息。</block>
@@ -1767,7 +1668,6 @@
   <block id="7e6804427b6e39789b1a282736e90b46" category="summary">您可以使用此插件创建和管理用户帐户。</block>
   <block id="bd6dca3f6f8d28ce081bb3957040368d" category="doc">创建和管理用户帐户</block>
   <block id="dbdd6377389228728e6ab594c50ad011" category="inline-link-macro">用户帐户</block>
-  <block id="254d84c1e79f220f2eeadc64b5924a02" category="paragraph"><block ref="f5c48e85f9806e4c64d9f138cc449780" category="inline-link-macro-rx"></block> 用于控制对基于 NetApp Element 软件的网络上存储资源的访问。</block>
   <block id="3412a6edf080f1a50d150bff869f3f63" category="list-text"><block ref="67727cdfcdf8454cd172e09fb9aca0cd" category="inline-xref-macro-rx"></block></block>
   <block id="3425273350b593004a27807eef888437" category="list-text"><block ref="c31194760f5b695ff1ea7cc608ff344d" category="inline-xref-macro-rx"></block></block>
   <block id="cd93513d64c6d6959e7d022f866129d5" category="list-text"><block ref="a56321edd021b945639593db06db7789" category="inline-xref-macro-rx"></block></block>
@@ -1791,17 +1691,14 @@
   <block id="72e4e3df0141e09fab8d0e23700dc1e5" category="list-text">编辑用于节点会话身份验证的启动程序密钥或目标密钥凭据。</block>
   <block id="59eb5e0137fec4eb4902b713fd23c0fd" category="admonition">如果不更改凭据，它们将保持不变。如果将凭据字段留空，系统将生成新密码。</block>
   <block id="7168d3c290a4e520538280cb01130d0e" category="section-title">删除帐户</block>
-  <block id="084ba7c7d125f845224fe2ad3a856a65" category="paragraph">您可以使用 NetApp Element 管理扩展点删除用户帐户。</block>
   <block id="dfb29ee1a7b82627bd39682c56b94d8d" category="paragraph">删除并清除与帐户关联的任何卷，或者将这些卷重新分配给其他帐户。</block>
   <block id="823133d2c680b39fec7b1008b1b0de64" category="admonition">如果要在管理节点中使用永久性卷，请勿删除与这些卷关联的帐户。</block>
   <block id="6abe832decbad73ac8671dfb705a7646" category="list-text">选中要删除的帐户对应的复选框。</block>
   <block id="76bcb4a408198a6676ccab6cbdeeaee5" category="summary">您可以使用此插件向集群添加和管理驱动器。</block>
-  <block id="784490f31ef7c7b5a1518324adf8d545" category="paragraph">您可以使用 NetApp Element 管理扩展点向集群添加驱动器，查看现有驱动器以及删除驱动器。</block>
   <block id="48bbbbb57ccd395ce003dc16efabe6c6" category="list-text"><block ref="2eb220b21980d2096a3435c5785423b2" category="inline-xref-macro-rx"></block></block>
   <block id="6f37aedfc852aeaea45102e890955544" category="list-text"><block ref="e7c6e26a570aff32be366f4d9243cb50" category="inline-xref-macro-rx"></block></block>
   <block id="bc1eb1cbd7311f24161209e91ac50dbf" category="list-text"><block ref="f7696c0eb3e241a9fa981f6082842519" category="inline-xref-macro-rx"></block></block>
   <block id="afa0f8bfb6b2a685bfd2bc8ddf2deb71" category="section-title">向集群添加可用驱动器</block>
-  <block id="c549cf15aeb9a724d612fb081deefc63" category="paragraph">您可以使用 NetApp Element 管理扩展点向集群添加驱动器。向集群添加节点或在现有节点中安装新驱动器时，驱动器会自动注册为 `Available` 。您必须先将驱动器添加到集群中，然后每个驱动器才能加入集群。</block>
   <block id="cdab8120f3c61e0ae0acea82ed3b0e1c" category="paragraph">存在以下情况时，驱动器不会显示在可用列表中：</block>
   <block id="f0a6ff5af9e6669a8433280d351a739a" category="list-text">驱动器处于 `Active` ， `Removing` ， `Erasing` 或 `Failed` 状态。</block>
   <block id="24a64c0d3aeddfc9cbb1edc51a57882c" category="list-text">驱动器所属节点处于 `Pending` 状态。</block>
@@ -1811,13 +1708,11 @@
   <block id="0af59b601370edfa683c170685a31191" category="list-text">单击 * 添加驱动器 * 。</block>
   <block id="76ea3f2e0b1a18dff4cb7f2bcf384766" category="list-text">查看要添加的驱动器的详细信息并确认此操作。</block>
   <block id="f6c2363cd44cb5fac1b33c9af530a088" category="section-title">查看驱动器详细信息</block>
-  <block id="540e44f0b45e0ccc116eb06c730192a3" category="paragraph">您可以通过 NetApp Element 管理扩展点的 "Cluster" 选项卡的 "Drives" 页面上的 "Active" 视图查看集群中的活动驱动器列表。您可以使用下拉筛选器选择可用选项来更改此视图。</block>
   <block id="2a830e938d41d25c466035edf872712e" category="paragraph">首次初始化集群时，活动驱动器列表为空。创建新集群后，您可以添加未分配给集群并在 " 可用 " 选项卡中列出的驱动器。</block>
   <block id="1459684317d20344424ba23f43789f70" category="list-text">选择 * 驱动器 * 子选项卡。</block>
   <block id="eea0d334e85371e13ef81617b9067d6a" category="list-text">查看系统中当前处于活动状态的驱动器的详细信息。</block>
   <block id="2b9a45b7029b4b971d1f884d28dfe232" category="paragraph">您可以查看驱动器 ID ，每个驱动器的容量和状态以及驱动器所在节点的相关信息。</block>
   <block id="e5aa87269e542ca978009c1a02dfdf74" category="section-title">删除驱动器</block>
-  <block id="3d3b187caecc43d9a9e8743c713c57a5" category="paragraph">您可以使用 NetApp Element 管理扩展点从集群中删除驱动器。在减少集群容量或准备更换接近使用寿命的驱动器时，您可以执行此操作。删除驱动器会使该驱动器脱机。在将驱动器从集群中删除之前，驱动器上的所有数据都会被删除并迁移到集群中的其他驱动器。根据集群上的容量利用率和活动 I/O ，将数据迁移到系统中的其他活动驱动器可能需要几分钟到一小时的时间。</block>
   <block id="d8cb492c14806c8939ce2f95fe8b318c" category="paragraph">删除处于 `Failed` 状态的驱动器时，该驱动器不会返回到 `Available` 或 `Active` 状态。而是无法在集群中使用此驱动器。</block>
   <block id="4e47c98dceef287087077163311714f6" category="list-text">从下拉列表中选择 * 全部 * 以查看完整的驱动器列表。</block>
   <block id="83393ec4d6905a1137783b44cff8baad" category="list-text">按如下所示删除驱动器：</block>
@@ -1877,7 +1772,6 @@
   <block id="37427fc5a8bad397ce23cc26db275d84" category="list-text">* vasaProviderEvent* ：与 VASA （ vSphere 存储感知 API ）提供程序相关的事件。</block>
   <block id="27c802fb2b1b7925cc7eeaab5967f0d2" category="summary">您可以使用此插件在集群配置中创建和管理节点。</block>
   <block id="a1fbed8c0121823f751f068780385f84" category="inline-link">存储节点</block>
-  <block id="c2e06f80da7f6b5804ad3d2a30028c9f" category="paragraph">使用 vCenter 插件，您可以添加<block ref="63488b15d8c0b0f8bf9dc0423b45e226" category="inline-link-rx"></block> 创建集群或需要更多存储时。可以使用 NetApp Element 管理扩展点添加运行 Element 软件的存储节点。必须在 vSphere 中的插件之外添加和管理 NetApp HCI 计算节点。</block>
   <block id="b3138b1ca8b06e1b0fc263835842b807" category="list-text"><block ref="b5d37a3673112572cce319c9a77e0cc9" category="inline-xref-macro-rx"></block></block>
   <block id="802b5631660d545c79d24adc150aacf8" category="list-text"><block ref="6cb804218363d80796d3426489f5b2c6" category="inline-xref-macro-rx"></block></block>
   <block id="1e37fcb4690b784ba2c06b330af2106e" category="list-text"><block ref="2b986148698fde4cd3ee03d0867368a6" category="inline-xref-macro-rx"></block></block>
@@ -1888,9 +1782,7 @@
   <block id="243b6494d60b1866c1fbd722876177d3" category="list-text">您要添加的节点已设置，启动和配置。</block>
   <block id="79e0186823c221d872157f5b0759dc5f" category="list-text">集群中每个节点上的软件的主要或次要版本号必须匹配，软件才能兼容。例如， Element 9.0 与 9.1 版不兼容。</block>
   <block id="3b5013950ab71766bee3fd7c69c1d2fd" category="admonition">如果要添加的节点的 NetApp Element 软件主要或次要版本与集群上运行的版本不同，则集群会异步将节点更新到集群主节点上运行的 NetApp Element 软件版本。更新节点后，它会自动将自己添加到集群中。在此异步过程中，节点将处于 `pendingActive` 状态。</block>
-  <block id="cf15185b1a0345cc754414c78c5dc352" category="paragraph">首次打开电源时，节点需要进行初始配置。设置和配置节点后，它会在配置节点时标识的集群上注册自身，并显示在 NetApp Element 管理扩展点的 * 集群 &gt; 节点 * 页面上的待定节点列表中。</block>
   <block id="308af774be47338e8f35a1fa620dad2d" category="paragraph">您可以向现有集群添加容量较小或较大的节点。</block>
-  <block id="08a430cc03de4fa592e93c4ab7fbd809" category="paragraph">在添加运行 NetApp Element 软件的光纤通道节点或存储节点时，操作步骤是相同的。</block>
   <block id="b8285a055a7672c24ffb62bf6857fea4" category="list-text">单击 * 节点 * 子选项卡。</block>
   <block id="1d6df00d185be1521c43c3981f89c499" category="list-text">从下拉列表中选择 * 待定 * 以查看节点列表。</block>
   <block id="68aa52388b6dc0f366e7c97c8364d211" category="list-text">要添加一个或多个节点，请执行以下步骤：</block>
@@ -1899,24 +1791,20 @@
   <block id="3ec33d4db72875c84a143e9750cf081c" category="list-text">查看要添加的节点的详细信息并确认此操作。</block>
   <block id="d230c0692e07b4ff57a43756a604cd94" category="paragraph">操作完成后，此节点将显示在集群的活动节点列表中。</block>
   <block id="1fb26e285018102a44117c4997b0d9d6" category="section-title">查看节点详细信息</block>
-  <block id="aca82d9b27a5fe40c2872e5594526f5a" category="paragraph">您可以从 NetApp Element 管理扩展点的 "Cluster" 选项卡的 "Nodes" 页面查看集群中节点的列表。要查看活动节点列表，必须选择 Active View 。您可以使用下拉筛选器选择 `Pending` ， `PendingActive` 和 `All` 选项来更改视图。</block>
   <block id="22d7257033abc210525bb71b8585e883" category="paragraph">您可以查看节点 ID ，每个节点的名称和状态，已配置的 IOPS ，节点类型，每个节点中的活动驱动器数量以及每个节点的网络信息等信息。</block>
   <block id="7f1dc82d374332dee855a925be6e83e3" category="section-title">重新启动节点</block>
-  <block id="31abb0e95a5919763bc22d552cc9dba8" category="paragraph">您可以使用 NetApp Element 管理扩展点重新启动集群中的一个或多个活动节点。</block>
   <block id="eacfad1499ca901255b178282af10724" category="paragraph">如果要同时重新启动多个节点，则已停止 I/O 并断开所有 iSCSI 会话。</block>
   <block id="056633f97280a78a0b53f18470ad585a" category="paragraph">要重新启动集群，您可以选择所有集群节点并执行重新启动。</block>
   <block id="d98cefed931537819de0b2f9849667b3" category="admonition">此方法将重新启动节点上的所有网络服务，从而导致网络连接暂时断开。</block>
   <block id="d12b0c2106484859adaa58fb0301d427" category="list-text">在 * 活动 * 视图中，选中要重新启动的每个节点对应的复选框。</block>
   <block id="f07022f87adadf12f55f40e181ebf796" category="list-text">选择 * 重新启动 * 。</block>
   <block id="48048c421be5676de2414b58f2b6aa50" category="section-title">关闭节点</block>
-  <block id="2dc086e4f0363a929a6f212100289331" category="paragraph">您可以使用 NetApp Element 管理扩展点关闭集群中的一个或多个活动节点。要关闭集群，您可以选择所有集群节点并同时关闭。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="admonition-title">关于此任务</block>
   <block id="1e5b872ba2c47b386694e9d32d6be27c" category="list-text">在 * 活动 * 视图中，选中要关闭的每个节点对应的复选框。</block>
   <block id="16e724a323a852e69bfc9e24ad860bb3" category="admonition">如果某个节点在任何类型的关闭条件下关闭时间超过 5.5 分钟，则 NetApp Element 软件会确定该节点不会重新加入集群。双 Helix 数据保护将开始将单个复制块写入另一个节点以复制数据。根据节点关闭的时间长度，在节点恢复联机后，可能需要将其驱动器重新添加回集群。</block>
   <block id="61cd542ac5ffcb86d2bd58d96750ea74" category="section-title">从集群中删除节点</block>
   <block id="349b5f66f496509850d29d8313c1052f" category="paragraph">当不再需要节点存储或需要维护时，您可以从集群中删除节点，而不会中断服务。</block>
   <block id="5feefa666579061dbeaaff5a75ad2c68" category="paragraph">您已从集群中删除节点中的所有驱动器。在 `RemoveDrives` 进程完成且所有数据均已迁移出节点之前，无法删除节点。</block>
-  <block id="7f592d3632e067960518b3d6ee6a4cd9" category="paragraph">NetApp Element 集群中的光纤通道连接至少需要两个光纤通道节点。如果仅连接了一个光纤通道节点，则系统会在事件日志中触发警报，直到您向集群添加另一个光纤通道节点为止，即使所有光纤通道网络流量仍只使用一个光纤通道节点运行也是如此。</block>
   <block id="e0605596794c54782078a16e6f3531ea" category="list-text">要删除一个或多个节点，请执行以下步骤：</block>
   <block id="6542f03da24583ff1799d6f4a1c344ce" category="list-text">在 * 活动 * 视图中，选中要删除的每个节点对应的复选框。</block>
   <block id="315cd19b17f3a6a462676019d1396e2f" category="paragraph">从集群中删除的任何节点都会显示在待定节点列表中。</block>
@@ -2004,7 +1892,6 @@
   <block id="524238bd3a425d1fa458c42f30d477c4" category="list-text">在显示的菜单中，选择 * 从 * 还原。</block>
   <block id="b12327f8c6bf0a8b0cd8b9505aa23600" category="list-text">在对话框的 * 还原自 * 下，选择 * NetApp Element * 。</block>
   <block id="34afe5a2a12cf65ca21ea3f1e4942b67" category="list-text">选择 * 生成密钥 * 可为目标卷生成批量卷写入密钥。</block>
-  <block id="b400cf75fa18e6479824fb28aa961822" category="list-text">从包含源集群的 vCenter 中，选择 * NetApp Element Management* &gt; * Protection* 。</block>
   <block id="1c4ca15fb15e74093fa190455976d8ae" category="list-text">选中要用于备份的快照对应的复选框。</block>
   <block id="39a9c018230a0ef2f3b6f7169782e97a" category="list-text">在对话框的 * 将卷备份到 * 下，选择 * NetApp Element * 。</block>
   <block id="2749f161eca1bfabc0348b6bcb6e9a13" category="list-text">在 * 采用以下数据格式 * 下选择与目标集群相同的选项。</block>
@@ -2013,7 +1900,6 @@
   <block id="18dc2c4f49d3a0392527c695500dcb14" category="list-text">* 远程用户密码 * ：输入远程集群密码。</block>
   <block id="5a3d175c6024c1772155e3abd36a0450" category="list-text">* 批量卷写入密钥 * ：粘贴先前在目标集群上生成的密钥。</block>
   <block id="2fc886b867029b14c756bd64fa4d24a0" category="section-title">删除卷快照</block>
-  <block id="23abff44f9ddb6c2b5926da2c8931c91" category="paragraph">您可以使用 NetApp Element 管理扩展点从运行 NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。</block>
   <block id="603fe2bdbef337d44d356e1d84936a8c" category="paragraph">您可以删除正在从源集群复制的快照。如果删除快照时快照正在同步到目标集群，则同步复制将完成，快照将从源集群中删除。快照不会从目标集群中删除。</block>
   <block id="8c9482a15b355f2a11bcd8a302881c1b" category="paragraph">您还可以从目标集群中删除已复制到目标的快照。已删除的快照将保留在目标上已删除的快照列表中，直到系统检测到您已删除源集群上的快照为止。在目标检测到您已删除源快照后，目标将停止复制该快照。</block>
   <block id="9d5b776e7ca85c6123a85509a7d8d3a2" category="list-text">从 * 快照 * 子选项卡中，选择以下视图之一：</block>
@@ -2057,8 +1943,6 @@
   <block id="c9bf0b029ad3ede39b7d6cf39607a322" category="summary">您可以使用此插件创建和管理卷访问组。</block>
   <block id="43c95975fceac67e14abe3895f6650b5" category="doc">创建和管理卷访问组</block>
   <block id="1e678cda01a6edfd6a8c776103d2e15b" category="inline-link-macro">卷访问组</block>
-  <block id="49c1b0b4dddf03721895d37d31dad4de" category="paragraph">答 <block ref="e64b216761b70bc0cfda4bc4eab1b43a" category="inline-link-macro-rx"></block> 是一组用户可以使用 iSCSI 启动程序或光纤通道启动程序访问的卷。</block>
-  <block id="026b1181418b22d0d086ab8b1ee080fb" category="paragraph">您可以通过在一组卷中映射 iSCSI 启动程序 IQN 或光纤通道 WWPN 来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个 WWPN 都允许通过光纤通道网络访问此访问组中的卷。</block>
   <block id="9a8af925f49d81fafe7af5c7760a9d2d" category="list-text"><block ref="57543d97a29cc33d58ce14b3298c6f06" category="inline-xref-macro-rx"></block></block>
   <block id="d9a2e1a0b080274a508aa3e2ea19b885" category="list-text"><block ref="ccaabee6671d5d96edfc9527954a4a58" category="inline-xref-macro-rx"></block></block>
   <block id="5f2e2767f1cc39ad97a918720665204b" category="list-text"><block ref="14b928912d2aef805fbbec0ef3934739" category="inline-xref-macro-rx"></block></block>
@@ -2073,7 +1957,6 @@
   <block id="4ec5a2e90ff6900399e5abea96356eb5" category="admonition">创建卷访问组后，可以添加或删除启动程序。</block>
   <block id="4561f4bbd99d7c358ce9ad3c2fdb044b" category="list-text">单击 * 确定 * 以创建访问组。</block>
   <block id="e603332250b9b151a5395dec1743a726" category="section-title">编辑访问组</block>
-  <block id="4f3f4f4162b25181ddd0cb069357acf7" category="paragraph">您可以从 NetApp Element 管理扩展点编辑卷访问组名称或添加或删除启动程序。</block>
   <block id="0d07d6705ea7ae9dcf80851269cdc590" category="list-text">选中要编辑的卷访问组对应的复选框。</block>
   <block id="7eb38bd0b75a50364b967a69ff9f406c" category="list-text">修改访问组名称。</block>
   <block id="fa731491db627be5297b2ebd42322b75" category="list-text">添加或删除启动程序。</block>
@@ -2093,7 +1976,6 @@
   <block id="9bc00e2adf5e91338e1faa6b1504bdfb" category="list-text">选择 * 从访问组中删除 * 。</block>
   <block id="e744e89ded669d4ac19883e1cce088f8" category="list-text">确认详细信息，然后选择不再希望访问每个选定卷的卷访问组。</block>
   <block id="89313961723b25e99b64b95147ff335f" category="section-title">删除访问组</block>
-  <block id="f91cfc31ba8bd0e4198d8a16c8cfaa3b" category="paragraph">您可以使用 NetApp Element 管理扩展点删除卷访问组。在删除卷访问组之前，您无需删除启动程序 ID 或解除卷与该组的关联。删除访问组后，对卷的组访问将中断。</block>
   <block id="0edf7556e8e57ccc1f12422d38698c24" category="list-text">选中要删除的访问组对应的复选框。</block>
   <block id="a5c32cc8adf2bbc488449723953d85c9" category="doc">取消注册 vCenter 插件</block>
   <block id="55477b2699e6a17485b69a178c7e2060" category="list-text">用于注销插件的 vCenter 管理员角色特权。</block>
@@ -2116,11 +1998,6 @@
   <block id="39afe46771d1f6276e3e9973c494711c" category="list-text">输入 `com.solidfire` 。</block>
   <block id="442fd0a282b7fe9744e68d31fea0a0d8" category="list-text">选择 * 调用方法 * 。</block>
   <block id="10e5d13dc7f14b2e6ce3bf05f1e9cd5e" category="list-text">使用 PowerCLI 注销：</block>
-  <block id="34129fbeb1e745f4b8caaaef6f309345" category="list-text">对于 vCenter 插件 2.6.1 或更早版本：</block>
-  <block id="0daab13d82a3f3a79fca6ede1e80ce6d" category="list-text">在浏览器中输入注册实用程序的 URL 或在程序目录中找到该实用程序：</block>
-  <block id="4b34f8cffb3b975cbb6367514ddb1221" category="list-text">`https://&lt;FDVAorManagementNodeIP&gt;:8443`</block>
-  <block id="b097dd7fc0edd773a7b1a7329a5f3c7d" category="list-text">` /opt/solidfire/vcp/bin/vcp-reg.sh`</block>
-  <block id="7d98cbc5103cb7d15ecf2436f9705068" category="list-text">在 vCenter Plugin Register/Unregister 窗口中，选择 * 取消注册 * 。</block>
   <block id="bf5a8b7651e391406af0962364e6f727" category="summary">您可以使用此插件创建和管理启动程序。</block>
   <block id="067dc4be0fd4af30d6f12cb91408d3a6" category="doc">创建和管理启动程序</block>
   <block id="8d16189da89bc0e08042e3a7ab454f17" category="paragraph">通过启动程序，外部客户端可以访问集群中的卷，从而充当客户端和卷之间通信的入口点。</block>
@@ -2243,7 +2120,6 @@
   <block id="b71679eee5d6955ed941947cd099cf8c" category="list-text">`无法连接到 SIOC 服务` ：在管理节点上的 ` /opt/solidfire/SIOC/data/logs/` 中打开 `sIOC.log` （在较早的管理节点上为` /var/log` 或 ` /var/log/solidfire/` ）以验证 SIOC 服务是否已成功启动。启动 SIOC 服务可能需要 50 秒或更长时间。如果服务未成功启动，请重试。</block>
   <block id="868bb634e7485d261251f49b43513549" category="section-title">QoSSIOC 服务显示为可用，但不可用</block>
   <block id="7633da8fcb93a8a0b7606c60796457ee" category="paragraph">QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。</block>
-  <block id="c52c82e92f6652ed27ee9100b65077e0" category="paragraph">从 NetApp Element 配置扩展点的 * QoSSIOC 设置 * 选项卡中，单击刷新按钮。根据需要更新 IP 地址或用户身份验证信息。</block>
   <block id="a2e3b74e6256816515a4f4476e88e431" category="section-title">已为数据存储库启用 QoSSIOC ，但此功能不可用</block>
   <block id="076b6b32ec77565d3ec23c7e8de33942" category="paragraph">已为数据存储库启用 QoSSIOC ，但 QoSSIOC 不可用。</block>
   <block id="f442137ca604e4772ca9b404bba25c87" category="paragraph">检查数据存储库上是否已启用 VMware SIOC ：</block>
@@ -2256,7 +2132,6 @@
   <block id="9154c6fd5e4a9dc865524f9f8778b48f" category="list-text"><block ref="9154c6fd5e4a9dc865524f9f8778b48f" category="inline-link-rx"></block></block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">发行说明</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
-  <block id="d4eb4c725f599d253c9232568333e094" category="sidebar">链接模式和 vCenter 插件</block>
   <block id="6432b0f49db5c1b83fbc6ce806da11df" category="sidebar">部署前要求</block>
   <block id="599bf02fc8774ce96678e83b0e06ec54" category="sidebar">使用 vCenter 插件管理存储</block>
   <block id="c077177f79a8baa119224257ba919d1b" category="sidebar">创建和管理访问组</block>
@@ -2294,9 +2169,7 @@
   <block id="57b1260b3b4b02b95040a199f4ba7ae7" category="cell"><block ref="57b1260b3b4b02b95040a199f4ba7ae7" category="inline-link-rx"></block></block>
   <block id="1bf351bf2131e4e1257bf891c669a3df" category="inline-link">2.17.56 KB</block>
   <block id="09d6a9e13c81a9feff06e2f08afd0bf9" category="cell"><block ref="09d6a9e13c81a9feff06e2f08afd0bf9" category="inline-link-rx"></block></block>
-  <block id="b6183ce9c4e8eb00aca6382fa0b9133d" category="paragraph">只有在登录到目标 vCenter Web 客户端后，您才能在 Element 插件中管理存储集群。</block>
   <block id="0d4feab6027cad30793ce2dadc6e4fde" category="paragraph">要在 vSphere 链接模式环境中设置存储集群管理，您可以使用以下操作步骤手动添加存储集群。</block>
-  <block id="91e17858e171c728ce382e4d503b66bc" category="list-text">在链接模式环境中要使用此插件的每个 vCenter Server 上注册此插件。</block>
   <block id="58ac558cf97424514dc4281b13503a9e" category="list-text">一次登录到每个链接的 vCenter Server 的 vSphere Web Client 。</block>
   <block id="c4cc76bc9ec18ff5bf06879832a4ba84" category="paragraph">登录后，此插件将在 Web 客户端上安装。</block>
   <block id="a87ae6e15ccb731ab64b5c012e2ae079" category="list-text">登录到要管理存储集群的目标 vCenter 的 Web 客户端。</block>
@@ -2306,15 +2179,11 @@
   <block id="686eb72e50fdf6e66f191bfc6cd63d86" category="list-text">要从 vCenter1 Web 客户端管理 cluster1 ，请将 cluster1 添加到 Element 插件清单中。</block>
   <block id="cc02c1a474fd0061edf9cb89e5207e4b" category="list-text">登录到 vCenter2 Web 客户端。</block>
   <block id="fc1711098d513e4eacdd203c03109df1" category="list-text">要从 vCenter2 Web 客户端管理 cluster2 ，请将 cluster2 添加到 Element 插件清单中。</block>
-  <block id="bbcde54d38a7d044c3b8a3ec056f932f" category="list-text">集群未列在 * 集群 * 部分中。</block>
-  <block id="cec85f10ae66451b3af081cbc5ca7e20" category="list-text">NetApp Element 配置的 * 集群和 QoSSIOC 设置 * 部分显示服务器错误。</block>
   <block id="aa8746d5b71402972581bdd84dcc2484" category="paragraph">还原集群和 QoSSIOC 设置：</block>
   <block id="c3a78f82feea7790e45dc2b8ff202ad6" category="list-text">从 vCenter 中注销。</block>
   <block id="42fe583841480643befc86660359cc97" category="list-text">在当前 vSphere Client 视图中，选择刷新图标。</block>
   <block id="d0027b340b133639d43317fb35d13a94" category="list-text">禁用缓存并刷新浏览器，例如，使用 Ctrl+F5 。</block>
   <block id="389eaf94a0ef26f9ba0cba36b0fb8069" category="list-text">检查集群和 QoSSIOC 设置是否已还原。</block>
-  <block id="b89387a58bf1412670fdff83f0b343a9" category="inline-link-macro">重新添加集群</block>
-  <block id="b7860cf0970d15cae4ff75cc6777e13e" category="paragraph">如果问题描述仍然存在，则需要执行此操作 <block ref="2defad7184bda40da2bf8bda0cd5de7e" category="inline-link-macro-rx"></block>。</block>
   <block id="230c0803a12f9d38853bdccc853eaabd" category="paragraph">要升级此插件，请按照适用于您的产品的升级文档中的说明进行操作：</block>
   <block id="056947baa0d57b8ea8db9699e2b2d650" category="inline-link">升级 NetApp HCI 系统</block>
   <block id="8205746f5d5236ad86d4993e15eed883" category="list-text"><block ref="8205746f5d5236ad86d4993e15eed883" category="inline-link-rx"></block></block>
@@ -2322,7 +2191,6 @@
   <block id="9082b5c51eb2d8daa6920501e4e6ac2a" category="list-text"><block ref="9082b5c51eb2d8daa6920501e4e6ac2a" category="inline-link-rx"></block></block>
   <block id="56570048e2475ec7b64ee91388743714" category="inline-link">《 NetApp Element 软件 12.3.2 发行说明》</block>
   <block id="9add94ad0bafb6a0c0977e09efa22b79" category="list-text"><block ref="9add94ad0bafb6a0c0977e09efa22b79" category="inline-link-rx"></block></block>
-  <block id="72da0f32a8783a5cb119cddae9f955bb" category="admonition">请勿将多个 NetApp Element VASA 提供程序注册到一个 vCenter 实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律声明提供对版权声明、商标、专利等的访问。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版权</block>
   <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
@@ -2337,15 +2205,12 @@
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">开放源代码</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。</block>
   <block id="4af68147a22cc3d80f4eb4f02b5b14a7" category="inline-link">NetApp HCI 1.10发行说明</block>
-  <block id="9203ca429e11584ecc455e2f24e8ab6b" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block> _new_</block>
   <block id="9676fc811bea74225536cdd128daebc0" category="list-text"><block ref="9676fc811bea74225536cdd128daebc0" category="inline-link-rx"></block></block>
   <block id="875455659aea2dfd3f63e40de150b31c" category="inline-link">《NetApp Element 软件12.5发行说明》</block>
   <block id="9de5606ae9b23ff6651244b85bd5dae8" category="list-text"><block ref="9de5606ae9b23ff6651244b85bd5dae8" category="inline-link-rx"></block></block>
   <block id="c7c27143d481078e23cd4144c0df2f10" category="inline-link">vCenter插件4.9发行说明</block>
   <block id="278e17511dfc12c355dd5120b3cdcf38" category="inline-link">计算固件包 2.146 发行说明</block>
-  <block id="cba86f04115d75e398ba32a033e63c37" category="list-text"><block ref="e15eb9592751e0df97c69e856ffc178a" category="inline-link-rx"></block> _new_</block>
   <block id="ad6795e432521efb065caaec447cfa77" category="inline-link">存储固件包 2.146 发行说明</block>
-  <block id="9f873554ab661acde4027ab646c5aa79" category="list-text"><block ref="e8158506d71c28d8d821c3acbeb0f97d" category="inline-link-rx"></block> _new_</block>
   <block id="176d9ae1b8e18dc2cedc534e1da45e7c" category="inline-link">存储固件包 2.99.2 发行说明</block>
   <block id="7a90185243c33f6e26c13fa828aa78ae" category="list-text"><block ref="7a90185243c33f6e26c13fa828aa78ae" category="inline-link-rx"></block></block>
   <block id="d75c92bfa55428c6b64a5ed842bd1c4f" category="section-title">适用于vCenter Server的NetApp Element 插件4.8</block>
@@ -2357,57 +2222,32 @@
   <block id="a6568301ea8af8e996ab5850a7e6e134" category="list-text">注销后、请等待三到五分钟、然后重新登录。</block>
   <block id="7389b01d5fe0e17f5523a7fb85295f91" category="inline-link">此知识库文章</block>
   <block id="2ca516a34cb5ec652761d2350d5a513e" category="list-text">vSphere 6.5、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
-  <block id="8ba5447ae975da458ad42dd041c1bfc0" category="admonition">此插件与适用于VMware vCenter Server 4.6、4.7和4.8的Element插件6.5版不兼容。</block>
   <block id="19f896759122e1f164b08da5c97303fd" category="summary">查看适用于VMware vCenter Server的NetApp Element 插件中的事件日志、其中列出了在集群上执行的操作以及指示错误的任何集群故障。</block>
   <block id="2c2631f50f8a871f30b75888dfbcea96" category="inline-link-macro">管理服务2.21.61的通知(适用于VMware vCenter Server的NetApp Element 插件4.10.12)</block>
   <block id="5a4d1edee05c62a7171ceb8c43afb590" category="list-text"><block ref="5a4d1edee05c62a7171ceb8c43afb590" category="inline-link-macro-rx"></block></block>
   <block id="1953a2d6d8fb71b3d3f05d7ab9aa523c" category="inline-link-macro">管理服务2.20.69通知(适用于VMware vCenter Server的NetApp Element 插件4.9.14)</block>
   <block id="ba9eae25d558175b3670fa75219d16c1" category="list-text"><block ref="ba9eae25d558175b3670fa75219d16c1" category="inline-link-macro-rx"></block></block>
-  <block id="c6df14aa71e88712620087ef3c0051b8" category="inline-link-macro">管理服务2.19.48通知(适用于vCenter Server的NetApp Element 插件4.8.34)</block>
-  <block id="9fd39b76002ba897bb7f2798062dd085" category="list-text"><block ref="9fd39b76002ba897bb7f2798062dd085" category="inline-link-macro-rx"></block></block>
-  <block id="e9ddfae2256b1bb9c9a0f68ff44e48e4" category="inline-link-macro">管理服务2.18.91通知(适用于vCenter Server 4.7.10的NetApp Element 插件)</block>
-  <block id="fd082478be94d13e97e62e3f3f795941" category="list-text"><block ref="fd082478be94d13e97e62e3f3f795941" category="inline-link-macro-rx"></block></block>
-  <block id="30d92c8789efab57b790dee431c18297" category="inline-link-macro">管理服务2.17.56通知(适用于vCenter Server的NetApp Element 插件4.6.32)</block>
-  <block id="159171d6deceb49b698f0e825e2dcbc0" category="list-text"><block ref="159171d6deceb49b698f0e825e2dcbc0" category="inline-link-macro-rx"></block></block>
-  <block id="87a0fdd7b9534808231b4d6ab471ebf1" category="inline-link-macro">管理服务2.17.52通知(适用于vCenter Server的NetApp Element 插件4.6.29)</block>
-  <block id="c60bfba5a7f27b590160ee0a6110ceed" category="list-text"><block ref="c60bfba5a7f27b590160ee0a6110ceed" category="inline-link-macro-rx"></block></block>
-  <block id="770994475f57b3ce3e40618e8d3e1705" category="inline-link-macro">管理服务通知2.16 (适用于vCenter Server的NetApp Element 插件4.6.29)</block>
-  <block id="6906a04b525fc75f5efe6486e751be6d" category="list-text"><block ref="6906a04b525fc75f5efe6486e751be6d" category="inline-link-macro-rx"></block></block>
-  <block id="1cb251dcf63c7c6b0f0f032152675c8b" category="inline-link-macro">管理服务2.14通知(适用于vCenter Server 4.5.42的NetApp Element 插件)</block>
-  <block id="f85c490ca21b5f7fefac2c50acf9bbc6" category="list-text"><block ref="f85c490ca21b5f7fefac2c50acf9bbc6" category="inline-link-macro-rx"></block></block>
-  <block id="a945e669932fbbe48d4794d770411d05" category="inline-link-macro">管理服务声明2.13 (适用于vCenter Server 4.5.42的NetApp Element 插件)</block>
-  <block id="cec503a733d11d28f5cfcc218bf7e140" category="list-text"><block ref="cec503a733d11d28f5cfcc218bf7e140" category="inline-link-macro-rx"></block></block>
-  <block id="d9f3c0c9eb340c8261bfa8b95bd04b9a" category="inline-link-macro">管理服务2.11通知(适用于vCenter Server的NetApp Element 插件4.4.72)</block>
-  <block id="5a7b6af19a3e043296cd2f7ad26a4e45" category="list-text"><block ref="5a7b6af19a3e043296cd2f7ad26a4e45" category="inline-link-macro-rx"></block></block>
   <block id="1dea56720635d200a6c7b3a71efca6ab" category="inline-link">《NetApp Element 软件12.7发行说明》</block>
   <block id="3e51721b09445e45502532be5e6096fc" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block> _new_</block>
   <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
   <block id="1de1fa776d5e13c615b89966caf040ca" category="section-title">适用于VMware vCenter Server的NetApp Element 插件</block>
   <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter插件4.10发行说明</block>
-  <block id="5c6c5d2c88269bcae97dbd93d213851a" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block> _new_</block>
   <block id="af0303f5d07cda64604644ac8608eabd" category="paragraph">作为可选设置、适用于VMware vCenter Server的NetApp Element 插件可启用自动服务质量 <block ref="93ca324be2348cd998a8e30867cdba0f" category="inline-link-rx"></block>）基于存储 I/O 控制 <block ref="bb0ee5f2944d3d4a12da5f2b10b4a8ee" category="inline-link-rx"></block>）标准数据存储库上所有 VM 的设置。可以为任何标准数据存储库启用 QoS 和 SIOC 集成（ QoSSIOC ），从而对所有关联 VM 上的所有 SIOC 设置运行扫描。</block>
   <block id="177259bf399e56131535817a5b3d056c" category="summary">适用于VMware vCenter Server的NetApp Element 插件4.6之前的版本提供了相关文档。</block>
   <block id="51e42727247460a0bec3c65c38a8231b" category="doc">适用于VMware vCenter Server的NetApp Element 插件的早期版本文档</block>
-  <block id="fa1dfaacd9c58d6fa24c3cd804696883" category="paragraph">此外、还提供了适用于VMware vCenter Server的NetApp Element 插件4.10之前版本的文档。</block>
   <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9.</block>
   <block id="f751fbabf8051844c49362e0317859f4" category="cell"><block ref="f751fbabf8051844c49362e0317859f4" category="inline-link-rx"></block></block>
   <block id="b9cf34af101112b6fe1d9cb0084bf6d5" category="inline-link">2.20.69</block>
-  <block id="5794a440d05a5dcbcf77aed8fc304a96" category="cell"><block ref="5794a440d05a5dcbcf77aed8fc304a96" category="inline-link-rx"></block></block>
   <block id="0fc8e7b7f795ce33c6e2864a2ab8efab" category="summary">您可以在适用于VMware vCenter Server的NetApp Element 插件中查看有关连接到选定集群的iSCSI会话的信息。</block>
-  <block id="90ceb2725b7a568b0b7d53711c6985c6" category="paragraph">您可以从适用于VMware vCenter Server的NetApp Element 插件中的NetApp Element 配置扩展点查看QoSSIOC事件。</block>
-  <block id="6735f3147a84072935a66d5ee4cba3c8" category="admonition">使用Element vCenter插件通过管理其他vCenter Server中的集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
   <block id="4376614e44aee58bcb5b464e37f653bd" category="summary">使用适用于VMware vCenter Server的NetApp Element 插件、您可以创建、查看、编辑、删除、 克隆、备份或还原卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。</block>
   <block id="ba45308f1d586697de5a2613412594d6" category="paragraph">使用适用于VMware vCenter Server的NetApp Element 插件、您可以创建、查看、编辑、删除、 克隆、备份或还原用户帐户的卷。您还可以管理集群上的每个卷，以及在卷访问组中添加或删除卷。</block>
   <block id="2e21a75f0172e364fdbd1484eb5046cb" category="summary">升级到适用于VMware vCenter Server的最新NetApp Element 插件。</block>
-  <block id="d6e863df4cb2baca4ec0a31356870241" category="paragraph">您可以按照为您的安装所述的步骤升级适用于VMware vCenter Server的NetApp Element 插件。Element vCenter插件4.10可作为管理服务包的一部分在Element软件和NetApp HCI 版本之外提供。</block>
   <block id="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="list-text"><block ref="a9fc1ab89aaaf4e529a9e4251a8b3b33" category="inline-link-rx"></block></block>
   <block id="c525ffb7ac26e605d251a5d7b5283d5d" category="doc">使用适用于VMware vCenter Server的NetApp Element 插件保护数据</block>
   <block id="295677223735c27b8f769e36504d00f4" category="paragraph">您可以使用适用于VMware vCenter Server的NetApp Element 插件确保在需要的位置创建和存储数据副本。为此，您可以创建和管理卷和组快照，设置快照计划以及创建卷和集群对关系以在远程集群之间进行复制。</block>
   <block id="a43682c16170c0daeb4b61bea847cf50" category="summary">下面列出了系统警报、这些警报是信息、警告或错误、可通过使用适用于VMware vCenter Server的NetApp Element 插件的报告页面指示集群的运行状况。</block>
   <block id="54a42634d580de7f407c8a5db3ecb280" category="summary">开始使用适用于VMware vCenter Server的NetApp Element 插件之前、您需要了解产品安装和使用的前提条件。</block>
   <block id="cb06d1227bb1236adf952ff5f5ffde34" category="doc">适用于VMware vCenter Server的NetApp Element 插件的要求</block>
-  <block id="a7d3dde6b1975bac709fda9052ae145a" category="paragraph">在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您需要确保系统满足插件使用要求。</block>
-  <block id="0a17c7cca46191582570013339ad71ef" category="paragraph">要使用Element vCenter插件、需要使用VMware vSphere 7.0、6.7或6.5、包括配置了软件iSCSI适配器和iSCSI网络的vCenter和ESXi。</block>
   <block id="8bb0a675e2ae63d09c6c36d5bb66f1b5" category="list-text">vSphere 7.0和7.0 Update 1和2、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="1ea81b2a1a5af8aa2bbc471d319704d1" category="list-text">vSphere 7.0 Update 3、包括使用Spring Framework 4的vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="e4eccb810d78b1a07fe7514cdf52eb9f" category="admonition">升级到VMware vCenter Server 7.0 U3时、Element插件无法部署。要使用Spring Framework 4解决此问题描述 、请参见<block ref="770c119932f7fa962a47dc0795db1af6" category="inline-link-rx"></block>。</block>
@@ -2421,27 +2261,20 @@
   <block id="f24eae8643c6cb1d0006da935aedec3b" category="image-alt">适用于vCenter Server的NetApp Element 插件注册实用程序菜单</block>
   <block id="4c4722e5324c9cd449ccd55ff6c40753" category="paragraph">您可以使用适用于VMware vCenter Server的NetApp Element 插件通过vCenter链接模式从其他vCenter Server管理集群资源。</block>
   <block id="e1595aba7650be0c4b402c998ad1c5ed" category="summary">通过使用适用于VMware vCenter Server的NetApp Element 插件的报告页面监控警报、这些警报可提供信息、警告或错误、指示集群的运行状况。</block>
-  <block id="d21eb641630f2fbe2737ceec55154371" category="doc">安装和配置适用于VMware vCenter Server的NetApp Element 插件</block>
-  <block id="a7dbf346e712ae6e21c15681462b415f" category="paragraph">您可以将适用于VMware vCenter Server的NetApp Element 插件的最新版本直接安装到vCenter中、并使用vSphere Web Client访问此插件。</block>
   <block id="169c2e8ca40df6aaefeb2f88a3a0791d" category="doc">适用于VMware vCenter Server的NetApp Element 插件产品概述</block>
   <block id="aac2194ee6e04f48729b889da7441b8c" category="paragraph">适用于VMware vCenter Server的NetApp Element 插件是一款与VMware vSphere Web Client用户界面(UI)集成的基于Web的工具。该插件是 VMware vSphere 的一个扩展和备用可扩展，用户友好型界面，可管理和监控运行 * NetApp Element software* 软件的存储集群。</block>
   <block id="51f311566f32302efc2fbbc6302900da" category="summary">使用适用于VMware vCenter Server的NetApp Element 插件的报告页面查看有关集群组件和性能的信息。</block>
   <block id="67072320f5169240d02469527b184433" category="paragraph">您可以使用适用于VMware vCenter Server的NetApp Element 插件的报告页面查看有关集群组件和性能的信息。</block>
   <block id="2b0c828f14aa63b395df1a30c61d61a1" category="paragraph">使用适用于VMware vCenter Server的NetApp Element 插件、您可以管理由Element卷提供支持的数据存储库。您可以创建，扩展，克隆，共享或删除数据存储库。您还可以使用 VAAI UNMAP 允许集群从精简配置的 VMFS 数据存储库回收可用块空间。</block>
-  <block id="bd8fb42cceeb576c1e2d18b77946eed5" category="admonition">使用适用于VMware vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
   <block id="b24c943e5c24047127dea66291cfe9e7" category="summary">您可以从适用于VMware vCenter Server的NetApp Element 插件的报告选项卡上的卷性能页面查看选定集群中所有卷的性能信息。</block>
   <block id="c22121750a7295f0a0efe2d585d7a948" category="summary">了解此版本的适用于VMware vCenter Server的NetApp Element 插件中的新增功能。</block>
   <block id="66651251ffc02faf1ed89440cd38f351" category="doc">适用于VMware vCenter Server的NetApp Element 插件中的新增功能</block>
-  <block id="25254260c83de85b427dcd94f7c337e5" category="paragraph">适用于vCenter Server 4.10的NetApp Element 插件包含已解决的问题、包括安全漏洞、这些问题可能会显著减少升级期间出现的中断、并增强某些环境的日常操作。在该插件的4.10版中、联机帮助链接已过渡到此版本 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block>。要从插件中访问联机帮助链接、您必须能够访问网络。</block>
   <block id="1614d1f32c2461293d78d48916983c1c" category="paragraph">Element vCenter插件4.10可用于2.21.61版的管理服务。</block>
   <block id="e6d3d1619eb4fdac2775643fea2a6c05" category="section-title">适用于vCenter Server 4.9的NetApp Element 插件</block>
-  <block id="be2443c4720bed9c69fd7e827839e61c" category="paragraph">适用于VMware vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。</block>
   <block id="d186d1a54781fe84473dd5d36734fed7" category="paragraph">Element vCenter插件4.9可用于管理服务2.20.69版。</block>
   <block id="537ead2e0cdece5a8f74b676b2a76ecc" category="paragraph">Element vCenter插件4.8可在2.19版管理服务中使用。</block>
-  <block id="2d11279b1331356298fd619891de0ffa" category="section-title">适用于VMware vCenter Server 4.7的NetApp Element 插件</block>
   <block id="518d3755563da4f104451562701d56eb" category="paragraph">Element vCenter插件4.7提供了重要的安全改进功能、进一步改进了中的功能<block ref="b1233a0bfa93edf062561cc29a402448" category="inline-link-rx"></block> 版本。</block>
   <block id="3c6aed0f37a9d3e025c0d369363e99bf" category="paragraph">Element vCenter插件4.7可在2.18版管理服务中使用。</block>
-  <block id="e414ac316c65e7ad77077a83fdacb5cf" category="section-title">适用于VMware vCenter Server的NetApp Element 插件4.6.</block>
   <block id="f91a1dbcfbda3cae56acbe505dc321b1" category="paragraph">管理服务的2.16版提供了Element vCenter插件4.6。</block>
   <block id="baf751cfa98ca2f74ceb6948fcda780b" category="inline-link-macro">适用于VMware vCenter Server的NetApp Element 插件概述</block>
   <block id="63cc63082dc63dbd2008d199a2bbc40f" category="list-text"><block ref="63cc63082dc63dbd2008d199a2bbc40f" category="inline-link-macro-rx"></block></block>
@@ -2472,7 +2305,344 @@
   <block id="102fa0b3d48f5eb07a14f36cdde32296" category="sidebar">SolidFire 和Element文档资源</block>
   <block id="e832d6528eba00e46f3e6d6ad9b8258b" category="sidebar">NetApp HCI 文档资源</block>
   <block id="f5409f597000de172b3e43bc31e32407" category="sidebar">《NetApp混合云控制和管理服务发行说明》知识库</block>
-  <block id="11c89ff1a6e1a8fdbe820874038b12c8" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件4.10、还包括版本4.6、4.7、4.8和4.9。</block>
   <block id="8e929e82af0bc25d8adcd4def2eab9a9" category="paragraph">Element vCenter插件4.8提供了一些安全改进功能、内存利用率改进功能以及第三方库升级功能。</block>
   <block id="858ea7ae6467e65992f082751f2c1cdf" category="sidebar">NetApp Element 软件中的新增功能</block>
+  <block id="66b9d76f9d2f1678de4ba80d9c517727" category="inline-link">升级到VMware vSphere 7.0 Update 3后、vCenter插件部署失败</block>
+  <block id="b2010cfbe08400d17df7d20e56543ad4" category="list-text"><block ref="b2010cfbe08400d17df7d20e56543ad4" category="inline-link-rx"></block></block>
+  <block id="4cbb394942ec1b0daa987a067831332a" category="list-title">NetApp Element vCenter插件4.10及更早版本的更正操作</block>
+  <block id="41180b9d912ac0775c54f8d9b5e8f219" category="list-text">这些集群未列在插件扩展点中的*集群*部分中。</block>
+  <block id="8e51bc02e420db8c01421fc5ed79d132" category="list-text">在*集群*和* QoSSIOC设置*部分中显示服务器错误。</block>
+  <block id="9b3df7377701499fa3c2a34110caca4a" category="inline-link-macro">为Element插件5.0或更高版本重新添加集群</block>
+  <block id="d942f53bb7018f8a55801f617d4168be" category="inline-link-macro">为Element插件4.10或更早版本重新添加集群</block>
+  <block id="d43a5dd6ed0dabcc84cc97121be1df5d" category="paragraph">如果问题描述仍然存在，则需要执行此操作 <block ref="dec66aca21129136d39edb540f5338e5" category="inline-link-macro-rx"></block> 或 <block ref="4cfc46098095584c6125d8df7f30717a" category="inline-link-macro-rx"></block>。</block>
+  <block id="5fe88e50f88c09fd79273fc07dc9c35d" category="paragraph">从NetApp Element 远程插件&gt;配置选项卡的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。</block>
+  <block id="0fa192dc2fdb28923d8429e74a3351f9" category="paragraph">从NetApp Element 配置扩展点的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。</block>
+  <block id="02762e915121057c841797106c1e2368" category="doc">NetApp Element 远程插件扩展点</block>
+  <block id="3f321b21c44f9d511aeef7e8094bd5f2" category="paragraph">从NetApp Element vCenter插件5.0开始、您可以使用NetApp Element 远程插件扩展点访问远程Element插件、通过该扩展点、您可以配置和管理集群、节点和驱动器并查看集群信息。</block>
+  <block id="808ee249c974e634470017799c571da3" category="paragraph">NetApp Element 远程插件扩展点提供了以下选项卡：</block>
+  <block id="6f838040c8e5310c491e521ede4462e6" category="list-text"><block ref="cff8b5d1baab44430cf8d64e546d83b9" category="inline-xref-macro-rx"></block></block>
+  <block id="fe04896dce545327fdc3ffeac742f64d" category="list-text"><block ref="2d746d9e0bab1c24493013a8adbfe787" category="inline-xref-macro-rx"></block></block>
+  <block id="babd22b5b72981328891ce98baeddcd0" category="list-text"><block ref="498efb1c181562561cf51a873ecf9202" category="inline-xref-macro-rx"></block></block>
+  <block id="5ec3ef4a2065434a3bb824e3b2dcb81e" category="list-text"><block ref="49ac0019839a03b9b626be93d8252be3" category="inline-xref-macro-rx"></block></block>
+  <block id="bf647454e36069fd16f1a7a35cf6a865" category="section-title">入门</block>
+  <block id="6c434d67702a3bb88eba48c8870fd5ee" category="paragraph">Getting Started选项卡介绍了此插件的扩展点以及可执行的操作。您可以从每个页面隐藏"入门"页面、也可以从*关于*选项卡还原这些页面。</block>
+  <block id="254f642527b45bc260048e30704edb39" category="section-title">Configuration</block>
+  <block id="99a083d1a8aaf7e639363ce46df8a6cb" category="paragraph">通过*配置*选项卡、您可以添加和管理集群、以及配置QoSSIOC的管理节点设置。</block>
+  <block id="e95890b45746f6c67fa619cd249ed6c0" category="image-alt">配置选项卡</block>
+  <block id="afb30a4920894ac793b3e52188990d76" category="paragraph">以下选项卡可从*配置*选项卡访问：</block>
+  <block id="fe4dbcab9b910577e5035e97ac068dae" category="section-title">管理</block>
+  <block id="8d80ac2ae8158fcc915155e49d717ae8" category="paragraph">使用*管理*选项卡、您可以执行以下活动：</block>
+  <block id="ee4dd45a1af5d1ae12d2bddc809c6495" category="list-text">查看集群信息</block>
+  <block id="ae4f12a9fd51bdcdee05f9cb94f9ebac" category="list-text">管理数据存储库、卷、用户帐户、访问组和启动程序</block>
+  <block id="b6459d816d310af03f8c5f033b25e0df" category="list-text">管理单个组快照以及添加和管理驱动器和节点</block>
+  <block id="02fa5dda99bec712095f03107cadc8bb" category="image-alt">管理选项卡</block>
+  <block id="dee7117b01583d52e67ffaf8a91a896c" category="paragraph">以下选项卡可从*管理*选项卡访问：</block>
+  <block id="184880d005651c6a28f8288a8b8e5003" category="list-text">* 报告 * ：显示有关集群组件的信息并提供集群性能概述。您还可以从选项卡中查找有关事件、警报、iSCSI会话、正在运行的任务和性能卷的信息。</block>
+  <block id="8f7f4c1ce7a4f933663d10543562b096" category="section-title">About</block>
+  <block id="3da585634416ac7af002de86560ec479" category="paragraph">显示插件版本信息并提供服务包下载选项。</block>
+  <block id="19c63df81b4a931980753ca5b4f349e8" category="inline-link-macro">适用于 vCenter Server 的 NetApp Element 插件概述</block>
+  <block id="4edecfeb69ec8a77c0bf8f61fa93ec9b" category="list-text"><block ref="4edecfeb69ec8a77c0bf8f61fa93ec9b" category="inline-link-macro-rx"></block></block>
+  <block id="8088f26fd11b6aee24aa85e21c8554c1" category="paragraph">您可以使用插件扩展点向集群添加驱动器、查看现有驱动器以及删除驱动器。</block>
+  <block id="a19f2337414927a2386f0e5759652f45" category="paragraph">您可以使用插件扩展点向集群添加驱动器。向集群添加节点或在现有节点中安装新驱动器时、驱动器会自动注册为<block ref="78945de8de090e90045d299651a68a9b" prefix=" " category="inline-code"></block>。您必须先将驱动器添加到集群中，然后每个驱动器才能加入集群。</block>
+  <block id="f52969ed7de53ed35bcdf18c7e49a448" category="list-text">在vSphere Web Client中、打开*集群*选项卡：</block>
+  <block id="ed1c0c85efb473570e9e0b99a58d6af4" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;集群*。</block>
+  <block id="abf7eef6bed0197895c3bf534495b705" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt;集群*。</block>
+  <block id="cffb1f002f64dfacc3e64e76675874ca" category="paragraph">您可以使用插件扩展点"Cluster"选项卡中"Drives"页面上的"Active"视图查看集群中的活动驱动器列表。您可以使用下拉筛选器选择可用选项来更改此视图。</block>
+  <block id="fbde2570c577c83970a1770f2bbb6b86" category="paragraph">您可以使用插件扩展点从集群中删除驱动器。在减少集群容量或准备更换接近使用寿命的驱动器时，您可以执行此操作。删除驱动器会使该驱动器脱机。在将驱动器从集群中删除之前，驱动器上的所有数据都会被删除并迁移到集群中的其他驱动器。根据集群上的容量利用率和活动 I/O ，将数据迁移到系统中的其他活动驱动器可能需要几分钟到一小时的时间。</block>
+  <block id="abb08438372677f826c66c2cf08946ee" category="paragraph">此外、还为适用于VMware vCenter Server的NetApp Element 插件5.0之前的版本提供了相关文档。</block>
+  <block id="aa6c9b02197698bcb50fa64860739d2c" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件5.0、还包括版本4.6、4.7、4.8、4.9和4.10。</block>
+  <block id="30dcb9c22f4d8eee8411cf243edfe0c6" category="cell">4.10</block>
+  <block id="d4b8b3b5c408146a8aaffd739bb70e85" category="cell"><block ref="d4b8b3b5c408146a8aaffd739bb70e85" category="inline-link-rx"></block></block>
+  <block id="cdac12e8444404de524af6aed2665f45" category="inline-link">2.21.61</block>
+  <block id="493947108f90792d70b0080451b59368" category="cell"><block ref="493947108f90792d70b0080451b59368" category="inline-link-rx"></block></block>
+  <block id="562a438f33bff2259da6858dd288f400" category="cell"><block ref="562a438f33bff2259da6858dd288f400" category="inline-link-rx"></block></block>
+  <block id="35217a2ac23a8b6448931b9efc4c4f94" category="paragraph">答 <block ref="2934e3adb910b5942a2e24ca276b4338" category="inline-link-macro-rx"></block> 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。</block>
+  <block id="adcd2fc490460962064733fd569fa4ea" category="paragraph">您可以通过在一组卷中映射iSCSI启动程序IQN或FC WWPN来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个WWPN都可以通过FC网络访问此访问组中的卷。</block>
+  <block id="ba5eebae5f14aac1ccd19f5057a508df" category="list-text">在vSphere Web Client中、打开*管理*选项卡：</block>
+  <block id="00d5861848d4c935bdf9d8f9e8d3a493" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;管理*。</block>
+  <block id="26f563562e9fca03d9fee200dd5ca782" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt;管理*。</block>
+  <block id="8dd24e4f47b78cbcad6c8014e9aaf2dc" category="paragraph">您可以编辑卷访问组名称、或者在插件扩展点中添加或删除启动程序。</block>
+  <block id="d5e94feb5a7e2863836bfcbf43e3040c" category="paragraph">您可以使用插件扩展点删除卷访问组。在删除卷访问组之前，您无需删除启动程序 ID 或解除卷与该组的关联。删除访问组后，对卷的组访问将中断。</block>
+  <block id="a20f6296e58ebcc988028fe8f0bc04e9" category="summary">了解适用于vCenter Server的远程NetApp Element 插件架构。</block>
+  <block id="70c22dd525f30cc0a04f947707191ca2" category="doc">远程插件架构概述</block>
+  <block id="d70e2fbb1f0c50d80e6563245c45884e" category="paragraph">从适用于vCenter Server 5.0的NetApp Element 插件开始、此插件的架构将从本地更改为远程。随着远程架构的推出、此插件不再部署在vCenter Server中。对于适用于vCenter Server 4.10或更早版本的Element插件、此插件部署仍位于其注册到的vCenter服务器的本地。</block>
+  <block id="8f49aad217d33b1d6d765c5bb73c5aab" category="paragraph">此页面介绍了适用于vCenter Server的远程NetApp Element 插件的实施。</block>
+  <block id="6f1a08637eed2bd2bdee6dcd4a5f759b" category="paragraph">vSphere Client远程插件架构旨在将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程插件架构支持插件隔离、支持横向扩展在大型vSphere环境中运行的插件、并具有以下优势：</block>
+  <block id="e48c29aa733cf1bd98f73c25e6be44d6" category="list-text">此插件可防止受同一vSphere Client上加载的不稳定或受损插件的干扰。</block>
+  <block id="a5dee47acf5561a559cd0ee8e79400d9" category="list-text">在vCenter Server升级过程中、插件兼容性非常强大。</block>
+  <block id="23f5385408076926ab7ca98425cc1aa4" category="list-text">不兼容的插件不会干扰vCenter Server操作。</block>
+  <block id="b304139bec0652246bd49e53776879d6" category="list-text">您可以在同一vSphere环境中部署多个插件版本。</block>
+  <block id="ce736ec3ebf15f49841cb0ad085e6e79" category="list-text">远程插件用户界面只需与单个后端服务器进行通信即可。</block>
+  <block id="090915874374b0102baffe6c77cdf820" category="list-text">部署的插件拓扑结构定义明确、易于理解哪些支持故障排除。</block>
+  <block id="de3079f9579c5fed13d4f4e460eae070" category="section-title">适用于vCenter Server的远程Element插件高级架构</block>
+  <block id="0db3217129ec18272b5f5715d23fa6c7" category="paragraph">使用NetApp Hybrid Cloud Control、远程Element插件与管理服务部署在管理节点内的Docker容器中。</block>
+  <block id="06db4b3e7eb409c2df1495a0e8cdd8fa" category="inline-image-macro">远程插件高级架构</block>
+  <block id="3bf4ee63b3991234d9028945be0adff4" category="paragraph"><block ref="3bf4ee63b3991234d9028945be0adff4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="034c451c62bba970557c5425009ce0db" category="paragraph">远程Element插件vCenter Server、注册服务和存储I/O控制(SIOC)服务共享相同的Docker服务、但侦听不同的端口。</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">Port</block>
+  <block id="cbcbbaf76a7eae1c51c75673e93ed055" category="cell">远程Element插件vCenter Server</block>
+  <block id="b8ffa41d4e492f0fad2f13e29e1762eb" category="cell">8333</block>
+  <block id="1794bd9600f1857e1549d0a8ffccaef9" category="cell">注册服务</block>
+  <block id="7dc8b441cf4e6fe9bc806679c4579e68" category="cell">9443</block>
+  <block id="b0d91179e8218af54f9eeea4682faf28" category="cell">SIOC服务</block>
+  <block id="7e6b20d014d1c659e4eaf20dc2dcd7eb" category="cell">8443</block>
+  <block id="935a19789070936a14a3c8937d3a30df" category="section-title">远程Element插件通信路径概述</block>
+  <block id="4683ccb7dc7ad6d2ed37fd1aa858b0cb" category="paragraph">您必须先使用管理节点上运行的注册服务向vCenter Server注册远程插件 <block ref="109a2b028cafee8eb30d1b5d201d7929" prefix="(" category="inline-code"></block>）。在注册页面上、您可以看到vCenter Server用户名、密码和<block ref="b3568fa08e53a00f66841ed9ca2c53d4" prefix=" " category="inline-code"></block> 清单文件路径。</block>
+  <block id="0919e8ccb2d7525bd5e7c573d9867cb1" category="admonition">默认路径将填充到用户界面中。无需执行任何操作。</block>
+  <block id="ca10c1060f8dbce44cb06366578c5647" category="paragraph">如果提供的详细信息正确无误、注册服务将向vCenter Server注册此插件、并在插件服务器数据库中输入vCenter详细信息。</block>
+  <block id="e7505babd4b94358b6b9933a0a85a4b0" category="paragraph">注册完成后、插件服务器将下载<block ref="b3568fa08e53a00f66841ed9ca2c53d4" prefix=" " category="inline-code"></block> 清单文件并启动远程插件部署、其中包括使用将远程插件配置为扩展<block ref="30330632c72fde88683e6d0128535d26" prefix=" " category="inline-code"></block> 客户端。部署完成后、您可以从访问* NetApp Element 远程插件*扩展点<block ref="30330632c72fde88683e6d0128535d26" prefix=" " category="inline-code"></block> Web客户端。</block>
+  <block id="ed7de310eb8308765727f706fb2d5568" category="paragraph">此插件UI中的所有通信均通过vCenter Server进行、vCenter Server使用HTTPS协议运行反向代理服务、该协议负责转发远程插件服务的请求。此插件服务器使用HTTPS基本身份验证与SIOC服务进行交互、并使用Element Java软件开发套件(SDK)与Element集群进行交互。</block>
+  <block id="59760a49ec409ff2c5b1be9ecdb67330" category="summary">您可以安装和配置适用于vCenter Server 5.0及更高版本的Element插件、以便与Element存储结合使用。</block>
+  <block id="466e21f036ce6d9f40d8c2b703698603" category="doc">为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本</block>
+  <block id="8728b3f7d7c47d7fd65bac3eabc83cc5" category="paragraph">从适用于vCenter Server 5.0的NetApp Element 插件开始、您可以将最新版本的Element插件直接安装到vCenter中、并使用vSphere Web Client访问此插件。</block>
+  <block id="04d8fc016f271b568cf1a1d1083ae782" category="paragraph">您可以手动执行此操作<block ref="206bb996ed133f6420d91bb80f3312b3" category="inline-link-rx"></block> 对于运行 NetApp Element 软件的集群，请使用适用于您的配置的映像。</block>
+  <block id="d0dac9771409f37205cf74b6359a36eb" category="list-text">您已部署运行Element软件12.3.x或更高版本的管理节点OVA。</block>
+  <block id="253af74c28d0b35848a95102791f27fd" category="list-text">您的防火墙规则允许打开 <block ref="659e4cbd51cb8dba5a95e3f7e2eb854a" category="inline-link-macro-rx"></block> 在vCenter和存储集群MVIP之间、使用TCP端口443、8443、8333和9443。端口 9443 用于注册，注册完成后可关闭此端口。如果已在集群上启用虚拟卷功能，请确保 TCP 端口 8444 也已打开，以便 VASA Provider 访问。</block>
+  <block id="e5c9b2861b4a79d55c4c6fd061b65585" category="paragraph">对于链接模式环境、您必须向环境中的每个vCenter Server注册单独的插件、以使MOB数据保持同步并能够升级此插件。如果 vSphere Web Client 连接到未注册插件的 vCenter Server ，则此插件对客户端不可见。</block>
+  <block id="8bcdbd50a9399bf2b64dc75f624b1939" category="admonition">以使用 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block>下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。</block>
+  <block id="f0b832d06d5edc14c10e5e1c1026ba96" category="image-alt">远程插件注册实用程序UI</block>
+  <block id="5c6c2ef7575586449d6ec4a970496b3a" category="paragraph">成功安装或升级后、NetApp Element 远程插件扩展点将显示在vSphere Web Client的侧面板的"快捷方式"选项卡中。</block>
+  <block id="2e569d11e48ca9483042fe36d64000ea" category="image-alt">描述了成功升级或安装后的插件扩展点</block>
+  <block id="d193461f11dfb27b71412732360d2f32" category="admonition">如果看不到vCenter插件图标、请参见 <block ref="fe8ddf0323e6cee4658194f2ebc6a4f6" category="inline-link-macro-rx"></block>。</block>
+  <block id="e4c576dcf9b8cfc164356e80b9e26656" category="paragraph">您可以使用NetApp Element 远程插件扩展点添加和管理运行Element软件的集群。</block>
+  <block id="f9390778a830235e991e5e07b112856a" category="list-text">防火墙规则允许打开 <block ref="659e4cbd51cb8dba5a95e3f7e2eb854a" category="inline-link-macro-rx"></block> 在vCenter和集群MVIP之间、使用TCP端口443、8333和8443。</block>
+  <block id="c34a23271451082a0022eb7a00ed289e" category="admonition">要使用管理功能、必须至少添加一个集群。</block>
+  <block id="66b6a83cb20d43e1a53af0cabb1e6e1d" category="list-text">选择* NetApp Element 远程插件&gt;配置&gt;集群*。</block>
+  <block id="73562fee387ed6c5a17d51e58616a581" category="list-text">选择* NetApp Element 远程插件&gt;配置&gt; QoSSIOC设置*。</block>
+  <block id="4bb027f11ea3fdd32821c7a091313cbd" category="paragraph">如果状态为以下任一项、请参见此｛url-peak｝[KB^]进行故障排除：</block>
+  <block id="5fda886f729cfe9f142dbd99d2b6cb09" category="list-text"><block ref="08a38277b0309070706f6652eeae9a53" prefix="" category="inline-code"></block>：未启用QoSSIOC。</block>
+  <block id="aa265d5e490cb8a81cfc512f91c383eb" category="list-text"><block ref="ac10863a89ea5da5d78b29ab7d8d4db9" prefix="" category="inline-code"></block>：尚未配置QoSSIOC设置。</block>
+  <block id="b474df170c76dcfb342270e5376869e1" category="list-text"><block ref="8e8acaa1cba651ded0d5a7427cba69ac" prefix="" category="inline-code"></block>：vCenter无法与网络上的QoSSIOC服务进行通信。mNode 和 SIOC 服务可能仍在运行。</block>
+  <block id="bda418bc832f2001229eadd9cdeaa03d" category="paragraph">您可以从插件扩展点的"Reporting"选项卡查看选定集群中所有卷的性能信息。</block>
+  <block id="50e580559681b896dda3dd2f1a75b68b" category="list-text">从vCenter插件中、打开*报告*选项卡：</block>
+  <block id="667522936c8839a59a7778b53cc6e68a" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;报告*。</block>
+  <block id="f0ce3dd6c4b88d5b0cbc69c5d531a3a2" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management&gt; Reporting*。</block>
+  <block id="2c1e263910d994848fed403b89dccbd0" category="list-text">选择*卷性能*。</block>
+  <block id="78eff24e35956a856d21e25903aa9b2c" category="paragraph">通过NetApp Element 管理扩展点、您可以查看集群信息、管理数据存储库、卷、用户帐户、访问组、 和启动程序、管理单个组快照以及添加和管理驱动器和节点。</block>
+  <block id="577264cf2bd321fc731d56278c703c22" category="admonition">使用适用于VMware vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
+  <block id="94341c12e51edbf7ac6e5b4caa8737ac" category="list-text">从vCenter插件中、打开*管理*选项卡：</block>
+  <block id="013aff1f14a63a87888a1ec1cef40e97" category="paragraph">您可以在插件扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。</block>
+  <block id="6515ee9060e70353f9e70cfdc1b81f05" category="paragraph">启用数据存储库 QoSSIOC 设置后，卷级别的任何 QoS 设置都将被覆盖。</block>
+  <block id="ab5a2e1182407c1415e14a4d40a00d1e" category="paragraph">操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档<block ref="be550d2037a470ce38c4e9b1205adbd3" category="inline-link-rx"></block> 和<block ref="e78925c5281376a20450a24207e06cd4" category="inline-link-rx"></block>。</block>
+  <block id="4db0281ff6074c3720c0e60c2f519f67" category="list-text">在要放置卷备份的vCenter和集群中、打开*管理*选项卡：</block>
+  <block id="a62b6b895ee3a8cd131047be0ebb39f7" category="list-text">在包含要用于备份的源卷的vCenter和集群中、打开*管理*选项卡：</block>
+  <block id="6f3512a5ff8ddd30db3f705929fc9002" category="list-text">在要还原卷的vCenter和集群中、打开*管理*选项卡：</block>
+  <block id="7dcd92c8f0fbef37c9157b7e4b3d80a6" category="list-text">从包含要用于还原的源卷的vCenter和集群中、打开*管理*选项卡：</block>
+  <block id="41850a9e782a9a5deffba88f60da5f86" category="paragraph">您可以使用插件扩展点从NetApp Element 集群中删除一个或多个卷。</block>
+  <block id="11e419c2947b7d06f69508696bb8366b" category="summary">您可以使用vCenter插件扩展点管理存储集群。</block>
+  <block id="3b0772681519f05a669fc19a78db2094" category="paragraph">在插件扩展点中的"Cluster"选项卡中、您可以查看和更改集群范围的设置、并对驱动器、节点和VLAN执行特定于集群的任务。</block>
+  <block id="f4c3b5c3b03a03813a4efc0d9b5c4948" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.0在Element和NetApp HCI 版本之外作为管理服务包的一部分提供。</block>
+  <block id="9a4f689e4a76aad8186d3bc65ad401fb" category="list-text">从适用于vCenter 5.0的Element插件开始、仅支持VMware vSphere 8.0和7.0。</block>
+  <block id="8ca6efece2cd741765d7545cfba33f66" category="list-text">从适用于vCenter 4.x的Element插件升级到5.0时、由于无法将数据从vCenter实例复制到远程插件、因此已配置此插件的集群将丢失。您必须将集群重新添加到远程插件。这是从本地插件升级到远程插件时的一次性活动。</block>
+  <block id="6b777567daa827d5b0665b94c630539f" category="inline-link">vCenter插件5.0发行说明</block>
+  <block id="0e051271241f0648ba45a8ad135d030c" category="list-text"><block ref="0e051271241f0648ba45a8ad135d030c" category="inline-link-rx"></block></block>
+  <block id="c1117ceebc72342e257fe6e0c4bc9865" category="paragraph">使用此插件、您可以添加<block ref="63488b15d8c0b0f8bf9dc0423b45e226" category="inline-link-rx"></block> 创建集群或需要更多存储时。您还可以添加运行Element软件的存储节点。您必须在vSphere中将NetApp HCI 计算节点添加到此插件之外。</block>
+  <block id="0d1dfc432a3b2a4db9668b9b1172bbb7" category="paragraph">首次打开电源时，节点需要进行初始配置。设置和配置节点后、它会在配置节点时标识的集群上注册自身、并显示在插件扩展点*集群&gt;节点*页面上的待定节点列表中。</block>
+  <block id="a74130a14b9b69624f0f82afb9fc7f9d" category="paragraph">添加运行NetApp Element 软件的FC节点或存储节点时、操作步骤 是相同的。</block>
+  <block id="8bb125254a41a22f9cad35786cd30505" category="paragraph">您可以通过插件扩展点的"Cluster"选项卡的"Nodes"页面查看集群中节点的列表。要查看活动节点列表，必须选择 Active View 。您可以通过选择来更改此视图<block ref="2d13df6f8b5e4c5af9f87e0dc39df69d" prefix=" " category="inline-code"></block>，<block ref="fb67a264f6f097a6906401627cbebd83" prefix=" " category="inline-code"></block>，和<block ref="b1c94ca2fbc3e78fc30069c8d0f01680" prefix=" " category="inline-code"></block> 选项。</block>
+  <block id="3037da5cf9e82f0792beee331eb699ed" category="paragraph">您可以使用插件扩展点重新启动集群中的一个或多个活动节点。</block>
+  <block id="cad457c741fa185de7fb9f1a3f6fd8e6" category="paragraph">您可以使用插件扩展点关闭集群中的一个或多个活动节点。要关闭集群，您可以选择所有集群节点并同时关闭。</block>
+  <block id="7fa39cd359e8278d4b0e842abf2c1899" category="paragraph">NetApp Element 集群中至少需要两个FC节点才能进行FC连接。如果仅连接了一个FC节点、则系统会在事件日志中触发警报、直到您向集群添加另一个FC节点为止、即使所有FC网络流量仍仅在一个FC节点上运行也是如此。</block>
+  <block id="bc01ab8e80900b65aafd1b1005135dbb" category="list-text">选择* iSCSI会话*。</block>
+  <block id="5a5f89a97903e9c726d1fd32e90a8450" category="paragraph">对于与vSphere 6.7或更早版本结合使用的vCenter插件4.0到4.10、您必须完成以下过程才能从vCenter Server中手动删除与此插件关联的所有文件。对于vSphere 7.0及更高版本、取消注册此插件后无需删除文件。</block>
+  <block id="703b4a90cb83eeedcd9f21fb666993cf" category="list-text">vCenter插件4.0到4.10</block>
+  <block id="13730b6c187c8aa8f92956aeb6cd01e2" category="paragraph">使用插件扩展点、您可以通过完成以下任务来配置和管理QoSSIOC：</block>
+  <block id="15829086740e5d8d6ada7649920234b9" category="list-text">监控*概述*页面上的数据。</block>
+  <block id="1e001803864a5eeb813e6a85e53f7e2b" category="paragraph">适用于vCenter Server 5.0的NetApp Element 插件包含远程插件架构、该架构可将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程架构支持插件隔离、并支持横向扩展在大型vSphere环境中运行的插件。远程Element插件随管理服务一起部署在管理节点内的Docker容器中。 <block ref="2629dee4a3682efc27bf42f47699460e" category="inline-link-macro-rx"></block></block>
+  <block id="c5d233b22f0e1d750ac78f2bfaa4bf45" category="paragraph">Element vCenter插件5.0支持VMware vSphere 8.0、7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi和vSphere HTML5 Web Client。</block>
+  <block id="ceec7b007b80cc66468eacb4ee0fa069" category="inline-link">管理服务发行说明2.21.61</block>
+  <block id="e0527e4365aa99f086c41c1e111702c3" category="paragraph">Element vCenter插件5.0可用于2.22.7版的管理服务。如果不使用此插件、则此升级为可选升级、因为所有其他服务和功能均与版本2.21.61相同。有关最新管理服务更新的信息、请参见<block ref="f3a45f13dd8f4769c4d441aacd935790" category="inline-link-rx"></block>。</block>
+  <block id="4673e8d6ed0e7b93905666b7b9b828db" category="section-title">适用于vCenter Server 4.10的NetApp Element 插件</block>
+  <block id="9dcfdea515e48bba43762fa8452d7de6" category="paragraph">Element vCenter插件4.10包含已解决的问题、包括安全漏洞、这些问题可能会显著减少升级期间出现的中断、并增强某些环境中的日常操作。在该插件的4.10版中、联机帮助链接已过渡到此版本 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block>。要从插件中访问联机帮助链接、您必须能够访问网络。</block>
+  <block id="c69dd8e231cb332d435e16f994fd7554" category="paragraph">适用于vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。</block>
+  <block id="0c6401f3a6e4115c47e9c1a72d14ab9e" category="section-title">适用于 vCenter Server 的 NetApp Element 插件 4.7</block>
+  <block id="b61ed991cc99953d3625ddb1c6d83fe1" category="section-title">适用于 vCenter Server 的 NetApp Element 插件 4.6</block>
+  <block id="8c41c261e6caa5882708210153199d1d" category="summary">您可以安装和配置适用于vCenter Server 4.10及更早版本的Element插件、以便与Element存储结合使用。</block>
+  <block id="cbf7fe36aa4c431d35296b6434c41187" category="doc">安装并配置Element插件4.10及更早版本</block>
+  <block id="5a8c1f682d825c304e5dd02c38b93e8a" category="paragraph">您可以将适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件直接安装到vCenter中、并使用vSphere Web Client访问此插件。</block>
+  <block id="9e508b7a35b28ea8b9e349e0b5459c5d" category="admonition">使用适用于vCenter Server的NetApp Element 插件从其他vCenter Server管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
+  <block id="073ea352a31000144ee91ed5adb59470" category="admonition">大多数安装都会使用默认路径。要在使用 HTTP 或 HTTPS 服务器（非公开站点）或修改了 ZIP 文件名或网络设置时自定义 URL ，请选择 * 自定义 URL* 。有关要自定义URL的其他步骤、请参见 <block ref="d2ed5bec20be0e8be5a97f9442c19f29" category="inline-xref-macro-rx"></block>。</block>
+  <block id="f6aa2fab0460e8c79aeee07ded672ece" category="admonition">要使用NetApp Element 管理扩展点功能、必须至少添加一个集群。</block>
+  <block id="1531d1917cc2ee96602fbfc4a19ddb95" category="paragraph">系统会报告每个警报的错误代码、以帮助您确定系统中哪个组件遇到警报以及生成警报的原因。您可以使用插件扩展点查看错误代码：</block>
+  <block id="4bc6bd28cc0c503ef5a8b76a625e2676" category="list-text">从Element vCenter插件5.0开始、选择* NetApp远程插件&gt;管理&gt;报告&gt;警报*。</block>
+  <block id="b1b72fc3251c66742cdb85c43052806b" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management&gt; Reporting &gt; Alerts*。</block>
+  <block id="8d14bf26468b329b6854a28f053cdb5f" category="paragraph">iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协议。协议端点不能由用户删除或修改，不与帐户关联，也不能添加到卷访问组。您可以使用插件扩展点查看协议端点信息：</block>
+  <block id="464cfc2d2e4ee2410ab0c8a62f90df95" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt; VVOL &gt;协议端点*。</block>
+  <block id="0126482d909d889f5f319db887ac95fd" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt; VVOL &gt;协议端点*。</block>
+  <block id="d021259b01e1c886873f2ac20fed3e25" category="paragraph">存储容器的功能类似于传统帐户，可以同时包含虚拟卷和传统卷。每个集群最多支持四个存储容器。要使用 VVol 功能，至少需要一个存储容器。您可以使用插件扩展点创建、删除和查看有关存储容器的详细信息：</block>
+  <block id="02f093eb0754d902a44ac7d587163fe7" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt; VVOL &gt;存储容器*。</block>
+  <block id="d17325c5abac06ae58c739755712457e" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt; VVOL &gt;存储容器*。</block>
+  <block id="f026e5db8cbb2bd6cf7974402c884987" category="paragraph">您还可以在创建VVOL期间在vCenter中发现存储容器。</block>
+  <block id="7afdf929c19e58d487aeeef892432d9e" category="admonition">对于Element软件12.5及更早版本、请勿将多个NetApp Element VASA Provider注册到一个vCenter实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。</block>
+  <block id="72ef472e28ce7788243ff528651aaedc" category="doc">链接模式和vCenter插件</block>
+  <block id="8775b337a59d4b9af3bc1c3a910bf056" category="open-title">适用于vCenter 5.0或更高版本的Element插件</block>
+  <block id="edc8a6e097a0a616799e29670fd1727c" category="paragraph">从Element插件5.0开始、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="list-title">示例</block>
+  <block id="ed8f14d31321b75640df3641f1f3e1e7" category="list-text">注册vCenter1：<block ref="c0c9cb7ddc6826e0f7a7b435702de8c1" prefix=" " category="inline-code"></block></block>
+  <block id="abde5e1877711d7fd2c206e05e749274" category="list-text">注册vCenter2：<block ref="6508886917962a1090e11b56ef7434f1" prefix=" " category="inline-code"></block></block>
+  <block id="2687289ed9b7361a79049b0e28103b8c" category="list-text">通过从单独的管理节点为使用此插件的链接模式环境中的每个vCenter Server注册此插件来部署Element插件。</block>
+  <block id="07bde62c98d9425f751066cd3ab1425d" category="list-text">使用Element插件。</block>
+  <block id="55ff226cd0aaaa383e0f43eaee3f987a" category="list-text">登录到链接模式环境中任何vCenter Server的Web客户端。</block>
+  <block id="747c18431857d6aedb79cdb9e301ecef" category="list-text">在* NetApp Element 远程插件*行中、选择*实例*列表。</block>
+  <block id="c837a20954f6e4212ffb770f04534e04" category="inline-image-macro">从列表中选择实例</block>
+  <block id="9762c1ef739fa00771eaa6b966b28dfb" category="paragraph"><block ref="9762c1ef739fa00771eaa6b966b28dfb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="50fd5d254a1dc5de750bcf90b5680a2e" category="list-text">选择要使用的vCenter Server。</block>
+  <block id="3cfb64d6061592c8af076555c7dec0f3" category="paragraph">选择目标vCenter Server后、您可以为该vCenter Server环境添加和管理集群。</block>
+  <block id="d8136275e7fe2d38f936705c83ebc5b1" category="admonition">您只能查看和管理与选定vCenter Server关联的存储集群。</block>
+  <block id="251e8c34abf8bad3f7c837565d6d29b0" category="paragraph">vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2 处于链接模式。您希望 vCenter1 管理 cluster1 ，而 vCenter2 管理 cluster2 。</block>
+  <block id="eb959172cfbea599b61835fa08175ddd" category="inline-image-macro">描绘了vCenter和集群拓扑</block>
+  <block id="b3fee9f6ce8317e49583f281e7eeef09" category="paragraph"><block ref="b3fee9f6ce8317e49583f281e7eeef09" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2aadc92dae8aa10037f20c45c63e1c17" category="paragraph">向每个vCenter Server的单独管理节点注册此插件后、请设置存储集群管理。</block>
+  <block id="ba89815ee908d9dfc845cfb3149d5ab2" category="list-text">要从vCenter1 Web客户端管理cluster1、请从列表中选择* vCenter1*。</block>
+  <block id="d797341b6b48ab06d8cc9deea1269ce4" category="list-text">将cluster1添加到Element插件清单中。</block>
+  <block id="72a7cd83b5d17a667d1f5e71e5e3645c" category="list-text">在* NetApp Element 远程插件*行中、选择*实例*列表</block>
+  <block id="6517a4eccb70629286703cf974e680a2" category="list-text">要从vCenter2 Web客户端管理cluster2、请从列表中选择* vCenter2*。</block>
+  <block id="48bce3119f16d7e961de670aac9a0f93" category="list-text">将cluster2添加到Element插件清单中。</block>
+  <block id="6b987340a9eb8c0a19bc09737c31c68b" category="open-title">适用于vCenter 4.10或更早版本的Element插件</block>
+  <block id="dd874b9407feb50b5c7b881246dbe379" category="paragraph">对于Element插件4.10或更早版本、只有在登录到目标vCenter Web客户端后、您才能在Element插件中管理存储集群。</block>
+  <block id="b20bdf214d464a5020b147f6d024270f" category="list-text">在使用此插件的链接模式环境中的每个vCenter Server上注册此插件。</block>
+  <block id="67a8fb181dbd5e085fff527886473493" category="admonition">从适用于vCenter 5.0的Element插件开始、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。</block>
+  <block id="93e2289f97da80da1364be2c4e0d10a1" category="list-text"><block ref="93e2289f97da80da1364be2c4e0d10a1" category="inline-link-macro-rx"></block></block>
+  <block id="999fcd675ef09d5bcf48ca4b68629358" category="paragraph">您已在QoSSIOC设置页面上配置QoSSIOC服务设置、并显示* QoSSIOC状态*字段<block ref="fbaedde498cdead4f2780217646e9ba1" prefix=" " category="inline-code"></block>。</block>
+  <block id="af72b44970b0f53f93223ac123ef17f6" category="inline-link-macro">使用Element vCenter插件5.0及更高版本配置设置</block>
+  <block id="122390a27f562fe7f6544690dfe28f01" category="list-text"><block ref="122390a27f562fe7f6544690dfe28f01" category="inline-link-macro-rx"></block></block>
+  <block id="e63b6a8ee18ab791fdc73308263d7334" category="inline-link-macro">使用Element vCenter插件4.10及更早版本配置设置</block>
+  <block id="14837869140e24491abac75e66c5448f" category="list-text"><block ref="14837869140e24491abac75e66c5448f" category="inline-link-macro-rx"></block></block>
+  <block id="7a58b9636c327e4f53eb3a94f83073de" category="paragraph">QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。</block>
+  <block id="ed286b930e1de69ce73874649eb8cd30" category="list-text">在vSphere Web Client中、打开* QoSSIOC设置*选项卡：</block>
+  <block id="9dae8624eccc21cb7bf7a894ffbf9bf8" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;配置&gt; QoSSIOC设置*。</block>
+  <block id="2d1d35ce15355d6d54a4f4916bcb9b56" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置&gt; QoSSIOC设置*。</block>
+  <block id="c66387cd1de0480bd2c9654b23b1dc90" category="list-text">选择 * 确定 * 。此时将显示"QoSSIOC Status"字段<block ref="fbaedde498cdead4f2780217646e9ba1" prefix=" " category="inline-code"></block> 插件可以成功与服务通信时。</block>
+  <block id="e9fee861a44316bc070e0889e006e893" category="paragraph">此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作 <block ref="ca2b2fd8486d4adc93dbf1425e6869a9" category="inline-xref-macro-rx"></block> 页面。</block>
+  <block id="7af2a7e92243549daf29f3adc3c71dda" category="list-text">在* QoSSIOC Automation"列中选择选定数据存储库的按钮。</block>
+  <block id="e9bb8b0b5e2571e151bff003f6243c99" category="paragraph">您可以编辑运行 Element 软件的集群，管理 SSH 配置，设置保护域监控以及关闭集群。</block>
+  <block id="d89835bccb80c8a9ab5109de6242c9b6" category="list-text">必须至少添加一个集群：</block>
+  <block id="a8312a3fa8b1104212746f41b41b6311" category="inline-link-macro">使用适用于vCenter 5.0及更高版本的Element插件添加集群</block>
+  <block id="645ee3f796aa1c252103a2382131b9ac" category="list-text"><block ref="645ee3f796aa1c252103a2382131b9ac" category="inline-link-macro-rx"></block></block>
+  <block id="4ac6862dbdb377d21e6b91031ce6eca5" category="inline-link-macro">使用适用于vCenter 4.10及更早版本的Element插件添加集群</block>
+  <block id="bac0a3d2890b4c3d8f8ec46ff9dc71bf" category="list-text"><block ref="bac0a3d2890b4c3d8f8ec46ff9dc71bf" category="inline-link-macro-rx"></block></block>
+  <block id="9ace6aefe52e2e7b61b2ba2987bd3932" category="admonition">要使用插件扩展点功能、必须至少添加一个集群。</block>
+  <block id="ddb7caa0d7da19325aa1dc4376317463" category="list-text">防火墙规则允许在vCenter和集群MVIP之间通过以下TCP端口进行开放网络通信：</block>
+  <block id="d976f926c490245d10dae594c2af2712" category="list-text">从适用于vCenter 5.0的Element插件开始、在端口443、8333和8443上。</block>
+  <block id="51d73ee3b9aa5bdd2d83b094d69d3e43" category="list-text">对于适用于vCenter 4.10或更早版本的Element插件、请使用端口443和8443。</block>
+  <block id="f1fb5ea94c1050ebaa02766312b28f00" category="paragraph">您可以从vCenter插件扩展点查看集群详细信息。</block>
+  <block id="3a7230d8065b20f8aca2aaef3962fae1" category="list-text">在vSphere Web Client中、打开*集群*选项卡：</block>
+  <block id="16e8713d704389f9e5b9f0ea5a9edd86" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;配置&gt;集群*。</block>
+  <block id="b1e9b6a242911de4fb08b63f7a82d556" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置&gt;集群*。</block>
+  <block id="2c45be0f6bc70f0d13ba783f669dcbe5" category="paragraph">您可以从插件扩展点更改集群用户ID和密码。</block>
+  <block id="27d5b31dab3c0b0d19e86a825f238383" category="paragraph">您可以使用此插件扩展点从vCenter插件中删除不再需要管理的集群的配置文件。</block>
+  <block id="8442c749bcc49725455e21b7bf6f6af5" category="list-text">从Element vCenter插件5.0开始、使用 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block>下、您可以从单独的管理节点为管理NetApp SolidFire 存储集群的每个vCenter Server注册Element插件。</block>
+  <block id="b398dfdb1790f9801fcd58eb5679247a" category="list-text">使用Element vCenter插件4.10及更早版本通过其他vCenter Server管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
+  <block id="0d59d8c82025f672973e2876980b7ce3" category="paragraph">您可以使用插件扩展点手动启用空闲加密(EAR)功能。</block>
+  <block id="0cb57699aef6699a4b4ec7527d51cf60" category="list-text">在显示的菜单中、选择*启用EAR*。</block>
+  <block id="817a53a039eb82a82c74b6fd8e35827d" category="paragraph">您可以使用插件扩展点手动禁用空闲加密(EAR)功能。</block>
+  <block id="599cb802d62593a662d74d879a4ea7d2" category="list-text">在vSphere Web Client中、打开*集群*选项卡b：</block>
+  <block id="2c7e9c9aec418a56f14794f368cf560c" category="list-text">在显示的菜单中、选择*禁用EAR*。</block>
+  <block id="86d6a38be00eba4ab409f5a977441f23" category="paragraph">您可以使用插件扩展点手动启用安全Shell (SSH)会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。</block>
+  <block id="81198632104281eea957be1cab9d81a4" category="paragraph">您可以使用插件扩展点手动禁用对存储集群中节点的安全Shell (SSH)访问。</block>
+  <block id="d202e20d3ddd901020cd8504b8c2a988" category="paragraph">您可以手动启用 <block ref="eb2a8f3ad2c177d2352fbc0a14b04656" category="inline-link-macro-rx"></block> 使用插件扩展点。您可以根据节点或机箱域选择保护域阈值。</block>
+  <block id="8449d435742ac57d994b5255e5b5fa22" category="paragraph">您可以使用插件扩展点手动关闭存储集群中的所有活动节点。</block>
+  <block id="3faa159aa964cba41fdd6f004775fb46" category="paragraph">您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。此插件扩展点提供了一个指向NetApp HCI UI的链接、用于扩展您的系统。</block>
+  <block id="08f925954eaa7c331aa4024f27c73410" category="paragraph">其他链接可从Getting Started和Cluster页面访问：</block>
+  <block id="0e3be44e4c46207bf63ede737f18078b" category="list-text">从Element vCenter插件5.0开始、选择NetApp Element 远程插件&gt;管理。</block>
+  <block id="e548657fb42e8cbef1be99494f820a45" category="list-text">对于Element vCenter插件4.10及更早版本、请选择NetApp Element 管理扩展点。</block>
+  <block id="99743f19cae906ba996350c449e1c983" category="paragraph">在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。</block>
+  <block id="ec039d5a9609896b1378c280f9eb795e" category="paragraph">验证您的系统是否满足使用Element vCenter插件5.0或更高版本的要求。</block>
+  <block id="87e51067c2a7529e01c8fa57d7d29919" category="paragraph">要使用Element vCenter插件、需要使用已配置软件iSCSI适配器和iSCSI网络的VMware vSphere 8.0和7.0、包括vCenter和ESXi。</block>
+  <block id="a293a3d51c53fc838afbc761865ddaa8" category="list-text">vSphere 8.0、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
+  <block id="9cf493ed2f9140046fab3919844fdd27" category="list-text">vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
+  <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link">文章</block>
+  <block id="1400ae8c17045a12d78fd12af11a1d4c" category="admonition">VMware vSphere 6.5和6.7已于2022年10月15日停止支持。从Element插件5.0开始、不再支持vSphere 6.5和6.7。有关详细信息，请参见此<block ref="6a2f70d2ba0033763d7682575dc0f9df" category="inline-link-rx"></block>。</block>
+  <block id="f4bbb6f9fa6c5749dac1df4f2bf8df3e" category="paragraph">验证您的系统是否满足使用Element vCenter插件4.10或更早版本的要求。</block>
+  <block id="eb56b88cdd81d40633d568a23d3857eb" category="paragraph">要使用Element vCenter插件、需要使用VMware vSphere 7.0、6.7或6.5、包括配置了软件iSCSI适配器和iSCSI网络的vCenter和ESXi。</block>
+  <block id="d97bbd8656e24ccefc431a8efa7d71b1" category="admonition">此插件与适用于vCenter 4.6、4.7和4.8的Element插件6.5版不兼容。</block>
+  <block id="2485371e710ec4ea8989c22e13c02067" category="list-text"><block ref="2485371e710ec4ea8989c22e13c02067" category="inline-link-rx"></block></block>
+  <block id="6e965491616fff846a7ae36b0c989a99" category="list-text"><block ref="0e051271241f0648ba45a8ad135d030c" category="inline-link-rx"></block> _new_</block>
+  <block id="e15eb9592751e0df97c69e856ffc178a" category="list-text"><block ref="e15eb9592751e0df97c69e856ffc178a" category="inline-link-rx"></block></block>
+  <block id="e8158506d71c28d8d821c3acbeb0f97d" category="list-text"><block ref="e8158506d71c28d8d821c3acbeb0f97d" category="inline-link-rx"></block></block>
+  <block id="bfc8310ead2967e2e87ebf3b95c4457e" category="list-text">从vCenter插件中、打开*保护*选项卡：</block>
+  <block id="9f6e30da93b129ae703507d1e2e04d6f" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;保护*。</block>
+  <block id="010e6c2a373b82571afeaf2060330298" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt;保护*。</block>
+  <block id="83cce61746a882e311eece2a3930e13f" category="list-text">在vCenter插件中、从vCenter插件中打开*保护*选项卡：</block>
+  <block id="17bbda2c10afb3a45455ef892d38e2cc" category="list-text">打开*管理*选项卡：</block>
+  <block id="f9d626e7bafda3610d6c757f1e60f548" category="list-text">从包含源集群的vCenter中、打开*保护*选项卡：</block>
+  <block id="01782872ab64f41e96e319bfaefc8262" category="paragraph">您可以使用插件扩展点从运行NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。</block>
+  <block id="ba0075aa8b62d71d95245c5912a935bc" category="paragraph"><block ref="dece502e66b0cc077bc3fbb88481b5ab" category="inline-link-macro-rx"></block> 用于控制对基于 NetApp Element 软件的网络上存储资源的访问。</block>
+  <block id="09f1a7a7c1295a24c3e3bf9e67591dd8" category="paragraph">您可以使用插件扩展点删除用户帐户。</block>
+  <block id="c2f2c17f03efbc27379f604eeac16576" category="paragraph">您可以从插件扩展点的集群选项卡的网络页面查看VLAN的网络信息。</block>
+  <block id="762e03751a5bcf1567f9a90b2b32e4b1" category="list-text">要对数据存储库使用QoSSIOC服务、必须先从插件扩展点的QoSSIOC设置页面上配置设置。</block>
+  <block id="49a89c2b3d21ac7c3ef4a5befe6a50fd" category="inline-link-macro">使用Element vCenter插件5.0及更高版本配置设置</block>
+  <block id="c37db1db50463d31553915a94d91b216" category="list-text"><block ref="c37db1db50463d31553915a94d91b216" category="inline-link-macro-rx"></block></block>
+  <block id="2e3ba5c792fb5fd53271799b7070a484" category="inline-link-macro">使用Element vCenter插件4.10及更早版本配置设置</block>
+  <block id="2ba23dfa3b981161d506965cecdb1fce" category="list-text"><block ref="2ba23dfa3b981161d506965cecdb1fce" category="inline-link-macro-rx"></block></block>
+  <block id="e6ef75ce804abb3fafc45fce21292bbe" category="paragraph">您可以从插件扩展创建数据存储库。</block>
+  <block id="bc9c2f3ff2c152ef9e77821cb6fe2b91" category="list-text">要对数据存储库使用QoSSIOC服务、您必须先从插件扩展点的"QoSSIOC Settings"页面上配置设置：</block>
+  <block id="0478961142438ca908428db5393dbaba" category="paragraph">如果QoSSIOC服务不可用、则必须先配置QoSSIOC设置：</block>
+  <block id="cde054e3559c1c9f1f57b66c49bfe49e" category="paragraph">您可以从插件扩展点的"Datastores"页面查看可用的数据存储库。</block>
+  <block id="58a14f9186318e7d122cfec91400cec5" category="paragraph">您可以使用插件扩展点扩展数据存储库以增加卷大小。扩展数据存储库还会扩展与该数据存储库相关的 VMFS 卷。</block>
+  <block id="0815f30cb9ef732c6b62e8a0eda8ca6a" category="paragraph">如果QoSSIOC服务不可用、则必须先从插件扩展点的"QoSSIOC Settings"页面上配置设置：</block>
+  <block id="8ff862509079356450d8655bcee2844d" category="paragraph">您可以使用插件扩展点与一个或多个主机共享数据存储库。</block>
+  <block id="9468e3241dd32c4b46120733b757b50f" category="paragraph">您可以使用插件扩展点删除数据存储库。此操作将永久删除与要删除的数据存储库上的 VM 关联的所有文件。此插件不会删除包含已注册 VM 的数据存储库。</block>
+  <block id="788ffeff4edcb8b53b5292e9cbd1ef32" category="list-text">在vSphere Web Client中、打开*保护*选项卡：</block>
+  <block id="8e9155a0647c2990855309b2276217c0" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;配置&gt;保护*。</block>
+  <block id="e4d8a3d460111250f83590417203c8de" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置&gt;保护*。</block>
+  <block id="8a5139243fd8c5d398af646e28aaa968" category="list-text">(可选)在远程集群上、使用Element UI或插件扩展点验证集群对是否已连接：</block>
+  <block id="d766a07570fa579e0090a8f25ab4b149" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt;保护&gt;集群对*。</block>
+  <block id="022c8955a74b4e4468cc59c8d97c0ad4" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt;保护&gt;集群对*。</block>
+  <block id="15bc7e92fbbba6d39f3ad435d3e9b29d" category="list-text">从包含本地集群的vCenter中、打开*保护*选项卡：</block>
+  <block id="351e499a10622a9d5005948d08b530a4" category="inline-xref">打开保护选项卡</block>
+  <block id="e87e60d3b8eae686f59dad0549e07bb5" category="list-text">从包含远程集群的vCenter中、 <block ref="b621f476b0900d938461122db13717e8" category="inline-xref-macro-rx"></block>。</block>
+  <block id="3ddf97b8ba85f55f893e365c0933865a" category="list-text">要验证集群对是否已连接、请在远程集群上 <block ref="b621f476b0900d938461122db13717e8" category="inline-xref-macro-rx"></block> 或者使用Element UI。</block>
+  <block id="992b5de2f985daf0e15f85a9211086fa" category="list-text">从包含本地集群的vCenter中、打开*管理*选项卡：</block>
+  <block id="2da341721f94dccdfb79c8733b4590e9" category="inline-xref">打开管理选项卡</block>
+  <block id="df49b105831941550aa260b8faab2748" category="list-text">从包含远程集群的vCenter中、 <block ref="a2d7630c00fc5e30b25225082893e325" category="inline-xref-macro-rx"></block>。</block>
+  <block id="e6d513adad672a33e6f6ba0c1553ad98" category="list-text">从插件扩展点选择包含要用作复制源的配对卷的集群：</block>
+  <block id="d9582314542b7f358eb5cf1fe4740fe5" category="list-text">从* NetApp远程插件&gt;管理*中的Element vCenter插件5.0开始。</block>
+  <block id="92b157691c5c81440c4d5fb8c1aba631" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management*。</block>
+  <block id="78443de6b4affdf44d424f773c05a6fe" category="list-text">从适用于vCenter Server的Element插件版本的扩展点中、选择*管理*选项卡。</block>
+  <block id="8906a1cf150bafcbee01a81d8b9c2a1d" category="list-text">选择包含要用作复制目标的配对卷的集群：</block>
+  <block id="a2287157d7f66ffafd484dbaebb3b9b1" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理&gt;管理&gt;管理*。</block>
+  <block id="91bcec4348be0116339e240abd4066a5" category="list-text">从* NetApp远程插件&gt;管理&gt;管理*中的Element vCenter插件5.0开始。</block>
+  <block id="04e07a949fb0baae335306a235e59485" category="paragraph">您可以在插件扩展点的保护选项卡的卷对页面上查看已配对或正在配对的卷的信息。从Element vCenter插件5.0开始、从NetApp Element 远程插件扩展点选择管理选项卡。对于Element vCenter插件4.10及更早版本、请选择NetApp Element 管理扩展点。</block>
+  <block id="0bfdfef00db126e69cd48dc5e3756fde" category="paragraph">您可以在初始配对过程中通过插件扩展点的保护选项卡的卷对页面查看消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。</block>
+  <block id="7d0d76bfba0afd9411399a0321b877af" category="paragraph">在对卷配对后、您可以从插件扩展点的保护选项卡的卷对页面查看警告消息。这些消息将显示在卷状态列中，并且可以显示在配对的源端和目标端。</block>
+  <block id="a97a3542b274263b998a7e50d4fadb56" category="paragraph">您可以启用 VMware vSphere <block ref="b2c897dbc9f8f27c64e032c063a4f688" category="inline-link-macro-rx"></block> 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， <block ref="18ac2bdbb323cba4124b1b85ce340ab4" category="inline-link-macro-rx"></block>， <block ref="4bb7989fc64f274d67c358cc77d42197" category="inline-link-macro-rx"></block>和插件扩展点的主机。</block>
+  <block id="682b4bd17b1197c464e68a9fef0d715f" category="paragraph">您必须使用插件扩展点手动启用vSphere虚拟卷(VVol)功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。</block>
+  <block id="866fd9232c858c7276b1b4fd4d5cec61" category="list-text">在显示的菜单中、选择*启用VVols*。</block>
+  <block id="f27a8dbce14d6736fb385e27c1d64148" category="list-text">从vSphere Client主页中、选择*主机和集群*。</block>
+  <block id="b4217a016a7debbe66f70f8749198d9d" category="list-text">在*存储提供程序*中、选择添加图标。</block>
+  <block id="d991ee613318408b7843d655014a188b" category="admonition">在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider URL 。此外、您还可以从集群详细信息(* NetApp Element 配置&gt;集群*或* NetApp Element 远程插件&gt;配置&gt;集群*)或Element UI中的集群设置中找到此URL <block ref="26fb54e902c0348c4db55b7ce2d6cbe4" prefix="(" category="inline-code"></block>）。</block>
+  <block id="313e753ce35d955809d1ad442a0276cf" category="admonition">首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在* NetApp Element 配置&gt;集群*或* NetApp Element 远程插件&gt;配置&gt;集群*中验证是否已启用此提供程序。为要启用的集群选择*操作*、然后选择*详细信息*。</block>
+  <block id="75fd12f03862ae9d547181b2705bd654" category="paragraph">您可以从插件扩展点中的"VVols"选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。</block>
+  <block id="37329cf5476139bfb90d2b7b9806f417" category="list-text">在vSphere Web Client中、打开* VVols*选项卡：</block>
+  <block id="da76ee36aa8f24a2bbc5c59c70f11e58" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;管理&gt; VVols*。</block>
+  <block id="174c272ec9902379760161672e6fe609" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management&gt; VVols*。</block>
+  <block id="d95986e274d588866379129ad3b823ed" category="paragraph">您可以从插件扩展点查看虚拟卷组件的性能和设置：</block>
+  <block id="d1426b5bb9a73a66029b558e202bd80d" category="paragraph">您可以从插件扩展点删除存储容器。</block>
+  <block id="7def67ab3cfcb3f77657050f8c6dbaec" category="paragraph">您可以从适用于vCenter Server的NetApp Element 插件中的插件扩展点查看QoSSIOC事件。</block>
+  <block id="6d2eee37a5791129fa81d2b32ba01523" category="list-text">使用适用于vCenter Server 4.10及更早版本的NetApp Element 插件从其他vCenter Server管理集群资源 <block ref="dca51ead05041aae3fc819e20576b43e" category="inline-link-macro-rx"></block> 仅限于本地存储集群。</block>
+  <block id="cb70d86f00beeb6827e9995793bef374" category="list-text">在vSphere Web Client中、打开* QoSSIOC Events*选项卡：</block>
+  <block id="9c48c0852d9ddcb9e3b5a40030b8aeb2" category="list-text">从Element vCenter插件5.0开始、选择* NetApp Element 远程插件&gt;配置&gt; QoSSIOC事件*。</block>
+  <block id="e1b91d18ce1722dcbd121c1ee6913aea" category="list-text">对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 配置&gt; QoSSIOC事件*。</block>
+  <block id="93c82fa50530ab1db18373f37f38e453" category="inline-link-macro">管理服务2.22.7通知(适用于VMware vCenter Server 5.0.37的NetApp Element 插件)</block>
+  <block id="6bad10de0797378a77f16be896cb0776" category="list-text"><block ref="6bad10de0797378a77f16be896cb0776" category="inline-link-macro-rx"></block></block>
+  <block id="f9be099601d4e0c767984f181aa078ea" category="inline-link-macro">管理服务2.19.48通知(适用于VMware vCenter Server的NetApp Element 插件4.8.34)</block>
+  <block id="22e76529eafa14e088705c8c2eb51f1a" category="list-text"><block ref="22e76529eafa14e088705c8c2eb51f1a" category="inline-link-macro-rx"></block></block>
+  <block id="25950657a40c97f3a26eadd5a5267fdb" category="inline-link-macro">管理服务2.18.91通知(适用于VMware vCenter Server 4.7.10的NetApp Element 插件)</block>
+  <block id="3a82672769f4754bb132e4738e99a04a" category="list-text"><block ref="3a82672769f4754bb132e4738e99a04a" category="inline-link-macro-rx"></block></block>
+  <block id="e587166432d2b9af4d01db0f30c62a66" category="inline-link-macro">管理服务2.17.56通知(适用于VMware vCenter Server的NetApp Element 插件4.6.32)</block>
+  <block id="11830ef7ca3ac55beb8e48e395c9ce88" category="list-text"><block ref="11830ef7ca3ac55beb8e48e395c9ce88" category="inline-link-macro-rx"></block></block>
+  <block id="8c918f8c84da992411a604e9604e0de2" category="inline-link-macro">管理服务2.17.52通知(适用于VMware vCenter Server的NetApp Element 插件4.6.29)</block>
+  <block id="ed4b820b50c17a4fbdba816e79500837" category="list-text"><block ref="ed4b820b50c17a4fbdba816e79500837" category="inline-link-macro-rx"></block></block>
+  <block id="7cc6e9d671cc2cb47f5c3f9d20c7057f" category="inline-link-macro">管理服务通知2.16 (适用于VMware vCenter Server的NetApp Element 插件4.6.29)</block>
+  <block id="1b72fe1774b978028d65bfdc928580e5" category="list-text"><block ref="1b72fe1774b978028d65bfdc928580e5" category="inline-link-macro-rx"></block></block>
+  <block id="2c5b860cb2b7058782b51f4fcd3e93bc" category="inline-link-macro">管理服务2.14通知(适用于VMware vCenter Server的NetApp Element 插件4.5.42)</block>
+  <block id="a17ceee3528cba96b771283242d64aab" category="list-text"><block ref="a17ceee3528cba96b771283242d64aab" category="inline-link-macro-rx"></block></block>
+  <block id="19d286cc7405b099eb203332d788dc5f" category="inline-link-macro">管理服务声明2.13 (适用于VMware vCenter Server的NetApp Element 插件4.5.42)</block>
+  <block id="099a8bc4bd6465122a6bdaa8caf314f1" category="list-text"><block ref="099a8bc4bd6465122a6bdaa8caf314f1" category="inline-link-macro-rx"></block></block>
+  <block id="24543c4d48ff85f421165ead301349af" category="inline-link-macro">管理服务2.11通知(适用于VMware vCenter Server的NetApp Element 插件4.4.72)</block>
+  <block id="d2b3d7ffe55a21ee9954248dccf4be03" category="list-text"><block ref="d2b3d7ffe55a21ee9954248dccf4be03" category="inline-link-macro-rx"></block></block>
+  <block id="0e9c9eb44ef5108d7204ec64bc76f844" category="sidebar">适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件</block>
+  <block id="74f171bb465a49ebcce88fa91d4562d4" category="sidebar">适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件</block>
+  <block id="2abfacd3d0325353cbe289faa9d0d3b1" category="sidebar">安装和配置适用于 vCenter Server 的 NetApp Element 插件</block>
 </blocks>

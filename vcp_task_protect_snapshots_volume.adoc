@@ -34,7 +34,12 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 您可以为活动卷创建快照，以便在任意时间点保留卷映像。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -78,7 +83,12 @@ NOTE: 设置保留期限时，您可以选择从当前时间开始的期限。�
 您可能需要验证是否已添加快照。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -101,7 +111,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以从卷的快照创建新卷。执行此操作时，系统会使用创建快照时卷上包含的数据使用快照信息克隆新卷。此过程还会在新创建的卷中存储有关卷的其他快照的信息。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 在vCenter插件中、从vCenter插件中打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -129,7 +144,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 . 选择 * 确定 * 。
 . 验证新卷：
 +
-.. 选择 * NetApp Element Management* > * Management* 。
+.. 打开*管理*选项卡：
++
+*** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+*** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 .. 选择 * 卷 * 子选项卡。
 .. 在 * 活动 * 视图中，确认新卷已列出。
 +
@@ -147,7 +167,12 @@ TIP: 如果需要，请刷新页面。
 您可以随时将卷回滚到快照。此操作将撤消自创建快照以来对卷所做的任何更改。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -191,7 +216,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以将 NetApp Element 快照备份到与 Amazon S3 兼容的外部对象存储。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -227,7 +257,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以将 NetApp Element 快照备份到与 OpenStack Swift 兼容的二级对象存储。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -267,10 +302,15 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 在将一个集群备份或还原到另一个集群时，系统会生成一个密钥，用作集群之间的身份验证。此批量卷写入密钥可使源集群向目标集群进行身份验证，从而在向目标卷写入数据时提供安全性。在备份或还原过程中，您需要先从目标卷生成批量卷写入密钥，然后再开始此操作。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
+
+
 
 . 选择 * 卷 * 子选项卡。
 . 选中目标卷对应的复选框。
@@ -285,7 +325,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 . 选择 * 生成密钥 * 可为目标卷生成批量卷写入密钥。
 . 将批量卷写入密钥复制到剪贴板，以应用于源集群上的后续步骤。
-. 从包含源集群的 vCenter 中，选择 * NetApp Element Management* > * Protection* 。
+. 从包含源集群的vCenter中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -310,14 +355,19 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 删除卷快照
 
-您可以使用 NetApp Element 管理扩展点从运行 NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。
+您可以使用插件扩展点从运行NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。
 
 您可以删除正在从源集群复制的快照。如果删除快照时快照正在同步到目标集群，则同步复制将完成，快照将从源集群中删除。快照不会从目标集群中删除。
 
 您还可以从目标集群中删除已复制到目标的快照。已删除的快照将保留在目标上已删除的快照列表中，直到系统检测到您已删除源集群上的快照为止。在目标检测到您已删除源快照后，目标将停止复制该快照。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。

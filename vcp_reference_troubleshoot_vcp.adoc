@@ -31,6 +31,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 *  message for QoSSIOC status
 *  service shown as available but is unavailable
 *  is enabled for datastore but unavailable
+* https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["升级到VMware vSphere 7.0 Update 3后、vCenter插件部署失败"^]
 
 
 
@@ -39,7 +40,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 
 注册显示为成功，但在 vSphere Web Client 中看不到插件图标。
 
-.更正操作
+.NetApp Element vCenter插件4.10及更早版本的更正操作
 * 从 vSphere Web Client 中注销并重新登录。可能需要关闭并重新打开浏览器。
 * 清除浏览器缓存。
 * 从 vCenter 中，从 Windows 管理工具中的服务菜单重新启动 vSphere Web Client 服务或重新启动 vCenter 。
@@ -85,8 +86,8 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 使用VMware vCenter Server 6.7U1升级到Element vCenter插件4.8或更高版本后、可能会遇到以下问题：
 
-* 集群未列在 * 集群 * 部分中。
-* NetApp Element 配置的 * 集群和 QoSSIOC 设置 * 部分显示服务器错误。
+* 这些集群未列在插件扩展点中的*集群*部分中。
+* 在*集群*和* QoSSIOC设置*部分中显示服务器错误。
 
 
 还原集群和 QoSSIOC 设置：
@@ -97,7 +98,7 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 . 禁用缓存并刷新浏览器，例如，使用 Ctrl+F5 。
 . 检查集群和 QoSSIOC 设置是否已还原。
 +
-如果问题描述仍然存在，则需要执行此操作 link:https://docs.netapp.com/us-en/vcp/vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["重新添加集群"^]。
+如果问题描述仍然存在，则需要执行此操作 link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in["为Element插件5.0或更高版本重新添加集群"] 或 link:vcp_task_getstarted.html#add-storage-clusters-for-use-with-the-plug-in["为Element插件4.10或更早版本重新添加集群"]。
 
 
 
@@ -214,7 +215,9 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。
 
-从 NetApp Element 配置扩展点的 * QoSSIOC 设置 * 选项卡中，单击刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
+从NetApp Element 远程插件>配置选项卡的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
+
+从NetApp Element 配置扩展点的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
 
 
 

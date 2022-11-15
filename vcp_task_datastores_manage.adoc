@@ -18,7 +18,12 @@ keywords: netapp, datastore, vcp, vcenter, element
 
 .您需要什么？ #8217 ；将需要什么
 * 要创建和管理数据存储库，必须先至少创建一个用户帐户。
-* 要对数据存储库使用 QoSSIOC 服务，必须首先 link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置设置"] 在 NetApp Element 配置扩展点的 "QoSSIOC Settings" 页面上。
+* 要对数据存储库使用QoSSIOC服务、必须先从插件扩展点的QoSSIOC设置页面上配置设置。
++
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
+
+
 * 由于数据存储库是使用选定 ESXi 主机支持的最高 VMFS 版本创建的，因此所有集群成员都应运行相同版本的 vSphere 和 ESXi ，以避免出现 VMFS 兼容性问题。
 
 
@@ -39,7 +44,7 @@ TIP: 在 vSphere 中使用任务监控功能监控数据存储库操作的完成
 
 == 创建数据存储库
 
-您可以从 NetApp Element 管理扩展创建数据存储库。
+您可以从插件扩展创建数据存储库。
 
 .您需要什么？ #8217 ；将需要什么
 * 必须至少将一台主机连接到 vCenter Server 。
@@ -49,11 +54,21 @@ TIP: 在 vSphere 中使用任务监控功能监控数据存储库操作的完成
 NOTE: 如果您使用的是 vCenter 链接模式，请确保已使用正确的 vCenter Server 添加集群。
 
 * 必须至少创建一个用户帐户。
-* 要对数据存储库使用 QoSSIOC 服务，必须首先 link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置设置"] 在 NetApp Element 配置扩展点的 "QoSSIOC Settings" 页面上。
+* 要对数据存储库使用QoSSIOC服务、您必须先从插件扩展点的"QoSSIOC Settings"页面上配置设置：
++
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
+
+
 
 
 .步骤
-. 选择 * NetApp Element Management* > * Management* 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -129,12 +144,17 @@ TIP: 最大或突发 IOPS 值大于 20 ， 000 IOPS 的卷可能需要较高的�
 
 . 如果要启用 QoSSIOC 自动化，请选中 * 启用 QoS 和 SIOC* ，然后配置 QoSSIOC 设置。
 +
+--
 
 TIP: 如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。
 
-+
-如果 QoSSIOC 服务不可用，请首先 link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置 QoSSIOC 设置"]。
+如果QoSSIOC服务不可用、则必须先配置QoSSIOC设置：
 
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
+
+
+--
 +
 .. 选择 * 启用 QoS 和 SIOC* 。
 .. 配置 * 突发因子 * 。
@@ -166,9 +186,14 @@ TIP: 默认情况下，最大 SIOC 磁盘共享设置为 `无限制` 。在 VDI 
 
 == 查看数据存储库列表
 
-您可以从 NetApp Element 管理扩展点的 "Datastores" 页面查看可用数据存储库。
+您可以从插件扩展点的"Datastores"页面查看可用的数据存储库。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。
@@ -203,9 +228,15 @@ NOTE: 不会列出跨多个卷的数据存储库（混合数据存储库）。�
 
 == 扩展数据存储库
 
-您可以使用 NetApp Element 管理扩展点扩展数据存储库以增加卷大小。扩展数据存储库还会扩展与该数据存储库相关的 VMFS 卷。
+您可以使用插件扩展点扩展数据存储库以增加卷大小。扩展数据存储库还会扩展与该数据存储库相关的 VMFS 卷。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+.步骤
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。
@@ -244,7 +275,12 @@ NOTE: 如果您使用的是 vCenter 链接模式，请确保已使用正确的 v
 
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。
@@ -321,12 +357,17 @@ TIP: 最大或突发 IOPS 值大于 20 ， 000 IOPS 的卷可能需要较高的�
 
 . 如果要启用 QoSSIOC 自动化，请选中 * 启用 QoS 和 SIOC* 复选框，然后配置 QoSSIOC 设置。
 +
+--
 
 IMPORTANT: 如果您使用的是 QoS 策略，请勿启用 QoSSIOC 。QoSSIOC 将覆盖和调整卷 QoS 设置的 QoS 值。
 
-+
-如果 QoSSIOC 服务不可用，则必须先从 NetApp Element 配置扩展点的 "QoSSIOC 设置 " 页面上配置设置。
+如果QoSSIOC服务不可用、则必须先从插件扩展点的"QoSSIOC Settings"页面上配置设置：
 
+** link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
+** link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
+
+
+--
 +
 .. 选择 * 启用 QoS 和 SIOC* 。
 .. 配置 * 突发因子 * 。
@@ -357,7 +398,7 @@ TIP: 默认情况下，最大 SIOC 磁盘共享设置为 `无限制` 。在 VDI 
 
 == 共享数据存储库
 
-您可以使用 NetApp Element 管理扩展点与一个或多个主机共享数据存储库。
+您可以使用插件扩展点与一个或多个主机共享数据存储库。
 
 数据存储库只能在同一数据中心内的主机之间共享。
 
@@ -371,7 +412,12 @@ NOTE: 如果您使用的是 vCenter 链接模式，请确保已使用正确的 v
 
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。
@@ -436,7 +482,12 @@ NOTE: 在创建新数据存储库之前，您至少需要一个已连接的主�
 
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。
@@ -453,9 +504,14 @@ NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用�
 
 == 删除数据存储库
 
-您可以使用 NetApp Element 管理扩展点删除数据存储库。此操作将永久删除与要删除的数据存储库上的 VM 关联的所有文件。此插件不会删除包含已注册 VM 的数据存储库。
+您可以使用插件扩展点删除数据存储库。此操作将永久删除与要删除的数据存储库上的 VM 关联的所有文件。此插件不会删除包含已注册 VM 的数据存储库。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请在导航栏中选择要使用的集群。

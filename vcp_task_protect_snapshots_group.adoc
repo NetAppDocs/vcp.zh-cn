@@ -33,7 +33,12 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 您可以稍后更改组快照的复制设置或保留期限。您指定的保留期限从输入新间隔开始。设置保留期限时，您可以选择从当前时间开始的期限（保留期限不会从快照创建时间开始计算）。您可以以分钟，小时和天为单位指定间隔。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -77,7 +82,12 @@ NOTE: 设置保留期限时，您可以选择从当前时间开始的期限。�
 您可能需要验证是否已添加快照。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -105,7 +115,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以从时间点组快照克隆一组卷。创建卷后，您可以像系统中的任何其他卷一样使用这些卷。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -138,7 +153,12 @@ NOTE: 卷大小和当前集群负载会影响完成克隆操作所需的时间�
 您可以将一组活动卷回滚到一个组快照。此操作会将组快照中的所有关联卷还原到创建组快照时的状态。此操作步骤还会将卷大小还原为原始快照中记录的大小。如果系统已清除某个卷，则在清除时也会删除该卷的所有快照；系统不会还原任何已删除的卷快照。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。
@@ -165,7 +185,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 如果删除属于组快照的卷或快照，则无法再回滚到组快照。但是，您可以单独回滚每个卷。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* > * Protection* 。
+. 从vCenter插件中、打开*保护*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>保护*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>保护*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要使用的集群。

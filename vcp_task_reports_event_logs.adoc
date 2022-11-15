@@ -17,7 +17,12 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, event, log, clust
 您可以查看事件日志，了解在选定集群上执行的操作以及可能发生的集群故障。大多数错误都会由系统自动解决。其他故障可能需要手动干预。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* 。
+. 从vCenter插件中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 . 选择 * 报告 * > * 事件日志 * 。
 . 要查看详细信息，请选择一个事件，然后单击 * 详细信息 * 。
 . 查看包括以下内容的事件信息：

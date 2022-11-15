@@ -14,7 +14,17 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
-适用于vCenter Server 4.10的NetApp Element 插件包含已解决的问题、包括安全漏洞、这些问题可能会显著减少升级期间出现的中断、并增强某些环境的日常操作。在该插件的4.10版中、联机帮助链接已过渡到此版本 link:index.html["文档链接"]。要从插件中访问联机帮助链接、您必须能够访问网络。
+适用于vCenter Server 5.0的NetApp Element 插件包含远程插件架构、该架构可将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程架构支持插件隔离、并支持横向扩展在大型vSphere环境中运行的插件。远程Element插件随管理服务一起部署在管理节点内的Docker容器中。 link:vcp_concept_remote_plugin_architecture.html["了解更多信息。"]
+
+Element vCenter插件5.0支持VMware vSphere 8.0、7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
+
+Element vCenter插件5.0可用于2.22.7版的管理服务。如果不使用此插件、则此升级为可选升级、因为所有其他服务和功能均与版本2.21.61相同。有关最新管理服务更新的信息、请参见 https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["管理服务发行说明2.21.61"^]。
+
+
+
+== 适用于vCenter Server 4.10的NetApp Element 插件
+
+Element vCenter插件4.10包含已解决的问题、包括安全漏洞、这些问题可能会显著减少升级期间出现的中断、并增强某些环境中的日常操作。在该插件的4.10版中、联机帮助链接已过渡到此版本 link:index.html["文档链接"]。要从插件中访问联机帮助链接、您必须能够访问网络。
 
 Element vCenter插件4.10可用于2.21.61版的管理服务。
 
@@ -22,7 +32,7 @@ Element vCenter插件4.10可用于2.21.61版的管理服务。
 
 == 适用于vCenter Server 4.9的NetApp Element 插件
 
-适用于VMware vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
+适用于vCenter Server 4.9的NetApp Element 插件可恢复对vSphere 6.5的支持、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
 
 Element vCenter插件4.9可用于管理服务2.20.69版。
 
@@ -36,7 +46,7 @@ Element vCenter插件4.8可在2.19版管理服务中使用。
 
 
 
-== 适用于VMware vCenter Server 4.7的NetApp Element 插件
+== 适用于 vCenter Server 的 NetApp Element 插件 4.7
 
 Element vCenter插件4.7提供了重要的安全改进功能、进一步改进了中的功能 https://security.netapp.com/advisory/ntap-20210315-0001/["最新的管理服务 2.17.56 修补程序"] 版本。
 
@@ -46,7 +56,7 @@ Element vCenter插件4.7可在2.18版管理服务中使用。
 
 
 
-== 适用于VMware vCenter Server的NetApp Element 插件4.6.
+== 适用于 vCenter Server 的 NetApp Element 插件 4.6
 
 在 4.6 版中，此插件现在支持 vSphere 7.0 Update 1 的组件，包括 vCenter Server ， ESXi 和 vSphere HTML5 Web Client 。
 

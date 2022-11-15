@@ -48,7 +48,12 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 添加虚拟网络时，系统会为每个节点创建一个接口，每个接口都需要一个虚拟网络 IP 地址。创建新虚拟网络时指定的 IP 地址数量必须等于或大于集群中的节点数量。虚拟网络地址由各个节点批量配置并自动分配给这些节点。您无需手动为集群中的节点分配虚拟网络地址。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -100,10 +105,15 @@ NOTE: IP 地址总数必须与存储集群中的节点数匹配。
 
 == 查看虚拟网络详细信息
 
-您可以从 NetApp Element 管理扩展点的集群选项卡中的网络页面查看 VLAN 的网络信息。
+您可以从插件扩展点的集群选项卡的网络页面查看VLAN的网络信息。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -125,7 +135,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 无法修改 VLAN 的 VLAN 标记和 SVIP 。只能修改 VRF VLAN 的网关属性。如果存在任何 iSCSI ，远程复制或其他网络会话，则修改可能会失败。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -146,7 +161,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 您可以永久删除 VLAN 对象及其 IP 块。分配给 VLAN 的地址块将与虚拟网络解除关联，并可重新分配给其他虚拟网络。
 
 .步骤
-. 选择 * NetApp Element 管理 > 集群 * 。
+. 在vSphere Web Client中、打开*集群*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>集群*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>集群*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。

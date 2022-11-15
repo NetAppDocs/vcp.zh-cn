@@ -17,9 +17,13 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 您可以从适用于VMware vCenter Server的NetApp Element 插件的NetApp Element 管理扩展点的报告选项卡的概述页面查看选定集群的集群信息、包括整体容量、效率和性能。
 
 .步骤
-. 从 vCenter 插件中，选择 * NetApp Element Management* 。
-. 选择 * 报告 * 。
-. 监控 " 概述 " 页面上的数据。
+. 从vCenter插件中、打开*报告*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>报告*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management> Reporting*。
+
+
+. 监控*概述*页面上的数据。
 
 
 

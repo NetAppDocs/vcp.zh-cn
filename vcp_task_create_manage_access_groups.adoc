@@ -14,9 +14,9 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 
 
 [role="lead"]
-答 link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html["卷访问组"^] 是一组用户可以使用 iSCSI 启动程序或光纤通道启动程序访问的卷。
+答 link:https://docs.netapp.com/us-en/hci/docs/concept_hci_volume_access_groups.html["卷访问组"] 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。
 
-您可以通过在一组卷中映射 iSCSI 启动程序 IQN 或光纤通道 WWPN 来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个 WWPN 都允许通过光纤通道网络访问此访问组中的卷。
+您可以通过在一组卷中映射iSCSI启动程序IQN或FC WWPN来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个WWPN都可以通过FC网络访问此访问组中的卷。
 
 .选项
 *  an access group
@@ -33,7 +33,12 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 您可以使用一个或多个启动程序创建卷访问组。将光纤通道（ WWPN ）或 iSCSI （ IQN ）客户端启动程序映射到卷访问组中的卷可以在网络和卷之间实现安全的数据 I/O 。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -57,10 +62,15 @@ NOTE: 创建卷访问组后，可以添加或删除启动程序。
 
 == 编辑访问组
 
-您可以从 NetApp Element 管理扩展点编辑卷访问组名称或添加或删除启动程序。
+您可以编辑卷访问组名称、或者在插件扩展点中添加或删除启动程序。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -79,7 +89,7 @@ NOTE: 如果要删除启动程序，请单击垃圾桶图标将其删除。删�
 
 
 
-. 单击 * 确定 * 。
+. 选择 * 确定 * 。
 
 
 
@@ -95,7 +105,12 @@ NOTE: 如果要删除启动程序，请单击垃圾桶图标将其删除。删�
 
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -119,7 +134,12 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 IMPORTANT: 从访问组中删除卷可能会中断主机对卷的访问。
 
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。
@@ -136,10 +156,15 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 删除访问组
 
-您可以使用 NetApp Element 管理扩展点删除卷访问组。在删除卷访问组之前，您无需删除启动程序 ID 或解除卷与该组的关联。删除访问组后，对卷的组访问将中断。
+您可以使用插件扩展点删除卷访问组。在删除卷访问组之前，您无需删除启动程序 ID 或解除卷与该组的关联。删除访问组后，对卷的组访问将中断。
 
 .步骤
-. 选择 * NetApp Element 管理 > 管理 * 。
+. 在vSphere Web Client中、打开*管理*选项卡：
++
+** 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理>管理*。
+** 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理>管理*。
+
+
 +
 
 NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要用于此任务的集群。

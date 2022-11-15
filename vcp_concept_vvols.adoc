@@ -30,7 +30,11 @@ VMware ESXi 主机使用称为协议端点的逻辑 I/O 代理与虚拟卷进行
 
 NetApp Element 集群中的协议端点用作 SCSI 管理逻辑单元。集群会自动创建每个协议端点。对于集群中的每个节点，都会创建一个相应的协议端点。例如，一个四节点集群将具有四个协议端点。
 
-iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协议。协议端点不能由用户删除或修改，不与帐户关联，也不能添加到卷访问组。在 NetApp Element 管理扩展点的 "* VVols">"Protocol Endpoints" 页面上，您可以查看协议端点信息。
+iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协议。协议端点不能由用户删除或修改，不与帐户关联，也不能添加到卷访问组。您可以使用插件扩展点查看协议端点信息：
+
+* 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVOL >协议端点*。
+* 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理> VVOL >协议端点*。
+
 
 
 
@@ -38,7 +42,13 @@ iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协�
 
 存储容器是映射到 NetApp Element 帐户的逻辑结构，用于报告和资源分配。它们可以将原始存储容量汇聚在一起，或者聚合存储系统可以为虚拟卷提供的存储功能。在 vSphere 中创建的 VVol 数据存储库将映射到单个存储容器。默认情况下，单个存储容器包含 NetApp Element 集群中的所有可用资源。如果需要对多租户进行更精细的监管，则可以创建多个存储容器。
 
-存储容器的功能类似于传统帐户，可以同时包含虚拟卷和传统卷。每个集群最多支持四个存储容器。要使用 VVol 功能，至少需要一个存储容器。在 NetApp Element 管理扩展点的 "* VVols">"Storage Containers" 页面上，您可以创建，删除和查看有关存储容器的详细信息。您可以在创建 VVOL 期间在 vCenter 中发现存储容器。
+存储容器的功能类似于传统帐户，可以同时包含虚拟卷和传统卷。每个集群最多支持四个存储容器。要使用 VVol 功能，至少需要一个存储容器。您可以使用插件扩展点创建、删除和查看有关存储容器的详细信息：
+
+* 从Element vCenter插件5.0开始、选择* NetApp Element 远程插件>管理> VVOL >存储容器*。
+* 对于Element vCenter插件4.10及更早版本、请选择* NetApp Element 管理> VVOL >存储容器*。
+
+
+您还可以在创建VVOL期间在vCenter中发现存储容器。
 
 
 
@@ -49,7 +59,7 @@ iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协�
 VASA 提供程序在 Element 软件中作为集群主节点的一部分运行。集群主节点是一种高可用性服务，可根据需要故障转移到集群中的任何节点。如果集群主节点进行故障转移， VASA 提供程序将随之移动，以确保 VASA 提供程序的高可用性。所有配置和存储管理任务都使用 VASA 提供程序，该提供程序可处理 Element 集群上所需的任何更改。
 
 
-NOTE: 请勿将多个 NetApp Element VASA 提供程序注册到一个 vCenter 实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。
+NOTE: 对于Element软件12.5及更早版本、请勿将多个NetApp Element VASA Provider注册到一个vCenter实例中。如果添加了另一个 NetApp Element VASA 提供程序，则会使所有 VVOL 数据存储库无法访问。
 
 
 NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA 升级修补程序为 10 个 vCenter 提供 VASA 支持。要安装，请按照 VASA39 清单中的说明进行操作，然后从下载 .tar.gz 文件 link:https://mysupport.netapp.com/site/products/all/details/element-software/downloads-tab/download/62654/vasa39["NetApp 软件下载"^] 站点NetApp Element VASA 提供程序使用 NetApp 证书。使用此修补程序时， vCenter 会未经修改地使用此证书来支持多个 vCenter 以供 VASA 和 VVol 使用。请勿修改证书。VASA 不支持自定义 SSL 证书。
