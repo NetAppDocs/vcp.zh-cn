@@ -17,20 +17,20 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 [role="lead"]
 您需要了解适用于VMware vCenter Server的NetApp Element 插件的一些常见问题以及解决这些问题的步骤。
 
-*  registration successful but icons do not appear in web client
-*  after NetApp Element Plug-in for VMware vCenter Server 4.8 or later upgrade with VMware vCenter Server 6.7U1
-*  registering plug-in using Registration UI
-*  updating plug-in using Registration UI
-*  message that NetApp extension cannot be upgraded
-*  plug-in completes successfully but icons remain
-*  cannot be unregistered or removed after admin password change
-*  management tasks fail or volumes are not accessible to ESXi host
-*  occurs during vCenter Plug-in use on Firefox 59.0.2 browsers
-*  datastore operation fails
-*  pair cannot connect using a pairing key
-*  message for QoSSIOC status
-*  service shown as available but is unavailable
-*  is enabled for datastore but unavailable
+* <<插件注册成功，但图标未显示在 Web 客户端中>>
+* <<使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误>>
+* <<使用注册用户界面注册插件时出错>>
+* <<使用注册用户界面更新插件时出错>>
+* <<无法升级 NetApp 扩展的错误消息>>
+* <<删除插件成功完成，但图标仍存在>>
+* <<更改管理员密码后，无法取消注册或删除插件>>
+* <<插件管理任务失败或 ESXi 主机无法访问卷>>
+* <<在 Firefox 59.0.2 浏览器上使用 vCenter 插件期间发生故障>>
+* <<删除数据存储库操作失败>>
+* <<集群对无法使用配对密钥进行连接>>
+* <<QoSSIOC 状态错误消息>>
+* <<QoSSIOC 服务显示为可用，但不可用>>
+* <<已为数据存储库启用 QoSSIOC ，但此功能不可用>>
 * https://kb.netapp.com/Advice_and_Troubleshooting/Hybrid_Cloud_Infrastructure/NetApp_HCI/vCenter_plug-in_deployment_fails_after_upgrading_vCenter_to_version_7.0_U3["升级到VMware vSphere 7.0 Update 3后、vCenter插件部署失败"^]
 
 
@@ -38,6 +38,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 
 == 插件注册成功，但图标未显示在 Web 客户端中
 
+.Description
 注册显示为成功，但在 vSphere Web Client 中看不到插件图标。
 
 .NetApp Element vCenter插件4.10及更早版本的更正操作
@@ -84,12 +85,14 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 == 使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误
 
+.Description
 使用VMware vCenter Server 6.7U1升级到Element vCenter插件4.8或更高版本后、可能会遇到以下问题：
 
 * 这些集群未列在插件扩展点中的*集群*部分中。
 * 在*集群*和* QoSSIOC设置*部分中显示服务器错误。
 
 
+.更正操作
 还原集群和 QoSSIOC 设置：
 
 . 从 vCenter 中注销。
@@ -106,16 +109,20 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 == 使用注册用户界面注册插件时出错
 
+.Description
 使用注册实用程序时，向 vCenter 服务器注册此插件时出错。已安装密钥为 `com.solidfire` 的插件。
 
+.更正操作
 在注册实用程序中，使用 * 更新插件 * ，而不是 * 注册插件 * 。
 
 
 
 == 使用注册用户界面更新插件时出错
 
+.Description
 使用注册实用程序时，针对 vCenter 服务器更新此插件时出错。未为更新安装密钥为 `com.solidfire` 的插件。
 
+.更正操作
 在注册实用程序中，使用 * 注册插件 * ，而不是 * 更新插件 * 。
 
 
@@ -127,6 +134,7 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 ----
 org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.GenericJDBCException: Could not open connection.
 ----
+.Description
 在将 Windows vCenter Server 从 6.0 版升级到 6.5 期间，您会看到一条警告，指出 NetApp 扩展无法升级或可能无法与新的 vCenter Server 配合使用。完成升级并登录到 vSphere Web Client 后，如果选择 vCenter 插件扩展点，则会发生此错误。发生此错误的原因是，存储运行时数据库的目录已从 6.0 更改为 6.5 。vCenter 插件无法创建运行时所需的文件。
 
 .更正操作
@@ -141,16 +149,20 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 == 删除插件成功完成，但图标仍存在
 
+.Description
 已成功删除 vCenter 插件软件包文件，但在 vSphere Web Client 中仍可看到插件图标。
 
+.更正操作
 从 vSphere Web Client 中注销并重新登录。可能需要关闭并重新打开浏览器。如果注销 vSphere Web Client 无法解析问题描述，则可能需要重新启动 vCenter Server Web 服务。此外，其他用户可能已有会话。必须关闭所有用户会话。
 
 
 
 == 更改管理员密码后，无法取消注册或删除插件
 
+.Description
 更改用于注册此插件的 vCenter 的管理员密码后，无法取消注册或删除此 vCenter 插件。
 
+.更正操作
 对于插件 2.6 ，转到 vCenter 插件 * 注册 */* 取消注册 * 页面。单击 * 更新 * 按钮以更改 vCenter IP 地址，用户 ID 和密码。
 
 对于插件 2.7 或更高版本，请在插件的 mNode Settings 中更新 vCenter 管理员密码。
@@ -161,6 +173,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 == 插件管理任务失败或 ESXi 主机无法访问卷
 
+.Description
 创建，克隆和共享数据存储库任务失败，或者 ESXi 主机无法访问卷。
 
 .更正操作
@@ -175,32 +188,40 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 == 在 Firefox 59.0.2 浏览器上使用 vCenter 插件期间发生故障
 
+.message
 `名称： HttpErrorResponse 原始消息： HTTP 故障响应 https://vc6/ui/solidfire-war-4.2.0-SNAPSHOT/rest/vsphere//servers:[] 500 内部服务器错误返回消息：服务器错误。请重试或联系 NetApp 支持`
 
+.Description
 此问题描述发生在使用 Firefox 的 vSphere HTML5 Web 客户端中。vSphere Flash 客户端不受影响。
 
+.更正操作
 在浏览器 URL 中使用完整的 FQDN 。VMware 要求对 IP ，短名称和 FQDN 进行完全正向和反向解析。
 
 
 
 == 删除数据存储库操作失败
 
+.Description
 删除数据存储库操作失败。
 
+.更正操作
 检查是否已从数据存储库中删除所有 VM 。您必须先从数据存储库中删除 VM ，然后才能删除该数据存储库。
 
 
 
 == 集群对无法使用配对密钥进行连接
 
+.Description
 使用配对密钥进行集群配对期间发生连接错误。"* 创建集群配对 * " 对话框中的错误消息指示没有到主机的路由。
 
+.更正操作
 手动删除未配置的集群对在本地集群上创建的过程进行配对，然后重新执行集群配对。
 
 
 
 == QoSSIOC 状态错误消息
 
+.Description
 此插件的 QoSSIOC 状态显示警告图标和错误消息。
 
 .更正操作
@@ -213,18 +234,23 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 == QoSSIOC 服务显示为可用，但不可用
 
+.Description
 QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。
 
+.Element vCenter插件5.0或更高版本的更正操作
 从NetApp Element 远程插件>配置选项卡的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
 
+.Element vCenter插件4.10或更早版本的更正操作
 从NetApp Element 配置扩展点的* QoSSIOC设置*选项卡中、选择刷新按钮。根据需要更新 IP 地址或用户身份验证信息。
 
 
 
 == 已为数据存储库启用 QoSSIOC ，但此功能不可用
 
+.Description
 已为数据存储库启用 QoSSIOC ，但 QoSSIOC 不可用。
 
+.更正操作
 检查数据存储库上是否已启用 VMware SIOC ：
 
 . 在管理节点上的 ` /opt/solidfire/sioc/data/logs/` 中打开 `sioc.log` （在旧管理节点上为` /var/log` 或 ` /var/log/solidfire/` ）。

@@ -16,7 +16,7 @@ keywords: netapp, cluster, vcp, vcenter, element
 [role="lead"]
 您可以编辑运行 Element 软件的集群，管理 SSH 配置，设置保护域监控以及关闭集群。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 必须至少添加一个集群：
 +
 ** link:vcp_task_getstarted_5_0.html#add-storage-clusters-for-use-with-the-plug-in["使用适用于vCenter 5.0及更高版本的Element插件添加集群"]
@@ -37,17 +37,17 @@ NOTE: 要使用插件扩展点功能、必须至少添加一个集群。
 
 
 .选项
-*  cluster details
-*  a cluster profile
-*  a cluster profile
-*  Encryption at Rest
-*  Encryption at Rest
-*  SSH
-*  the SSH time limit
-*  SSH
-*  protection domain monitoring
-*  down a cluster
-*  your NetApp HCI infrastructure
+* <<查看集群详细信息>>
+* <<编辑集群配置文件>>
+* <<删除集群配置文件>>
+* <<启用空闲加密>>
+* <<禁用空闲加密>>
+* <<启用 SSH ：>>
+* <<更改 SSH 时间限制>>
+* <<禁用 SSH>>
+* <<设置保护域监控>>
+* <<关闭集群>>
+* <<扩展 NetApp HCI 基础架构>>
 
 
 
@@ -285,7 +285,7 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 您可以手动启用 link:vcp_concept_protection_domains.html["保护域监控"] 使用插件扩展点。您可以根据节点或机箱域选择保护域阈值。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 要使用保护域监控功能，必须由 Element 11.0 或更高版本监控选定集群；否则，保护域功能将不可用。
 * 要使用保护域功能，集群必须具有两个以上的节点。无法与双节点集群兼容。
 
@@ -322,6 +322,7 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
+.您需要的内容
 您已停止 I/O 并断开所有 iSCSI 会话。
 
 .步骤

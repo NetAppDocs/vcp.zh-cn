@@ -19,11 +19,11 @@ keywords: netapp, storage, access groups, vcp, vcenter, element
 您可以通过在一组卷中映射iSCSI启动程序IQN或FC WWPN来创建访问组。添加到访问组的每个 IQN 都可以访问组中的每个卷，而无需 CHAP 身份验证。添加到访问组的每个WWPN都可以通过FC网络访问此访问组中的卷。
 
 .选项
-*  an access group
-*  an access group
-*  volumes to an access group
-*  volumes from an access group
-*  an access group
+* <<创建访问组>>
+* <<编辑访问组>>
+* <<将卷添加到访问组>>
+* <<从访问组中删除卷>>
+* <<删除访问组>>
 
 
 
@@ -98,7 +98,7 @@ NOTE: 如果要删除启动程序，请单击垃圾桶图标将其删除。删�
 
 您可以将卷添加到卷访问组。每个卷都可以属于多个卷访问组；您可以从 " 活动卷 " 视图中查看每个卷所属的组。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 必须至少添加并运行一个集群。
 * 至少存在一个访问组。
 * 至少存在一个活动卷。

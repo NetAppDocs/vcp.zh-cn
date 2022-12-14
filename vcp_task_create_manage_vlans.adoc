@@ -16,10 +16,10 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 [role="lead"]
 您可以将新的虚拟网络添加到集群配置中，以便与运行 NetApp Element 软件的集群建立多租户环境连接，并使用 vCenter 插件管理虚拟网络。
 
-*  a virtual network
-*  virtual network details
-*  a virtual network
-*  a virtual network
+* <<创建虚拟网络>>
+* <<查看虚拟网络详细信息>>
+* <<编辑虚拟网络>>
+* <<删除虚拟网络>>
 
 
 
@@ -28,7 +28,7 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 
 您可以将新的虚拟网络添加到集群配置中。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * ESXi 主机具有一个 iSCSI 软件适配器。
 * 已为 VLAN 配置主机或交换机。
 * 您已确定要分配给集群节点上虚拟网络的 IP 地址块。
@@ -45,6 +45,7 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 
 
 ====
+.关于此任务
 添加虚拟网络时，系统会为每个节点创建一个接口，每个接口都需要一个虚拟网络 IP 地址。创建新虚拟网络时指定的 IP 地址数量必须等于或大于集群中的节点数量。虚拟网络地址由各个节点批量配置并自动分配给这些节点。您无需手动为集群中的节点分配虚拟网络地址。
 
 .步骤
@@ -132,6 +133,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以更改 VLAN 属性，例如 VLAN 名称，网络掩码和 IP 地址块大小。
 
+.关于此任务
 无法修改 VLAN 的 VLAN 标记和 SVIP 。只能修改 VRF VLAN 的网关属性。如果存在任何 iSCSI ，远程复制或其他网络会话，则修改可能会失败。
 
 .步骤

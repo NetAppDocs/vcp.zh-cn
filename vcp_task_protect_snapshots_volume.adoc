@@ -19,12 +19,12 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 您可以使用快照将卷回滚到创建快照时的状态。但是，由于快照只是卷元数据的副本，因此无法挂载或写入这些副本。
 
 .选项
-*  a volume snapshot
-*  volume snapshot details
-*  a volume from a snapshot
-*  back a volume to a snapshot
-*  up a volume snapshot to an external object store
-*  a volume snapshot
+* <<创建卷快照>>
+* <<查看卷快照详细信息>>
+* <<从快照克隆卷>>
+* <<将卷回滚到快照>>
+* <<将卷快照备份到外部对象存储>>
+* <<删除卷快照>>
 
 
 
@@ -204,9 +204,9 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 将快照备份到外部对象存储时，必须与允许读 / 写操作的对象存储建立连接。
 
-*  up a volume snapshot to an Amazon S3 object store
-*  up a volume snapshot to an OpenStack Swift object store
-*  up a volume snapshot to a cluster running Element software
+* <<将卷快照备份到 Amazon S3 对象存储>>
+* <<将卷快照备份到 OpenStack Swift 对象存储>>
+* <<将卷快照备份到运行 Element 软件的集群>>
 
 
 
@@ -297,8 +297,10 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以将运行 NetApp Element 软件的集群上的卷快照备份到远程 Element 集群。
 
+.您需要的内容
 您必须在目标集群上创建一个大小等于或大于要用于备份的快照的卷。
 
+.关于此任务
 在将一个集群备份或还原到另一个集群时，系统会生成一个密钥，用作集群之间的身份验证。此批量卷写入密钥可使源集群向目标集群进行身份验证，从而在向目标卷写入数据时提供安全性。在备份或还原过程中，您需要先从目标卷生成批量卷写入密钥，然后再开始此操作。
 
 .步骤
@@ -357,6 +359,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以使用插件扩展点从运行NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。
 
+.关于此任务
 您可以删除正在从源集群复制的快照。如果删除快照时快照正在同步到目标集群，则同步复制将完成，快照将从源集群中删除。快照不会从目标集群中删除。
 
 您还可以从目标集群中删除已复制到目标的快照。已删除的快照将保留在目标上已删除的快照列表中，直到系统检测到您已删除源集群上的快照为止。在目标检测到您已删除源快照后，目标将停止复制该快照。

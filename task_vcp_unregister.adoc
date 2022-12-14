@@ -16,12 +16,13 @@ keywords: netapp, vcp, vcenter, plugin, element, unregister
 [role="lead"]
 您可以使用以下过程之一从vCenter取消注册适用于VMware vCenter Server的NetApp Element 插件。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 用于注销插件的 vCenter 管理员角色特权。
 * 管理节点的 IP 地址。
 * 要从中取消注册此插件的 vCenter 的 URL 和凭据。
 
 
+.关于此任务
 对于 vSphere 6.7 及更早版本，注销插件的效果与禁用此插件相同，但不会删除本地安装的所有关联文件和文件夹。要删除所有插件文件，请参见上的说明 link:task_vcp_remove.html["正在删除插件"]。
 
 对于 vSphere 7.0 ，注销插件后，所有文件都会自动删除。

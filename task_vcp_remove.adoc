@@ -16,7 +16,7 @@ keywords: netapp, vcp, vcenter, plugin, element, upgrade
 [role="lead"]
 对于与vSphere 6.7或更早版本结合使用的vCenter插件4.0到4.10、您必须完成以下过程才能从vCenter Server中手动删除与此插件关联的所有文件。对于vSphere 7.0及更高版本、取消注册此插件后无需删除文件。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * vCenter插件4.0到4.10
 * vSphere 6.7 或更早版本
 * 您已拥有 link:task_vcp_unregister.html["已取消注册"] 现有插件并与 vCSA 或 vCenter Server 建立 SSH ， RDP 或其他适当连接。

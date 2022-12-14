@@ -27,7 +27,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, qossioc, cluster,
 
 
 ====
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 必须至少添加并运行一个集群。
 * 必须使用此插件的 "QoSSIOC Settings" 页面配置并验证 QoSSIOC 服务是否正在运行。
 * 必须至少有一个数据存储库启用 QoSSIOC 自动化。

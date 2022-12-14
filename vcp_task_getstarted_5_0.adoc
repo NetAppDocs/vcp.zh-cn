@@ -21,14 +21,14 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 阅读并完成每个步骤以安装并开始使用此插件：
 
-*  for installation
-*  the management node
-*  the plug-in with vCenter
-*  the plug-in and verify successful installation
-*  storage clusters for use with the plug-in
-*  QoSSIOC settings using the plug-in
-*  user accounts
-*  datastores and volumes
+* <<准备安装>>
+* <<安装管理节点>>
+* <<将此插件注册到 vCenter>>
+* <<访问此插件并验证安装是否成功>>
+* <<添加要与此插件结合使用的存储集群>>
+* <<使用此插件配置 QoSSIOC 设置>>
+* <<配置用户帐户>>
+* <<创建数据存储库和卷>>
 
 
 
@@ -51,7 +51,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 在 vSphere Web Client 中部署 vCenter 插件软件包涉及到将该软件包注册为 vCenter Server 上的扩展。注册完成后，连接到 vSphere 环境的任何 vSphere Web Client 均可使用此插件。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您拥有注册插件的 vCenter 管理员角色权限。
 * 您已部署运行Element软件12.3.x或更高版本的管理节点OVA。
 * 管理节点已启动，并已配置其 IP 地址或 DHCP 地址。
@@ -59,6 +59,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 * 您的防火墙规则允许打开 link:reference_requirements_vcp.html["网络通信"] 在vCenter和存储集群MVIP之间、使用TCP端口443、8443、8333和9443。端口 9443 用于注册，注册完成后可关闭此端口。如果已在集群上启用虚拟卷功能，请确保 TCP 端口 8444 也已打开，以便 VASA Provider 访问。
 
 
+.关于此任务
 您必须在需要使用 vCenter 插件的每个 vCenter Server 上注册此插件。
 
 对于链接模式环境、您必须向环境中的每个vCenter Server注册单独的插件、以使MOB数据保持同步并能够升级此插件。如果 vSphere Web Client 连接到未注册插件的 vCenter Server ，则此插件对客户端不可见。
@@ -139,7 +140,7 @@ NOTE: 如果看不到vCenter插件图标、请参见 link:vcp_reference_troubles
 
 您可以使用NetApp Element 远程插件扩展点添加和管理运行Element软件的集群。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 必须至少有一个集群可用，并且其 IP 或 FQDN 地址已知。
 * 集群的当前完整集群管理员用户凭据。
 * 防火墙规则允许打开 link:reference_requirements_vcp.html["网络通信"] 在vCenter和集群MVIP之间、使用TCP端口443、8333和8443。
@@ -148,6 +149,7 @@ NOTE: 如果看不到vCenter插件图标、请参见 link:vcp_reference_troubles
 
 NOTE: 要使用管理功能、必须至少添加一个集群。
 
+.关于此任务
 此操作步骤介绍了如何添加集群配置文件，以便此插件可以管理此集群。您不能使用此插件修改集群管理员凭据。
 
 请参见 https://docs.netapp.com/us-en/element-software/storage/concept_system_manage_manage_cluster_administrator_users.html["管理集群管理员用户帐户"^] 有关更改集群管理员帐户凭据的说明。
@@ -182,6 +184,7 @@ NOTE: 要使用管理功能、必须至少添加一个集群。
 
 您可以根据存储 I/O 控制设置自动服务质量 link:vcp_concept_qossioc.html["（ QoSSIOC ）"] 由插件控制的单个卷和数据存储库。为此，您需要配置 QoSSIOC 和 vCenter 凭据，使 QoSSIOC 服务能够与 vCenter 进行通信。
 
+.关于此任务
 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为默认设置。QoSSIOC 设置将还原为最后一次已知的有效 QoSSIOC 设置，直到您为新管理节点提供有效的 QoSSIOC 设置为止。在为新管理节点设置 QoSSIOC 凭据之前，必须清除已配置管理节点的 QoSSIOC 设置。
 
 .步骤

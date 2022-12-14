@@ -2,7 +2,6 @@
 <blocks>
   <block id="6bde8427d243711530e47035165075a8" category="summary">您可以使用此插件添加在 Element 卷上创建的管理数据存储库。</block>
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="doc">管理数据存储库</block>
-  <block id="a711863513c11f3a6d86294acc7be0ba" category="list-title">您需要什么？ #8217 ；将需要什么</block>
   <block id="fee03a90bfc424cd6ea94a6cc22746e8" category="list-text">要创建和管理数据存储库，必须先至少创建一个用户帐户。</block>
   <block id="292ffe431087f7d8cd09b046745b9893" category="list-text">由于数据存储库是使用选定 ESXi 主机支持的最高 VMFS 版本创建的，因此所有集群成员都应运行相同版本的 vSphere 和 ESXi ，以避免出现 VMFS 兼容性问题。</block>
   <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="list-title">选项</block>
@@ -2645,4 +2644,9 @@
   <block id="74f171bb465a49ebcce88fa91d4562d4" category="sidebar">适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件</block>
   <block id="2abfacd3d0325353cbe289faa9d0d3b1" category="sidebar">安装和配置适用于 vCenter Server 的 NetApp Element 插件</block>
   <block id="e97497d0f5938ed35b2e63e89f51bf3c" category="paragraph">答 <block ref="e64b216761b70bc0cfda4bc4eab1b43a" category="inline-link-macro-rx"></block> 是一组用户可以使用iSCSI启动程序或FC启动程序访问的卷。</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="paragraph-title">您需要的内容</block>
+  <block id="65988ccc1e915ab34bd44768f37b0444" category="paragraph-title">Element vCenter插件5.0或更高版本的更正操作</block>
+  <block id="47c4fb98f272f850da400ba07b3981fa" category="paragraph-title">Element vCenter插件4.10或更早版本的更正操作</block>
+  <block id="d495047561c1a08074d3afeeb5b5d172" category="paragraph-title">VMware vSphere 前提条件</block>
+  <block id="3903fd261f224ad8af888f893eb71a5e" category="paragraph-title">此插件支持的 VMware vSphere 版本</block>
 </blocks>

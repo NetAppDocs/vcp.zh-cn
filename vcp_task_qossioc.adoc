@@ -32,7 +32,7 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 == 设置任务
 
 * link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["配置 QoSSIOC 设置"]
-*  QoSSIOC automation on datastores
+* <<在数据存储库上启用 QoSSIOC 自动化>>
 
 
 
@@ -40,10 +40,10 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 == 管理任务
 
 * link:vcp_task_reports_qossioc.html["监控具有 QoSSIOC 事件的虚拟机性能分层"^]
-*  QoSSIOC settings
-*  the QoSSIOC service password
-*  QoSSIOC automation for a datastore
-*  QoSSIOC settings
+* <<编辑 QoSSIOC 设置>>
+* <<更改 QoSSIOC 服务密码>>
+* <<为数据存储库禁用 QoSSIOC 自动化>>
+* <<清除 QoSSIOC 设置>>
 
 
 
@@ -52,12 +52,14 @@ NOTE: 您不能使用 QoSSIOC 设置页面启用虚拟卷（ VVol ）功能或�
 
 在为插件启用 QoSSIOC 服务后，您可以为数据存储库启用 QoSSIOC 自动化并自定义虚拟机磁盘（ VMDK ）性能级别。
 
+.您需要的内容
 您已在QoSSIOC设置页面上配置QoSSIOC服务设置、并显示* QoSSIOC状态*字段 `UP`。
 
 * link:vcp_task_getstarted_5_0.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件5.0及更高版本配置设置"]
 * link:vcp_task_getstarted.html#configure-qossioc-settings-using-the-plug-in["使用Element vCenter插件4.10及更早版本配置设置"]
 
 
+.关于此任务
 QoSSIOC 仅适用于标准数据存储库。它不适用于虚拟卷（ VVOL ）。QoSSIOC 会在发生虚拟机事件时调整标准 Element 卷上的 QoS 值，例如启动或关闭事件，子系统重新启动或关闭或重新配置活动。
 
 
@@ -146,11 +148,12 @@ NOTE: 为管理节点配置有效的 QoSSIOC 设置后，这些设置将成为�
 
 您可以使用注册实用程序 UI 更改管理节点上 QoSSIOC 服务的密码。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 管理节点已启动。
 
 
-此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作  QoSSIOC settings,QoSSIOC 设置 页面。
+.关于此任务
+此过程仅介绍如何更改 QoSSIOC 密码。如果要更改 QoSSIOC 用户名，可以从中执行此操作 <<编辑 QoSSIOC 设置,QoSSIOC 设置>> 页面。
 
 .步骤
 . 在vSphere Web Client中、打开* QoSSIOC设置*选项卡：

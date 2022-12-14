@@ -16,7 +16,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 [role="lead"]
 您可以启用 VMware vSphere link:vcp_concept_vvols.html["虚拟卷（ VVOL ）"] 在 NetApp Element 存储集群上运行并设置虚拟卷配置。适用于 vCenter Server 的 Element 插件可监控性能，并为您提供管理虚拟卷的选项， link:vcp_concept_vvols.html#storage-containers["存储容器"]， link:vcp_concept_vvols.html#protocol-endpoints["协议端点"]和插件扩展点的主机。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您使用的 NetApp Element 10 或更高版本集群连接到与 VVol 兼容的 ESXi 6.5 或更高版本环境。
 * 您正在使用 vCenter 6.5 或更高版本。
 
@@ -28,18 +28,18 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 要在适用于 vCenter Server 的 NetApp Element 插件中使用虚拟卷（ VVol ），您必须执行初始配置步骤。
 
 .步骤
-.  virtual volumes functionality on the NetApp Element cluster
-.  the VASA provider with vCenter
-.  a storage container and associated VVol datastore
+. <<在 NetApp Element 集群上启用虚拟卷功能>>
+. <<向 vCenter 注册 VASA Provider>>
+. <<创建存储容器以及关联的 VVol 数据存储库>>
 
 
 
 
 == 管理任务
 
-*  virtual volume resources
-*  a VVol datastore for a storage container
-*  a storage container
+* <<监控虚拟卷资源>>
+* <<为存储容器创建 VVol 数据存储库>>
+* <<删除存储容器>>
 
 
 
@@ -70,7 +70,7 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 . 为选定集群选择 * 操作 * 。
 . 在显示的菜单中，选择 * 详细信息 * 。
 . 从 * VASA Provider URL* 字段复制 VASA Provider URL 。您将使用此 URL 在 vCenter 中注册 VASA Provider 。
-. 请参见  the VASA provider with vCenter 后续步骤。
+. 请参见 <<向 vCenter 注册 VASA Provider>> 后续步骤。
 
 
 
@@ -79,10 +79,11 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 
 您必须向 vCenter 注册 NetApp Element VASA Provider ，以便 vCenter 能够识别集群上的 VVOL 功能。向 vCenter 注册 VASA Provider 是一次性配置任务。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您已为集群启用 VVol 功能。
 
 
+.关于此任务
 本操作步骤介绍了 vSphere 6.7 版中提供的步骤。您的 vSphere 用户界面可能与所述略有不同，具体取决于安装的 vSphere 版本。有关其他帮助，请参见 VMware vCenter 文档。
 
 
@@ -117,7 +118,7 @@ NOTE: 在 vCenter 插件中启用 VVOL 时，系统会为您提供 VASA Provider
 
 NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程序以显示此提供程序的当前状态。您还可以在* NetApp Element 配置>集群*或* NetApp Element 远程插件>配置>集群*中验证是否已启用此提供程序。为要启用的集群选择*操作*、然后选择*详细信息*。
 
-. 请参见  a storage container and associated VVol datastore 后续步骤。
+. 请参见 <<创建存储容器以及关联的 VVol 数据存储库>> 后续步骤。
 
 
 
@@ -179,9 +180,9 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 您可以从插件扩展点查看虚拟卷组件的性能和设置：
 
-*  VVols
-*  storage containers
-*  protocol endpoints
+* <<监控 VVOL>>
+* <<监控存储容器>>
+* <<监控协议端点>>
 
 
 
@@ -190,7 +191,7 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 您可以查看集群上所有活动虚拟卷的常规数据或每个虚拟卷的详细数据。此插件可跟踪虚拟卷的效率，性能，事件和 QoS 以及关联的快照， VM 和绑定。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 您已启动 VM ，以便可以查看虚拟卷详细信息。
 
 
@@ -261,9 +262,9 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 == 为存储容器创建 VVol 数据存储库
 
-创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法  a storage container and associated VVol datastore,创建存储容器 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
+创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法 <<创建存储容器以及关联的 VVol 数据存储库,创建存储容器>> 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 虚拟环境中的现有存储容器。
 +
 
@@ -291,7 +292,7 @@ NOTE: 您无需手动创建协议端点（ PE ） LUN 。创建数据存储库�
 
 您可以从插件扩展点删除存储容器。
 
-.您需要什么？ #8217 ；将需要什么
+.您需要的内容
 * 已从存储容器中删除所有卷。
 
 

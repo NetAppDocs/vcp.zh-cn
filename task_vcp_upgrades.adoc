@@ -23,6 +23,7 @@ keywords: netapp, vcp, vcenter, plugin, element, upgrade
 
 
 ====
+.步骤
 要升级此插件，请按照适用于您的产品的升级文档中的说明进行操作：
 
 * https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html["升级 NetApp HCI 系统"^]

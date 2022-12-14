@@ -18,10 +18,10 @@ keywords: netapp, vcp, element, plugin, plug-in, management, extension point, re
 
 NetApp Element 远程插件扩展点提供了以下选项卡：
 
-*  Started
-* 
-* 
-* 
+* <<入门>>
+* <<Configuration>>
+* <<管理>>
+* <<About>>
 
 
 

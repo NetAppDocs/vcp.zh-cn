@@ -22,8 +22,10 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 --
 验证您的系统是否满足使用Element vCenter插件5.0或更高版本的要求。
 
+.VMware vSphere 前提条件
 要使用Element vCenter插件、需要使用已配置软件iSCSI适配器和iSCSI网络的VMware vSphere 8.0和7.0、包括vCenter和ESXi。
 
+.此插件支持的 VMware vSphere 版本
 此插件支持以下主要版本的 VMware 软件：
 
 * vSphere 8.0、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
@@ -38,8 +40,10 @@ IMPORTANT: VMware vSphere 6.5和6.7已于2022年10月15日停止支持。从Elem
 --
 验证您的系统是否满足使用Element vCenter插件4.10或更早版本的要求。
 
+.VMware vSphere 前提条件
 要使用Element vCenter插件、需要使用VMware vSphere 7.0、6.7或6.5、包括配置了软件iSCSI适配器和iSCSI网络的vCenter和ESXi。
 
+.此插件支持的 VMware vSphere 版本
 此插件支持以下主要版本的 VMware 软件：
 
 * vSphere 7.0和7.0 Update 1和2、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库

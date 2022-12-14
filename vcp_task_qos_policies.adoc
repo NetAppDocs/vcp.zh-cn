@@ -18,11 +18,11 @@ keywords: netapp, qos policy, quality of service, qos policies, vcp, vcenter, el
 
 使用插件扩展点、您可以通过完成以下任务来配置和管理QoSSIOC：
 
-*  a QoS policy
-*  a QoS policy to volumes
-*  the QoS policy association of a volume
-*  a QoS policy
-*  a QoS policy
+* <<创建 QoS 策略>>
+* <<将 QoS 策略应用于卷>>
+* <<更改卷的 QoS 策略关联>>
+* <<编辑 QoS 策略>>
+* <<删除 QoS 策略>>
 
 
 
@@ -62,7 +62,8 @@ TIP: 使用描述性命名最佳实践。如果您的环境中使用了多个集
 
 您可以将现有 QoS 策略应用于多个卷。如果要将策略批量应用于一个或多个卷，请使用此过程。
 
-要批量应用的 QoS 策略已是  a QoS policy,已创建。
+.您需要的内容
+要批量应用的 QoS 策略已是 <<创建 QoS 策略,已创建>>。
 
 .步骤
 . 从vCenter插件中、打开*管理*选项卡：
@@ -89,7 +90,8 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 您可以从卷中删除 QoS 策略关联，也可以选择其他 QoS 策略或自定义 QoS 。
 
-要修改的卷为  a QoS policy to volumes,已关联 使用 QoS 策略。
+.您需要的内容
+要修改的卷为 <<将 QoS 策略应用于卷,已关联>> 使用 QoS 策略。
 
 .步骤
 . 从vCenter插件中、打开*管理*选项卡：

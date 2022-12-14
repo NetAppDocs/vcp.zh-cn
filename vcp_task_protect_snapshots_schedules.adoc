@@ -21,11 +21,11 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, schedule
 
 NOTE: 计划使用 UTC+0 时间创建。您可能需要根据时区调整快照的实际运行时间。
 
-*  a snapshot schedule
-*  snapshot schedule details
-*  a snapshot schedule
-*  a snapshot schedule
-*  a snapshot schedule
+* <<创建快照计划>>
+* <<查看快照计划详细信息>>
+* <<编辑快照计划>>
+* <<复制快照计划>>
+* <<删除快照计划>>
 
 
 

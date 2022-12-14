@@ -50,6 +50,7 @@ NOTE: 您只能查看和管理与选定vCenter Server关联的存储集群。
 
 
 
+.示例
 vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2 处于链接模式。您希望 vCenter1 管理 cluster1 ，而 vCenter2 管理 cluster2 。
 
 image:two_vcenter_topology.PNG["描绘了vCenter和集群拓扑"]
@@ -83,6 +84,7 @@ image:two_vcenter_topology.PNG["描绘了vCenter和集群拓扑"]
 . 将存储集群添加到 Element 插件清单中。
 
 
+.示例
 vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2 处于链接模式。您希望 vCenter1 管理 cluster1 ，而 vCenter2 管理 cluster2 。要设置存储集群管理，请在向每个 vCenter Server 注册此插件后执行以下步骤：
 
 . 登录到 vCenter1 Web 客户端。
