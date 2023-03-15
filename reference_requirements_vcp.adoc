@@ -10,11 +10,13 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 
 [role="lead"]
 在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。
+
+对于vCenter Server 8.0和7.0、您可以 <<create_vcp_role,在vCenter中创建"VCP角色">> 为Element插件用户帐户分配权限、以便注册或升级适用于vCenter Server的Element插件并执行Element插件管理任务。
 
 [role="tabbed-block"]
 ====
@@ -96,6 +98,90 @@ IMPORTANT: VMware vSphere 6.0 已于 2020 年 3 月 12 日停止支持。从 Net
 == 网络端口要求
 
 您需要允许某些 TCP 端口通过数据中心的边缘防火墙，以便可以远程管理系统，并允许数据中心外部的客户端连接到资源。有关 NetApp HCI 和 SolidFire 系统中使用的端口的完整列表，请参见此部分 link:https://docs.netapp.com/us-en/hci/docs/hci_prereqs_required_network_ports.html["页面。"]。
+
+
+
+== (可选)在vCenter中创建"VCP角色"
+
+对于vCenter Server 8.0和7.0、您可以在vCenter中为Element插件用户帐户创建"VCP角色"、并分配注册或升级适用于vCenter Server的Element插件以及执行Element插件管理任务的权限。
+
+.步骤
+. 以管理员身份登录到vSphere Web Client。
+. 选择*管理*。
+. 选择*单一登录*>*用户和组*。
+. 选择*用户*选项卡、然后从*域*列表中选择目标域。
+. 选择 * 添加 * 。
+. 填写*添加用户*屏幕中的字段、然后选择*添加*。
++
+image:vcp_add_user.PNG["添加用户字段的屏幕截图"]
+
+. 选择*访问控制*>*角色*、然后选择*新建*。
+. 在*新角色*屏幕中、完成以下步骤：
++
+.. 在*角色名称*下、输入"VcProle"。
+.. 贷方A问题描述。
+.. 从*显示*列表中、选择适用于您的vCenter Server版本的权限：
++
+... 选择vCenter Server 8.0的权限：
++
+**** 加密操作>注册虚拟机
+**** 数据存储库>全选
+**** 扩展>全选
+**** 主机>配置>更改设置
+**** 主机>配置>连接
+**** 主机>配置>维护
+**** 主机>配置>存储分区配置
+**** 主机>配置>系统管理
+**** 主机>配置>系统资源
+**** privile.Task.Update.Task.Update.label > privile.Task.Update.Task.Update.Label
+**** 任务>全选
+**** 虚拟机>编辑清单>注册
+**** VM存储策略> VM存储策略查看权限>查看VM存储策略
+
+
+... 选择vCenter Server 7.x的权限：
++
+**** 加密操作>注册虚拟机
+**** 数据存储库>全选
+**** 扩展>全选
+**** 主机>配置>更改设置
+**** 主机>配置>连接
+**** 主机>配置>维护
+**** 主机>配置>存储分区配置
+**** 主机>配置>系统管理
+**** 主机>配置>系统资源
+**** 插件>全选
+**** 已计划任务>全选
+**** 存储视图>全选
+**** 任务>全选
+
+
+
+
+.. 选择 * 创建 * 。
+
+
++
+image:vcp_create_vcprole.PNG["新角色字段的屏幕截图"]
+
+. 选择*全局权限*、然后选择*添加*。
+. 在*添加权限*屏幕中、完成以下步骤：
++
+--
+.. 从*域*列表中选择目标域。
+.. 在*用户/组*字段中、输入Element插件用户ID。
+.. 从*角色*列表中选择* VcProle*。
+.. 选择*传播到子项*并选择*确定*。
+
+
+--
++
+image:vcp_assign_vcprole.PNG["添加权限字段的屏幕截图"]
+
++
+现在、您可以使用"vcpuser"帐户登录到vSphere Web Client。
+
+
 
 
 
