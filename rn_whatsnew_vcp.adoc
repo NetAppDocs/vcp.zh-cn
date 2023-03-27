@@ -14,7 +14,13 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
-适用于vCenter Server 5.0的NetApp Element 插件包含远程插件架构、该架构可将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程架构支持插件隔离、并支持横向扩展在大型vSphere环境中运行的插件。远程Element插件随管理服务一起部署在管理节点内的Docker容器中。 link:vcp_concept_remote_plugin_architecture.html["了解更多信息。"]
+适用于vCenter Server 5.1的NetApp Element 插件可提高安全性和性能。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734["了解更多信息。"^]。
+
+
+
+== 适用于vCenter Server 5.0的NetApp Element 插件
+
+适用于vCenter Server 5.0的NetApp Element 插件包含远程插件架构、该架构可将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程架构支持插件隔离、并支持横向扩展在大型vSphere环境中运行的插件。远程Element插件随管理服务一起部署在管理节点内的Docker容器中。 link:vcp_concept_remote_plugin_architecture.html["了解更多信息。"]。
 
 Element vCenter插件5.0支持VMware vSphere 8.0、7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi和vSphere HTML5 Web Client。
 

@@ -14,14 +14,17 @@ summary: 适用于VMware vCenter Server的NetApp Element 插件4.6之前的版�
 
 
 [role="lead"]
-此外、还为适用于VMware vCenter Server的NetApp Element 插件5.0之前的版本提供了相关文档。
+此外、还提供了适用于VMware vCenter Server的NetApp Element 插件5.1之前版本的文档。
 
 
-NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件5.0、还包括版本4.6、4.7、4.8、4.9和4.10。
+NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件5.1、还包括版本4.6、4.7、4.8、4.9、4.10、 和5.0。
 
 [cols="4*"]
 |===
 | version | 插件发行说明 | 管理服务发行说明 | 用户指南 
+
+
+| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["2.21.61"^] | link:index.html["链接。"] 
 
 
 | 4.10 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["2.21.61"^] | link:index.html["链接。"] 

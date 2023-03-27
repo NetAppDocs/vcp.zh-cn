@@ -16,7 +16,7 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 [role="lead"]
 在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。
 
-对于vCenter Server 8.0和7.0、您可以 <<create_vcp_role,在vCenter中创建"VCP角色">> 为Element插件用户帐户分配权限、以便注册或升级适用于vCenter Server的Element插件并执行Element插件管理任务。
+对于vCenter Server 8.0和7.0、您可以 <<create_vcp_role,在vCenter中创建"VCP角色">> 为Element插件用户帐户分配权限、并分配注册或升级适用于vCenter Server的Element插件以及执行Element插件管理任务的权限。
 
 [role="tabbed-block"]
 ====
