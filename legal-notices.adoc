@@ -47,6 +47,7 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知文件提供有关 NetApp 软件中使用的第三方版权和许可证的信息。
 
+* link:media/mgmt_svcs_2.23_notice.pdf["管理服务2.23.64通知(适用于VMware vCenter Server 5.1.2的NetApp Element 插件)"^]
 * link:media/mgmt_svcs_2.22_notice.pdf["管理服务2.22.7通知(适用于VMware vCenter Server 5.0.37的NetApp Element 插件)"^]
 * link:media/mgmt_svcs_2.21_notice.pdf["管理服务2.21.61的通知(适用于VMware vCenter Server的NetApp Element 插件4.10.12)"^]
 * link:media/mgmt_svcs_2.20_notice.pdf["管理服务2.20.69通知(适用于VMware vCenter Server的NetApp Element 插件4.9.14)"^]

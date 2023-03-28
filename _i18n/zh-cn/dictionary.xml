@@ -2817,4 +2817,6 @@
   <block id="29d500d8439e3dd944e651a8cafac013" category="paragraph">适用于vCenter Server 5.1的NetApp Element 插件可提高安全性和性能。<block ref="8f4569e0d2bf7d4026fc97d3aaa16f27" category="inline-link-rx"></block>。</block>
   <block id="91b1f6d002234f22dafb0acd912c78a9" category="section-title">适用于vCenter Server 5.0的NetApp Element 插件</block>
   <block id="1f9b4aab4a12232cc23a810bf4cafc23" category="paragraph">适用于vCenter Server 5.0的NetApp Element 插件包含远程插件架构、该架构可将插件功能集成到vSphere Client中、而无需在vCenter Server中运行。远程架构支持插件隔离、并支持横向扩展在大型vSphere环境中运行的插件。远程Element插件随管理服务一起部署在管理节点内的Docker容器中。 <block ref="87219cf69889d249e3cece46c871efe3" category="inline-link-macro-rx"></block>。</block>
+  <block id="bddb591f0b60efba3de48f954b55f287" category="inline-link-macro">管理服务2.23.64通知(适用于VMware vCenter Server 5.1.2的NetApp Element 插件)</block>
+  <block id="c427a8a16f088c999b45d089d225b2dc" category="list-text"><block ref="c427a8a16f088c999b45d089d225b2dc" category="inline-link-macro-rx"></block></block>
 </blocks>
