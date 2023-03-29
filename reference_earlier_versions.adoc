@@ -24,7 +24,7 @@ NOTE: 这 link:index.html["文档链接"] 对于Element vCenter插件5.1、还�
 | version | 插件发行说明 | 管理服务发行说明 | 用户指南 
 
 
-| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["2.21.61"^] | link:index.html["链接。"] 
+| 5.0 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["2.22.7"^] | link:index.html["链接。"] 
 
 
 | 4.10 | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["PDF"^] | https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["2.21.61"^] | link:index.html["链接。"] 
