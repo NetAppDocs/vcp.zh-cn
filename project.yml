@@ -128,16 +128,14 @@ homepage:
   tiles:
   - title: 入门
     links:
+    - title: 发行说明
+      url: "/rn_relatedrn_vcp.html"
+    - title: 新增功能
+      url: "/rn_whatsnew_vcp.html"
     - title: 产品概述
       url: "/concept_vcp_product_overview.html"
     - title: 安装并部署此插件
-      url: "/vcp_task_getstarted.html"
-  - title: 了解
-    links:
-    - title: 新增功能
-      url: "/rn_whatsnew_vcp.html"
-    - title: 发行说明
-      url: "/rn_relatedrn_vcp.html"
+      url: "/vcp_task_getstarted_5_0.html"
   - title: SolidFire 全闪存存储系统
     links:
     - title: NetApp Element 软件中的新增功能
@@ -148,6 +146,8 @@ homepage:
       url: https://docs.netapp.com/us-en/element-software/upgrade/task_sf_upgrade_all_vsphere.html
   - title: NetApp HCI 系统
     links:
+    - title: NetApp HCI 中的新增功能
+      url: https://docs.netapp.com/us-en/hci/docs/rn_whatsnew.html
     - title: 升级Element插件
       url: https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html
     - title: 升级vSphere组件

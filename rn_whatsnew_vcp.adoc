@@ -14,6 +14,16 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
+适用于vCenter Server 5.2的NetApp Element插件对可支持性进行了改进、并对自定义保护域显示进行了增强。
+
+在版本5.2中、如果在Element软件集群上配置了自定义保护域、则此插件将显示自定义保护域运行状况信息。 link:vcp_task_reports_overview.html#reporting-overview-page-data["了解更多信息。"]。
+
+Element vCenter插件5.2随管理服务2.24.40版提供。
+
+
+
+== 适用于vCenter Server 5.1的NetApp Element插件
+
 适用于vCenter Server 5.1的NetApp Element 插件可提高安全性和性能。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734["了解更多信息。"^]。
 
 

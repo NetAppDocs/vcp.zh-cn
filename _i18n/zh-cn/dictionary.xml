@@ -2077,7 +2077,6 @@
   <block id="1953a2d6d8fb71b3d3f05d7ab9aa523c" category="inline-link-macro">管理服务2.20.69通知(适用于VMware vCenter Server的NetApp Element 插件4.9.14)</block>
   <block id="ba9eae25d558175b3670fa75219d16c1" category="list-text"><block ref="ba9eae25d558175b3670fa75219d16c1" category="inline-link-macro-rx"></block></block>
   <block id="1dea56720635d200a6c7b3a71efca6ab" category="inline-link">《NetApp Element 软件12.7发行说明》</block>
-  <block id="3e51721b09445e45502532be5e6096fc" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block> _new_</block>
   <block id="6a881248d046a90f573e41d5ebe1362e" category="list-text"><block ref="6a881248d046a90f573e41d5ebe1362e" category="inline-link-rx"></block></block>
   <block id="1de1fa776d5e13c615b89966caf040ca" category="section-title">适用于VMware vCenter Server的NetApp Element 插件</block>
   <block id="90e7c2277ee69a3d3ecf30fa1fe61ab1" category="inline-link">vCenter插件4.10发行说明</block>
@@ -2141,7 +2140,6 @@
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
   <block id="4b983fff716674f120176e09551dd445" category="sidebar">产品概述</block>
   <block id="5aa6ea991a62f7c634596fc6b1987052" category="sidebar">安装并部署此插件</block>
-  <block id="2f1a3e62508d88ddc31f1aa72a8334d4" category="sidebar">了解</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">发行说明</block>
   <block id="09a3438150481f613a24e724fafccaaa" category="sidebar">SolidFire 全闪存存储系统</block>
@@ -2392,7 +2390,6 @@
   <block id="99743f19cae906ba996350c449e1c983" category="paragraph">在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。</block>
   <block id="ec039d5a9609896b1378c280f9eb795e" category="paragraph">验证您的系统是否满足使用Element vCenter插件5.0或更高版本的要求。</block>
   <block id="87e51067c2a7529e01c8fa57d7d29919" category="paragraph">要使用Element vCenter插件、需要使用已配置软件iSCSI适配器和iSCSI网络的VMware vSphere 8.0和7.0、包括vCenter和ESXi。</block>
-  <block id="a293a3d51c53fc838afbc761865ddaa8" category="list-text">vSphere 8.0、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="9cf493ed2f9140046fab3919844fdd27" category="list-text">vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link">文章</block>
   <block id="1400ae8c17045a12d78fd12af11a1d4c" category="admonition">VMware vSphere 6.5和6.7已于2022年10月15日停止支持。从Element插件5.0开始、不再支持vSphere 6.5和6.7。有关详细信息，请参见此<block ref="6a2f70d2ba0033763d7682575dc0f9df" category="inline-link-rx"></block>。</block>
@@ -2796,18 +2793,14 @@
   <block id="94ca762adece646829ae29b252ee07c1" category="inline-image-macro">添加权限字段的屏幕截图</block>
   <block id="5e636586f9af12688faa4fc928306db1" category="paragraph"><block ref="5e636586f9af12688faa4fc928306db1" category="inline-image-macro-rx" type="image"></block></block>
   <block id="091b350d4631df39f5b5dc80970dd512" category="paragraph">现在、您可以使用"vcpuser"帐户登录到vSphere Web Client。</block>
-  <block id="b66c8a9d68bd0aeaa399e0f8ae04a674" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.1可作为管理服务包的一部分在Element和NetApp HCI 版本之外提供。</block>
   <block id="9fbd9fb1c98fdc3b7aeb8cf30510365b" category="list-text">从适用于vCenter 4.x的Element插件升级到5.x时、由于无法将数据从vCenter实例复制到远程插件、因此已配置此插件的集群将丢失。您必须将集群重新添加到远程插件。这是从本地插件升级到远程插件时的一次性活动。</block>
   <block id="54db42757b5d75d2f660dc70f35850cf" category="inline-link">vCenter插件5.1发行说明</block>
   <block id="410ecb079e286058eeb2bc6b56d9379c" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block></block>
   <block id="a03e0fc189a20ac61004659572cb08f7" category="paragraph">对于 vSphere 6.7 及更早版本，注销插件的效果与禁用此插件相同，但不会删除本地安装的所有关联文件和文件夹。要删除所有插件文件，请参见上的说明 <block ref="fa2a18d6b355d33b924c5f0014a5db48" category="inline-link-macro-rx"></block>。</block>
-  <block id="892ff8e8ba8a88084fa51c3657a81ab8" category="paragraph">此外、还提供了适用于VMware vCenter Server的NetApp Element 插件5.1之前版本的文档。</block>
-  <block id="5fd41756fdaa6f29377e51f411e6ef7b" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件5.1、还包括版本4.6、4.7、4.8、4.9、4.10、 和5.0。</block>
   <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5.0</block>
   <block id="ccdedb9c7dac93213366653d125b0ffe" category="cell"><block ref="ccdedb9c7dac93213366653d125b0ffe" category="inline-link-rx"></block></block>
   <block id="db26a1619b3544de39b9ae935f1f5853" category="paragraph">对于vCenter Server 8.0和7.0、您可以 <block ref="80e1b054839423dbd44653f6cd7557e3" category="inline-xref-macro-rx"></block> 为Element插件用户帐户分配权限、并分配注册或升级适用于vCenter Server的Element插件以及执行Element插件管理任务的权限。</block>
   <block id="905117ce83c2d95fd055b77e296e775c" category="paragraph">对于vCenter Server 8.0和7.0、您可以在vCenter中为Element插件用户帐户创建"VCP角色"、并分配注册或升级适用于vCenter Server的Element插件以及执行Element插件管理任务的权限。</block>
-  <block id="61ad36f15eb6ab7927cdc50f6e089a98" category="list-text"><block ref="410ecb079e286058eeb2bc6b56d9379c" category="inline-link-rx"></block> _new_</block>
   <block id="d59048f21fd887ad520398ce677be586" category="inline-link">了解更多信息。</block>
   <block id="29d500d8439e3dd944e651a8cafac013" category="paragraph">适用于vCenter Server 5.1的NetApp Element 插件可提高安全性和性能。<block ref="8f4569e0d2bf7d4026fc97d3aaa16f27" category="inline-link-rx"></block>。</block>
   <block id="91b1f6d002234f22dafb0acd912c78a9" category="section-title">适用于vCenter Server 5.0的NetApp Element 插件</block>
@@ -2824,4 +2817,32 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c383a818c3a85c8ddf42d50823c74c87" category="list-text">*自定义保护域运行状况*：在集群上配置自定义保护域时、显示集群的自定义保护域运行状况。</block>
+  <block id="e8337edeb04bc8a7d5079c3ae42aca9e" category="paragraph">以下数据指示了可在集群的一个自定义保护域发生故障时提供的保护。</block>
+  <block id="1b15621f73b7acf776f4bab322f48c37" category="list-text">*保护级别*：表示整体保护级别状态。</block>
+  <block id="e953d3ede945712963b8633a34a16147" category="list-text">*块容量*：表示块服务子系统的当前保护级别状态。</block>
+  <block id="0903e7a25b6fe3c4c1c292bfb50b6305" category="paragraph">它还指示故障恢复能力丢失时的总容量阈值。</block>
+  <block id="3def03a8540a1fa0cd5fddb64be14a52" category="list-text">*元数据容量*：指示元数据服务子系统的当前保护级别状态。</block>
+  <block id="9055d5b4f435ab7f0fd544794b6cd19f" category="list-text">*集合节点*：指示集合成员子系统的当前保护级别状态。</block>
+  <block id="939f531b35412529043c2c302552fa24" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block></block>
+  <block id="ce397f79b5032c3e327db3efe5a6048a" category="inline-link">vCenter插件5.2发行说明</block>
+  <block id="4718467fa890cd0dcf159b3d461cedbe" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block> _new_</block>
+  <block id="0d8e7da83905e55b509122516259e079" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.2可作为管理服务包的一部分在Element和NetApp HCI版本之外获得。</block>
+  <block id="6bd87cf3d55c2ead3ab585e965bea4db" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block></block>
+  <block id="ce4da9d1400f05b36779b0eb51082347" category="inline-link">了解有关自定义保护域的更多信息</block>
+  <block id="c671ce05a947b4fc3538276dc92df5bc" category="paragraph"><block ref="94416f01b8f87d5b898c4987d363cee6" category="inline-link-rx"></block>。</block>
+  <block id="93fa53865774995b6cd95dfc1939095f" category="list-text">vSphere 8.0 Update 1包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
+  <block id="faf6c38631911f7840c3498b4ec9f746" category="inline-link-macro">管理服务2.24.40通知(适用于VMware vCenter Server 5.2.12的NetApp Element插件)</block>
+  <block id="25ca5b0e8a707ce2e66aeb1f6f90e710" category="list-text"><block ref="25ca5b0e8a707ce2e66aeb1f6f90e710" category="inline-link-macro-rx"></block></block>
+  <block id="fb7ee1da3ef0eafb228b5df1bc76e51a" category="paragraph">此外、还为适用于VMware vCenter Server的NetApp Element插件5.2之前的版本提供了相关文档。</block>
+  <block id="514f715e57edd4343e805d5f5384b20e" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件5.2、还包括5.1、5.0、4.10、4.9、4.8、 4.7和4.6。</block>
+  <block id="43ff194f410f3e93a8680bef5ba51e50" category="cell">5.1.</block>
+  <block id="8ef365dbc309c214b67cabb8e4667395" category="cell"><block ref="8ef365dbc309c214b67cabb8e4667395" category="inline-link-rx"></block></block>
+  <block id="f8d3d7b8669323aed37a5ab85af833f2" category="inline-link">2.23.64</block>
+  <block id="6770db097fe40e46c77f186c92635e8d" category="cell"><block ref="6770db097fe40e46c77f186c92635e8d" category="inline-link-rx"></block></block>
+  <block id="5c6a9de58feba2a173cb8abb3af2ec85" category="paragraph">适用于vCenter Server 5.2的NetApp Element插件对可支持性进行了改进、并对自定义保护域显示进行了增强。</block>
+  <block id="c43b3da83b1c4add892ede9398b1570e" category="paragraph">在版本5.2中、如果在Element软件集群上配置了自定义保护域、则此插件将显示自定义保护域运行状况信息。 <block ref="a4fc86d509d3502936ee9fca7d20341d" category="inline-link-macro-rx"></block>。</block>
+  <block id="cc3e6fea6638b2b1b2791804af52ec8c" category="paragraph">Element vCenter插件5.2随管理服务2.24.40版提供。</block>
+  <block id="910e8449099d39f06d7f2cd8d6feea1c" category="section-title">适用于vCenter Server 5.1的NetApp Element插件</block>
+  <block id="6b51db420393cbff0d9f09dfeb229ecb" category="sidebar">NetApp HCI 中的新增功能</block>
 </blocks>
