@@ -2845,4 +2845,5 @@
   <block id="cc3e6fea6638b2b1b2791804af52ec8c" category="paragraph">Element vCenter插件5.2随管理服务2.24.40版提供。</block>
   <block id="910e8449099d39f06d7f2cd8d6feea1c" category="section-title">适用于vCenter Server 5.1的NetApp Element插件</block>
   <block id="6b51db420393cbff0d9f09dfeb229ecb" category="sidebar">NetApp HCI 中的新增功能</block>
+  <block id="bf2765efb2720c4592beeec5c6bf386c" category="sidebar">适用于VMware vCenter Server的NetApp Element插件为VMware vSphere界面提供了一个插件、可用于管理和监控运行NetApp Element软件的存储集群。您可以使用此文档站点了解并使用此插件。本文档站点介绍了适用于vCenter 5.0及更高版本的远程Element插件以及适用于vCenter 4.6至4.10的本地Element插件。</block>
 </blocks>
