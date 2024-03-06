@@ -27,10 +27,8 @@
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">选择 * 下一步 * 。</block>
   <block id="9dbdab54470930bcd90fc6a8b9dacf15" category="list-text">为数据存储库选择一个或多个所需主机。</block>
   <block id="ff51ebefd280ca27ec34709c2afb8006" category="admonition">在创建新数据存储库之前，您至少需要一个已连接的主机。如果主机具有多个启动程序，请选择一个启动程序或主机以选择所有启动程序。如果您使用的是 vCenter 链接模式，则只能选择可供分配了集群的 vCenter Server 使用的主机。</block>
-  <block id="bacf21a423bfde2c1eb26fc08d7bdc62" category="list-text">在 * 配置卷 * 窗格中，选择一个现有卷并继续执行下一步，或者为新数据存储库创建一个新卷：</block>
   <block id="b8a1cad4a50c9260122967b830aa2f1e" category="inline-link">挂载 VMFS 数据存储库副本</block>
   <block id="d79c3c87976b8fd24486c760b99214ec" category="inline-link">管理重复的 VMFS 数据存储库</block>
-  <block id="0f030e88335aefb9eac88487443396e2" category="admonition">如果选择现有卷以创建新数据存储库，则现有数据将丢失。对于现有 VMFS 卷，请参见有关的 VMware 文档<block ref="be550d2037a470ce38c4e9b1205adbd3" category="inline-link-rx"></block> 和<block ref="e78925c5281376a20450a24207e06cd4" category="inline-link-rx"></block>。</block>
   <block id="9b4855f94b52191a1a75d475396f12a1" category="list-text">为支持数据存储库的卷输入一个名称。</block>
   <block id="f344eae662ec1ec943e20eea1abbf748" category="list-text">从帐户列表中选择一个用户帐户。</block>
   <block id="f35c2266c9134e65354b7bac8eb01f5a" category="list-text">输入要创建的卷的总大小。</block>
@@ -2846,4 +2844,18 @@
   <block id="910e8449099d39f06d7f2cd8d6feea1c" category="section-title">适用于vCenter Server 5.1的NetApp Element插件</block>
   <block id="6b51db420393cbff0d9f09dfeb229ecb" category="sidebar">NetApp HCI 中的新增功能</block>
   <block id="bf2765efb2720c4592beeec5c6bf386c" category="sidebar">适用于VMware vCenter Server的NetApp Element插件为VMware vSphere界面提供了一个插件、可用于管理和监控运行NetApp Element软件的存储集群。您可以使用此文档站点了解并使用此插件。本文档站点介绍了适用于vCenter 5.0及更高版本的远程Element插件以及适用于vCenter 4.6至4.10的本地Element插件。</block>
+  <block id="d80d65153da9f647c1ae66ee2e9b710f" category="list-text">在*配置卷*窗格中，选择现有卷或为新数据存储库创建新卷：</block>
+  <block id="b0593ca7b0e91ef1a450ba78bba4194b" category="open-title">选择现有卷</block>
+  <block id="a97aaeb15fa07b573c01cd843d650936" category="paragraph">如果选择现有卷、则必须满足以下前提条件：</block>
+  <block id="c7857ac5cc7266a638970bba9e2b2004" category="list-text">要使用卷访问组、请执行以下操作：</block>
+  <block id="380d0774a372417aac38043e2915ac37" category="list-text">创建启用了512e的新卷。</block>
+  <block id="77960d964e75337a6bb83aef1ceb795a" category="list-text">将卷添加到包含一个或多个目标主机启动程序的访问组。</block>
+  <block id="8b9144d3ca30a3b9d4bb0cb90305f7b2" category="list-text">要使用CHAP、请执行以下操作：</block>
+  <block id="d239fbec99786f06b158cd7eedf51a08" category="list-text">确保已为每个目标主机iSCSI适配器配置CHAP。</block>
+  <block id="36a821057cd0ff678a617d89d48fbc98" category="list-text">使用以下选项之一创建启用了512e的新卷：</block>
+  <block id="f3c1df40f5b3b7b499caddeebcf7577e" category="list-text">请使用一个帐户、并为每个目标主机设置适当的CHAP设置。</block>
+  <block id="13360f9beb5e70b1a3911ee48b55a553" category="list-text">创建帐户并配置目标和启动程序密钥。</block>
+  <block id="9314e5acbbfd0a4b95d982565586c95f" category="list-text">查看卷详细信息。</block>
+  <block id="0fae033b7f8a2552a2db93253ae48448" category="list-text">将卷IQN添加到每个目标主机iSCSI适配器静态发现表。</block>
+  <block id="ce8c852278bf664e34483c6a3fbd4194" category="open-title">创建新卷</block>
 </blocks>
