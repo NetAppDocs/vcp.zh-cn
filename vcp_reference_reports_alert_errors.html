@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>系统警报列表</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="系统警报列表" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/vcp/vcp_reference_reports_alert_errors.html" />
+	<meta property="og:description" content="下面列出了系统警报、这些警报是信息、警告或错误、可通过使用适用于VMware vCenter Server的NetApp Element 插件的报告页面指示集群的运行状况。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="下面列出了系统警报、这些警报是信息、警告或错误、可通过使用适用于VMware vCenter Server的NetApp Element 插件的报告页面指示集群的运行状况。">
+  <meta name="keywords" content=" netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, performance"><!-- Icons -->
+  <link rel="icon" href="/zh-cn/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/zh-cn/vcp/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/vcp/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/zh-cn/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/vcp/vcp_reference_reports_alert_errors.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/vcp/vcp_reference_reports_alert_errors.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/vcp/js/na-search.js'></script><script src='/zh-cn/vcp/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/zh-cn/vcp/js/custom-dropdown.js'></script>
+  <script src='/zh-cn/vcp/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/vcp/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/vcp/js/jszip.min.js'></script><script src='/zh-cn/vcp/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/zh-cn/vcp/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/cn">
+                <image id="ie-header-logo" src="/zh-cn/vcp/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">文档</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/zh-cn/vcp/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">简体中文</span>
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/zh-cn/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/vcp/vcp_reference_reports_alert_errors.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/zh-cn/vcp/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">全部来自 NetApp</span>
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">支持</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">知识库</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/zh-hans/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">训练</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">所有文档</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/zh-cn/vcp/">-->
+      VCP
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/zh-cn/vcp/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/zh-cn/vcp/search.html" 
+        data-type="widget"
+        data-placeholder="搜索文档"
+        data-no-results-found="未找到 {query} 的相关结果"
+        data-did-you-mean="搜索 {suggestion}。"
+        data-no-results-found-did-you-mean="未找到 {query} 的相关结果。您是指 {suggestion}？"
+        data-results-found="找到 {hitCount} 个结果"
+        data-error-message="发生错误。请重试。"
+        data-error-reset="重置搜索"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件文档"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/index.html">
+        适用于VMware vCenter Server的NetApp Element 插件文档
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件产品概述"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/concept_vcp_product_overview.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/concept_vcp_product_overview.html">
+        适用于VMware vCenter Server的NetApp Element 插件产品概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="发行说明"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 发行说明</div>-->
+         发行说明
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件中的新增功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/rn_whatsnew_vcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/rn_whatsnew_vcp.html">
+        适用于VMware vCenter Server的NetApp Element 插件中的新增功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="其他版本信息"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/rn_relatedrn_vcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/rn_relatedrn_vcp.html">
+        其他版本信息
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件</div>-->
+         适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="远程插件架构概述"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_remote_plugin_architecture.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_remote_plugin_architecture.html">
+        远程插件架构概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 远程插件扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_remote_plugin_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_remote_plugin_extension_point.html">
+        NetApp Element 远程插件扩展点
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件</div>-->
+         适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 配置扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_config_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_config_extension_point.html">
+        NetApp Element 配置扩展点
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 管理扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_management_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_management_extension_point.html">
+        NetApp Element 管理扩展点
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="用户帐户"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_accounts.html">
+        用户帐户
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保护域"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_protection_domains.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_protection_domains.html">
+        保护域
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="链接模式和vCenter插件"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_linkedmode.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_linkedmode.html">
+        链接模式和vCenter插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="QoSSIOC"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="虚拟卷（ VVOL ）"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_concept_vvols.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_vvols.html">
+        虚拟卷（ VVOL ）
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署前要求"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/reference_requirements_vcp.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/reference_requirements_vcp.html">
+        部署前要求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安装和配置适用于 vCenter Server 的 NetApp Element 插件"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 安装和配置适用于 vCenter Server 的 NetApp Element 插件</div>-->
+         安装和配置适用于 vCenter Server 的 NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_getstarted_5_0.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_getstarted_5_0.html">
+        为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安装并配置Element插件4.10及更早版本"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_getstarted.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_getstarted.html">
+        安装并配置Element插件4.10及更早版本
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升级此插件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/task_vcp_upgrades.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_upgrades.html">
+        升级此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件管理存储"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用 vCenter 插件管理存储</div>-->
+         使用 vCenter 插件管理存储
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_clusters_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_clusters_manage.html">
+        管理集群
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理数据存储库"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_datastores_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_datastores_manage.html">
+        管理数据存储库
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理卷"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_volumes_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_volumes_manage.html">
+        管理卷
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理用户帐户"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_create_manage_user_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_user_accounts.html">
+        创建和管理用户帐户
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理访问组"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_create_manage_access_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_access_groups.html">
+        创建和管理访问组
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理启动程序"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_create_manage_initiators.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_initiators.html">
+        创建和管理启动程序
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_qossioc.html">
+        为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理卷 QoS 策略"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_qos_policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_qos_policies.html">
+        创建和管理卷 QoS 策略
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群硬件和虚拟网络"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理集群硬件和虚拟网络</div>-->
+         管理集群硬件和虚拟网络
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群硬件和虚拟网络概述"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_manage_cluster_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_manage_cluster_overview.html">
+        管理集群硬件和虚拟网络概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="添加和管理驱动器"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_add_manage_drive.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_add_manage_drive.html">
+        添加和管理驱动器
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="添加和管理节点"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_add_manage_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_add_manage_nodes.html">
+        添加和管理节点
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理虚拟网络"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_create_manage_vlans.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_vlans.html">
+        创建和管理虚拟网络
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控系统性能"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 监控系统性能</div>-->
+         监控系统性能
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用报告选项监控系统性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_intro.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_intro.html">
+        使用报告选项监控系统性能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在概述页面上监控集群的整体运行状况"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_overview.html">
+        在概述页面上监控集群的整体运行状况
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控系统警报"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_alerts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_alerts.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 监控系统警报</div>-->
+         监控系统警报
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="系统警报列表"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_reference_reports_alert_errors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_reference_reports_alert_errors.html">
+        系统警报列表
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控事件日志以进行故障排除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_event_logs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_event_logs.html">
+        监控事件日志以进行故障排除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控卷性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_volume_performance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_volume_performance.html">
+        监控卷性能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控 iSCSI 会话以确定连接状态"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_iscsi.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_iscsi.html">
+        监控 iSCSI 会话以确定连接状态
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 QocSSIOC 事件监控虚拟机性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_reports_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_qossioc.html">
+        使用 QocSSIOC 事件监控虚拟机性能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件保护数据"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用 vCenter 插件保护数据</div>-->
+         使用 vCenter 插件保护数据
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件概述保护数据"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_protect_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_overview.html">
+        使用 vCenter 插件概述保护数据
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理卷快照"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_volume.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_volume.html">
+        创建和管理卷快照
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理组快照"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_group.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_group.html">
+        创建和管理组快照
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建快照计划"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_schedules.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_schedules.html">
+        创建快照计划
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在集群之间执行远程复制"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_protect_remote_replication.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_remote_replication.html">
+        在集群之间执行远程复制
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件设置和管理虚拟卷"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_task_configure_manage_vvols.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/vcp_task_configure_manage_vvols.html">
+        使用 vCenter 插件设置和管理虚拟卷
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="取消注册此插件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/task_vcp_unregister.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_unregister.html">
+        取消注册此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="删除此插件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/task_vcp_remove.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_remove.html">
+        删除此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="对插件进行故障排除"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/vcp_reference_troubleshoot_vcp.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/vcp_reference_troubleshoot_vcp.html">
+        对插件进行故障排除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="早期版本的 NetApp Element 插件文档"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/reference_earlier_versions.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/reference_earlier_versions.html">
+        早期版本的 NetApp Element 插件文档
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律声明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/vcp_reference_reports_alert_errors.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/legal-notices.html">
+        法律声明
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/zh-cn/vcp"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/zh-cn/vcp"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/zh-cn/vcp/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">系统警报列表</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-02-23 19:56:53 +0000">02/23/2023</time>
+        
+    
+    
+        <span>贡献者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/zh-cn/vcp/images/discuss-sm.svg" alt="" class="github-icon" />建议更改</span>
+        <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/vcp.zh-cn/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-cn/vcp/vcp_reference_reports_alert_errors.html&page-title=系统警报列表" class="page-nav-contribute-link" role="button">请求文档更改</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/vcp_reference_reports_alert_errors.adoc" class="page-nav-contribute-link" role="button">编辑此页面</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >了解如何贡献</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/zh-cn/vcp/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/zh-cn/vcp/pdfs/fullsite-sidebar/适用于VMware_vCenter_Server的NetApp_Element_插件文档.pdf" >
+                    <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>本文档站点的 PDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/发行说明.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            发行说明
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/适用于VMware_vCenter_Server_5_0或更高版本的NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/适用于VMware_vCenter_Server_4_10或更早版本的NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/安装和配置适用于_vCenter_Server_的_NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            安装和配置适用于 vCenter Server 的 NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件管理存储.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用 vCenter 插件管理存储
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/管理集群硬件和虚拟网络.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理集群硬件和虚拟网络
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统性能.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            监控系统性能
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统警报.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            监控系统警报
+          </a>
+          
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件保护数据.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用 vCenter 插件保护数据
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/zh-cn/vcp/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>单独 PDF 文档的收集<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph lead">
+<p>系统会报告每个警报的错误代码、以帮助您确定系统中哪个组件遇到警报以及生成警报的原因。您可以使用插件扩展点查看错误代码：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>从Element vCenter插件5.0开始、选择* NetApp远程插件&gt;管理&gt;报告&gt;警报*。</p>
+</li>
+<li>
+<p>对于Element vCenter插件4.10及更早版本、请选择* NetApp Element Management&gt; Reporting &gt; Alerts*。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>以下列表概述了不同类型的系统警报。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>* 身份验证服务故障 *</p>
+<div class="paragraph">
+<p>一个或多个集群节点上的身份验证服务未按预期运行。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 可用 VirtualNetworkIPAddressLow*</p>
+<div class="paragraph">
+<p>IP 地址块中的虚拟网络地址数量较少。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请向虚拟网络地址块添加更多 IP 地址。</p>
+</div>
+</li>
+<li>
+<p>* 块集群完整 *</p>
+<div class="paragraph">
+<p>没有足够的可用块存储空间来支持单节点丢失。有关集群填充度级别的详细信息，请参见 GetClusterFullThreshold API 方法。此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stage3Low （ Warning ）：已超过用户定义的阈值。调整 "Cluster Full" 设置或添加更多节点。</p>
+</li>
+<li>
+<p>stage4Critical （ Error ）：没有足够的空间从单节点故障中恢复。不允许创建卷，快照和克隆。</p>
+</li>
+<li>
+<p>stage5CompletelyConsumed （严重） 1 ；不允许写入或新的 iSCSI 连接。将保持当前的 iSCSI 连接。写入将失败，直到向集群添加更多容量为止。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请清除或删除卷，或者向存储集群添加另一个存储节点。</p>
+</div>
+</li>
+<li>
+<p>* 块已降级 *</p>
+<div class="paragraph">
+<p>由于发生故障，块数据不再完全复制。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>只能访问块数据的两个完整副本。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>只能访问块数据的一个完整副本。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>严重</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>无法访问块数据的完整副本。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>注： * 警告状态只能发生在三重 Helix 系统上。</p>
+<div class="paragraph">
+<p>要解决此故障，请还原任何脱机节点或块服务，或者联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 块服务 TooFull*</p>
+<div class="paragraph">
+<p>块服务正在使用过多空间。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请添加更多已配置容量。</p>
+</div>
+</li>
+<li>
+<p>* 块服务运行状况不正常 *</p>
+<div class="paragraph">
+<p>检测到块服务运行状况不正常：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>严重性 = 警告：不执行任何操作。此警告期限将在 cTimeUntilBSisKiledMSec=330000 毫秒后过期。</p>
+</li>
+<li>
+<p>严重性 = 错误：系统正在自动停用数据并将其数据重新复制到其他运行状况良好的驱动器。</p>
+</li>
+<li>
+<p>严重性 = 严重：多个节点上的故障块服务大于或等于复制计数（双 Helix 为 2 ）。数据不可用，无法完成箱同步。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>检查网络连接问题和硬件错误。如果特定硬件组件出现故障，则会出现其他故障。当可访问块服务或已停用此服务时，此故障将得以清除。</p>
+</div>
+</li>
+<li>
+<p>* BmcSelfTestFailed</p>
+<div class="paragraph">
+<p>基板管理控制器(BMC)未通过自检。</p>
+</div>
+<div class="paragraph">
+<p>请联系NetApp支持部门以获得帮助。</p>
+</div>
+<div class="paragraph">
+<p>在升级到Element 12.5或更高版本期间、 <code>BmcSelfTestFailed</code> 如果节点先前存在故障BMC、或者节点的BMC在升级期间出现故障、则不会为该节点生成故障。升级期间未通过自检的BMC将使用问题描述 A <code>BmcSelfTestFailed</code> 整个集群完成升级后出现警告故障。</p>
+</div>
+</li>
+<li>
+<p>* 时钟 SkewExceedsFaultThreshold *</p>
+<div class="paragraph">
+<p>集群主节点与提供令牌的节点之间的时间偏差超过建议的阈值。存储集群无法自动更正节点之间的时间偏差。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请使用网络内部的 NTP 服务器，而不是使用安装默认值。如果您使用的是内部 NTP 服务器，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* clusterCannotSync*</p>
+<div class="paragraph">
+<p>出现空间不足的情况，脱机块存储驱动器上的数据无法同步到仍处于活动状态的驱动器。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请添加更多存储。</p>
+</div>
+</li>
+<li>
+<p>* clusterFull *</p>
+<div class="paragraph">
+<p>存储集群中没有更多可用存储空间。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请添加更多存储。</p>
+</div>
+</li>
+<li>
+<p>* 集群 IOPSAreOverProvisioned *</p>
+<div class="paragraph">
+<p>集群 IOPS 配置过度。所有最小 QoS IOPS 的总和大于集群的预期 IOPS 。无法同时为所有卷保持最低 QoS 。</p>
+</div>
+<div class="paragraph">
+<p>要解决此问题描述，请降低卷的最小 QoS IOPS 设置。</p>
+</div>
+</li>
+<li>
+<p>* cpuTherMalEventThreshold *</p>
+<div class="paragraph">
+<p>一个或多个CPU上的CPU散热事件数超过配置的阈值。</p>
+</div>
+<div class="paragraph">
+<p>如果在10分钟内未检测到新的CPU散热事件、则此警告将自行解决。</p>
+</div>
+</li>
+<li>
+<p>* 禁用 DriveSecurityFailed</p>
+<div class="paragraph">
+<p>集群未配置为启用驱动器安全性（空闲加密），但至少有一个驱动器启用了驱动器安全性，这意味着在这些驱动器上禁用驱动器安全性失败。此故障会记录为 "`Warning` " 严重性。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请查看故障详细信息以了解无法禁用驱动器安全保护的原因。可能的原因包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>无法获取加密密钥，请调查此密钥或外部密钥服务器的访问问题。</p>
+</li>
+<li>
+<p>对驱动器执行禁用操作失败，请确定是否可能获取了错误的密钥。</p>
+<div class="paragraph">
+<p>如果这两种情况都不是导致故障的原因，则可能需要更换驱动器。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>您可以尝试恢复未成功禁用安全的驱动器，即使提供的身份验证密钥正确也是如此。要执行此操作，请将驱动器移至 "Available" （可用）以从系统中删除，对驱动器执行安全擦除并将其移回 "Active" （活动）。</p>
+</div>
+</li>
+<li>
+<p>* 已断开 ClusterPair*</p>
+<div class="paragraph">
+<p>集群对已断开连接或配置不正确。</p>
+</div>
+<div class="paragraph">
+<p>检查集群之间的网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 断开 RemoteNode*</p>
+<div class="paragraph">
+<p>远程节点已断开连接或配置不正确。</p>
+</div>
+<div class="paragraph">
+<p>检查节点之间的网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 断开 SnapMirrorEndpoint*</p>
+<div class="paragraph">
+<p>远程 SnapMirror 端点已断开连接或配置不正确。</p>
+</div>
+<div class="paragraph">
+<p>检查集群与远程 SnapMirrorEndpoint 之间的网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 可用驱动器 *</p>
+<div class="paragraph">
+<p>集群中有一个或多个驱动器可用。通常，所有集群都应添加所有驱动器，而不应使任何驱动器处于可用状态。如果意外出现此故障，请联系 NetApp 支持部门。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请向存储集群添加任何可用驱动器。</p>
+</div>
+</li>
+<li>
+<p>* 驱动器已启用 *</p>
+<div class="paragraph">
+<p>当一个或多个驱动器发生故障时，集群将返回此故障，表示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>驱动器管理器无法访问此驱动器。</p>
+</li>
+<li>
+<p>分区或块服务失败次数过多，可能是由于驱动器读取或写入失败，无法重新启动。</p>
+</li>
+<li>
+<p>驱动器缺失。</p>
+</li>
+<li>
+<p>无法访问节点的主服务（此节点中的所有驱动器均视为缺失 / 故障）。</p>
+</li>
+<li>
+<p>驱动器已锁定，无法获取驱动器的身份验证密钥。</p>
+</li>
+<li>
+<p>驱动器已锁定，解锁操作失败。</p>
+<div class="paragraph">
+<p>要解决此问题描述，请执行以下操作：</p>
+</div>
+</li>
+<li>
+<p>检查节点的网络连接。</p>
+</li>
+<li>
+<p>更换驱动器。</p>
+</li>
+<li>
+<p>确保身份验证密钥可用。</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 驱动器运行状况故障 *</p>
+<div class="paragraph">
+<p>驱动器未通过智能运行状况检查，因此驱动器的功能会降低。此故障具有严重严重性级别：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>插槽中序列号为 &lt; 序列号 &gt; 的驱动器： &lt; 节点插槽 &gt;&lt; 驱动器插槽 &gt; 未通过 SMART 整体运行状况检查。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请更换驱动器。</p>
+</div>
+</li>
+<li>
+<p>* 驱动器 WearFault *</p>
+<div class="paragraph">
+<p>驱动器的剩余寿命已降至阈值以下，但它仍在运行。此故障可能存在两个严重性级别：严重和警告：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>序列号为 &lt; 序列号 &gt; 的驱动器插槽： &lt; 节点插槽 &gt;&lt; 驱动器插槽 &gt; 具有严重的损耗级别。</p>
+</li>
+<li>
+<p>驱动器的插槽： &lt;node slot&gt;&lt;drive slot&gt; 中的序列号为 &lt;serial number&gt; ，因此预留的损耗较低。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请尽快更换驱动器。</p>
+</div>
+</li>
+<li>
+<p>* 双工 ClusterMasterCandidate*</p>
+<div class="paragraph">
+<p>检测到多个存储集群候选主存储。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 启用 DriveSecurityFailed</p>
+<div class="paragraph">
+<p>集群已配置为需要驱动器安全性（空闲加密），但至少一个驱动器无法启用驱动器安全性。此故障会记录为 "`Warning` " 严重性。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请查看故障详细信息以了解无法启用驱动器安全保护的原因。可能的原因包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>无法获取加密密钥，请调查此密钥或外部密钥服务器的访问问题。</p>
+</li>
+<li>
+<p>驱动器上的启用操作失败，请确定是否可能获取了错误的密钥。如果这两种情况都不是导致故障的原因，则可能需要更换驱动器。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>您可以尝试恢复未成功启用安全保护的驱动器，即使提供的身份验证密钥正确也是如此。要执行此操作，请将驱动器移至 "Available" （可用）以从系统中删除，对驱动器执行安全擦除并将其移回 "Active" （活动）。</p>
+</div>
+</li>
+<li>
+<p>* 信号群已降级 *</p>
+<div class="paragraph">
+<p>一个或多个集合节点已断开网络连接或电源。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请还原网络连接或电源。</p>
+</div>
+</li>
+<li>
+<p>* 异常 *</p>
+<div class="paragraph">
+<p>报告的故障不是例行故障。这些故障不会自动从故障队列中清除。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 故障空间 TooFull*</p>
+<div class="paragraph">
+<p>块服务未响应数据写入请求。这会导致分区服务用尽存储失败写入的空间。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请还原块服务功能，以允许继续正常写入并从分区服务刷新故障空间。</p>
+</div>
+</li>
+<li>
+<p>* 风扇传感器 *</p>
+<div class="paragraph">
+<p>风扇传感器出现故障或缺失。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请更换任何出现故障的硬件。</p>
+</div>
+</li>
+<li>
+<p>* 光纤通道访问已降级 *</p>
+<div class="paragraph">
+<p>光纤通道节点在一段时间内未通过其存储 IP 对存储集群中的其他节点做出响应。在此状态下，节点将被视为无响应并生成集群故障。</p>
+</div>
+<div class="paragraph">
+<p>检查网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 光纤通道访问不可用 *</p>
+<div class="paragraph">
+<p>所有光纤通道节点均无响应。此时将显示节点 ID 。</p>
+</div>
+<div class="paragraph">
+<p>检查网络连接。</p>
+</div>
+</li>
+<li>
+<p>* fibreChannelActiveIxL*</p>
+<div class="paragraph">
+<p>IXL Nexus 计数即将达到支持的限制，即每个光纤通道节点具有 8000 个活动会话。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>最佳实践限制为 5500 。</p>
+</li>
+<li>
+<p>警告限制为 7500 。</p>
+</li>
+<li>
+<p>最大限制（未强制实施）为 8192 。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请将 IXL Nexus 计数降至最佳实践限制 5500 以下。</p>
+</div>
+</li>
+<li>
+<p>* fibreChannelConfig*</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>PCI 插槽上存在意外的光纤通道端口。</p>
+</li>
+<li>
+<p>存在意外的光纤通道 HBA 型号。</p>
+</li>
+<li>
+<p>光纤通道 HBA 的固件存在问题。</p>
+</li>
+<li>
+<p>光纤通道端口未联机。</p>
+</li>
+<li>
+<p>有一个永久性问题描述正在配置光纤通道直通。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 光纤通道 IOPS*</p>
+<div class="paragraph">
+<p>集群中光纤通道节点的总 IOPS 计数即将达到 IOPS 限制。限制包括：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FC0025 ：每个光纤通道节点 4 k 块大小时的 IOPS 限制为 450 k 。</p>
+</li>
+<li>
+<p>FCN001 ：每个光纤通道节点 4 K 块大小时的 625K 操作数限制。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请在所有可用光纤通道节点之间平衡负载。</p>
+</div>
+</li>
+<li>
+<p>* fibreChannelStaticIxL*</p>
+<div class="paragraph">
+<p>IXL Nexus 计数即将达到支持的限制，即每个光纤通道节点有 16000 个静态会话。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>最佳实践限制为 11000 。</p>
+</li>
+<li>
+<p>警告限制为 15000 。</p>
+</li>
+<li>
+<p>最大限制（强制实施）为 16384 。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请将 IXL Nexus 计数降至最佳实践限制 11000 以下。</p>
+</div>
+</li>
+<li>
+<p>* 文件系统容量低 *</p>
+<div class="paragraph">
+<p>其中一个文件系统空间不足。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请向文件系统添加更多容量。</p>
+</div>
+</li>
+<li>
+<p>*文件系统IsReadOnly *</p>
+<div class="paragraph">
+<p>文件系统已移至只读模式。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* fipsDrivesMismatch*</p>
+<div class="paragraph">
+<p>已将非 FIPS 驱动器物理插入支持 FIPS 的存储节点，或者已将 FIPS 驱动器物理插入非 FIPS 存储节点。每个节点会生成一个故障，并列出所有受影响的驱动器。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请卸下或更换不匹配的相关驱动器。</p>
+</div>
+</li>
+<li>
+<p>* fipsDrivesOutOfCompliance"</p>
+<div class="paragraph">
+<p>在启用 FIPS 驱动器功能后，系统检测到已禁用空闲加密。如果启用了 FIPS 驱动器功能且存储集群中存在非 FIPS 驱动器或节点，则也会生成此故障。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请启用空闲加密或从存储集群中删除非 FIPS 硬件。</p>
+</div>
+</li>
+<li>
+<p>* fipsSelfTestFailure*</p>
+<div class="paragraph">
+<p>FIPS 子系统在自检期间检测到故障。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 硬件配置不匹配 *</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>此配置与节点定义不匹配。</p>
+</li>
+<li>
+<p>此类节点的驱动器大小不正确。</p>
+</li>
+<li>
+<p>检测到不受支持的驱动器。可能的原因是，安装的 Element 版本无法识别此驱动器。建议更新此节点上的 Element 软件。</p>
+</li>
+<li>
+<p>驱动器固件不匹配。</p>
+</li>
+<li>
+<p>驱动器加密功能状态与节点不匹配。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* idPCertificateExpiration*</p>
+<div class="paragraph">
+<p>用于第三方身份提供程序（ IdP ）的集群服务提供商 SSL 证书即将到期或已过期。此故障会根据紧急程度使用以下严重性：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 30 天内过期。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 7 天内过期。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>严重</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 3 天内过期或已过期。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>要解决此故障，请在 SSL 证书过期之前对其进行更新。将UpdateIdpConfiguration API方法与结合使用 <code>refreshCertificateExpirationTime=true</code> 以提供更新后的SSL证书。</p>
+</div>
+</li>
+<li>
+<p>* 不一致的绑定模式 *</p>
+<div class="paragraph">
+<p>VLAN 设备上缺少绑定模式。此故障将显示预期的绑定模式和当前正在使用的绑定模式。</p>
+</div>
+</li>
+<li>
+<p>* 不一致的 Mtus*</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bond1G mismatch ：在绑定 1G 接口上检测到 MTU 不一致。</p>
+</li>
+<li>
+<p>Bond10G mismatch ：在绑定 10G 接口上检测到 MTU 不一致。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>此故障将显示相关节点以及关联的 MTU 值。</p>
+</div>
+</li>
+<li>
+<p>* 不一致的路由规则 *</p>
+<div class="paragraph">
+<p>此接口的路由规则不一致。</p>
+</div>
+</li>
+<li>
+<p>* 不一致的子网询问 *</p>
+<div class="paragraph">
+<p>VLAN 设备上的网络掩码与内部记录的 VLAN 网络掩码不匹配。此故障将显示预期的网络掩码和当前正在使用的网络掩码。</p>
+</div>
+</li>
+<li>
+<p>* 绑定端口数不正确 *</p>
+<div class="paragraph">
+<p>绑定端口数不正确。</p>
+</div>
+</li>
+<li>
+<p>* invuidConfiguredFibreChannelNodeCount*</p>
+<div class="paragraph">
+<p>两个预期光纤通道节点连接中的一个已降级。如果仅连接了一个光纤通道节点，则会出现此故障。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请检查集群网络连接和网络布线，并检查服务是否出现故障。如果没有网络或服务问题，请联系 NetApp 支持部门更换光纤通道节点。</p>
+</div>
+</li>
+<li>
+<p>* irqBalanceFailed</p>
+<div class="paragraph">
+<p>尝试平衡中断时出现异常。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* kmipCertificateFault ：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>根证书颁发机构（ CA ）证书即将到期。</p>
+<div class="paragraph">
+<p>要解决此故障，请从根 CA 获取一个新证书，此证书的到期日期至少为 30 天后，并使用 ModifyKeyServerKmip 提供更新后的根 CA 证书。</p>
+</div>
+</li>
+<li>
+<p>客户端证书即将到期。</p>
+<div class="paragraph">
+<p>要解决此故障，请使用 GetClientCertificateSigningRequest 创建一个新的 CSR ，并对其进行签名以确保新的到期日期至少在 30 天后，然后使用 ModifyKeyServerKmip 将即将到期的 KMIP 客户端证书替换为新证书。</p>
+</div>
+</li>
+<li>
+<p>根证书颁发机构（ CA ）证书已过期。</p>
+<div class="paragraph">
+<p>要解决此故障，请从根 CA 获取一个新证书，此证书的到期日期至少为 30 天后，并使用 ModifyKeyServerKmip 提供更新后的根 CA 证书。</p>
+</div>
+</li>
+<li>
+<p>客户端证书已过期。</p>
+<div class="paragraph">
+<p>要解决此故障，请使用 GetClientCertificateSigningRequest 创建一个新的 CSR ，并对其进行签名以确保新的到期日期至少在 30 天后，然后使用 ModifyKeyServerKmip 将已过期的 KMIP 客户端证书替换为新证书。</p>
+</div>
+</li>
+<li>
+<p>根证书颁发机构（ CA ）证书错误。</p>
+<div class="paragraph">
+<p>要解决此故障，请检查提供的证书是否正确，如果需要，请从根 CA 重新获取此证书。使用 ModifyKeyServerKmip 安装正确的 KMIP 客户端证书。</p>
+</div>
+</li>
+<li>
+<p>客户端证书错误。</p>
+<div class="paragraph">
+<p>要解决此故障，请检查是否安装了正确的 KMIP 客户端证书。客户端证书的根 CA 应安装在 EKS 上。使用 ModifyKeyServerKmip 安装正确的 KMIP 客户端证书。</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* kmipServerFault * ：</p>
+<div class="ulist">
+<ul>
+<li>
+<p>连接失败</p>
+<div class="paragraph">
+<p>要解决此故障，请检查外部密钥服务器是否处于活动状态并可通过网络访问。使用 TestKeyServerKimp 和 TestKeyProviderKmip 测试连接。</p>
+</div>
+</li>
+<li>
+<p>身份验证失败</p>
+<div class="paragraph">
+<p>要解决此故障，请检查使用的根 CA 和 KMIP 客户端证书是否正确，以及私钥和 KMIP 客户端证书是否匹配。</p>
+</div>
+</li>
+<li>
+<p>服务器错误</p>
+<div class="paragraph">
+<p>要解决此故障，请查看此错误的详细信息。根据返回的错误，可能需要在外部密钥服务器上进行故障排除。</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>* 内存 EccThreshold *</p>
+<div class="paragraph">
+<p>检测到大量可更正或不可更正的 ECC 错误。此故障会根据紧急程度使用以下严重性：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">事件</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>一个 DIMM cErrorCount 达到 cDImmCorrectableErrWarnThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>DIMM 上的可更正 ECC 内存错误超过阈值： &lt;Processor&gt; &lt;DIMM Slot&gt;</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在 DIMM 的 cErrorFault计时 器过期之前，一个 DIMM cErrorCount 将保持在 cDIMMCorrectableErrWarnThreshold 以上。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>DIMM &lt;Processor&gt; &lt;DIMM&gt; 上的可更正 ECC 内存错误超过阈值</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>内存控制器报告 cErrorCount 高于 cMemCtrl+Alt+CorrectErrWarnThreshold ，并指定 cMemcerrCorrectableErrWarnDuration 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>内存控制器 &lt;Processor&gt; &lt;Memory Controller&gt; 上的可更正 ECC 内存错误超过阈值</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在内存控制器的 cErrorFault计时 器过期之前，内存控制器会报告 cErrorCount 高于 cMemCtrl+Alt+CorrectErrWarnThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>DIMM &lt;Processor&gt; &lt;DIMM&gt; 上的可更正 ECC 内存错误超过阈值</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>单个 DIMM 报告的 uErrorCount 超过零，但小于 cdimmUncorrecteErrFaultThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在 DIMM ： &lt;Processor&gt; &lt;DIMM Slot&gt; 上检测到不可更正的 ECC 内存错误</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>单个 DIMM 报告的 uErrorCount 至少为 cDIMMUncorrectErrFaultThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在 DIMM ： &lt;Processor&gt; &lt;DIMM Slot&gt; 上检测到不可更正的 ECC 内存错误</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>内存控制器报告 uErrorCount 超过零，但小于 cMemcerrUncorrectErrFaultThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在内存控制器 &lt; 处理器 &gt; &lt; 内存控制器 &gt; 上检测到不可更正的 ECC 内存错误</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>内存控制器报告的 uErrorCount 至少为 cMemcerrcerr无法 更正 ErrFaultThreshold 。</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>在内存控制器 &lt; 处理器 &gt; &lt; 内存控制器 &gt; 上检测到不可更正的 ECC 内存错误</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>要解决此故障，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 内存使用阈值 *</p>
+<div class="paragraph">
+<p>内存使用量超过正常值。此故障会根据紧急程度使用以下严重性：</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/vcp/images/note.svg" alt="备注">
+</td>
+<td class="content">
+有关故障类型的更多详细信息，请参见错误故障中的 * 详细信息 * 标题。
+</td>
+</tr>
+</table>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>系统内存不足。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>系统内存非常低。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>严重</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>系统内存已完全耗尽。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>要解决此故障，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 元数据 ClusterFull*</p>
+<div class="paragraph">
+<p>没有足够的可用元数据存储空间来支持单节点丢失。有关集群填充度级别的详细信息，请参见 GetClusterFullThreshold API 方法。此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stage3Low （ Warning ）：已超过用户定义的阈值。调整 "Cluster Full" 设置或添加更多节点。</p>
+</li>
+<li>
+<p>stage4Critical （ Error ）：没有足够的空间从单节点故障中恢复。不允许创建卷，快照和克隆。</p>
+</li>
+<li>
+<p>stage5CompletelyConsumed （严重） 1 ；不允许写入或新的 iSCSI 连接。将保持当前的 iSCSI 连接。写入将失败，直到向集群添加更多容量为止。清除或删除数据或添加更多节点。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请清除或删除卷，或者向存储集群添加另一个存储节点。</p>
+</div>
+</li>
+<li>
+<p>* mtuCheckFailure *</p>
+<div class="paragraph">
+<p>未为网络设备配置正确的 MTU 大小。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请确保为所有网络接口和交换机端口配置巨型帧（ MTU 大小高达 9000 字节）。</p>
+</div>
+</li>
+<li>
+<p>* 网络配置 *</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>预期接口不存在。</p>
+</li>
+<li>
+<p>存在重复接口。</p>
+</li>
+<li>
+<p>已配置的接口已关闭。</p>
+</li>
+<li>
+<p>需要重新启动网络。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 节点可用虚拟网络 IP 插件 *</p>
+<div class="paragraph">
+<p>IP 地址块中没有可用的虚拟网络地址。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>virtualNetworkID <mark>标记(</mark>##)没有可用的存储IP地址。无法向集群添加其他节点。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请向虚拟网络地址块添加更多 IP 地址。</p>
+</div>
+</li>
+<li>
+<p>*nodeHardwareFault （网络接口 &lt;name&gt; 已关闭或缆线已拔出） *</p>
+<div class="paragraph">
+<p>网络接口已关闭或已拔下缆线。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请检查一个或多个节点的网络连接。</p>
+</div>
+</li>
+<li>
+<p>*nodeHardwareFault （驱动器加密功能状态与插槽 &lt;node slot&gt;&lt;drive slot&gt; 中驱动器的节点加密功能状态不匹配） *</p>
+<div class="paragraph">
+<p>驱动器的加密功能与安装该驱动器的存储节点不匹配。</p>
+</div>
+</li>
+<li>
+<p>* 节点 HardwareFault （此节点类型的插槽 &lt; 驱动器插槽 &gt;&lt; 驱动器插槽 &gt; 中驱动器的驱动器 &lt; 驱动器类型 &gt; 驱动器大小 &lt; 实际大小 &gt; 不正确 - 应为 &lt; 预期大小 &gt; ） *</p>
+<div class="paragraph">
+<p>存储节点中的驱动器大小不正确。</p>
+</div>
+</li>
+<li>
+<p>* 节点硬件故障（在插槽 &lt; 节点插槽 &gt;&lt; 驱动器插槽 &gt; 中检测到不支持的驱动器；驱动器统计信息和运行状况信息将不可用） *</p>
+<div class="paragraph">
+<p>存储节点包含其不支持的驱动器。</p>
+</div>
+</li>
+<li>
+<p>* 节点硬件故障（插槽 &lt; 节点插槽 &gt;&lt; 驱动器插槽 &gt; 中的驱动器应使用固件版本 &lt; 预期版本 &gt; ，但使用的版本 &lt; 实际版本 &gt; 不受支持） *</p>
+<div class="paragraph">
+<p>存储节点包含运行不受支持的固件版本的驱动器。</p>
+</div>
+</li>
+<li>
+<p>* 节点维护模式 *</p>
+<div class="paragraph">
+<p>节点已置于维护模式。此故障会根据紧急程度使用以下严重性：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>指示节点仍处于维护模式。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>表示维护模式无法禁用，最可能的原因是备用磁盘出现故障或处于活动状态。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>要解决此故障，请在维护完成后禁用维护模式。如果错误级别故障仍然存在，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 节点脱机 *</p>
+<div class="paragraph">
+<p>Element 软件无法与指定节点进行通信。检查网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 不使用 LACPBondMode*</p>
+<div class="paragraph">
+<p>未配置 LACP 绑定模式。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请在部署存储节点时使用 LACP 绑定；如果未启用并正确配置 LACP ，客户端可能会遇到性能问题。</p>
+</div>
+</li>
+<li>
+<p>* 无法访问 ntpServer*</p>
+<div class="paragraph">
+<p>存储集群无法与指定的一个或多个 NTP 服务器进行通信。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请检查 NTP 服务器，网络和防火墙的配置。</p>
+</div>
+</li>
+<li>
+<p>* ntpTimeNotInSync*</p>
+<div class="paragraph">
+<p>存储集群时间与指定 NTP 服务器时间之间的差异过大。存储集群无法自动更正此差异。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请使用网络内部的 NTP 服务器，而不是使用安装默认值。如果您使用的是内部 NTP 服务器，并且问题描述仍然存在，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* nvramDeviceStatus*</p>
+<div class="paragraph">
+<p>NVRAM 设备出现错误，正在发生故障或已发生故障。此故障具有以下严重性：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>硬件检测到警告。这种情况可能是暂时的，例如温度警告。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>nvmLifetimeError</p>
+</li>
+<li>
+<p>nvmLifetimeStatus</p>
+</li>
+<li>
+<p>生成源 LifetimeStatus</p>
+</li>
+<li>
+<p>energySourceTemperatureStatus</p>
+</li>
+<li>
+<p>warningThresholdExceeded</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>硬件检测到错误或严重状态。集群主节点尝试从操作中删除分区驱动器（此操作会生成驱动器删除事件）。如果二级分区服务不可用，则不会删除驱动器。除了警告级别错误之外，还返回错误：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>NVRAM 设备挂载点不存在。</p>
+</li>
+<li>
+<p>NVRAM 设备分区不存在。</p>
+</li>
+<li>
+<p>NVRAM 设备分区已存在，但未挂载。</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>严重</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>硬件检测到错误或严重状态。集群主节点尝试从操作中删除分区驱动器（此操作会生成驱动器删除事件）。如果二级分区服务不可用，则不会删除驱动器。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>持久性 Lost</p>
+</li>
+<li>
+<p>armStatusSaveNarm</p>
+</li>
+<li>
+<p>csaveStatusError</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>更换节点中的所有故障硬件。如果无法解决问题描述问题，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 电源供应错误 *</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>电源不存在。</p>
+</li>
+<li>
+<p>电源出现故障。</p>
+</li>
+<li>
+<p>电源输入缺失或超出范围。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请验证是否已为所有节点提供冗余电源。请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 配置空间 TooFull*</p>
+<div class="paragraph">
+<p>集群的整体已配置容量过满。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请添加更多已配置空间，或者删除并清除卷。</p>
+</div>
+</li>
+<li>
+<p>* remoteRePAsyncDelayExceedd*</p>
+<div class="paragraph">
+<p>已超过为复制配置的异步延迟。检查集群之间的网络连接。</p>
+</div>
+</li>
+<li>
+<p>* 远程 remoteClusterFull*</p>
+<div class="paragraph">
+<p>卷已暂停远程复制，因为目标存储集群太满。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请释放目标存储集群上的一些空间。</p>
+</div>
+</li>
+<li>
+<p>* remoteSnapshotClusterFull*</p>
+<div class="paragraph">
+<p>由于目标存储集群太满，卷已暂停快照远程复制。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请释放目标存储集群上的一些空间。</p>
+</div>
+</li>
+<li>
+<p>* remoteSnapshotsExceededLimit*</p>
+<div class="paragraph">
+<p>由于目标存储集群卷已超过其快照限制，卷已暂停快照远程复制。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请增加目标存储集群上的快照限制。</p>
+</div>
+</li>
+<li>
+<p>* 计划操作错误 *</p>
+<div class="paragraph">
+<p>已运行一个或多个计划活动，但失败。</p>
+</div>
+<div class="paragraph">
+<p>如果计划活动再次运行并成功，计划活动已删除或活动已暂停并恢复，则此故障将清除。</p>
+</div>
+</li>
+<li>
+<p>* 传感器读取已成功 *</p>
+<div class="paragraph">
+<p>传感器无法与基板管理控制器(BMC)通信。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 服务未运行 *</p>
+<div class="paragraph">
+<p>所需服务未运行。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* sliceServiceTooFull*</p>
+<div class="paragraph">
+<p>为分区服务分配的已配置容量太少。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请添加更多已配置容量。</p>
+</div>
+</li>
+<li>
+<p>* sliceServiceUnhealth*</p>
+<div class="paragraph">
+<p>系统已检测到分区服务运行状况不正常，并且正在自动停用该服务。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>严重性 = 警告：不执行任何操作。此警告期限将在 6 分钟后过期。</p>
+</li>
+<li>
+<p>严重性 = 错误：系统正在自动停用数据并将其数据重新复制到其他运行状况良好的驱动器。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>检查网络连接问题和硬件错误。如果特定硬件组件出现故障，则会出现其他故障。当分区服务可访问或服务已停用时，此故障将得以清除。</p>
+</div>
+</li>
+<li>
+<p>* 已启用 ssh*</p>
+<div class="paragraph">
+<p>已在存储集群中的一个或多个节点上启用 SSH 服务。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请在相应节点上禁用 SSH 服务，或者联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* sslCertificateExpiration*</p>
+<div class="paragraph">
+<p>与此节点关联的 SSL 证书即将到期或已过期。此故障会根据紧急程度使用以下严重性：</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">severity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>警告</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 30 天内过期。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>error</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 7 天内过期。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>严重</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>证书将在 3 天内过期或已过期。</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>要解决此故障，请续订 SSL 证书。如果需要，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* strandedCapacity"</p>
+<div class="paragraph">
+<p>单个节点占用的存储集群容量超过一半。</p>
+</div>
+<div class="paragraph">
+<p>为了保持数据冗余，系统会减少最大节点的容量，以使其部分块容量处于孤立状态（未使用）。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请向现有存储节点添加更多驱动器或向集群添加存储节点。</p>
+</div>
+</li>
+<li>
+<p>* TempSensor *</p>
+<div class="paragraph">
+<p>温度传感器报告的温度高于正常温度。此故障可能会与 powerSupplyError 或 FanSensor 故障一起触发。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请检查存储集群附近是否存在气流障碍。如果需要，请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 升级 *</p>
+<div class="paragraph">
+<p>升级已进行 24 小时以上。</p>
+</div>
+<div class="paragraph">
+<p>要解决此故障，请恢复升级或联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 无响应服务 *</p>
+<div class="paragraph">
+<p>服务已变得无响应。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 虚拟网络配置 *</p>
+<div class="paragraph">
+<p>此集群故障指示以下情况之一：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>接口不存在。</p>
+</li>
+<li>
+<p>接口上的命名空间不正确。</p>
+</li>
+<li>
+<p>网络掩码不正确。</p>
+</li>
+<li>
+<p>IP 地址不正确。</p>
+</li>
+<li>
+<p>某个接口未启动且未运行。</p>
+</li>
+<li>
+<p>节点上存在多余的接口。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+<li>
+<p>* 卷已降级 *</p>
+<div class="paragraph">
+<p>二级卷尚未完成复制和同步。同步完成后，此消息将被清除。</p>
+</div>
+</li>
+<li>
+<p>* 卷脱机 *</p>
+<div class="paragraph">
+<p>存储集群中的一个或多个卷已脱机。此外，还将出现 * 卷已降级 * 故障。</p>
+</div>
+<div class="paragraph">
+<p>请联系 NetApp 支持部门以获得帮助。</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">在本页面中</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">使用条款</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私策略</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">请发送有关此页面的反馈</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/vcp/js/ie-tabbed-blocks.js'></script>
+    <script src='/zh-cn/vcp/js/ie-sidebar.js'></script>
+  </body>
+
+</html>

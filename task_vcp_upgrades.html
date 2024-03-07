@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head class="at-element-marker">
+  <title>升级此插件</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="升级此插件" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-cn/vcp/task_vcp_upgrades.html" />
+	<meta property="og:description" content="升级到适用于VMware vCenter Server的最新NetApp Element 插件。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-cn/vcp/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="升级到适用于VMware vCenter Server的最新NetApp Element 插件。">
+  <meta name="keywords" content=" netapp, vcp, vcenter, plugin, element, upgrade"><!-- Icons -->
+  <link rel="icon" href="/zh-cn/vcp/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/zh-cn/vcp/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/zh-cn/vcp/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-cn/vcp/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/zh-cn/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/vcp/task_vcp_upgrades.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/vcp/task_vcp_upgrades.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-cn/vcp/js/na-search.js'></script><script src='/zh-cn/vcp/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/zh-cn/vcp/js/custom-dropdown.js'></script>
+  <script src='/zh-cn/vcp/js/FileSaver.min.js'></script>
+  <script src='/zh-cn/vcp/js/jszip-utils.min.js'></script>
+  <script src='/zh-cn/vcp/js/jszip.min.js'></script><script src='/zh-cn/vcp/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/zh-cn/vcp/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/cn">
+                <image id="ie-header-logo" src="/zh-cn/vcp/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/support-and-training/documentation/">文档</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/zh-cn/vcp/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">简体中文</span>
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/zh-cn/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ja-jp/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/vcp/task_vcp_upgrades.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/zh-cn/vcp/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">全部来自 NetApp</span>
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">支持</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">知识库</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/zh-hans/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">训练</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">所有文档</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/zh-cn/vcp/">-->
+      VCP
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/zh-cn/vcp/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/zh-cn/vcp/search.html" 
+        data-type="widget"
+        data-placeholder="搜索文档"
+        data-no-results-found="未找到 {query} 的相关结果"
+        data-did-you-mean="搜索 {suggestion}。"
+        data-no-results-found-did-you-mean="未找到 {query} 的相关结果。您是指 {suggestion}？"
+        data-results-found="找到 {hitCount} 个结果"
+        data-error-message="发生错误。请重试。"
+        data-error-reset="重置搜索"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件文档"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/index.html">
+        适用于VMware vCenter Server的NetApp Element 插件文档
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件产品概述"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/concept_vcp_product_overview.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/concept_vcp_product_overview.html">
+        适用于VMware vCenter Server的NetApp Element 插件产品概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="发行说明"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 发行说明</div>-->
+         发行说明
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server的NetApp Element 插件中的新增功能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/rn_whatsnew_vcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/rn_whatsnew_vcp.html">
+        适用于VMware vCenter Server的NetApp Element 插件中的新增功能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="其他版本信息"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/rn_relatedrn_vcp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/rn_relatedrn_vcp.html">
+        其他版本信息
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件</div>-->
+         适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="远程插件架构概述"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_remote_plugin_architecture.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_remote_plugin_architecture.html">
+        远程插件架构概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 远程插件扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_remote_plugin_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_remote_plugin_extension_point.html">
+        NetApp Element 远程插件扩展点
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件</div>-->
+         适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 配置扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_config_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_config_extension_point.html">
+        NetApp Element 配置扩展点
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp Element 管理扩展点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_management_extension_point.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_concept_management_extension_point.html">
+        NetApp Element 管理扩展点
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="用户帐户"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_accounts.html">
+        用户帐户
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保护域"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_protection_domains.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_protection_domains.html">
+        保护域
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="链接模式和vCenter插件"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_linkedmode.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_linkedmode.html">
+        链接模式和vCenter插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="QoSSIOC"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_qossioc.html">
+        QoSSIOC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="虚拟卷（ VVOL ）"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_concept_vvols.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_concept_vvols.html">
+        虚拟卷（ VVOL ）
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="部署前要求"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/reference_requirements_vcp.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/reference_requirements_vcp.html">
+        部署前要求
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安装和配置适用于 vCenter Server 的 NetApp Element 插件"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 安装和配置适用于 vCenter Server 的 NetApp Element 插件</div>-->
+         安装和配置适用于 vCenter Server 的 NetApp Element 插件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_getstarted_5_0.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_getstarted_5_0.html">
+        为vCenter Server 7.0及更高版本安装和配置Element插件5.0及更高版本
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="安装并配置Element插件4.10及更早版本"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_getstarted.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_getstarted.html">
+        安装并配置Element插件4.10及更早版本
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="升级此插件"
+      data-li-level="1#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/task_vcp_upgrades.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_upgrades.html">
+        升级此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件管理存储"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用 vCenter 插件管理存储</div>-->
+         使用 vCenter 插件管理存储
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_clusters_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_clusters_manage.html">
+        管理集群
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理数据存储库"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_datastores_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_datastores_manage.html">
+        管理数据存储库
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理卷"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_volumes_manage.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_volumes_manage.html">
+        管理卷
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理用户帐户"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_create_manage_user_accounts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_user_accounts.html">
+        创建和管理用户帐户
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理访问组"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_create_manage_access_groups.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_access_groups.html">
+        创建和管理访问组
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理启动程序"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_create_manage_initiators.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_initiators.html">
+        创建和管理启动程序
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_qossioc.html">
+        为 Element 卷和 VMware 数据存储库设置和管理 QoSSIOC
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理卷 QoS 策略"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_qos_policies.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_qos_policies.html">
+        创建和管理卷 QoS 策略
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群硬件和虚拟网络"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 管理集群硬件和虚拟网络</div>-->
+         管理集群硬件和虚拟网络
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理集群硬件和虚拟网络概述"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_manage_cluster_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_manage_cluster_overview.html">
+        管理集群硬件和虚拟网络概述
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="添加和管理驱动器"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_add_manage_drive.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_add_manage_drive.html">
+        添加和管理驱动器
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="添加和管理节点"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_add_manage_nodes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_add_manage_nodes.html">
+        添加和管理节点
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理虚拟网络"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_create_manage_vlans.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_create_manage_vlans.html">
+        创建和管理虚拟网络
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控系统性能"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 监控系统性能</div>-->
+         监控系统性能
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用报告选项监控系统性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_intro.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_intro.html">
+        使用报告选项监控系统性能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在概述页面上监控集群的整体运行状况"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_overview.html">
+        在概述页面上监控集群的整体运行状况
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控系统警报"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_alerts.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_alerts.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 监控系统警报</div>-->
+         监控系统警报
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="系统警报列表"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_reference_reports_alert_errors.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/zh-cn/vcp/vcp_reference_reports_alert_errors.html">
+        系统警报列表
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控事件日志以进行故障排除"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_event_logs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_event_logs.html">
+        监控事件日志以进行故障排除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控卷性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_volume_performance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_volume_performance.html">
+        监控卷性能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="监控 iSCSI 会话以确定连接状态"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_iscsi.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_iscsi.html">
+        监控 iSCSI 会话以确定连接状态
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 QocSSIOC 事件监控虚拟机性能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_reports_qossioc.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_reports_qossioc.html">
+        使用 QocSSIOC 事件监控虚拟机性能
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件保护数据"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/zh-cn/vcp/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/zh-cn/vcp/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 使用 vCenter 插件保护数据</div>-->
+         使用 vCenter 插件保护数据
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件概述保护数据"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_protect_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_overview.html">
+        使用 vCenter 插件概述保护数据
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理卷快照"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_volume.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_volume.html">
+        创建和管理卷快照
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建和管理组快照"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_group.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_group.html">
+        创建和管理组快照
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="创建快照计划"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_protect_snapshots_schedules.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_snapshots_schedules.html">
+        创建快照计划
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="在集群之间执行远程复制"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_protect_remote_replication.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/zh-cn/vcp/vcp_task_protect_remote_replication.html">
+        在集群之间执行远程复制
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="使用 vCenter 插件设置和管理虚拟卷"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_task_configure_manage_vvols.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/vcp_task_configure_manage_vvols.html">
+        使用 vCenter 插件设置和管理虚拟卷
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="取消注册此插件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/task_vcp_unregister.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_unregister.html">
+        取消注册此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="删除此插件"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/task_vcp_remove.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/task_vcp_remove.html">
+        删除此插件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="对插件进行故障排除"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/vcp_reference_troubleshoot_vcp.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/vcp_reference_troubleshoot_vcp.html">
+        对插件进行故障排除
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="早期版本的 NetApp Element 插件文档"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/reference_earlier_versions.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/reference_earlier_versions.html">
+        早期版本的 NetApp Element 插件文档
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法律声明"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/task_vcp_upgrades.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/zh-cn/vcp/legal-notices.html">
+        法律声明
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/zh-cn/vcp"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/zh-cn/vcp"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/zh-cn/vcp/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 简体中文版经机器翻译而成，仅供参考。如与英语版出现任何冲突，应以英语版为准。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">升级此插件</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-10-02 16:47:20 +0000">10/02/2023</time>
+        
+    
+    
+        <span>贡献者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/zh-cn/vcp/images/discuss-sm.svg" alt="" class="github-icon" />建议更改</span>
+        <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/zh-cn/vcp/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/vcp.zh-cn/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/zh-cn/vcp/task_vcp_upgrades.html&page-title=升级此插件" class="page-nav-contribute-link" role="button">请求文档更改</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/vcp/blob/main/task_vcp_upgrades.adoc" class="page-nav-contribute-link" role="button">编辑此页面</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >了解如何贡献</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/zh-cn/vcp/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/zh-cn/vcp/pdfs/fullsite-sidebar/适用于VMware_vCenter_Server的NetApp_Element_插件文档.pdf" >
+                    <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>本文档站点的 PDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/发行说明.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            发行说明
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/适用于VMware_vCenter_Server_5_0或更高版本的NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            适用于VMware vCenter Server 5.0或更高版本的NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/适用于VMware_vCenter_Server_4_10或更早版本的NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            适用于VMware vCenter Server 4.10或更早版本的NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/安装和配置适用于_vCenter_Server_的_NetApp_Element_插件.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            安装和配置适用于 vCenter Server 的 NetApp Element 插件
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件管理存储.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用 vCenter 插件管理存储
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/管理集群硬件和虚拟网络.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            管理集群硬件和虚拟网络
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统性能.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            监控系统性能
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/监控系统警报.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            监控系统警报
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/zh-cn/vcp/pdfs/sidebar/使用_vCenter_插件保护数据.pdf" 
+            
+          >
+            <img src="/zh-cn/vcp/images/pdf-icon.png" alt="" width="16" height="16"/>
+            使用 vCenter 插件保护数据
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/zh-cn/vcp/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>单独 PDF 文档的收集<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph lead">
+<p>您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.2可作为管理服务包的一部分在Element和NetApp HCI版本之外获得。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/vcp/images/note.svg" alt="备注">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>从适用于vCenter 5.0的Element插件开始、仅支持VMware vSphere 8.0和7.0。</p>
+</li>
+<li>
+<p>从适用于vCenter 4.x的Element插件升级到5.x时、由于无法将数据从vCenter实例复制到远程插件、因此已配置此插件的集群将丢失。您必须将集群重新添加到远程插件。这是从本地插件升级到远程插件时的一次性活动。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">步骤</div>
+<p>要升级此插件，请按照适用于您的产品的升级文档中的说明进行操作：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/docs/task_vcp_upgrade_plugin.html" target="_blank" rel="noopener">"升级 NetApp HCI 系统"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/element-software/upgrade/task_vcp_upgrade_plugin.html" target="_blank" rel="noopener">"升级 SolidFire 全闪存存储系统"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="了解更多信息">了解更多信息</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272" target="_blank" rel="noopener">"vCenter插件5.2发行说明"</a></p>
+</li>
+<li>
+<p><a href="https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes" target="_blank" rel="noopener">"《混合云控制和管理服务发行说明》"</a></p>
+</li>
+<li>
+<p><a href="https://docs.netapp.com/us-en/hci/index.html" target="_blank" rel="noopener">"NetApp HCI 文档"</a></p>
+</li>
+<li>
+<p><a href="http://mysupport.netapp.com/hci/resources" target="_blank" rel="noopener">"NetApp HCI 资源页面"</a></p>
+</li>
+<li>
+<p><a href="https://www.netapp.com/data-storage/solidfire/documentation" target="_blank" rel="noopener">"SolidFire 和 Element 资源页面"</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/zh-cn/vcp/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">在本页面中</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">使用条款</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">隐私策略</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie 政策</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">Cookie 设置</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">请发送有关此页面的反馈</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-cn/vcp/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-cn/vcp/js/ie-tabbed-blocks.js'></script>
+    <script src='/zh-cn/vcp/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
