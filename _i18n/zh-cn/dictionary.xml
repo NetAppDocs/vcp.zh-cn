@@ -2388,7 +2388,6 @@
   <block id="99743f19cae906ba996350c449e1c983" category="paragraph">在使用适用于VMware vCenter Server的NetApp Element 插件管理NetApp HCI 或SolidFire 全闪存阵列存储之前、您必须验证系统是否满足插件使用要求。</block>
   <block id="ec039d5a9609896b1378c280f9eb795e" category="paragraph">验证您的系统是否满足使用Element vCenter插件5.0或更高版本的要求。</block>
   <block id="87e51067c2a7529e01c8fa57d7d29919" category="paragraph">要使用Element vCenter插件、需要使用已配置软件iSCSI适配器和iSCSI网络的VMware vSphere 8.0和7.0、包括vCenter和ESXi。</block>
-  <block id="9cf493ed2f9140046fab3919844fdd27" category="list-text">vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="92a2b5cb9c6906035c2864fa225e1940" category="inline-link">文章</block>
   <block id="1400ae8c17045a12d78fd12af11a1d4c" category="admonition">VMware vSphere 6.5和6.7已于2022年10月15日停止支持。从Element插件5.0开始、不再支持vSphere 6.5和6.7。有关详细信息，请参见此<block ref="6a2f70d2ba0033763d7682575dc0f9df" category="inline-link-rx"></block>。</block>
   <block id="f4bbb6f9fa6c5749dac1df4f2bf8df3e" category="paragraph">验证您的系统是否满足使用Element vCenter插件4.10或更早版本的要求。</block>
@@ -2824,16 +2823,11 @@
   <block id="9055d5b4f435ab7f0fd544794b6cd19f" category="list-text">*集合节点*：指示集合成员子系统的当前保护级别状态。</block>
   <block id="939f531b35412529043c2c302552fa24" category="list-text"><block ref="939f531b35412529043c2c302552fa24" category="inline-link-rx"></block></block>
   <block id="ce397f79b5032c3e327db3efe5a6048a" category="inline-link">vCenter插件5.2发行说明</block>
-  <block id="4718467fa890cd0dcf159b3d461cedbe" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block> _new_</block>
-  <block id="0d8e7da83905e55b509122516259e079" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.2可作为管理服务包的一部分在Element和NetApp HCI版本之外获得。</block>
   <block id="6bd87cf3d55c2ead3ab585e965bea4db" category="list-text"><block ref="6bd87cf3d55c2ead3ab585e965bea4db" category="inline-link-rx"></block></block>
   <block id="ce4da9d1400f05b36779b0eb51082347" category="inline-link">了解有关自定义保护域的更多信息</block>
   <block id="c671ce05a947b4fc3538276dc92df5bc" category="paragraph"><block ref="94416f01b8f87d5b898c4987d363cee6" category="inline-link-rx"></block>。</block>
-  <block id="93fa53865774995b6cd95dfc1939095f" category="list-text">vSphere 8.0 Update 1包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库</block>
   <block id="faf6c38631911f7840c3498b4ec9f746" category="inline-link-macro">管理服务2.24.40通知(适用于VMware vCenter Server 5.2.12的NetApp Element插件)</block>
   <block id="25ca5b0e8a707ce2e66aeb1f6f90e710" category="list-text"><block ref="25ca5b0e8a707ce2e66aeb1f6f90e710" category="inline-link-macro-rx"></block></block>
-  <block id="fb7ee1da3ef0eafb228b5df1bc76e51a" category="paragraph">此外、还为适用于VMware vCenter Server的NetApp Element插件5.2之前的版本提供了相关文档。</block>
-  <block id="514f715e57edd4343e805d5f5384b20e" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件5.2、还包括5.1、5.0、4.10、4.9、4.8、 4.7和4.6。</block>
   <block id="43ff194f410f3e93a8680bef5ba51e50" category="cell">5.1.</block>
   <block id="8ef365dbc309c214b67cabb8e4667395" category="cell"><block ref="8ef365dbc309c214b67cabb8e4667395" category="inline-link-rx"></block></block>
   <block id="f8d3d7b8669323aed37a5ab85af833f2" category="inline-link">2.23.64</block>
@@ -2858,4 +2852,21 @@
   <block id="9314e5acbbfd0a4b95d982565586c95f" category="list-text">查看卷详细信息。</block>
   <block id="0fae033b7f8a2552a2db93253ae48448" category="list-text">将卷IQN添加到每个目标主机iSCSI适配器静态发现表。</block>
   <block id="ce8c852278bf664e34483c6a3fbd4194" category="open-title">创建新卷</block>
+  <block id="d3c4a89052a32dd9783dd119f30d6d47" category="inline-link">vCenter插件5.3发行说明</block>
+  <block id="0c21440ced3ddae10d1eea32870fdf02" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block> _new_</block>
+  <block id="724cde13f8f34ec9a75aa3a5949a7bae" category="paragraph">此外、还为适用于VMware vCenter Server的NetApp Element插件5.3之前的版本提供了相关文档。</block>
+  <block id="b91ca928498ebf0173fb7e3d48992a66" category="admonition">这 <block ref="f85d5f4f47d1b49f55d365d260fa53d2" category="inline-link-macro-rx"></block> 对于Element vCenter插件、5.3还包括版本5.2、5.1、5.0、4.10、4.9、 4.8、4.7和4.6。</block>
+  <block id="d3fc3e6e42d7ebd71ce2e5001c965277" category="cell">5.2.</block>
+  <block id="a87975cd874f3995aa0f5b8e9914d6ac" category="cell"><block ref="a87975cd874f3995aa0f5b8e9914d6ac" category="inline-link-rx"></block></block>
+  <block id="1b96174d42a2f1a016196aced05ce205" category="inline-link">2.24.40</block>
+  <block id="06ee06aae7e4ab0cc69854ffbaf61edf" category="cell"><block ref="06ee06aae7e4ab0cc69854ffbaf61edf" category="inline-link-rx"></block></block>
+  <block id="b735801c9fa7b1a5f19bea246684bd80" category="list-text">vSphere 8.0 Update 1和2、包括vCenter Server、ESXi以及VMFS5和VMFS6数据存储库</block>
+  <block id="9440aa5daecc4e454dc1c5f4c3914782" category="list-text">vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi以及VMFS5和VMFS6数据存储库</block>
+  <block id="976b368b923346c8ea4ccc71e72749f5" category="inline-link-macro">管理服务2.25.42通知(适用于VMware vCenter Server 5.3.9的NetApp Element插件)</block>
+  <block id="a2263b02c6e08e0a4fcf66ab7402c155" category="list-text"><block ref="a2263b02c6e08e0a4fcf66ab7402c155" category="inline-link-macro-rx"></block></block>
+  <block id="4dc24cec9c06f3bd0c6f458b16afede8" category="paragraph">适用于vCenter Server 5.3的NetApp Element插件可提高安全性和性能。<block ref="ca5ac7a1ab671f72eb64321851616ed9" category="inline-link-rx"></block>。</block>
+  <block id="04f2e4cbd56c4588624b04a1aa9d7bf7" category="paragraph">Element vCenter插件5.3随管理服务2.25.42版提供。</block>
+  <block id="7d85b43ddb7107e1d89d5c5b6d8d7f2a" category="section-title">适用于vCenter Server 5.2的NetApp Element插件</block>
+  <block id="85cde91596c6febafca64baa345a0163" category="paragraph">您可以按照为您的安装所述的步骤升级适用于 vCenter Server 的 NetApp Element 插件。NetApp Element vCenter插件5.3在Element和NetApp HCI版本之外作为管理服务包的一部分提供。</block>
+  <block id="ce90fd614158a5c7e0a42a5908fa1cd7" category="list-text"><block ref="ce90fd614158a5c7e0a42a5908fa1cd7" category="inline-link-rx"></block></block>
 </blocks>

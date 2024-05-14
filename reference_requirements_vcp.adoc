@@ -30,8 +30,8 @@ keywords: netapp, hci, kubernetes, on premise, cloud services
 .此插件支持的 VMware vSphere 版本
 此插件支持以下主要版本的 VMware 软件：
 
-* vSphere 8.0 Update 1包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
-* vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi、VMFS5和VMFS6数据存储库
+* vSphere 8.0 Update 1和2、包括vCenter Server、ESXi以及VMFS5和VMFS6数据存储库
+* vSphere 7.0和7.0 Update 1、2和3、包括vCenter Server、ESXi以及VMFS5和VMFS6数据存储库
 
 
 

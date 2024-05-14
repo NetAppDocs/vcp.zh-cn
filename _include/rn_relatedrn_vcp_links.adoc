@@ -47,7 +47,8 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 == 适用于VMware vCenter Server的NetApp Element 插件
 
-* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272["vCenter插件5.2发行说明"^] _new_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480["vCenter插件5.3发行说明"^] _new_
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2886272["vCenter插件5.2发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2885734["vCenter插件5.1发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884992["vCenter插件5.0发行说明"^]
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2884458["vCenter插件4.10发行说明"^]
