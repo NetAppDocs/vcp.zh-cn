@@ -165,9 +165,6 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 您可以使用插件扩展点手动启用空闲加密(EAR)功能。
 
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
-
 .步骤
 . 在vSphere Web Client中、打开*集群*选项卡：
 +
@@ -206,9 +203,6 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 您可以使用插件扩展点手动启用安全Shell (SSH)会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。
 
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
-
 .步骤
 . 在vSphere Web Client中、打开*集群*选项卡：
 +
@@ -232,9 +226,6 @@ NOTE: 要继续，您需要输入一个值。
 == 更改 SSH 时间限制
 
 您可以输入 SSH 会话的新持续时间。
-
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
 . 在vSphere Web Client中、打开*集群*选项卡：
@@ -262,9 +253,6 @@ NOTE: 要继续，您需要输入一个值。
 == 禁用 SSH
 
 您可以使用插件扩展点手动禁用对存储集群中节点的安全Shell (SSH)访问。
-
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
 . 在vSphere Web Client中、打开*集群*选项卡：
@@ -319,9 +307,6 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 如果您要 ... link:vcp_task_add_manage_nodes.html#restart-a-node["重新启动"] 您可以从 NetApp Element 管理扩展点的 "Cluster" 页面中选择所有节点并执行重新启动，而不是关闭集群。
 
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
-
 .您需要的内容
 您已停止 I/O 并断开所有 iSCSI 会话。
 
@@ -349,9 +334,6 @@ NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 * 从Element vCenter插件5.0开始、选择NetApp Element 远程插件>管理。
 * 对于Element vCenter插件4.10及更早版本、请选择NetApp Element 管理扩展点。
 
-
-
-NOTE: 此功能在 SolidFire 企业 SDS 集群中不可用。
 
 .步骤
 . 在vSphere Web Client中、打开*集群*选项卡：
