@@ -14,15 +14,25 @@ keywords: netapp, vcp, vcenter, plugin, element, new, whats new
 
 
 [role="lead"]
-Element vCenter插件5.4版中没有新的增强功能。
+适用于 vCenter Server 5.5 版本的NetApp Element插件提供了安全性增强功能，并可与 2.27.40 版本的管理服务一起使用。
 
-Element vCenter插件5.4随2.26.30版本的管理服务一起提供。 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3330676["了解更多信息。"^]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864["了解适用于 vCenter Server 5.5 版本的 Element 插件"^]
+
+
+
+== 适用于 vCenter Server 5.4 的NetApp Element插件
+
+Element vCenter 插件 5.4 随管理服务 2.26.30 版本提供。
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3330676["了解适用于 vCenter Server 5.4 版本的 Element 插件"^]
 
 
 
 == 适用于vCenter Server 5.3的NetApp Element插件
 
-适用于vCenter Server 5.3的NetApp Element插件可提高安全性和性能。 https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480["了解更多信息。"^]。
+适用于 vCenter Server 5.3 的NetApp Element插件提供了安全性和性能改进。
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP3316480["了解适用于 vCenter Server 5.3 版本的 Element 插件"^] 。
 
 Element vCenter插件5.3随管理服务2.25.42版提供。
 
