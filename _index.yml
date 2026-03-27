@@ -1,5 +1,11 @@
 ---
 indexpage:
+  title: 适用于VMware vCenter Server的NetApp Element 插件文档
+  summary: 适用于VMware vCenter Server的NetApp Element插件为VMware vSphere界面提供了一个插件、可用于管理和监控运行NetApp
+    Element软件的存储集群。您可以使用此文档站点了解并使用此插件。本文档站点介绍了适用于vCenter 5.0及更高版本的远程Element插件以及适用于vCenter
+    4.6至4.10的本地Element插件。
+  keywords: vcp, netapp, element, plug-in, vmware, vcenter, server documentation,
+    storage clusters, element software, deployment, install
   lead: 适用于VMware vCenter Server的NetApp Element插件为VMware vSphere界面提供了一个插件、可用于管理和监控运行NetApp
     Element软件的存储集群。您可以使用此文档站点了解并使用此插件。本文档站点介绍了适用于vCenter 5.0及更高版本的远程Element插件以及适用于vCenter
     4.6至4.10的本地Element插件。
