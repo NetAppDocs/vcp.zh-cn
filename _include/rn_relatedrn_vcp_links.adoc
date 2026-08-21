@@ -9,6 +9,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[netapp-hci]]
 == NetApp HCI
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP2882194["NetApp HCI 1.10发行说明"^]
@@ -21,6 +22,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[netapp-element-software]]
 == NetApp Element 软件
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3362264["NetApp Element软件 12.9 发行说明"^]_新的_
@@ -40,6 +42,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[management-services]]
 == 管理服务
 
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Management_services_for_Element_Software_and_NetApp_HCI/Management_Services_Release_Notes["管理服务发行说明知识库"^]
@@ -47,6 +50,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[netapp-element-plug-in-for-vmware-vcenter-server]]
 == 适用于VMware vCenter Server的NetApp Element 插件
 
 * https://library.netapp.com/ecm/ecm_download_file/ECMLP3344864["vCenter 插件 5.5 发行说明"^]
@@ -67,6 +71,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[compute-firmware]]
 == 计算固件
 
 * https://docs.netapp.com/us-en/hci/docs/rn_compute_firmware_2.146.html["计算固件包 2.146 发行说明"^]
@@ -77,6 +82,7 @@ NOTE: 系统将提示您使用 NetApp 支持站点凭据登录。
 
 
 
+[[storage-firmware]]
 == 存储固件
 
 * https://docs.netapp.com/us-en/hci/docs/rn_storage_firmware_2.146.html["存储固件包 2.146 发行说明"^]

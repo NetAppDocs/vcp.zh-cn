@@ -7,7 +7,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 = 对 vCenter 插件进行故障排除
 :hardbreaks:
 :allow-uri-read: 
-:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
+:url-peak: https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -18,7 +18,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 您需要了解适用于VMware vCenter Server的NetApp Element 插件的一些常见问题以及解决这些问题的步骤。
 
 * <<插件注册成功，但图标未显示在 Web 客户端中>>
-* <<使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误>>
+* <<error_vcp48_67u1,使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误>>
 * <<使用注册用户界面注册插件时出错>>
 * <<使用注册用户界面更新插件时出错>>
 * <<无法升级 NetApp 扩展的错误消息>>
@@ -36,6 +36,7 @@ keywords: netapp, hci, vcp, vcenter, element, troubleshoot, monitor, report, ale
 
 
 
+[[plug-in-registration-successful-but-icons-do-not-appear-in-web-client]]
 == 插件注册成功，但图标未显示在 Web 客户端中
 
 .Description
@@ -83,6 +84,8 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 
 
+[[errors-after-netapp-element-plug-in-for-vmware-vcenter-server-4-8-or-later-upgrade-with-vmware-vcenter-server-6-7u1]]
+[[error_vcp48_67u1]]
 == 使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误
 
 .Description
@@ -107,6 +110,7 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 
 
+[[error-registering-plug-in-using-registration-ui]]
 == 使用注册用户界面注册插件时出错
 
 .Description
@@ -117,6 +121,7 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 
 
+[[error-updating-plug-in-using-registration-ui]]
 == 使用注册用户界面更新插件时出错
 
 .Description
@@ -127,6 +132,7 @@ NOTE: 您可能需要更正无法访问或错误的 URL 。更新插件注册或
 
 
 
+[[error-message-that-netapp-extension-cannot-be-upgraded]]
 == 无法升级 NetApp 扩展的错误消息
 
 .message
@@ -147,6 +153,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[removing-plug-in-completes-successfully-but-icons-remain]]
 == 删除插件成功完成，但图标仍存在
 
 .Description
@@ -157,6 +164,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[plug-in-cannot-be-unregistered-or-removed-after-admin-password-change]]
 == 更改管理员密码后，无法取消注册或删除插件
 
 .Description
@@ -171,6 +179,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[plug-in-management-tasks-fail-or-volumes-are-not-accessible-to-esxi-host]]
 == 插件管理任务失败或 ESXi 主机无法访问卷
 
 .Description
@@ -186,6 +195,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[failure-occurs-during-vcenter-plug-in-use-on-firefox-59-0-2-browsers]]
 == 在 Firefox 59.0.2 浏览器上使用 vCenter 插件期间发生故障
 
 .message
@@ -199,6 +209,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[delete-datastore-operation-fails]]
 == 删除数据存储库操作失败
 
 .Description
@@ -209,6 +220,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[cluster-pair-cannot-connect-using-a-pairing-key]]
 == 集群对无法使用配对密钥进行连接
 
 .Description
@@ -219,6 +231,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[error-message-for-qossioc-status]]
 == QoSSIOC 状态错误消息
 
 .Description
@@ -232,6 +245,7 @@ org.springframework.transaction.CannotCreateTransactionException: Could not open
 
 
 
+[[qossioc-service-shown-as-available-but-is-unavailable]]
 == QoSSIOC 服务显示为可用，但不可用
 
 .Description
@@ -245,6 +259,7 @@ QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。
 
 
 
+[[qossioc-is-enabled-for-datastore-but-unavailable]]
 == 已为数据存储库启用 QoSSIOC ，但此功能不可用
 
 .Description
@@ -260,5 +275,5 @@ QoSSIOC 服务设置显示为已启动，但 QoSSIOC 不可用。
 ----
 SIOC is not enabled
 ----
-. 请参见 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_'Network_Down'_or_'Down'_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)["本文"] 针对特定于问题描述的更正操作。
+. 有关针对您问题的纠正措施，请参见 https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP["本文"]。
 

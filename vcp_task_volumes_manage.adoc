@@ -29,6 +29,7 @@ keywords: netapp, volumes, vcp, vcenter, element,
 
 
 
+[[create-a-volume]]
 == 创建卷
 
 您可以创建一个新卷并将该卷与给定帐户关联（每个卷都必须与一个帐户关联）。通过此关联，帐户可以使用 CHAP 凭据通过 iSCSI 启动程序访问卷。您还可以在创建卷期间为卷指定 QoS 设置。
@@ -80,6 +81,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[view-volume-details]]
 == 查看卷详细信息
 
 您可以在插件扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。
@@ -136,6 +138,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[general-details-section]]
 === 常规详细信息部分
 
 * * 名称 * ：分配给卷的名称。
@@ -152,6 +155,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[efficiency-section]]
 === 效率部分
 
 * * 压缩 * ：卷的压缩效率得分。
@@ -162,6 +166,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[performance-section]]
 === 性能部分
 
 * * 帐户 ID* ：关联帐户的唯一帐户 ID 。
@@ -200,6 +205,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[quality-of-service-section]]
 === 服务质量部分
 
 * * 策略 * ：分配给卷的 QoS 策略的名称。
@@ -212,6 +218,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[snapshots-section]]
 === Snapshots 部分
 
 * * 快照 ID* ：系统为快照生成的 ID 。
@@ -223,6 +230,7 @@ IMPORTANT: QoS 策略最适合服务环境，例如数据库，应用程序或�
 
 
 
+[[edit-a-volume]]
 == 编辑卷
 
 您可以更改卷属性，例如 QoS 值，卷大小以及计算字节值时使用的度量单位。您还可以更改访问级别以及可以访问卷的帐户。您还可以修改帐户访问权限以使用复制或限制对卷的访问。
@@ -280,6 +288,7 @@ QoS 策略最适合服务环境，例如数据库，应用程序或基础架构�
 
 
 
+[[clone-a-volume]]
 == 克隆卷
 
 您可以创建卷的克隆以创建数据的时间点副本。克隆卷时，系统会创建卷的快照，然后为该快照引用的数据创建一份副本。这是一个异步过程，此过程所需的时间量取决于要克隆的卷大小和当前集群负载。
@@ -297,7 +306,7 @@ QoS 策略最适合服务环境，例如数据库，应用程序或基础架构�
 
 NOTE: 克隆的卷不会从源卷继承卷访问组成员资格。
 
-操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EEFEB765-A41F-4B6D-917C-BB9ABB80FC80.html["挂载 VMFS 数据存储库副本"^] 和 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.storage.doc/GUID-EBAB0D5A-3C77-4A9B-9884-3D4AD69E28DC.html["管理重复的 VMFS 数据存储库"^]。
+操作系统处理克隆卷的方式各不相同。ESXi 会将克隆的卷视为卷副本或快照卷。卷将是可用于创建新数据存储区的设备。有关装载克隆卷和处理快照 LUN 的更多信息，请参见有关 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-copies-and-datastore-resignaturing/resignature-a-vmfs-datastore-copy-in-the-vsphere-web-client.html["挂载 VMFS 数据存储库副本"^]和 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage/working-with-datastores-in-vsphere-storage-environment/vsphere-vmfs-datastore-copies-and-datastore-resignaturing.html["管理重复的 VMFS 数据存储库"^]的 VMware 文档。
 
 .步骤
 . 从vCenter插件中、打开*管理*选项卡：
@@ -349,6 +358,7 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 
+[[back-up-or-restore-volumes]]
 == 备份或还原卷
 
 您可以将系统配置为将卷的内容备份到基于 NetApp Element 软件的存储外部的对象存储容器，以及从该容器还原卷的内容。
@@ -357,6 +367,7 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 
+[[back-up-volumes]]
 === 备份卷
 
 您可以将 NetApp Element 卷备份到 Element 存储以及与 Amazon S3 或 OpenStack Swift 兼容的二级对象存储。
@@ -494,6 +505,7 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 
+[[restore-volumes]]
 === 还原卷
 
 从 OpenStack Swift 或 Amazon S3 等对象存储上的备份还原卷时，您需要原始备份过程中的清单信息。如果要还原在基于 NetApp Element 的存储系统上备份的 NetApp Element 卷，则不需要清单信息。您可以在 "Reporting" 选项卡上的 "Event Log" 中找到从 Swift 和 S3 还原所需的清单信息。
@@ -635,6 +647,7 @@ NOTE: 完成克隆操作所需的时间受卷大小和当前集群负载的影�
 
 
 
+[[delete-volumes]]
 == 删除卷
 
 您可以使用插件扩展点从NetApp Element 集群中删除一个或多个卷。
@@ -677,6 +690,7 @@ NOTE: 此插件不允许删除包含数据存储库的卷。
 
 
 
+[[purge-volumes]]
 == 清除卷
 
 您可以在删除卷后手动清除这些卷。
@@ -703,6 +717,7 @@ IMPORTANT: 清除卷后，该卷将立即从系统中永久删除。卷中的所
 
 
 
+[[restore-deleted-volumes]]
 == 还原已删除的卷
 
 如果卷已删除但尚未清除，您可以还原 NetApp Element 系统中的卷。
@@ -730,6 +745,7 @@ NOTE: 如果删除卷并随后还原， ESXi 将无法检测还原的卷（以�
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

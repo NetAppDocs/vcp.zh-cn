@@ -119,6 +119,7 @@ service-control --start vsphere-ui
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

@@ -24,6 +24,7 @@ keywords: netapp, VLANs, create, manage, delete, view vcp, vcenter, element
 
 
 
+[[create-a-virtual-network]]
 == 创建虚拟网络
 
 您可以将新的虚拟网络添加到集群配置中。
@@ -104,6 +105,7 @@ NOTE: IP 地址总数必须与存储集群中的节点数匹配。
 
 
 
+[[view-virtual-network-details]]
 == 查看虚拟网络详细信息
 
 您可以从插件扩展点的集群选项卡的网络页面查看VLAN的网络信息。
@@ -129,6 +131,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[edit-a-virtual-network]]
 == 编辑虚拟网络
 
 您可以更改 VLAN 属性，例如 VLAN 名称，网络掩码和 IP 地址块大小。
@@ -158,6 +161,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[delete-a-virtual-network]]
 == 删除虚拟网络
 
 您可以永久删除 VLAN 对象及其 IP 块。分配给 VLAN 的地址块将与虚拟网络解除关联，并可重新分配给其他虚拟网络。

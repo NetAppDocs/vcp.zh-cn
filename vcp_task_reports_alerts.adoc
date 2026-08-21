@@ -61,6 +61,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report, alert, cluster, p
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

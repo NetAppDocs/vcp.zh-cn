@@ -25,6 +25,7 @@ keywords: netapp, nodes, create, manage, delete, view vcp, vcenter, element
 
 
 
+[[add-a-node-to-a-cluster]]
 == 将节点添加到集群
 
 您可以使用 vCenter 插件将存储节点添加到集群中。
@@ -71,6 +72,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[view-node-details]]
 == 查看节点详细信息
 
 您可以通过插件扩展点的"Cluster"选项卡的"Nodes"页面查看集群中节点的列表。要查看活动节点列表，必须选择 Active View 。您可以通过选择来更改此视图 `Pending`， `PendingActive`，和 `All` 选项。
@@ -96,6 +98,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[restart-a-node]]
 == 重新启动节点
 
 您可以使用插件扩展点重新启动集群中的一个或多个活动节点。
@@ -132,6 +135,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[shut-down-a-node]]
 == 关闭节点
 
 您可以使用插件扩展点关闭集群中的一个或多个活动节点。要关闭集群，您可以选择所有集群节点并同时关闭。
@@ -165,6 +169,7 @@ NOTE: 如果某个节点在任何类型的关闭条件下关闭时间超过 5.5 
 
 
 
+[[remove-a-node-from-a-cluster]]
 == 从集群中删除节点
 
 当不再需要节点存储或需要维护时，您可以从集群中删除节点，而不会中断服务。
@@ -202,6 +207,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

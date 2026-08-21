@@ -29,6 +29,7 @@ keywords: netapp, hci, vcp, vcenter, element, protect, snapshots, clone, backup,
 
 
 
+[[create-a-volume-snapshot]]
 == 创建卷快照
 
 您可以为活动卷创建快照，以便在任意时间点保留卷映像。
@@ -78,6 +79,7 @@ NOTE: 设置保留期限时，您可以选择从当前时间开始的期限。�
 
 
 
+[[view-volume-snapshot-details]]
 == 查看卷快照详细信息
 
 您可能需要验证是否已添加快照。
@@ -106,6 +108,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[clone-a-volume-from-a-snapshot]]
 == 从快照克隆卷
 
 您可以从卷的快照创建新卷。执行此操作时，系统会使用创建快照时卷上包含的数据使用快照信息克隆新卷。此过程还会在新创建的卷中存储有关卷的其他快照的信息。
@@ -162,6 +165,7 @@ TIP: 如果需要，请刷新页面。
 
 
 
+[[roll-back-a-volume-to-a-snapshot]]
 == 将卷回滚到快照
 
 您可以随时将卷回滚到快照。此操作将撤消自创建快照以来对卷所做的任何更改。
@@ -198,6 +202,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[back-up-a-volume-snapshot-to-an-external-object-store]]
 == 将卷快照备份到外部对象存储
 
 您可以使用集成备份功能备份卷快照。您可以将快照从运行 NetApp Element 软件的集群备份到外部对象存储或另一个基于 Element 的集群。
@@ -211,6 +216,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[back-up-a-volume-snapshot-to-an-amazon-s3-object-store]]
 === 将卷快照备份到 Amazon S3 对象存储
 
 您可以将 NetApp Element 快照备份到与 Amazon S3 兼容的外部对象存储。
@@ -252,6 +258,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[back-up-a-volume-snapshot-to-an-openstack-swift-object-store]]
 === 将卷快照备份到 OpenStack Swift 对象存储
 
 您可以将 NetApp Element 快照备份到与 OpenStack Swift 兼容的二级对象存储。
@@ -293,6 +300,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[back-up-a-volume-snapshot-to-a-cluster-running-element-software]]
 === 将卷快照备份到运行 Element 软件的集群
 
 您可以将运行 NetApp Element 软件的集群上的卷快照备份到远程 Element 集群。
@@ -355,6 +363,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[delete-a-volume-snapshot]]
 == 删除卷快照
 
 您可以使用插件扩展点从运行NetApp Element 软件的集群中删除卷快照。删除快照时，系统会立即将其删除。
@@ -389,6 +398,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

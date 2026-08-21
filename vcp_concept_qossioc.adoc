@@ -37,6 +37,7 @@ TIP: https://activeiq.solidfire.com["SolidFire Active IQ"^] 具有一个 QoS 建
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

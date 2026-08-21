@@ -26,12 +26,14 @@ NetApp Element 远程插件扩展点提供了以下选项卡：
 
 
 
+[[getting-started]]
 == 入门
 
 Getting Started选项卡介绍了此插件的扩展点以及可执行的操作。您可以从每个页面隐藏"入门"页面、也可以从*关于*选项卡还原这些页面。
 
 
 
+[[configuration]]
 == Configuration
 
 通过*配置*选项卡、您可以添加和管理集群、以及配置QoSSIOC的管理节点设置。
@@ -50,6 +52,7 @@ image::vcp_config_tab.png[配置选项卡]
 
 
 
+[[management]]
 == 管理
 
 使用*管理*选项卡、您可以执行以下活动：
@@ -83,6 +86,7 @@ image::vcp_management_tab.png[管理选项卡]
 
 
 
+[[about]]
 == About
 
 显示插件版本信息并提供服务包下载选项。

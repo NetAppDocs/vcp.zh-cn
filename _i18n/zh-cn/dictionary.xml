@@ -161,7 +161,6 @@
   <block id="54bf2caed918291b3771a8543d667f6c" category="list-text">* 集群 * ：添加和管理驱动器和节点。您还可以创建和管理 VLAN 。</block>
   <block id="53c3fa82359c8c96c0034060741a24ad" category="list-text">* vvols* ：管理虚拟卷及其关联的存储容器，协议端点和绑定。</block>
   <block id="ca55ce9e6e52d3c2adce10bd8af25702" category="inline-link-macro">NetApp Element 配置扩展点</block>
-  <block id="c384eab57dc664d0f5f58e4f009f0b6a" category="list-text"><block ref="c384eab57dc664d0f5f58e4f009f0b6a" category="inline-link-macro-rx"></block></block>
   <block id="5ffbddc6871ea17252ba04957698f0fd" category="summary">您可以设置和修改 QoS 策略以应用于存储集群中的卷。</block>
   <block id="50ee1f895e7e284e9dd0f8f045bc11a2" category="doc">创建和管理卷 QoS 策略</block>
   <block id="aa59f10f28f46853d1287bf8c57a1896" category="paragraph">通过 QoS （服务质量）策略，您可以创建和保存可应用于多个卷的标准化服务质量设置。要使用 QoS 策略，选定集群必须为 Element 10.0 或更高版本；否则， QoS 策略功能将不可用。</block>
@@ -699,8 +698,6 @@
   <block id="7bd2cb3916cfeeacb5ad9861e1f051d4" category="section-title">创建数据存储库和卷</block>
   <block id="b167e058141b07b7d5ef11b3c8da0281" category="inline-link-macro">数据存储库和 Element 卷</block>
   <block id="9638d724eefaf6fd978f12d18a9b0321" category="paragraph">您可以创建 <block ref="304c7799f55370c63adc103f03c487d2" category="inline-link-macro-rx"></block> 开始分配存储。</block>
-  <block id="c93817bbfc3fab71f5f7ca740a11c847" category="inline-link">NetApp HCI 资源页面</block>
-  <block id="db44bd4317aeddd12845bd1fdbf8738c" category="list-text"><block ref="db44bd4317aeddd12845bd1fdbf8738c" category="inline-link-rx"></block></block>
   <block id="6baba9ea1f49e8f0d2e63e8b18f41850" category="doc">使用报告选项监控系统性能</block>
   <block id="bb7424d4b554e480f39339135637d31a" category="paragraph">使用 vCenter 插件，您可以通过以下方式监控集群组件和性能：</block>
   <block id="268b7f69a76bac76b7a2d89e6d7decf7" category="inline-link-macro">在概述页面上监控集群的整体运行状况</block>
@@ -1372,8 +1369,6 @@
   <block id="986682d95d754575922ac5a1aa4b5910" category="paragraph">您可以更改活动 Element 管理节点的 QoSSIOC 和 vCenter 凭据。</block>
   <block id="afdeffce59224badc13a8821b6ec412f" category="list-text">在 * 编辑 QoSSIOC 设置 * 对话框中，更改以下任一项：</block>
   <block id="f8bae8de9baa8395a6a8ec2d860c337f" category="list-text">* QoSSIOC 用户 ID* ： QoSSIOC 服务的用户 ID 。QoSSIOC 服务的默认用户 ID 为 `admin` 。对于 NetApp HCI ，用户 ID 与使用 NetApp 部署引擎在安装期间输入的用户 ID 相同。</block>
-  <block id="cad792ab45ca62879a629f687945067c" category="admonition">对于 NetApp HCI 部署，默认密码会在安装期间随机生成。要确定密码，请参见本指南中的操作步骤 4<block ref="73c985feae38ab11c72c32983286b317" category="inline-link-rx"></block> 文章。</block>
-  <block id="18d6e8678d9b6ffeb8e937c46930d1ee" category="admonition">请参见此内容<block ref="73c985feae38ab11c72c32983286b317" category="inline-link-rx"></block> 要在状态为以下任一项时进行故障排除，请执行以下操作： * `DOwn` ： QoSSIOC is not enabled 。* `未配置` ：尚未配置 QoSSIOC 设置。* `网络关闭` ： vCenter 无法与网络上的 QoSSIOC 服务进行通信。mNode 和 SIOC 服务可能仍在运行。</block>
   <block id="fa56630b6219bb590988e3850ac6bf23" category="section-title">更改 QoSSIOC 服务密码</block>
   <block id="8209f42f47120008b0d3d7d32da6ae59" category="paragraph">您可以使用注册实用程序 UI 更改管理节点上 QoSSIOC 服务的密码。</block>
   <block id="e1ea2de510fb69c3802c3b09357e3c35" category="list-text">管理节点已启动。</block>
@@ -1515,7 +1510,6 @@
   <block id="a4c87fceeca93beb148602bece77fca6" category="list-text">* QoSSIOC 设置 * ：为管理节点上的 QoSSIOC 服务配置凭据，以便与 vCenter 进行通信。</block>
   <block id="17214f3da5f4fde025ab6bff02b1e131" category="list-text">* QoSSIOC Events* ：显示有关检测到的所有 QoSSIOC 事件的信息。</block>
   <block id="7859d016cf7f2b5a5e2abf89cdedf206" category="list-text">* 关于 * ：显示插件版本信息并提供服务包下载选项。</block>
-  <block id="d05470d1480aa89ff09b30647c509081" category="list-text"><block ref="d05470d1480aa89ff09b30647c509081" category="inline-link-macro-rx"></block></block>
   <block id="7e6804427b6e39789b1a282736e90b46" category="summary">您可以使用此插件创建和管理用户帐户。</block>
   <block id="bd6dca3f6f8d28ce081bb3957040368d" category="doc">创建和管理用户帐户</block>
   <block id="dbdd6377389228728e6ab594c50ad011" category="inline-link-macro">用户帐户</block>
@@ -1976,7 +1970,6 @@
   <block id="4fb0bbac8ed9dc001c6bd394776c58b9" category="list-text">在管理节点上的 ` /opt/solidfire/sioc/data/logs/` 中打开 `sioc.log` （在旧管理节点上为` /var/log` 或 ` /var/log/solidfire/` ）。</block>
   <block id="8776a0f7728d2804b6638746068901d5" category="list-text">搜索此文本：</block>
   <block id="8acadeccb90bf205135348e4902b9c20" category="inline-link">本文</block>
-  <block id="6827a947857f77989cf06bb0f67a6085" category="list-text">请参见<block ref="fcb81063f72d7cb08144faa25942e149" category="inline-link-rx"></block> 针对特定于问题描述的更正操作。</block>
   <block id="8fbfd26ed5e6497365d351c8f25fa303" category="doc">升级此插件</block>
   <block id="9cec0e50b42801b7660f56e947b1c67f" category="inline-link">《混合云控制和管理服务发行说明》</block>
   <block id="9154c6fd5e4a9dc865524f9f8778b48f" category="list-text"><block ref="9154c6fd5e4a9dc865524f9f8778b48f" category="inline-link-rx"></block></block>
@@ -2124,14 +2117,12 @@
   <block id="baf751cfa98ca2f74ceb6948fcda780b" category="inline-link-macro">适用于VMware vCenter Server的NetApp Element 插件概述</block>
   <block id="63cc63082dc63dbd2008d199a2bbc40f" category="list-text"><block ref="63cc63082dc63dbd2008d199a2bbc40f" category="inline-link-macro-rx"></block></block>
   <block id="8c685412580675b6fc94b6d9884c2190" category="paragraph">您需要了解适用于VMware vCenter Server的NetApp Element 插件的一些常见问题以及解决这些问题的步骤。</block>
-  <block id="f379f8e66e1db17bdc8c224d43f3435a" category="list-text"><block ref="59dc4ba83e500318a7037078449a4c75" category="inline-xref-macro-rx"></block></block>
   <block id="c3441035a5fc5df8f56c371510235cc0" category="section-title">使用VMware vCenter Server 6.7U1升级适用于VMware vCenter Server 4.8或更高版本的NetApp Element 插件后出现错误</block>
   <block id="41c092fb7a927ae7d39aa5ea193ab8a5" category="paragraph">使用VMware vCenter Server 6.7U1升级到Element vCenter插件4.8或更高版本后、可能会遇到以下问题：</block>
   <block id="c9a65a128a505a58d4d567963f8c5eef" category="summary">使用适用于VMware vCenter Server的NNetApp Element插件的报告页面查看有关集群组件和性能的信息。</block>
   <block id="698d667d11b7e38537ec61866ca4211e" category="paragraph">您可以从适用于VMware vCenter Server的NetApp Element 插件的NetApp Element 管理扩展点的报告选项卡的概述页面查看选定集群的集群信息、包括整体容量、效率和性能。</block>
   <block id="2152f196efbe56dd4b6ed7ebdf60184e" category="summary">您可以从vCenter取消注册适用于VMware vCenter Server的NetApp Element 插件。</block>
   <block id="0e2cb9099b297835fc679a9e70a9f01b" category="paragraph">您可以使用以下过程之一从vCenter取消注册适用于VMware vCenter Server的NetApp Element 插件。</block>
-  <block id="7c385748f57d5138e7a7e04224b0094d" category="summary">使用适用于VMware vCenter Server的NetApp Element 插件(VMware vSphere界面的插件)管理和监控运行NetApp Element 软件的存储集群。</block>
   <block id="64224a57594a94e207c3cc3f117b9b4c" category="doc">适用于VMware vCenter Server的NetApp Element 插件文档</block>
   <block id="96c1d0016bb846b8879188911653c245" category="sidebar">适用于VMware vCenter Server的NetApp Element 插件中的新增功能</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">入门</block>
@@ -2264,7 +2255,6 @@
   <block id="94341c12e51edbf7ac6e5b4caa8737ac" category="list-text">从vCenter插件中、打开*管理*选项卡：</block>
   <block id="013aff1f14a63a87888a1ec1cef40e97" category="paragraph">您可以在插件扩展点中查看集群上所有活动卷的常规信息。您还可以查看每个活动卷的详细信息，包括效率，性能， QoS 以及关联快照。</block>
   <block id="6515ee9060e70353f9e70cfdc1b81f05" category="paragraph">启用数据存储库 QoSSIOC 设置后，卷级别的任何 QoS 设置都将被覆盖。</block>
-  <block id="ab5a2e1182407c1415e14a4d40a00d1e" category="paragraph">操作系统在处理克隆卷方面有所不同。ESXi 会将克隆的卷视为卷副本或快照卷。此卷将成为可用于创建新数据存储库的设备。有关挂载克隆卷和处理快照 LUN 的详细信息，请参见有关的 VMware 文档<block ref="be550d2037a470ce38c4e9b1205adbd3" category="inline-link-rx"></block> 和<block ref="e78925c5281376a20450a24207e06cd4" category="inline-link-rx"></block>。</block>
   <block id="4db0281ff6074c3720c0e60c2f519f67" category="list-text">在要放置卷备份的vCenter和集群中、打开*管理*选项卡：</block>
   <block id="a62b6b895ee3a8cd131047be0ebb39f7" category="list-text">在包含要用于备份的源卷的vCenter和集群中、打开*管理*选项卡：</block>
   <block id="6f3512a5ff8ddd30db3f705929fc9002" category="list-text">在要还原卷的vCenter和集群中、打开*管理*选项卡：</block>
@@ -2899,4 +2889,11 @@
   <block id="0f0dd8ebb47c876fc4d83cd4c503304a" category="list-text"><block ref="65f476025a11aaf16dc58328cfd02319" category="inline-link-rx"></block>_新的_</block>
   <block id="53e04163346326834efd61306c0800b5" category="list-text"><block ref="53e04163346326834efd61306c0800b5" category="inline-link-rx"></block></block>
   <block id="19934d197d6821fc66160fdecbaaf499" category="list-text"><block ref="19934d197d6821fc66160fdecbaaf499" category="inline-link-rx"></block></block>
+  <block id="7ee2c1d45d5ea0b3b627e776551e0a66" category="list-text"><block ref="7ee2c1d45d5ea0b3b627e776551e0a66" category="inline-link-rx"></block></block>
+  <block id="ddfcc4a211e4d4aeb8858fcf7023db79" category="list-text"><block ref="ddfcc4a211e4d4aeb8858fcf7023db79" category="inline-link-macro-rx"></block></block>
+  <block id="946a456b3340bab5444f7fdd2d1668a6" category="list-text"><block ref="81a91a7b2e7c16e9382a3b4102c75dd6" category="inline-xref-macro-rx"></block></block>
+  <block id="576fdcfbd453ff81e50ed038bbd75080" category="list-text">有关针对您问题的纠正措施，请参见<block ref="b1809f417eab8dd7bd52c5b130b213a1" category="inline-link-rx"></block>。</block>
+  <block id="49e5955799c1635bb234348ec3e98e8d" category="admonition">对于 NetApp HCI 部署，默认密码在安装过程中随机生成。要确定密码，请参阅本文中的步骤 4<block ref="6eec7bea3d46c7ec2c72cd0ab5ecde7c" category="inline-link-rx"></block>。</block>
+  <block id="2547d26c583559d66bf10554cc96e8c0" category="admonition">请参阅此处<block ref="6eec7bea3d46c7ec2c72cd0ab5ecde7c" category="inline-link-rx"></block>进行故障排除（如果状态为以下任何内容）：*<block ref="08a38277b0309070706f6652eeae9a53" prefix=" " category="inline-code"></block>：未启用 QoSSIOC。*<block ref="ac10863a89ea5da5d78b29ab7d8d4db9" prefix=" " category="inline-code"></block>：未配置 QoSSIOC 设置。*<block ref="8e8acaa1cba651ded0d5a7427cba69ac" prefix=" " category="inline-code"></block>：vCenter 无法与网络上的 QoSSIOC 服务通信。mNode 和 SIOC 服务可能仍在运行。</block>
+  <block id="8ffbbcee166c0ec6044df97dd87b1511" category="paragraph">操作系统处理克隆卷的方式各不相同。ESXi 会将克隆的卷视为卷副本或快照卷。卷将是可用于创建新数据存储区的设备。有关装载克隆卷和处理快照 LUN 的更多信息，请参见有关<block ref="f96e603cc6ab65c475c668cd9e36a0f1" category="inline-link-rx"></block>和<block ref="1504d644b8dbc81b76b400084d9988fb" category="inline-link-rx"></block>的 VMware 文档。</block>
 </blocks>

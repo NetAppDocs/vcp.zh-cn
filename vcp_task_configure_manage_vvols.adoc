@@ -23,6 +23,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 
+[[setup-tasks]]
 == 设置任务
 
 要在适用于 vCenter Server 的 NetApp Element 插件中使用虚拟卷（ VVol ），您必须执行初始配置步骤。
@@ -35,6 +36,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 
+[[management-tasks]]
 == 管理任务
 
 * <<监控虚拟卷资源>>
@@ -44,6 +46,7 @@ keywords: netapp, set up vvol, configure vvol, virtual volume, vcp, vcenter, ele
 
 
 
+[[enable-virtual-volumes-functionality-on-the-netapp-element-cluster]]
 == 在 NetApp Element 集群上启用虚拟卷功能
 
 您必须使用插件扩展点手动启用vSphere虚拟卷(VVol)功能。默认情况下， Element 系统随附的 VVol 功能处于禁用状态，它不会在新安装或升级过程中自动启用。启用 VVol 功能是一次性配置任务。
@@ -75,6 +78,7 @@ NOTE: 启用 VVol 功能后， Element 集群将启动 VASA Provider ，为 VASA
 
 
 
+[[register-the-vasa-provider-with-vcenter]]
 == 向 vCenter 注册 VASA Provider
 
 您必须向 vCenter 注册 NetApp Element VASA Provider ，以便 vCenter 能够识别集群上的 VVOL 功能。向 vCenter 注册 VASA Provider 是一次性配置任务。
@@ -123,6 +127,7 @@ NOTE: 首次注册存储提供程序后，如有必要，请刷新此提供程�
 
 
 
+[[create-a-storage-container-and-associated-vvol-datastore]]
 == 创建存储容器以及关联的 VVol 数据存储库
 
 您可以从插件扩展点中的"VVols"选项卡创建存储容器。您必须至少创建一个存储容器，才能开始配置 VVol 支持的虚拟机。
@@ -176,6 +181,7 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 
 
+[[monitor-virtual-volume-resources]]
 == 监控虚拟卷资源
 
 您可以从插件扩展点查看虚拟卷组件的性能和设置：
@@ -187,6 +193,7 @@ NOTE: 如果您使用的是 vCenter 链接模式，则只能选择可供分配�
 
 
 
+[[monitoring-vvols]]
 === 监控 VVOL
 
 您可以查看集群上所有活动虚拟卷的常规数据或每个虚拟卷的详细数据。此插件可跟踪虚拟卷的效率，性能，事件和 QoS 以及关联的快照， VM 和绑定。
@@ -214,6 +221,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[monitoring-storage-containers]]
 === 监控存储容器
 
 您可以查看集群上所有活动存储容器的常规数据或每个存储容器的详细数据。此插件可跟踪存储容器的效率，性能以及关联的虚拟卷。
@@ -237,6 +245,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[monitoring-protocol-endpoints]]
 === 监控协议端点
 
 您可以查看集群上所有协议端点的常规数据。
@@ -260,6 +269,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[create-a-vvol-datastore-for-a-storage-container]]
 == 为存储容器创建 VVol 数据存储库
 
 创建存储容器后，您还必须在 vCenter 中创建一个虚拟卷数据存储库，用于表示 NetApp Element 集群上的存储容器。可以使用此操作步骤作为从创建数据存储库的替代方法 <<创建存储容器以及关联的 VVol 数据存储库,创建存储容器>> 向导。您必须至少创建一个 VVol 数据存储库，才能开始配置 VVol 支持的虚拟机。
@@ -288,6 +298,7 @@ NOTE: 您无需手动创建协议端点（ PE ） LUN 。创建数据存储库�
 
 
 
+[[delete-a-storage-container]]
 == 删除存储容器
 
 您可以从插件扩展点删除存储容器。
@@ -317,6 +328,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

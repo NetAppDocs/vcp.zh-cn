@@ -28,6 +28,7 @@ keywords: netapp, hci, vcp, vcenter, element, monitor, report
 
 
 
+[[reporting-overview-page-data]]
 == 报告概述页面数据
 
 以下数据将显示在 "Reporting Overview" 页面上：
@@ -106,6 +107,7 @@ NOTE: 例如，如果集群中有四个卷，每个卷的最小 IOPS 为 500 ，
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

@@ -30,6 +30,7 @@ vSphere Client远程插件架构旨在将插件功能集成到vSphere Client中�
 
 
 
+[[remote-element-plug-in-for-vcenter-server-high-level-architecture]]
 == 适用于vCenter Server的远程Element插件高级架构
 
 使用NetApp Hybrid Cloud Control、远程Element插件与管理服务部署在管理节点内的Docker容器中。
@@ -53,6 +54,7 @@ image:vcp_remote_plugin_high_level_architecture.png["远程插件高级架构"]
 |===
 
 
+[[remote-element-plug-in-communication-paths-overview]]
 == 远程Element插件通信路径概述
 
 您必须先使用管理节点上运行的注册服务向vCenter Server注册远程插件 (`https://<mnode-ip>:9443/`）。在注册页面上、您可以看到vCenter Server用户名、密码和 `plugin.json` 清单文件路径。
@@ -68,6 +70,7 @@ NOTE: 默认路径将填充到用户界面中。无需执行任何操作。
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

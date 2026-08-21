@@ -97,6 +97,7 @@ vCenter1 和 vCenter2 处于链接模式，而存储 cluster1 和存储 cluster2
 ====
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

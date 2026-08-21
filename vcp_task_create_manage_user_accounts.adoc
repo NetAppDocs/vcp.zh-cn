@@ -24,6 +24,7 @@ link:vcp_concept_accounts.html["用户帐户"] 用于控制对基于 NetApp Elem
 
 
 
+[[create-an-account]]
 == 创建帐户
 
 您可以创建一个唯一的用户帐户，以允许访问存储卷。
@@ -65,6 +66,7 @@ NOTE: 启动程序密钥和目标密钥必须不同。如果这些字段留空�
 
 
 
+[[edit-an-account]]
 == 编辑帐户
 
 您可以编辑用户帐户以更改状态或 CHAP 密码。更改 CHAP 设置可能会导致发生原因丢失主机与其关联卷之间的连接。
@@ -106,6 +108,7 @@ NOTE: 如果不更改凭据，它们将保持不变。如果将凭据字段留�
 
 
 
+[[delete-an-account]]
 == 删除帐户
 
 您可以使用插件扩展点删除用户帐户。
@@ -136,6 +139,7 @@ NOTE: 如果添加了两个或更多集群，请确保在导航栏中选择要�
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

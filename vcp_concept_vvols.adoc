@@ -18,12 +18,14 @@ vSphere 虚拟卷是 VMware 的一种存储模式，可将 vSphere 的大部分�
 
 
 
+[[bindings]]
 == 绑定
 
 NetApp Element 集群会选择最佳协议端点，创建将 ESXi 主机和虚拟卷与协议端点关联的绑定，并将此绑定返回到 ESXi 主机。绑定后， ESXi 主机可以对绑定的虚拟卷执行 I/O 操作。
 
 
 
+[[protocol-endpoints]]
 == 协议端点
 
 VMware ESXi 主机使用称为协议端点的逻辑 I/O 代理与虚拟卷进行通信。ESXi 主机将虚拟卷绑定到协议端点以执行 I/O 操作。当主机上的虚拟机执行 I/O 操作时，关联的协议端点会将 I/O 定向到与其配对的虚拟卷。
@@ -38,6 +40,7 @@ iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协�
 
 
 
+[[storage-containers]]
 == 存储容器
 
 存储容器是映射到 NetApp Element 帐户的逻辑结构，用于报告和资源分配。它们可以将原始存储容量汇聚在一起，或者聚合存储系统可以为虚拟卷提供的存储功能。在 vSphere 中创建的 VVol 数据存储库将映射到单个存储容器。默认情况下，单个存储容器包含 NetApp Element 集群中的所有可用资源。如果需要对多租户进行更精细的监管，则可以创建多个存储容器。
@@ -52,6 +55,7 @@ iSCSI 是 NetApp Element 软件唯一支持的协议。不支持光纤通道协�
 
 
 
+[[vasa-provider]]
 == VASA 提供程序
 
 要使 vSphere 能够识别 NetApp Element 集群上的 VVOL 功能， vSphere 管理员必须向 vCenter 注册 NetApp Element VASA Provider 。VASA 提供程序是 vSphere 与 Element 集群之间的带外控制路径。它负责代表 vSphere 在 Element 集群上执行请求，例如创建 VM ，使 VM 可供 vSphere 使用以及向 vSphere 公布存储功能。
@@ -66,9 +70,9 @@ NOTE: 如果您已在 vCenter 中注册 VASA Provider ，则最多可通过 VASA
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
-* http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire 和Element文档资源"^]
 

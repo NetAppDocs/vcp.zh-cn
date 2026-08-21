@@ -52,6 +52,7 @@ NOTE: 要使用插件扩展点功能、必须至少添加一个集群。
 
 
 
+[[view-cluster-details]]
 == 查看集群详细信息
 
 您可以从vCenter插件扩展点查看集群详细信息。
@@ -101,6 +102,7 @@ NOTE: 要使用插件扩展点功能、必须至少添加一个集群。
 
 
 
+[[edit-a-cluster-profile]]
 == 编辑集群配置文件
 
 您可以从插件扩展点更改集群用户ID和密码。
@@ -133,6 +135,7 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 
 
+[[remove-a-cluster-profile]]
 == 删除集群配置文件
 
 您可以使用此插件扩展点从vCenter插件中删除不再需要管理的集群的配置文件。
@@ -161,6 +164,7 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 
 
+[[enable-encryption-at-rest]]
 == 启用空闲加密
 
 您可以使用插件扩展点手动启用空闲加密(EAR)功能。
@@ -180,6 +184,7 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 
 
+[[disable-encryption-at-rest]]
 == 禁用空闲加密
 
 您可以使用插件扩展点手动禁用空闲加密(EAR)功能。
@@ -199,6 +204,7 @@ NOTE: 添加集群后，您无法更改集群的 IP 地址或 FQDN 。您也不�
 
 
 
+[[enable-ssh]]
 == 启用 SSH ：
 
 您可以使用插件扩展点手动启用安全Shell (SSH)会话。启用 SSH 后， NetApp 技术支持工程师可以在您确定的持续时间内访问存储节点进行故障排除。
@@ -223,6 +229,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[change-the-ssh-time-limit]]
 == 更改 SSH 时间限制
 
 您可以输入 SSH 会话的新持续时间。
@@ -250,6 +257,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[disable-ssh]]
 == 禁用 SSH
 
 您可以使用插件扩展点手动禁用对存储集群中节点的安全Shell (SSH)访问。
@@ -269,6 +277,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[set-protection-domain-monitoring]]
 == 设置保护域监控
 
 您可以手动启用 link:vcp_concept_protection_domains.html["保护域监控"] 使用插件扩展点。您可以根据节点或机箱域选择保护域阈值。
@@ -301,6 +310,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[shut-down-a-cluster]]
 == 关闭集群
 
 您可以使用插件扩展点手动关闭存储集群中的所有活动节点。
@@ -325,6 +335,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[expand-your-netapp-hci-infrastructure]]
 == 扩展 NetApp HCI 基础架构
 
 您可以通过使用 NetApp HCI 添加节点来手动扩展 NetApp HCI 基础架构。此插件扩展点提供了一个指向NetApp HCI UI的链接、用于扩展您的系统。
@@ -349,6 +360,7 @@ NOTE: 要继续，您需要输入一个值。
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]

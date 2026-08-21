@@ -7,7 +7,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 = 安装并配置Element插件4.10及更早版本
 :hardbreaks:
 :allow-uri-read: 
-:url-peak: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Element_Plug-in_for_vCenter_server/mNode_Status_shows_as_%27Network_Down%27_or_%27Down%27_in_the_mNode_Settings_tab_of_the_Element_Plugin_for_vCenter_(VCP)
+:url-peak: https://kb.netapp.com/on-prem/solidfire/Element_OS_Kbs/mNode_Status_Network_Down_or_Down_in_the_mNode_Settings_tab_of_Element_Plugin_for_vCenter_VCP
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -34,12 +34,14 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 
 
+[[prepare-for-installation]]
 == 准备安装
 
 开始安装之前，请查看 link:reference_requirements_vcp.html["部署前要求"]。
 
 
 
+[[install-the-management-node]]
 == 安装管理节点
 
 您可以手动执行此操作 https://docs.netapp.com/us-en/hci/docs/task_mnode_install.html["安装管理节点"^] 对于运行 NetApp Element 软件的集群，请使用适用于您的配置的映像。
@@ -48,6 +50,7 @@ keywords: netapp, hci, vcp, vcenter, element, install, setup
 
 
 
+[[register-the-plug-in-with-vcenter]]
 == 将此插件注册到 vCenter
 
 在 vSphere Web Client 中部署 vCenter 插件软件包涉及到将该软件包注册为 vCenter Server 上的扩展。注册完成后，连接到 vSphere 环境的任何 vSphere Web Client 均可使用此插件。
@@ -137,6 +140,7 @@ NOTE: 此操作将在 vSphere Web Client 中完成安装。如果在 vSphere 中
 
 
 
+[[modify-vcenter-properties-for-a-dark-site-http-server]]
 == 修改非公开站点 HTTP 服务器的 vCenter 属性
 
 如果要在 vCenter 插件注册期间自定义内部（非公开站点） HTTP 服务器的 URL ，则必须修改 vSphere Web Client 属性文件 `webclient.properties` 。您可以使用 vCSA 或 Windows 进行更改。
@@ -247,6 +251,7 @@ NOTE: 完成注册操作步骤后，您可以从修改的文件中删除 `allowH
 
 
 
+[[access-the-plug-in-and-verify-successful-installation]]
 == 访问此插件并验证安装是否成功
 
 成功安装或升级后， NetApp Element 配置和管理扩展点将显示在 vSphere Web Client 的 " 快捷方式 " 选项卡和侧面板中。
@@ -258,6 +263,7 @@ NOTE: 如果看不到vCenter插件图标、请参见 link:vcp_reference_troubles
 
 
 
+[[add-storage-clusters-for-use-with-the-plug-in]]
 == 添加要与此插件结合使用的存储集群
 
 您可以使用 NetApp Element 配置扩展点添加运行 Element 软件的集群，以便该插件可以对其进行管理。
@@ -307,6 +313,7 @@ IMPORTANT: vSphere HTML5 Web 客户端和 Flash Web 客户端具有单独的数�
 
 
 
+[[configure-qossioc-settings-using-the-plug-in]]
 == 使用此插件配置 QoSSIOC 设置
 
 您可以根据存储 I/O 控制设置自动服务质量 link:vcp_concept_qossioc.html["（ QoSSIOC ）"] 由插件控制的单个卷和数据存储库。为此，您需要配置 QoSSIOC 和 vCenter 凭据，使 QoSSIOC 服务能够与 vCenter 进行通信。
@@ -350,21 +357,23 @@ IMPORTANT: vSphere HTML5 Web 客户端和 Flash Web 客户端具有单独的数�
 
 
 
+[[configure-user-accounts]]
 == 配置用户帐户
 
 要启用对卷的访问，您需要至少创建一个 link:vcp_task_create_manage_user_accounts.html#create-an-account["用户帐户"]。
 
 
 
+[[create-datastores-and-volumes]]
 == 创建数据存储库和卷
 
 您可以创建 link:vcp_task_datastores_manage.html#create-a-datastore["数据存储库和 Element 卷"] 开始分配存储。
 
 
 
+[[find-more-information]]
 == 了解更多信息
 
 * https://docs.netapp.com/us-en/hci/index.html["NetApp HCI 文档"^]
-* http://mysupport.netapp.com/hci/resources["NetApp HCI 资源页面"^]
-* https://www.netapp.com/data-storage/solidfire/documentation["SolidFire 和 Element 资源页面"^]
+* https://docs.netapp.com/us-en/element-software/index.html["SolidFire 和Element文档资源"^]
 
